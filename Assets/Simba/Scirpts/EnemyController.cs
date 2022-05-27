@@ -7,7 +7,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] float reaction;
     Rigidbody2D rb;
     bool isGroogy;
-    // Start is called before the first frame update
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

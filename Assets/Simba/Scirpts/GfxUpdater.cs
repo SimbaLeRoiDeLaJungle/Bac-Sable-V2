@@ -25,8 +25,10 @@ namespace Simba{
                 animator.SetTrigger("attack");
             }
 
-            // on verifie si le calques n°2 celui qui contient les attaques est entrain d'etre jouer, ici on cherche a voir si l'animation de l'attaque est terminé
-            var info = animator.GetCurrentAnimatorClipInfo(1);
+            // on verifie si le calques n°2(ici c'est pas les calques d'affichage graphique, mais les calques de l'animator, voir dans widow/animation/animator) 
+            //celui qui contient les attaques est entrain d'etre jouer,ici on cherche a voir si l'animation de l'attaque est terminé
+            var info = animator.GetCurrentAnimatorClipInfo(1); // le 1 c'est pour le 2eme claques
+            // si sa longeur est 0 c'est que l'on est dans le "state' de nom "new state" qui sert a faire les transition entre marche / attaques (voir animator du player)
             if(info.Length == 0){
                 isAttacking =false;
             }
