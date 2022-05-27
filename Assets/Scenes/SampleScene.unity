@@ -688,7 +688,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1105280330325216486, guid: 6458991b29a1ee289a52ca7166a5cc93, type: 3}
+  m_Sprite: {fileID: -5070505861155681980, guid: 6458991b29a1ee289a52ca7166a5cc93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -712,7 +712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackEffectPrefab: {fileID: 3628236789827854803, guid: 5fb5d09a66925433c86ae1db98779465, type: 3}
-  effectRelativePosition: {x: 1, y: 0}
+  effectRelativePosition: {x: 1.25, y: 0.2}
 --- !u!1 &679298686
 GameObject:
   m_ObjectHideFlags: 0
