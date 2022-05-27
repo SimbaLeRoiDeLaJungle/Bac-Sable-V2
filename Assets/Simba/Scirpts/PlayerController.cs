@@ -31,7 +31,7 @@ namespace Simba{
             chargeTimer = new Timer(2,TimerMode.LOCK);
         }
 
-        void FixedUpdate() {
+        public void CustomUpdate() {
             float dt = Time.fixedDeltaTime; // temps entre 2 fixedUpdate
 
             //récupère les inputs
@@ -100,6 +100,10 @@ namespace Simba{
             // On met à jour le sprite du personnage en fonction des inputs
             gfx.UpdateGfx(isGrounded, rb.velocity.x , attackLaunch,isCharging,chargeTimer, ref isAttacking);
             // je passe isAttacking en ref pour le changer si l'annimation est fini, il y a probablement mieu
+        }
+
+        public void SetCharacter(Character character){
+            gfx.SetCharacter(character);
         }
     }
 }

@@ -9,9 +9,11 @@ namespace Simba{
         Animator animator;
         [SerializeField] GameObject attackEffectPrefab;
         [SerializeField] Vector2 effectRelativePosition;
+        [SerializeField] Character character;
         void Start()
         {
             animator = GetComponent<Animator>();
+            SetCharacter(character);
         }
 
         public void UpdateGfx(bool isGrounded, float xVel, bool attack,bool isCharging, Timer chargeTimer, ref bool isAttacking){
@@ -62,6 +64,11 @@ namespace Simba{
             }
 
         }
+        public void SetCharacter(Character character){
+            this.character = character;
+            animator.runtimeAnimatorController = character.GetAnimatorController();
+        }
+
     }
 
 
