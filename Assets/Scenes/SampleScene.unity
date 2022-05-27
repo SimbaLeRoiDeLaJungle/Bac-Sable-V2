@@ -711,6 +711,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1655a0fbcd8975e9329cbe76c57fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackEffectPrefab: {fileID: 3628236789827854803, guid: 5fb5d09a66925433c86ae1db98779465, type: 3}
+  effectRelativePosition: {x: 1, y: 0}
 --- !u!1 &679298686
 GameObject:
   m_ObjectHideFlags: 0
