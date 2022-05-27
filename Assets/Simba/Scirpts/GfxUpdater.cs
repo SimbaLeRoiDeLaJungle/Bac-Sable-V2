@@ -7,7 +7,6 @@ namespace Simba{
     public class GfxUpdater : MonoBehaviour
     {
         Animator animator;
-        [SerializeField] GameObject attackEffectPrefab;
         [SerializeField] Vector2 effectRelativePosition;
         [SerializeField] Character character;
         void Start()
@@ -37,7 +36,7 @@ namespace Simba{
                     position = new Vector2(-effectRelativePosition.x,effectRelativePosition.y) + (Vector2)transform.position;
                 }
                 if(chargeTimer.Time >= chargeTimer.MaxTime*0.5f){
-                    GameObject go = Instantiate(attackEffectPrefab , (Vector3)position, Quaternion.identity);
+                    GameObject go = Instantiate(character.GetPrefabAttackEffect(), (Vector3)position, Quaternion.identity);
                     var script = go.GetComponent<AttackEffectScript>();
                     if(direction){
                         Vector3 scale = go.transform.localScale;

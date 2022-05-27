@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Character02
   m_EditorClassIdentifier: 
   animatorController: {fileID: 9100000, guid: be0498a5f522cb9688dc82567c3f8d2e, type: 2}
-  prefab: {fileID: 3628236789827854803, guid: 5fb5d09a66925433c86ae1db98779465, type: 3}
+  prefabAttackEffect: {fileID: 3628236789827854803, guid: 5fb5d09a66925433c86ae1db98779465, type: 3}
