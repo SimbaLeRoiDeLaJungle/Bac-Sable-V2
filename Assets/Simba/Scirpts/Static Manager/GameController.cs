@@ -19,7 +19,7 @@ namespace Simba{
 
         void FixedUpdate()
         {
-            playerController.CustomUpdate();
+            playerController.CustomUpdate2();
         }
 
 

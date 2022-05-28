@@ -7,6 +7,10 @@ namespace Simba{
     public class InputHandler : MonoBehaviour
     {
         static Dictionary<KeyCode, bool[]> inputs;
+        static ActionPad actionPad;
+        
+        static Dictionary<Action, KeyCode> personalKey;
+
         void Start()
         {
             inputs = new Dictionary<KeyCode, bool[]>();
@@ -14,6 +18,13 @@ namespace Simba{
             b[0] = false;
             b[1] = false;
             inputs.Add(KeyCode.Space, b);
+
+            //
+
+            personalKey = new Dictionary<Action, KeyCode> (){
+                {Action.First, KeyCode.Space},
+                {Action.Second, KeyCode.RightControl}
+            };
         }
 
         void FixedUpdate()
@@ -24,16 +35,19 @@ namespace Simba{
             inputs[KeyCode.Space] = b;
         }
 
-        public static bool KeyDown(KeyCode keyCode){
-            return inputs[keyCode][1];
+        public static bool KeyDown(Action action){
+            KeyCode keycode = personalKey[action];
+            return inputs[keycode][1];
         }
 
-        public static bool KeyRelease(KeyCode keyCode){
-            return inputs[keyCode][0] && !inputs[keyCode][1];
+        public static bool KeyRelease(Action action){
+            KeyCode keycode = personalKey[action];
+            return inputs[keycode][0] && !inputs[keycode][1];
         }
 
-        public static bool KeyPressed(KeyCode keyCode){
-            return !inputs[keyCode][0] && inputs[keyCode][1];
+        public static bool KeyPressed(Action action){
+            KeyCode keycode = personalKey[action];
+            return !inputs[keycode][0] && inputs[keycode][1];
         } 
 
         public static Vector2 GetAxesInput(){
@@ -41,5 +55,10 @@ namespace Simba{
             float y = Input.GetAxisRaw("Vertical");
             return new Vector2(x,y);
         }
+    }
+
+    public enum Action{
+        First,
+        Second
     }
 }

@@ -760,7 +760,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectRelativePosition: {x: 1.25, y: 0.2}
-  character: {fileID: 11400000, guid: c752a2453f3e78164b70fcf7f5c9398e, type: 2}
 --- !u!1 &679298686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,8 +1200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c67d45f625d08d18733c75fc6c176d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  jumpSpeed: 200
+  character: {fileID: 11400000, guid: c752a2453f3e78164b70fcf7f5c9398e, type: 2}
   gfx: {fileID: 604378675}
 --- !u!50 &1480141914
 Rigidbody2D:

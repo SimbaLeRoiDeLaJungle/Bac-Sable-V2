@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495de80eb82989b6f8a62d4fbdf1bd27, type: 3}
+  m_Name: FireBall
+  m_EditorClassIdentifier: 
+  _canCharge: 0
+  _maxChargeTime: 0
+  _minChargeTime: 0
+  _power: 0
+  _range: 0
+  _attackType: 1
+  _prefabBullet: {fileID: 713108296049806951, guid: c891ee2d98cbdffb8bfb47fe826d9735, type: 3}
+  _prefabEffectCharge: {fileID: 0}
+  _prefabEffect: {fileID: 0}

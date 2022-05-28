@@ -18,4 +18,9 @@ public class EnemyController : MonoBehaviour
         Vector3 dF = power*reaction*(dir+Vector3.up);
         rb.AddForce(dF, ForceMode2D.Impulse);
     }
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.tag == "Bullet"){
+            Debug.Log("hit");
+        }
+    }
 }

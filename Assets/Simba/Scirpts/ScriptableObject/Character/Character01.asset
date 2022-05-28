@@ -10,7 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: baf3303df04e2f83fb6b170692b21d35, type: 3}
-  m_Name: Character02
+  m_Name: Character01
   m_EditorClassIdentifier: 
-  animatorController: {fileID: 9100000, guid: be0498a5f522cb9688dc82567c3f8d2e, type: 2}
-  prefabAttackEffect: {fileID: 3628236789827854803, guid: 5fb5d09a66925433c86ae1db98779465, type: 3}
+  animatorController: {fileID: 9100000, guid: 87afc5def119330d5a56484bba0a6b0f, type: 2}
+  actionPad:
+    first: {fileID: 11400000, guid: af377e0bd10adebc99eb6910eeb21217, type: 2}
+    second: {fileID: 0}
+  _speed: 2
+  _jumpSpeed: 100
