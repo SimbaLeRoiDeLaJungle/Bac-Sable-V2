@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/SpriteEditor/SpriteNameFileIdPair.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5c619a296023e83a6677e0176cfa3c9d.html">com.unity.2d.sprite@1.0.0</a></li><li class="navelem"><a class="el" href="dir_3a60e56e7ba05fabd92e031555305799.html">Editor</a></li><li class="navelem"><a class="el" href="dir_6b564a754d5f3b5173df19ff77d52e40.html">SpriteEditor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SpriteNameFileIdPair.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_sprite_name_file_id_pair.html">   10</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html">SpriteNameFileIdPair</a> : IEquatable&lt;SpriteNameFileIdPair&gt;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">string</span> m_Name;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">long</span> m_FileId;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">private</span> GUID m_GUID;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#abc88c6b73c19dcd548e5c949391c322a">name</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#abc88c6b73c19dcd548e5c949391c322a">   23</a></span>&#160;        {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Name; }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keyword">set</span> { m_Name = value; }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        [Obsolete(<span class="stringliteral">&quot;Property obsolete. Please use GetFileGUID and SetFileGUID instead.&quot;</span>)]</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">long</span> <a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#ac4fa329579109dbef84c0966caa13795">fileId</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#ac4fa329579109dbef84c0966caa13795">   33</a></span>&#160;        {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_FileId; }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keyword">set</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                m_FileId = value;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#af8da8d4bf9d6cb7538eead7f3f74f0e6">SetFileGUID</a>(GUID.CreateGUIDFromSInt64(m_FileId));</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#aa030ef94874ac6bbcea2f47559062c2c">   46</a></span>&#160;        <span class="keyword">public</span> GUID <a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#aa030ef94874ac6bbcea2f47559062c2c">GetFileGUID</a>()</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">return</span> m_GUID;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#af8da8d4bf9d6cb7538eead7f3f74f0e6">   55</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#af8da8d4bf9d6cb7538eead7f3f74f0e6">SetFileGUID</a>(GUID value)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">if</span> (value.Empty())</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                value = GUID.Generate();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            m_GUID = value;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#abcf5d00a961e711583ca5560bf0dddc9">   65</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#abcf5d00a961e711583ca5560bf0dddc9">SpriteNameFileIdPair</a>() {}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#a6954897615bf8036cd496dde7e70ed65">   70</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#a6954897615bf8036cd496dde7e70ed65">SpriteNameFileIdPair</a>(<span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#abc88c6b73c19dcd548e5c949391c322a">name</a>, GUID <a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#ac4fa329579109dbef84c0966caa13795">fileId</a>)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            this.name = <a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#abc88c6b73c19dcd548e5c949391c322a">name</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#af8da8d4bf9d6cb7538eead7f3f74f0e6">SetFileGUID</a>(<a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#ac4fa329579109dbef84c0966caa13795">fileId</a>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#ae8ae256e4fc679028b0f9758a75186d8">   80</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#ae8ae256e4fc679028b0f9758a75186d8">GetHashCode</a>()</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">return</span> (<a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#abc88c6b73c19dcd548e5c949391c322a">name</a> ?? <span class="keywordtype">string</span>.Empty).GetHashCode() ^ m_GUID.GetHashCode();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#a1f950a41534b3dd8e4d928a2bdaed753">   90</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#a1f950a41534b3dd8e4d928a2bdaed753">Equals</a>(<span class="keywordtype">object</span> obj)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            var pair = obj as <a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#abcf5d00a961e711583ca5560bf0dddc9">SpriteNameFileIdPair</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">return</span> pair != <span class="keyword">null</span> &amp;&amp; <a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#a1f950a41534b3dd8e4d928a2bdaed753">Equals</a>(pair);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#a95c845cc9b989f59b8e416d7dd66509b">  101</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#a95c845cc9b989f59b8e416d7dd66509b">Equals</a>(<a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html">SpriteNameFileIdPair</a> pair)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordflow">return</span> pair != <span class="keyword">null</span> &amp;&amp; <a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#abc88c6b73c19dcd548e5c949391c322a">name</a> == pair.<a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#abc88c6b73c19dcd548e5c949391c322a">name</a> &amp;&amp; <a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#aa030ef94874ac6bbcea2f47559062c2c">GetFileGUID</a>() == pair.<a class="code" href="class_unity_editor_1_1_sprite_name_file_id_pair.html#aa030ef94874ac6bbcea2f47559062c2c">GetFileGUID</a>();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_unity_editor_1_1_sprite_name_file_id_pair_html_abc88c6b73c19dcd548e5c949391c322a"><div class="ttname"><a href="class_unity_editor_1_1_sprite_name_file_id_pair.html#abc88c6b73c19dcd548e5c949391c322a">UnityEditor.SpriteNameFileIdPair.name</a></div><div class="ttdeci">string name</div><div class="ttdoc">Name property.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_name_file_id_pair_8cs_source.html#l00023">SpriteNameFileIdPair.cs:23</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_sprite_name_file_id_pair_html_aa030ef94874ac6bbcea2f47559062c2c"><div class="ttname"><a href="class_unity_editor_1_1_sprite_name_file_id_pair.html#aa030ef94874ac6bbcea2f47559062c2c">UnityEditor.SpriteNameFileIdPair.GetFileGUID</a></div><div class="ttdeci">GUID GetFileGUID()</div><div class="ttdoc">Returns the ID used for the name.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_name_file_id_pair_8cs_source.html#l00046">SpriteNameFileIdPair.cs:46</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_sprite_name_file_id_pair_html_a95c845cc9b989f59b8e416d7dd66509b"><div class="ttname"><a href="class_unity_editor_1_1_sprite_name_file_id_pair.html#a95c845cc9b989f59b8e416d7dd66509b">UnityEditor.SpriteNameFileIdPair.Equals</a></div><div class="ttdeci">bool Equals(SpriteNameFileIdPair pair)</div><div class="ttdoc">Override Equal operator.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_name_file_id_pair_8cs_source.html#l00101">SpriteNameFileIdPair.cs:101</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_sprite_name_file_id_pair_html_af8da8d4bf9d6cb7538eead7f3f74f0e6"><div class="ttname"><a href="class_unity_editor_1_1_sprite_name_file_id_pair.html#af8da8d4bf9d6cb7538eead7f3f74f0e6">UnityEditor.SpriteNameFileIdPair.SetFileGUID</a></div><div class="ttdeci">void SetFileGUID(GUID value)</div><div class="ttdoc">Sets the ID used for the name.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_name_file_id_pair_8cs_source.html#l00055">SpriteNameFileIdPair.cs:55</a></div></div>
+<div class="ttc" id="anamespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8animation_0d8_80_81_2_editor_2_analytics_8cs_source.html#l00009">Analytics.cs:9</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_sprite_name_file_id_pair_html_a6954897615bf8036cd496dde7e70ed65"><div class="ttname"><a href="class_unity_editor_1_1_sprite_name_file_id_pair.html#a6954897615bf8036cd496dde7e70ed65">UnityEditor.SpriteNameFileIdPair.SpriteNameFileIdPair</a></div><div class="ttdeci">SpriteNameFileIdPair(string name, GUID fileId)</div><div class="ttdoc">Constructor to initialize name and fileID.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_name_file_id_pair_8cs_source.html#l00070">SpriteNameFileIdPair.cs:70</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_sprite_name_file_id_pair_html_abcf5d00a961e711583ca5560bf0dddc9"><div class="ttname"><a href="class_unity_editor_1_1_sprite_name_file_id_pair.html#abcf5d00a961e711583ca5560bf0dddc9">UnityEditor.SpriteNameFileIdPair.SpriteNameFileIdPair</a></div><div class="ttdeci">SpriteNameFileIdPair()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_name_file_id_pair_8cs_source.html#l00065">SpriteNameFileIdPair.cs:65</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_sprite_name_file_id_pair_html_ac4fa329579109dbef84c0966caa13795"><div class="ttname"><a href="class_unity_editor_1_1_sprite_name_file_id_pair.html#ac4fa329579109dbef84c0966caa13795">UnityEditor.SpriteNameFileIdPair.fileId</a></div><div class="ttdeci">long fileId</div><div class="ttdoc">FileId property. This property is obsolete. Please use GetFileGUID and SetFileGUID instead.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_name_file_id_pair_8cs_source.html#l00033">SpriteNameFileIdPair.cs:33</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_sprite_name_file_id_pair_html"><div class="ttname"><a href="class_unity_editor_1_1_sprite_name_file_id_pair.html">UnityEditor.SpriteNameFileIdPair</a></div><div class="ttdoc">Data structure to hold Name ID pair.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_name_file_id_pair_8cs_source.html#l00010">SpriteNameFileIdPair.cs:10</a></div></div>
+<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition:</b> <a href="_preserve_dependency_attribute_8cs_source.html#l00030">PreserveDependencyAttribute.cs:30</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_sprite_name_file_id_pair_html_ae8ae256e4fc679028b0f9758a75186d8"><div class="ttname"><a href="class_unity_editor_1_1_sprite_name_file_id_pair.html#ae8ae256e4fc679028b0f9758a75186d8">UnityEditor.SpriteNameFileIdPair.GetHashCode</a></div><div class="ttdeci">override int GetHashCode()</div><div class="ttdoc">Custom hashcode generation.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_name_file_id_pair_8cs_source.html#l00080">SpriteNameFileIdPair.cs:80</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_sprite_name_file_id_pair_html_a1f950a41534b3dd8e4d928a2bdaed753"><div class="ttname"><a href="class_unity_editor_1_1_sprite_name_file_id_pair.html#a1f950a41534b3dd8e4d928a2bdaed753">UnityEditor.SpriteNameFileIdPair.Equals</a></div><div class="ttdeci">override bool Equals(object obj)</div><div class="ttdoc">Override Equal operator.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_name_file_id_pair_8cs_source.html#l00090">SpriteNameFileIdPair.cs:90</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

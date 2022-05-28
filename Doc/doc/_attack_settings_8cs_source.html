@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Assets/Simba/Scirpts/Attack System/AttackSettings.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_158af4e89fe28c6233fdc636e282763b.html">Simba</a></li><li class="navelem"><a class="el" href="dir_7fd08fc4bf1ab871205d67b083a39232.html">Scirpts</a></li><li class="navelem"><a class="el" href="dir_12aa266cb53bbf76cf8bc5785e2b8ff0.html">Attack System</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">AttackSettings.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_attack_settings_8cs.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System.Collections;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> System;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_attack_system.html">AttackSystem</a>{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="struct_attack_system_1_1_attack_settings.html">    9</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">struct </span><a class="code" href="struct_attack_system_1_1_attack_settings.html">AttackSettings</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="struct_attack_system_1_1_attack_settings.html#ab75ec24909d4192691e9f2b2465735c7">   12</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="struct_attack_system_1_1_attack_settings.html#ab75ec24909d4192691e9f2b2465735c7">canCharge</a> { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="struct_attack_system_1_1_attack_settings.html#a011b117bcf3e1d9494f12fd2556cf6f9">   13</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="struct_attack_system_1_1_attack_settings.html#a011b117bcf3e1d9494f12fd2556cf6f9">maxChargeTime</a> { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="struct_attack_system_1_1_attack_settings.html#a9747546dd34096ad889eb5a8f95ef9fb">   14</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="struct_attack_system_1_1_attack_settings.html#a9747546dd34096ad889eb5a8f95ef9fb">minChargeTime</a> { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="struct_attack_system_1_1_attack_settings.html#a38f0254251b1d8ae5149a647777deb77">   15</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="struct_attack_system_1_1_attack_settings.html#a38f0254251b1d8ae5149a647777deb77">power</a> { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="struct_attack_system_1_1_attack_settings.html#a536db0a8eb532d45f04f501292a6f77b">   16</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="_attack_type_8cs.html#a904b2f9c8f3951116c343784c59d6afe">AttackType</a> <a class="code" href="struct_attack_system_1_1_attack_settings.html#a536db0a8eb532d45f04f501292a6f77b">attackType</a>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="struct_attack_system_1_1_attack_settings.html#ab48462c7de7382b1919c5a7b758242b5">   17</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="struct_attack_system_1_1_attack_settings.html#ab48462c7de7382b1919c5a7b758242b5">range</a> { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="struct_attack_system_1_1_attack_settings.html#a633b767d52b3d21cb6fad90e8f708b0d">   18</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="struct_attack_system_1_1_attack_settings.html#a633b767d52b3d21cb6fad90e8f708b0d">timeOfHit</a> {<span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="struct_attack_system_1_1_attack_settings.html#a4ea2cf88b4b01c3be5dc745704f0ed43">   19</a></span>&#160;        <span class="keyword">public</span> Vector2 <a class="code" href="struct_attack_system_1_1_attack_settings.html#a4ea2cf88b4b01c3be5dc745704f0ed43">bulletRelativePosition</a> {<span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="struct_attack_system_1_1_attack_settings.html#a0464786280ea85e00a4ad60d3a7b6018">   20</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="struct_attack_system_1_1_attack_settings.html#a0464786280ea85e00a4ad60d3a7b6018">AttackSettings</a>(<span class="keywordtype">bool</span> p_canCharge, <span class="keywordtype">float</span> p_maxChargeTime, <span class="keywordtype">float</span> p_minChargeTime, <span class="keywordtype">int</span> p_power, <a class="code" href="_attack_type_8cs.html#a904b2f9c8f3951116c343784c59d6afe">AttackType</a> p_attackType, <span class="keywordtype">float</span> p_range, <span class="keywordtype">float</span> p_timeOfHit, Vector2 p_bulletRelativePosition){</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <a class="code" href="struct_attack_system_1_1_attack_settings.html#ab75ec24909d4192691e9f2b2465735c7">canCharge</a> = p_canCharge;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <a class="code" href="struct_attack_system_1_1_attack_settings.html#a011b117bcf3e1d9494f12fd2556cf6f9">maxChargeTime</a> = p_maxChargeTime;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <a class="code" href="struct_attack_system_1_1_attack_settings.html#a9747546dd34096ad889eb5a8f95ef9fb">minChargeTime</a> = p_minChargeTime;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <a class="code" href="struct_attack_system_1_1_attack_settings.html#a38f0254251b1d8ae5149a647777deb77">power</a> = p_power;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <a class="code" href="struct_attack_system_1_1_attack_settings.html#a536db0a8eb532d45f04f501292a6f77b">attackType</a> = p_attackType;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <a class="code" href="struct_attack_system_1_1_attack_settings.html#ab48462c7de7382b1919c5a7b758242b5">range</a> = p_range;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <a class="code" href="struct_attack_system_1_1_attack_settings.html#a633b767d52b3d21cb6fad90e8f708b0d">timeOfHit</a> = p_timeOfHit;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <a class="code" href="struct_attack_system_1_1_attack_settings.html#a4ea2cf88b4b01c3be5dc745704f0ed43">bulletRelativePosition</a> = p_bulletRelativePosition;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_attack_system_1_1_attack_settings_html_a9747546dd34096ad889eb5a8f95ef9fb"><div class="ttname"><a href="struct_attack_system_1_1_attack_settings.html#a9747546dd34096ad889eb5a8f95ef9fb">AttackSystem.AttackSettings.minChargeTime</a></div><div class="ttdeci">float minChargeTime</div><div class="ttdef"><b>Definition:</b> <a href="_attack_settings_8cs_source.html#l00014">AttackSettings.cs:14</a></div></div>
+<div class="ttc" id="anamespace_attack_system_html"><div class="ttname"><a href="namespace_attack_system.html">AttackSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="_action_pad_8cs_source.html#l00006">ActionPad.cs:6</a></div></div>
+<div class="ttc" id="astruct_attack_system_1_1_attack_settings_html_a38f0254251b1d8ae5149a647777deb77"><div class="ttname"><a href="struct_attack_system_1_1_attack_settings.html#a38f0254251b1d8ae5149a647777deb77">AttackSystem.AttackSettings.power</a></div><div class="ttdeci">int power</div><div class="ttdef"><b>Definition:</b> <a href="_attack_settings_8cs_source.html#l00015">AttackSettings.cs:15</a></div></div>
+<div class="ttc" id="astruct_attack_system_1_1_attack_settings_html_a0464786280ea85e00a4ad60d3a7b6018"><div class="ttname"><a href="struct_attack_system_1_1_attack_settings.html#a0464786280ea85e00a4ad60d3a7b6018">AttackSystem.AttackSettings.AttackSettings</a></div><div class="ttdeci">AttackSettings(bool p_canCharge, float p_maxChargeTime, float p_minChargeTime, int p_power, AttackType p_attackType, float p_range, float p_timeOfHit, Vector2 p_bulletRelativePosition)</div><div class="ttdef"><b>Definition:</b> <a href="_attack_settings_8cs_source.html#l00020">AttackSettings.cs:20</a></div></div>
+<div class="ttc" id="astruct_attack_system_1_1_attack_settings_html_ab48462c7de7382b1919c5a7b758242b5"><div class="ttname"><a href="struct_attack_system_1_1_attack_settings.html#ab48462c7de7382b1919c5a7b758242b5">AttackSystem.AttackSettings.range</a></div><div class="ttdeci">float range</div><div class="ttdef"><b>Definition:</b> <a href="_attack_settings_8cs_source.html#l00017">AttackSettings.cs:17</a></div></div>
+<div class="ttc" id="astruct_attack_system_1_1_attack_settings_html_a536db0a8eb532d45f04f501292a6f77b"><div class="ttname"><a href="struct_attack_system_1_1_attack_settings.html#a536db0a8eb532d45f04f501292a6f77b">AttackSystem.AttackSettings.attackType</a></div><div class="ttdeci">AttackType attackType</div><div class="ttdef"><b>Definition:</b> <a href="_attack_settings_8cs_source.html#l00016">AttackSettings.cs:16</a></div></div>
+<div class="ttc" id="astruct_attack_system_1_1_attack_settings_html"><div class="ttname"><a href="struct_attack_system_1_1_attack_settings.html">AttackSystem.AttackSettings</a></div><div class="ttdef"><b>Definition:</b> <a href="_attack_settings_8cs_source.html#l00009">AttackSettings.cs:9</a></div></div>
+<div class="ttc" id="astruct_attack_system_1_1_attack_settings_html_a4ea2cf88b4b01c3be5dc745704f0ed43"><div class="ttname"><a href="struct_attack_system_1_1_attack_settings.html#a4ea2cf88b4b01c3be5dc745704f0ed43">AttackSystem.AttackSettings.bulletRelativePosition</a></div><div class="ttdeci">Vector2 bulletRelativePosition</div><div class="ttdef"><b>Definition:</b> <a href="_attack_settings_8cs_source.html#l00019">AttackSettings.cs:19</a></div></div>
+<div class="ttc" id="a_attack_type_8cs_html_a904b2f9c8f3951116c343784c59d6afe"><div class="ttname"><a href="_attack_type_8cs.html#a904b2f9c8f3951116c343784c59d6afe">AttackType</a></div><div class="ttdeci">AttackType</div><div class="ttdef"><b>Definition:</b> <a href="_attack_type_8cs_source.html#l00001">AttackType.cs:1</a></div></div>
+<div class="ttc" id="astruct_attack_system_1_1_attack_settings_html_a633b767d52b3d21cb6fad90e8f708b0d"><div class="ttname"><a href="struct_attack_system_1_1_attack_settings.html#a633b767d52b3d21cb6fad90e8f708b0d">AttackSystem.AttackSettings.timeOfHit</a></div><div class="ttdeci">float timeOfHit</div><div class="ttdef"><b>Definition:</b> <a href="_attack_settings_8cs_source.html#l00018">AttackSettings.cs:18</a></div></div>
+<div class="ttc" id="astruct_attack_system_1_1_attack_settings_html_a011b117bcf3e1d9494f12fd2556cf6f9"><div class="ttname"><a href="struct_attack_system_1_1_attack_settings.html#a011b117bcf3e1d9494f12fd2556cf6f9">AttackSystem.AttackSettings.maxChargeTime</a></div><div class="ttdeci">float maxChargeTime</div><div class="ttdef"><b>Definition:</b> <a href="_attack_settings_8cs_source.html#l00013">AttackSettings.cs:13</a></div></div>
+<div class="ttc" id="astruct_attack_system_1_1_attack_settings_html_ab75ec24909d4192691e9f2b2465735c7"><div class="ttname"><a href="struct_attack_system_1_1_attack_settings.html#ab75ec24909d4192691e9f2b2465735c7">AttackSystem.AttackSettings.canCharge</a></div><div class="ttdeci">bool canCharge</div><div class="ttdef"><b>Definition:</b> <a href="_attack_settings_8cs_source.html#l00012">AttackSettings.cs:12</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

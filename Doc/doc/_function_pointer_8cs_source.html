@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.burst@1.7.1/Runtime/FunctionPointer.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_318047b0933770f6fc575b6b2592a104.html">com.unity.burst@1.7.1</a></li><li class="navelem"><a class="el" href="dir_6d655650f7d17de8b8b8f6c04e00ac7c.html">Runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">FunctionPointer.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Diagnostics;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.<a class="code" href="namespace_system_1_1_runtime.html">Runtime</a>.InteropServices;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity.html">Unity</a>.Collections.LowLevel.Unsafe;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_1_1_burst.html">Unity.Burst</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="interface_unity_1_1_burst_1_1_i_function_pointer.html">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interface_unity_1_1_burst_1_1_i_function_pointer.html">IFunctionPointer</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        [Obsolete(<span class="stringliteral">&quot;This method will be removed in a future version of Burst&quot;</span>)]</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="interface_unity_1_1_burst_1_1_i_function_pointer.html">IFunctionPointer</a> <a class="code" href="interface_unity_1_1_burst_1_1_i_function_pointer.html#ad06ed17dbeeaec5e1288bc9232837f53">FromIntPtr</a>(IntPtr ptr);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_unity_1_1_burst_1_1_function_pointer.html">   27</a></span>&#160;    <span class="keyword">public</span> readonly <span class="keyword">struct </span><a class="code" href="struct_unity_1_1_burst_1_1_function_pointer.html">FunctionPointer</a>&lt;T&gt; : <a class="code" href="interface_unity_1_1_burst_1_1_i_function_pointer.html">IFunctionPointer</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">// DOTSPLAYER&#39;s shim package relies on Burst for it&#39;s jobs code</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">// so Burst does not see the DOTSPLAYER definition of this attribute</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#if !UNITY_DOTSPLAYER</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        [NativeDisableUnsafePtrRestriction]</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">private</span> readonly IntPtr _ptr;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="struct_unity_1_1_burst_1_1_function_pointer.html#a4ba030dba6ac08403328f415977f35c8">   40</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="struct_unity_1_1_burst_1_1_function_pointer.html#a4ba030dba6ac08403328f415977f35c8">FunctionPointer</a>(IntPtr ptr)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            _ptr = ptr;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="struct_unity_1_1_burst_1_1_function_pointer.html#a2f5e91f136fab369c0da9a50f75c8075">   48</a></span>&#160;        <span class="keyword">public</span> IntPtr <a class="code" href="struct_unity_1_1_burst_1_1_function_pointer.html#a2f5e91f136fab369c0da9a50f75c8075">Value</a> =&gt; _ptr;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        [Conditional(<span class="stringliteral">&quot;ENABLE_UNITY_COLLECTIONS_CHECKS&quot;</span>)]</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> CheckIsCreated()</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="struct_unity_1_1_burst_1_1_function_pointer.html#a5e240b45de5ca1c8bac842374d71ea9a">IsCreated</a>)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> NullReferenceException(<span class="stringliteral">&quot;Object reference not set to an instance of an object&quot;</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">public</span> T <a class="code" href="struct_unity_1_1_burst_1_1_function_pointer.html#ace9f67929476f929895dc08d8016c1db">Invoke</a></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="struct_unity_1_1_burst_1_1_function_pointer.html#ace9f67929476f929895dc08d8016c1db">   66</a></span>&#160;        {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keyword">get</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                CheckIsCreated();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">return</span> Marshal.GetDelegateForFunctionPointer&lt;T&gt;(_ptr);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="struct_unity_1_1_burst_1_1_function_pointer.html#a5e240b45de5ca1c8bac842374d71ea9a">   77</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="struct_unity_1_1_burst_1_1_function_pointer.html#a5e240b45de5ca1c8bac842374d71ea9a">IsCreated</a> =&gt; _ptr != IntPtr.Zero;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="interface_unity_1_1_burst_1_1_i_function_pointer.html">IFunctionPointer</a> <a class="code" href="interface_unity_1_1_burst_1_1_i_function_pointer.html">IFunctionPointer</a>.<a class="code" href="interface_unity_1_1_burst_1_1_i_function_pointer.html#ad06ed17dbeeaec5e1288bc9232837f53">FromIntPtr</a>(IntPtr ptr) =&gt; <span class="keyword">new</span> <a class="code" href="struct_unity_1_1_burst_1_1_function_pointer.html">FunctionPointer&lt;T&gt;</a>(ptr);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="ainterface_unity_1_1_burst_1_1_i_function_pointer_html"><div class="ttname"><a href="interface_unity_1_1_burst_1_1_i_function_pointer.html">Unity.Burst.IFunctionPointer</a></div><div class="ttdoc">Base interface for a function pointer.</div><div class="ttdef"><b>Definition:</b> <a href="_function_pointer_8cs_source.html#l00011">FunctionPointer.cs:11</a></div></div>
+<div class="ttc" id="astruct_unity_1_1_burst_1_1_function_pointer_html"><div class="ttname"><a href="struct_unity_1_1_burst_1_1_function_pointer.html">Unity.Burst.FunctionPointer</a></div><div class="ttdoc">A function pointer that can be used from a Burst Job or from regular C#. It needs to be compiled thro...</div><div class="ttdef"><b>Definition:</b> <a href="_function_pointer_8cs_source.html#l00027">FunctionPointer.cs:27</a></div></div>
+<div class="ttc" id="anamespace_unity_1_1_burst_html"><div class="ttname"><a href="namespace_unity_1_1_burst.html">Unity.Burst</a></div><div class="ttdoc">UNITY_DOTSPLAYER &amp;&amp; !NET_DOTS.</div><div class="ttdef"><b>Definition:</b> <a href="_burst_inspector_g_u_i_8cs_source.html#l00015">BurstInspectorGUI.cs:15</a></div></div>
+<div class="ttc" id="ainterface_unity_1_1_burst_1_1_i_function_pointer_html_ad06ed17dbeeaec5e1288bc9232837f53"><div class="ttname"><a href="interface_unity_1_1_burst_1_1_i_function_pointer.html#ad06ed17dbeeaec5e1288bc9232837f53">Unity.Burst.IFunctionPointer.FromIntPtr</a></div><div class="ttdeci">IFunctionPointer FromIntPtr(IntPtr ptr)</div><div class="ttdoc">Converts a pointer to a function pointer.</div></div>
+<div class="ttc" id="astruct_unity_1_1_burst_1_1_function_pointer_html_ace9f67929476f929895dc08d8016c1db"><div class="ttname"><a href="struct_unity_1_1_burst_1_1_function_pointer.html#ace9f67929476f929895dc08d8016c1db">Unity.Burst.FunctionPointer.Invoke</a></div><div class="ttdeci">T Invoke</div><div class="ttdoc">Gets the delegate associated to this function pointer in order to call the function pointer....</div><div class="ttdef"><b>Definition:</b> <a href="_function_pointer_8cs_source.html#l00066">FunctionPointer.cs:66</a></div></div>
+<div class="ttc" id="astruct_unity_1_1_burst_1_1_function_pointer_html_a4ba030dba6ac08403328f415977f35c8"><div class="ttname"><a href="struct_unity_1_1_burst_1_1_function_pointer.html#a4ba030dba6ac08403328f415977f35c8">Unity.Burst.FunctionPointer.FunctionPointer</a></div><div class="ttdeci">FunctionPointer(IntPtr ptr)</div><div class="ttdoc">Creates a new instance of this function pointer with the following native pointer.</div><div class="ttdef"><b>Definition:</b> <a href="_function_pointer_8cs_source.html#l00040">FunctionPointer.cs:40</a></div></div>
+<div class="ttc" id="anamespace_system_1_1_runtime_html"><div class="ttname"><a href="namespace_system_1_1_runtime.html">System.Runtime</a></div><div class="ttdef"><b>Definition:</b> <a href="_preserve_dependency_attribute_8cs_source.html#l00030">PreserveDependencyAttribute.cs:30</a></div></div>
+<div class="ttc" id="astruct_unity_1_1_burst_1_1_function_pointer_html_a5e240b45de5ca1c8bac842374d71ea9a"><div class="ttname"><a href="struct_unity_1_1_burst_1_1_function_pointer.html#a5e240b45de5ca1c8bac842374d71ea9a">Unity.Burst.FunctionPointer.IsCreated</a></div><div class="ttdeci">bool IsCreated</div><div class="ttdoc">Whether the function pointer is valid.</div><div class="ttdef"><b>Definition:</b> <a href="_function_pointer_8cs_source.html#l00077">FunctionPointer.cs:77</a></div></div>
+<div class="ttc" id="anamespace_unity_html"><div class="ttname"><a href="namespace_unity.html">Unity</a></div><div class="ttdef"><b>Definition:</b> <a href="_build_asset_bundle_8cs_source.html#l00004">BuildAssetBundle.cs:4</a></div></div>
+<div class="ttc" id="astruct_unity_1_1_burst_1_1_function_pointer_html_a2f5e91f136fab369c0da9a50f75c8075"><div class="ttname"><a href="struct_unity_1_1_burst_1_1_function_pointer.html#a2f5e91f136fab369c0da9a50f75c8075">Unity.Burst.FunctionPointer.Value</a></div><div class="ttdeci">IntPtr Value</div><div class="ttdoc">Gets the underlying pointer.</div><div class="ttdef"><b>Definition:</b> <a href="_function_pointer_8cs_source.html#l00048">FunctionPointer.cs:48</a></div></div>
+<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition:</b> <a href="_preserve_dependency_attribute_8cs_source.html#l00030">PreserveDependencyAttribute.cs:30</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

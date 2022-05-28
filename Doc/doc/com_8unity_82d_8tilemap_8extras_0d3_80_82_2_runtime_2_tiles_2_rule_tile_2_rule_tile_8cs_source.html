@@ -1,0 +1,718 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.tilemap.extras@3.0.2/Runtime/Tiles/RuleTile/RuleTile.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_39a2cd9064c52ac43c6a4ca83a34fdd0.html">com.unity.2d.tilemap.extras@3.0.2</a></li><li class="navelem"><a class="el" href="dir_378fceb67e9f8efffa4655c4b4c79d54.html">Runtime</a></li><li class="navelem"><a class="el" href="dir_ef07ec135cd64d36ebddf41115d4e2c3.html">Tiles</a></li><li class="navelem"><a class="el" href="dir_39958f008f9daec3a9ebb946f6ab7592.html">RuleTile</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">RuleTile.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Reflection;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_tilemaps.html">Tilemaps</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Serialization;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine.html">UnityEngine</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html">   15</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>&lt;T&gt; : <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#a372055c7c52186fa0c136f52bf07f899">   20</a></span>&#160;        <span class="keyword">public</span> sealed <span class="keyword">override</span> Type <a class="code" href="class_unity_engine_1_1_rule_tile.html#a372055c7c52186fa0c136f52bf07f899">m_NeighborType</a> =&gt; typeof(T);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    [HelpURL(<span class="stringliteral">&quot;https://docs.unity3d.com/Packages/com.unity.2d.tilemap.extras@latest/index.html?subfolder=/manual/RuleTile.html&quot;</span>)]</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a> : TileBase</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#a98029edbf0720f709fdd2ee20811c63c">   33</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> Type <a class="code" href="class_unity_engine_1_1_rule_tile.html#a372055c7c52186fa0c136f52bf07f899">m_NeighborType</a> =&gt; typeof(<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_1_1_neighbor.html">Neighbor</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">public</span> Sprite <a class="code" href="class_unity_engine_1_1_rule_tile.html#a21639ca96b4be7fa98c80f0fd931e949">m_DefaultSprite</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#a402c83679101cd205c4c6b5fb6350acf">   42</a></span>&#160;        <span class="keyword">public</span> GameObject <a class="code" href="class_unity_engine_1_1_rule_tile.html#a402c83679101cd205c4c6b5fb6350acf">m_DefaultGameObject</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">public</span> Tile.ColliderType <a class="code" href="class_unity_engine_1_1_rule_tile.html#a7535932a28053b3533a82afc9f63270c">m_DefaultColliderType</a> = Tile.ColliderType.Sprite;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#a1607f69b9f0a92b1aa5bd8eafa3402cf">   51</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html#a1607f69b9f0a92b1aa5bd8eafa3402cf">m_RotationAngle</a> =&gt; 90;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#a8ebcbdd54be271d2822736053723a6d5">   56</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html#a8ebcbdd54be271d2822736053723a6d5">m_RotationCount</a> =&gt; 360 / m_RotationAngle;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        [Serializable]</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">   63</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#a3d9d3c29ee076d0e6f9d83817d56bd8a">   68</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#a3d9d3c29ee076d0e6f9d83817d56bd8a">m_Id</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#aa93cfbc10f45c0773f111646ba88f467">   72</a></span>&#160;            <span class="keyword">public</span> Sprite[] <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#aa93cfbc10f45c0773f111646ba88f467">m_Sprites</a> = <span class="keyword">new</span> Sprite[1];</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#a6abb8070d8ff9afe6fd58869ec8f88d1">   76</a></span>&#160;            <span class="keyword">public</span> GameObject <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#a6abb8070d8ff9afe6fd58869ec8f88d1">m_GameObject</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            [FormerlySerializedAs(<span class="stringliteral">&quot;m_AnimationSpeed&quot;</span>)]</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#a5b013c786ffbf197cb278839f06323c0">   81</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#a5b013c786ffbf197cb278839f06323c0">m_MinAnimationSpeed</a> = 1f;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            [FormerlySerializedAs(<span class="stringliteral">&quot;m_AnimationSpeed&quot;</span>)]</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#ab1a3be390066d2eaa43006059ba8a042">   86</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#ab1a3be390066d2eaa43006059ba8a042">m_MaxAnimationSpeed</a> = 1f;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#a55c2ec947a31c054734132b2ca1f91aa">   90</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#a55c2ec947a31c054734132b2ca1f91aa">m_PerlinScale</a> = 0.5f;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#a731e08cac62307ec44c886b9e784e670">   94</a></span>&#160;            <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#ab5f56742b83061b5b9dfe426ca93420a">OutputSprite</a> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#a731e08cac62307ec44c886b9e784e670">m_Output</a> = <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#ab5f56742b83061b5b9dfe426ca93420a">OutputSprite</a>.Single;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#a992fb9ad851969da704c34fec053dc38">   98</a></span>&#160;            <span class="keyword">public</span> Tile.ColliderType <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#a992fb9ad851969da704c34fec053dc38">m_ColliderType</a> = Tile.ColliderType.Sprite;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#ad13ea577f3bdd1c91f9b35153d469e9d">  102</a></span>&#160;            <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#afe0cda84ee0906035b86819ec4216647">Transform</a> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#ad13ea577f3bdd1c91f9b35153d469e9d">m_RandomTransform</a>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_1_1_neighbor.html">  107</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_1_1_neighbor.html">Neighbor</a></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            {</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_1_1_neighbor.html#a74e10882ec027091bb38aa6f3a4dada6">  113</a></span>&#160;                <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_1_1_neighbor.html#a74e10882ec027091bb38aa6f3a4dada6">This</a> = 1;</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_1_1_neighbor.html#a4e9ff7d8858234a253342fcdbb935171">  118</a></span>&#160;                <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_1_1_neighbor.html#a4e9ff7d8858234a253342fcdbb935171">NotThis</a> = 2;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#afe0cda84ee0906035b86819ec4216647">  124</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#afe0cda84ee0906035b86819ec4216647">Transform</a></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                Fixed,</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                Rotated,</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                MirrorX,</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                MirrorY,</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                MirrorXY</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#ab5f56742b83061b5b9dfe426ca93420a">  151</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#ab5f56742b83061b5b9dfe426ca93420a">OutputSprite</a></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                Single,</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                Random,</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                Animation</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        [Serializable]</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keyword">public</span> <span class="keyword">class </span>TilingRule : TilingRuleOutput</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        {</div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#af2f62b858a8c55cca784b7cd0540707c">  178</a></span>&#160;            <span class="keyword">public</span> List&lt;int&gt; m_Neighbors = <span class="keyword">new</span> List&lt;int&gt;();</div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#af5741b2d3712390bd1937ab9c80ea93b">  182</a></span>&#160;            <span class="keyword">public</span> List&lt;Vector3Int&gt; <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#af5741b2d3712390bd1937ab9c80ea93b">m_NeighborPositions</a> = <span class="keyword">new</span> List&lt;Vector3Int&gt;()</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                <span class="keyword">new</span> Vector3Int(-1, 1, 0),</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                <span class="keyword">new</span> Vector3Int(0, 1, 0),</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                <span class="keyword">new</span> Vector3Int(1, 1, 0),</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                <span class="keyword">new</span> Vector3Int(-1, 0, 0),</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                <span class="keyword">new</span> Vector3Int(1, 0, 0),</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                <span class="keyword">new</span> Vector3Int(-1, -1, 0),</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                <span class="keyword">new</span> Vector3Int(0, -1, 0),</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                <span class="keyword">new</span> Vector3Int(1, -1, 0),</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            };</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="keyword">public</span> Transform <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#adfa2cdc67f06595c9dce7ab77629319b">m_RuleTransform</a>;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#a29c83a0b9767e5b8e830e8369c186071">  202</a></span>&#160;            <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#a29c83a0b9767e5b8e830e8369c186071">Clone</a>()</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a> rule = <span class="keyword">new</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                    m_Neighbors = <span class="keyword">new</span> List&lt;int&gt;(m_Neighbors),</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                    <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#af5741b2d3712390bd1937ab9c80ea93b">m_NeighborPositions</a> = <span class="keyword">new</span> List&lt;Vector3Int&gt;(<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#af5741b2d3712390bd1937ab9c80ea93b">m_NeighborPositions</a>),</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                    <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#adfa2cdc67f06595c9dce7ab77629319b">m_RuleTransform</a> = <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#adfa2cdc67f06595c9dce7ab77629319b">m_RuleTransform</a>,</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                    m_Sprites = <span class="keyword">new</span> Sprite[m_Sprites.Length],</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                    m_GameObject = m_GameObject,</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                    m_MinAnimationSpeed = m_MinAnimationSpeed,</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                    m_MaxAnimationSpeed = m_MaxAnimationSpeed,</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                    m_PerlinScale = m_PerlinScale,</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                    m_Output = m_Output,</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                    m_ColliderType = m_ColliderType,</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                    m_RandomTransform = m_RandomTransform,</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                };</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                Array.Copy(m_Sprites, rule.m_Sprites, m_Sprites.Length);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                <span class="keywordflow">return</span> rule;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            </div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#a8ef8962533b59743c43db74885ee6238">  226</a></span>&#160;            <span class="keyword">public</span> Dictionary&lt;Vector3Int, int&gt; <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#a8ef8962533b59743c43db74885ee6238">GetNeighbors</a>()</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                Dictionary&lt;Vector3Int, int&gt; dict = <span class="keyword">new</span> Dictionary&lt;Vector3Int, int&gt;();</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_Neighbors.Count &amp;&amp; i &lt; <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#af5741b2d3712390bd1937ab9c80ea93b">m_NeighborPositions</a>.Count; i++)</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                    dict.Add(<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#af5741b2d3712390bd1937ab9c80ea93b">m_NeighborPositions</a>[i], m_Neighbors[i]);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                <span class="keywordflow">return</span> dict;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#ac0e780823df3b3296c3ff230413f3dee">  240</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#ac0e780823df3b3296c3ff230413f3dee">ApplyNeighbors</a>(Dictionary&lt;Vector3Int, int&gt; dict)</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            {</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#af5741b2d3712390bd1937ab9c80ea93b">m_NeighborPositions</a> = dict.Keys.ToList();</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                m_Neighbors = dict.Values.ToList();</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#a2fa91a9f4198ae21eae577e60e0b7b71">  250</a></span>&#160;            <span class="keyword">public</span> BoundsInt <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#a2fa91a9f4198ae21eae577e60e0b7b71">GetBounds</a>()</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                BoundsInt bounds = <span class="keyword">new</span> BoundsInt(Vector3Int.zero, Vector3Int.one);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                <span class="keywordflow">foreach</span> (var neighbor <span class="keywordflow">in</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#a8ef8962533b59743c43db74885ee6238">GetNeighbors</a>())</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                    bounds.xMin = Mathf.Min(bounds.xMin, neighbor.Key.x);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                    bounds.yMin = Mathf.Min(bounds.yMin, neighbor.Key.y);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                    bounds.xMax = Mathf.Max(bounds.xMax, neighbor.Key.x + 1);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                    bounds.yMax = Mathf.Max(bounds.yMax, neighbor.Key.y + 1);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                }</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                <span class="keywordflow">return</span> bounds;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            }</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        }</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile_1_1_dont_override.html">  267</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_rule_tile_1_1_dont_override.html">DontOverride</a> : Attribute { }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        [HideInInspector] <span class="keyword">public</span> List&lt;TilingRule&gt; <a class="code" href="class_unity_engine_1_1_rule_tile.html#a6b34e9ca87e1f4fab49cd17bd00d3115">m_TilingRules</a> = <span class="keyword">new</span> List&lt;<a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>&gt;();</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keyword">public</span> HashSet&lt;Vector3Int&gt; <a class="code" href="class_unity_engine_1_1_rule_tile.html#a4ced13d2af68dce3cd3c9573c8edb2dc">neighborPositions</a></div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#a4ced13d2af68dce3cd3c9573c8edb2dc">  278</a></span>&#160;        {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            <span class="keyword">get</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            {</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                <span class="keywordflow">if</span> (m_NeighborPositions.Count == 0)</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                    <a class="code" href="class_unity_engine_1_1_rule_tile.html#a5de8e8950278bed45467e76e7f9c18ff">UpdateNeighborPositions</a>();</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                <span class="keywordflow">return</span> m_NeighborPositions;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keyword">private</span> HashSet&lt;Vector3Int&gt; m_NeighborPositions = <span class="keyword">new</span> HashSet&lt;Vector3Int&gt;();</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#a5de8e8950278bed45467e76e7f9c18ff">  293</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html#a5de8e8950278bed45467e76e7f9c18ff">UpdateNeighborPositions</a>()</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            m_CacheTilemapsNeighborPositions.Clear();</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            HashSet&lt;Vector3Int&gt; positions = m_NeighborPositions;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            positions.Clear();</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            <span class="keywordflow">foreach</span> (<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a> rule <span class="keywordflow">in</span> m_TilingRules)</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            {</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                <span class="keywordflow">foreach</span> (var neighbor <span class="keywordflow">in</span> rule.GetNeighbors())</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                    Vector3Int position = neighbor.Key;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                    positions.Add(position);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                    <span class="comment">// Check rule against rotations of 0, 90, 180, 270</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                    <span class="keywordflow">if</span> (rule.m_RuleTransform == <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#afe0cda84ee0906035b86819ec4216647">Transform</a>.Rotated)</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                    {</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> angle = m_RotationAngle; angle &lt; 360; angle += m_RotationAngle)</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                        {</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                            positions.Add(<a class="code" href="class_unity_engine_1_1_rule_tile.html#a23fdfb41e7950cec1a34417d163c885e">GetRotatedPosition</a>(position, angle));</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                        }</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                    }</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                    <span class="comment">// Check rule against x-axis, y-axis mirror</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rule.m_RuleTransform == <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#afe0cda84ee0906035b86819ec4216647">Transform</a>.MirrorXY)</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                    {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                        positions.Add(<a class="code" href="class_unity_engine_1_1_rule_tile.html#a387889fcd9a4c06dac2107d01512756d">GetMirroredPosition</a>(position, <span class="keyword">true</span>, <span class="keyword">true</span>));</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                        positions.Add(<a class="code" href="class_unity_engine_1_1_rule_tile.html#a387889fcd9a4c06dac2107d01512756d">GetMirroredPosition</a>(position, <span class="keyword">true</span>, <span class="keyword">false</span>));</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                        positions.Add(<a class="code" href="class_unity_engine_1_1_rule_tile.html#a387889fcd9a4c06dac2107d01512756d">GetMirroredPosition</a>(position, <span class="keyword">false</span>, <span class="keyword">true</span>));</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                    }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                    <span class="comment">// Check rule against x-axis mirror</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rule.m_RuleTransform == <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#afe0cda84ee0906035b86819ec4216647">Transform</a>.MirrorX)</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                    {</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                        positions.Add(<a class="code" href="class_unity_engine_1_1_rule_tile.html#a387889fcd9a4c06dac2107d01512756d">GetMirroredPosition</a>(position, <span class="keyword">true</span>, <span class="keyword">false</span>));</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                    }</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                    <span class="comment">// Check rule against y-axis mirror</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rule.m_RuleTransform == <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#afe0cda84ee0906035b86819ec4216647">Transform</a>.MirrorY)</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                    {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                        positions.Add(<a class="code" href="class_unity_engine_1_1_rule_tile.html#a387889fcd9a4c06dac2107d01512756d">GetMirroredPosition</a>(position, <span class="keyword">false</span>, <span class="keyword">true</span>));</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                    }</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        }</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
+<div class="line"><a name="l00343"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#a5be42696a09c3467f3f178c943443f65">  343</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html#a5be42696a09c3467f3f178c943443f65">StartUp</a>(Vector3Int position, ITilemap tilemap, GameObject instantiatedGameObject)</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        {</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            <span class="keywordflow">if</span> (instantiatedGameObject != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            {</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                Tilemap tmpMap = tilemap.GetComponent&lt;Tilemap&gt;();</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                Matrix4x4 orientMatrix = tmpMap.orientationMatrix;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                var iden = Matrix4x4.identity;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                Vector3 gameObjectTranslation = <span class="keyword">new</span> Vector3();</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                Quaternion gameObjectRotation = <span class="keyword">new</span> Quaternion();</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                Vector3 gameObjectScale = <span class="keyword">new</span> Vector3();</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                <span class="keywordtype">bool</span> ruleMatched = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                Matrix4x4 transform = iden;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                <span class="keywordflow">foreach</span> (<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a> rule <span class="keywordflow">in</span> m_TilingRules)</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                {</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                    <span class="keywordflow">if</span> (RuleMatches(rule, position, tilemap, ref transform))</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                    {</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                        transform = orientMatrix * transform;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160; </div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                        <span class="comment">// Converts the tile&#39;s translation, rotation, &amp; scale matrix to values to be used by the instantiated GameObject</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                        gameObjectTranslation = <span class="keyword">new</span> Vector3(transform.m03, transform.m13, transform.m23);</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                        gameObjectRotation = Quaternion.LookRotation(<span class="keyword">new</span> Vector3(transform.m02, transform.m12, transform.m22), <span class="keyword">new</span> Vector3(transform.m01, transform.m11, transform.m21));</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                        gameObjectScale = transform.lossyScale;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                        ruleMatched = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                    }</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                }</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                <span class="keywordflow">if</span> (!ruleMatched)</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                {</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                    <span class="comment">// Fallback to just using the orientMatrix for the translation, rotation, &amp; scale values.</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                    gameObjectTranslation = <span class="keyword">new</span> Vector3(orientMatrix.m03, orientMatrix.m13, orientMatrix.m23);</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                    gameObjectRotation = Quaternion.LookRotation(<span class="keyword">new</span> Vector3(orientMatrix.m02, orientMatrix.m12, orientMatrix.m22), <span class="keyword">new</span> Vector3(orientMatrix.m01, orientMatrix.m11, orientMatrix.m21));</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                    gameObjectScale = orientMatrix.lossyScale;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                }</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                instantiatedGameObject.transform.localPosition = gameObjectTranslation + tmpMap.CellToLocalInterpolated(position + tmpMap.tileAnchor);</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                instantiatedGameObject.transform.localRotation = gameObjectRotation;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                instantiatedGameObject.transform.localScale = gameObjectScale;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            }</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        }</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160; </div>
+<div class="line"><a name="l00394"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#abc08969cc48b923de3748a49d7d6d4e9">  394</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html#abc08969cc48b923de3748a49d7d6d4e9">GetTileData</a>(Vector3Int position, ITilemap tilemap, ref TileData tileData)</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        {</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            var iden = Matrix4x4.identity;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;            tileData.sprite = m_DefaultSprite;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            tileData.gameObject = m_DefaultGameObject;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            tileData.colliderType = <a class="code" href="class_unity_engine_1_1_rule_tile.html#a7535932a28053b3533a82afc9f63270c">m_DefaultColliderType</a>;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;            tileData.flags = TileFlags.LockTransform;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;            tileData.transform = iden;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            Matrix4x4 transform = iden;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            <span class="keywordflow">foreach</span> (<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a> rule <span class="keywordflow">in</span> m_TilingRules)</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            {</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                <span class="keywordflow">if</span> (RuleMatches(rule, position, tilemap, ref transform))</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                {</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                    <span class="keywordflow">switch</span> (rule.m_Output)</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                    {</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                        <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#ab5f56742b83061b5b9dfe426ca93420a">OutputSprite</a>.Single:</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                        <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#ab5f56742b83061b5b9dfe426ca93420a">OutputSprite</a>.Animation:</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;                            tileData.sprite = rule.m_Sprites[0];</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;                        <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#ab5f56742b83061b5b9dfe426ca93420a">OutputSprite</a>.Random:</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;                            <span class="keywordtype">int</span> index = Mathf.Clamp(Mathf.FloorToInt(GetPerlinValue(position, rule.m_PerlinScale, 100000f) * rule.m_Sprites.Length), 0, rule.m_Sprites.Length - 1);</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                            tileData.sprite = rule.m_Sprites[index];</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;                            <span class="keywordflow">if</span> (rule.m_RandomTransform != <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#afe0cda84ee0906035b86819ec4216647">Transform</a>.Fixed)</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;                                transform = ApplyRandomTransform(rule.m_RandomTransform, transform, rule.m_PerlinScale, position);</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;                    }</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;                    tileData.transform = transform;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;                    tileData.gameObject = rule.m_GameObject;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;                    tileData.colliderType = rule.m_ColliderType;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;                }</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;            }</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        }</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160; </div>
+<div class="line"><a name="l00437"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#a215895abbf4940f35472154e37392c68">  437</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html#a215895abbf4940f35472154e37392c68">GetPerlinValue</a>(Vector3Int position, <span class="keywordtype">float</span> scale, <span class="keywordtype">float</span> offset)</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        {</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;            <span class="keywordflow">return</span> Mathf.PerlinNoise((position.x + offset) * scale, (position.y + offset) * scale);</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        }</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160; </div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        <span class="keyword">static</span> Dictionary&lt;Tilemap, KeyValuePair&lt;HashSet&lt;TileBase&gt;, HashSet&lt;Vector3Int&gt;&gt;&gt; m_CacheTilemapsNeighborPositions = <span class="keyword">new</span> Dictionary&lt;Tilemap, KeyValuePair&lt;HashSet&lt;TileBase&gt;, HashSet&lt;Vector3Int&gt;&gt;&gt;();</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        <span class="keyword">static</span> TileBase[] m_AllocatedUsedTileArr = Array.Empty&lt;TileBase&gt;();</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160; </div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> IsTilemapUsedTilesChange(Tilemap tilemap, out KeyValuePair&lt;HashSet&lt;TileBase&gt;, HashSet&lt;Vector3Int&gt;&gt; hashSet)</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;        {</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;            <span class="keywordflow">if</span> (!m_CacheTilemapsNeighborPositions.TryGetValue(tilemap, out hashSet))</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160; </div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;            var oldUsedTiles = hashSet.Key;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;            <span class="keywordtype">int</span> newUsedTilesCount = tilemap.GetUsedTilesCount();</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;            <span class="keywordflow">if</span> (newUsedTilesCount != oldUsedTiles.Count)</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160; </div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;            <span class="keywordflow">if</span> (m_AllocatedUsedTileArr.Length &lt; newUsedTilesCount)</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                Array.Resize(ref m_AllocatedUsedTileArr, newUsedTilesCount);</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160; </div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;            tilemap.GetUsedTilesNonAlloc(m_AllocatedUsedTileArr);</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; newUsedTilesCount; i++)</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;            {</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;                TileBase newUsedTile = m_AllocatedUsedTileArr[i];</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;                <span class="keywordflow">if</span> (!oldUsedTiles.Contains(newUsedTile))</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;            }</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160; </div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        }</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160; </div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        <span class="keyword">static</span> KeyValuePair&lt;HashSet&lt;TileBase&gt;, HashSet&lt;Vector3Int&gt;&gt; CachingTilemapNeighborPositions(Tilemap tilemap)</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        {</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            <span class="keywordtype">int</span> usedTileCount = tilemap.GetUsedTilesCount();</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;            HashSet&lt;TileBase&gt; usedTiles = <span class="keyword">new</span> HashSet&lt;TileBase&gt;();</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;            HashSet&lt;Vector3Int&gt; <a class="code" href="class_unity_engine_1_1_rule_tile.html#a4ced13d2af68dce3cd3c9573c8edb2dc">neighborPositions</a> = <span class="keyword">new</span> HashSet&lt;Vector3Int&gt;();</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160; </div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;            <span class="keywordflow">if</span> (m_AllocatedUsedTileArr.Length &lt; usedTileCount)</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;                Array.Resize(ref m_AllocatedUsedTileArr, usedTileCount);</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160; </div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;            tilemap.GetUsedTilesNonAlloc(m_AllocatedUsedTileArr);</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160; </div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; usedTileCount; i++)</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;            {</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                TileBase tile = m_AllocatedUsedTileArr[i];</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                usedTiles.Add(tile);</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;                RuleTile ruleTile = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160; </div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;                <span class="keywordflow">if</span> (tile is RuleTile rt)</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;                    ruleTile = rt;</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile is <a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html">RuleOverrideTile</a> ot)</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;                    ruleTile = ot.m_Tile;</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160; </div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;                <span class="keywordflow">if</span> (ruleTile)</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;                    <span class="keywordflow">foreach</span> (Vector3Int neighborPosition <span class="keywordflow">in</span> ruleTile.neighborPositions)</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;                        neighborPositions.Add(neighborPosition);</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;            }</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160; </div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;            var value = <span class="keyword">new</span> KeyValuePair&lt;HashSet&lt;TileBase&gt;, HashSet&lt;Vector3Int&gt;&gt;(usedTiles, neighborPositions);</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;            m_CacheTilemapsNeighborPositions[tilemap] = value;</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;            <span class="keywordflow">return</span> value;</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;        }</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160; </div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> NeedRelease()</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        {</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;            <span class="keywordflow">foreach</span> (var keypair <span class="keywordflow">in</span> m_CacheTilemapsNeighborPositions)</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;            {</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;                <span class="keywordflow">if</span> (keypair.Key == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;                {</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;                }</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;            }</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;        }</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;        </div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> ReleaseDestroyedTilemapCacheData()</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;        {</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;            <span class="keywordflow">if</span> (!NeedRelease())</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160; </div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;            var hasCleared = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;            var keys = m_CacheTilemapsNeighborPositions.Keys.ToArray();</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;            <span class="keywordflow">foreach</span> (var key <span class="keywordflow">in</span> keys)</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;            {</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;                <span class="keywordflow">if</span> (key == <span class="keyword">null</span> &amp;&amp; m_CacheTilemapsNeighborPositions.Remove(key))</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;                    hasCleared = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;            }</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;            <span class="keywordflow">if</span> (hasCleared)</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;            {</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;                <span class="comment">// TrimExcess</span></div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;                m_CacheTilemapsNeighborPositions = <span class="keyword">new</span> Dictionary&lt;Tilemap, KeyValuePair&lt;HashSet&lt;TileBase&gt;, HashSet&lt;Vector3Int&gt;&gt;&gt;(m_CacheTilemapsNeighborPositions);</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;            }</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;        }</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160; </div>
+<div class="line"><a name="l00539"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#a0c2f1e62f1b2316964944fb9af5b02ab">  539</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html#a0c2f1e62f1b2316964944fb9af5b02ab">GetTileAnimationData</a>(Vector3Int position, ITilemap tilemap, ref TileAnimationData tileAnimationData)</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;        {</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;            Matrix4x4 transform = Matrix4x4.identity;</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;            <span class="keywordflow">foreach</span> (<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a> rule <span class="keywordflow">in</span> m_TilingRules)</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;            {</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;                <span class="keywordflow">if</span> (rule.m_Output == <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#ab5f56742b83061b5b9dfe426ca93420a">OutputSprite</a>.Animation)</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;                {</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;                    <span class="keywordflow">if</span> (RuleMatches(rule, position, tilemap, ref transform))</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;                    {</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;                        tileAnimationData.animatedSprites = rule.m_Sprites;</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;                        tileAnimationData.animationSpeed = Random.Range( rule.m_MinAnimationSpeed, rule.m_MaxAnimationSpeed);</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;                    }</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;                }</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;            }</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;        }</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160; </div>
+<div class="line"><a name="l00562"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#ab1bd7b0668656d2beabf4cd7da4bbf56">  562</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html#ab1bd7b0668656d2beabf4cd7da4bbf56">RefreshTile</a>(Vector3Int position, ITilemap tilemap)</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;        {</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;            base.RefreshTile(position, tilemap);</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160; </div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;            Tilemap baseTilemap = tilemap.GetComponent&lt;Tilemap&gt;();</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160; </div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;            ReleaseDestroyedTilemapCacheData(); <span class="comment">// Prevent memory leak</span></div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160; </div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;            <span class="keywordflow">if</span> (IsTilemapUsedTilesChange(baseTilemap, out var neighborPositionsSet))</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;                neighborPositionsSet = CachingTilemapNeighborPositions(baseTilemap);</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160; </div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;            var neighborPositionsRuleTile = neighborPositionsSet.Value;</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;            <span class="keywordflow">foreach</span> (Vector3Int offset <span class="keywordflow">in</span> neighborPositionsRuleTile)</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;            {</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;                Vector3Int offsetPosition = <a class="code" href="class_unity_engine_1_1_rule_tile.html#a36fcd587d44d2520ff19757538288efd">GetOffsetPositionReverse</a>(position, offset);</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;                TileBase tile = tilemap.GetTile(offsetPosition);</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;                <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a> ruleTile = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160; </div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;                <span class="keywordflow">if</span> (tile is <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a> rt)</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;                    ruleTile = rt;</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tile is <a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html">RuleOverrideTile</a> ot)</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;                    ruleTile = ot.m_Tile;</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160; </div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;                <span class="keywordflow">if</span> (ruleTile != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;                    <span class="keywordflow">if</span> (ruleTile == <span class="keyword">this</span> || ruleTile.neighborPositions.Contains(offset))</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;                        base.RefreshTile(offsetPosition, tilemap);</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;            }</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;        }</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160; </div>
+<div class="line"><a name="l00599"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#a4833f70e53aa664eb8226a1e2d9e36a3">  599</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html#a4833f70e53aa664eb8226a1e2d9e36a3">RuleMatches</a>(<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a> rule, Vector3Int position, ITilemap tilemap, ref Matrix4x4 transform)</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;        {</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;            <span class="keywordflow">if</span> (RuleMatches(rule, position, tilemap, 0))</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;            {</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;                transform = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0f, 0f, 0f), Vector3.one);</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;            }</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160; </div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;            <span class="comment">// Check rule against rotations of 0, 90, 180, 270</span></div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;            <span class="keywordflow">if</span> (rule.m_RuleTransform == <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#afe0cda84ee0906035b86819ec4216647">Transform</a>.Rotated)</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;            {</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> angle = m_RotationAngle; angle &lt; 360; angle += m_RotationAngle)</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;                {</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;                    <span class="keywordflow">if</span> (RuleMatches(rule, position, tilemap, angle))</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;                    {</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;                        transform = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0f, 0f, -angle), Vector3.one);</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;                    }</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;                }</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;            }</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;            <span class="comment">// Check rule against x-axis, y-axis mirror</span></div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rule.m_RuleTransform == <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#afe0cda84ee0906035b86819ec4216647">Transform</a>.MirrorXY)</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;            {</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;                <span class="keywordflow">if</span> (RuleMatches(rule, position, tilemap, <span class="keyword">true</span>, <span class="keyword">true</span>))</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;                {</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;                    transform = Matrix4x4.TRS(Vector3.zero, Quaternion.identity, <span class="keyword">new</span> Vector3(-1f, -1f, 1f));</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;                }</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;                <span class="keywordflow">if</span> (RuleMatches(rule, position, tilemap, <span class="keyword">true</span>, <span class="keyword">false</span>))</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;                {</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;                    transform = Matrix4x4.TRS(Vector3.zero, Quaternion.identity, <span class="keyword">new</span> Vector3(-1f, 1f, 1f));</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;                }</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;                <span class="keywordflow">if</span> (RuleMatches(rule, position, tilemap, <span class="keyword">false</span>, <span class="keyword">true</span>))</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;                {</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;                    transform = Matrix4x4.TRS(Vector3.zero, Quaternion.identity, <span class="keyword">new</span> Vector3(1f, -1f, 1f));</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;                }</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;            }</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;            <span class="comment">// Check rule against x-axis mirror</span></div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rule.m_RuleTransform == <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#afe0cda84ee0906035b86819ec4216647">Transform</a>.MirrorX)</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;            {</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;                <span class="keywordflow">if</span> (RuleMatches(rule, position, tilemap, <span class="keyword">true</span>, <span class="keyword">false</span>))</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;                {</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;                    transform = Matrix4x4.TRS(Vector3.zero, Quaternion.identity, <span class="keyword">new</span> Vector3(-1f, 1f, 1f));</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;                }</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;            }</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;            <span class="comment">// Check rule against y-axis mirror</span></div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rule.m_RuleTransform == <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#afe0cda84ee0906035b86819ec4216647">Transform</a>.MirrorY)</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;            {</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;                <span class="keywordflow">if</span> (RuleMatches(rule, position, tilemap, <span class="keyword">false</span>, <span class="keyword">true</span>))</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;                {</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;                    transform = Matrix4x4.TRS(Vector3.zero, Quaternion.identity, <span class="keyword">new</span> Vector3(1f, -1f, 1f));</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;                }</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;            }</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160; </div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;        }</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160; </div>
+<div class="line"><a name="l00668"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#a2314abdeeed77039ab390d88658ceb09">  668</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> Matrix4x4 <a class="code" href="class_unity_engine_1_1_rule_tile.html#a2314abdeeed77039ab390d88658ceb09">ApplyRandomTransform</a>(<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#afe0cda84ee0906035b86819ec4216647">Transform</a> type, Matrix4x4 original, <span class="keywordtype">float</span> perlinScale, Vector3Int position)</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;        {</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;            <span class="keywordtype">float</span> perlin = GetPerlinValue(position, perlinScale, 200000f);</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;            <span class="keywordflow">switch</span> (type)</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;            {</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#afe0cda84ee0906035b86819ec4216647">Transform</a>.MirrorXY:</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;                    <span class="keywordflow">return</span> original * Matrix4x4.TRS(Vector3.zero, Quaternion.identity, <span class="keyword">new</span> Vector3(Math.Abs(perlin - 0.5) &gt; 0.25 ? 1f : -1f, perlin &lt; 0.5 ? 1f : -1f, 1f));</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#afe0cda84ee0906035b86819ec4216647">Transform</a>.MirrorX:</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;                    <span class="keywordflow">return</span> original * Matrix4x4.TRS(Vector3.zero, Quaternion.identity, <span class="keyword">new</span> Vector3(perlin &lt; 0.5 ? 1f : -1f, 1f, 1f));</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#afe0cda84ee0906035b86819ec4216647">Transform</a>.MirrorY:</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;                    <span class="keywordflow">return</span> original * Matrix4x4.TRS(Vector3.zero, Quaternion.identity, <span class="keyword">new</span> Vector3(1f, perlin &lt; 0.5 ? 1f : -1f, 1f));</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#afe0cda84ee0906035b86819ec4216647">Transform</a>.Rotated:</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;                    <span class="keywordtype">int</span> angle = Mathf.Clamp(Mathf.FloorToInt(perlin * m_RotationCount), 0, m_RotationCount - 1) * m_RotationAngle;</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;                    <span class="keywordflow">return</span> Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0f, 0f, -angle), Vector3.one);</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;            }</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;            <span class="keywordflow">return</span> original;</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;        }</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160; </div>
+<div class="line"><a name="l00691"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#ae0fde3f32e2c9e811effe2b365fc1422">  691</a></span>&#160;        <span class="keyword">public</span> FieldInfo[] <a class="code" href="class_unity_engine_1_1_rule_tile.html#ae0fde3f32e2c9e811effe2b365fc1422">GetCustomFields</a>(<span class="keywordtype">bool</span> isOverrideInstance)</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;        {</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;            <span class="keywordflow">return</span> this.GetType().GetFields(BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic)</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;                .Where(field =&gt; typeof(<a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>).GetField(field.Name) == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;                .Where(field =&gt; field.IsPublic || field.IsDefined(typeof(SerializeField)))</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;                .Where(field =&gt; !field.IsDefined(typeof(HideInInspector)))</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;                .Where(field =&gt; !isOverrideInstance || !field.IsDefined(typeof(<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_dont_override.html">DontOverride</a>)))</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;                .ToArray();</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;        }</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160; </div>
+<div class="line"><a name="l00707"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#a2d00a7e7ccb441dbba77eac87a578ef0">  707</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html#a2d00a7e7ccb441dbba77eac87a578ef0">RuleMatch</a>(<span class="keywordtype">int</span> neighbor, TileBase other)</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;        {</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;            <span class="keywordflow">if</span> (other is <a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html">RuleOverrideTile</a> ot)</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;                other = ot.m_InstanceTile;</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160; </div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;            <span class="keywordflow">switch</span> (neighbor)</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;            {</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_1_1_neighbor.html">Neighbor</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_1_1_neighbor.html#a74e10882ec027091bb38aa6f3a4dada6">This</a>: <span class="keywordflow">return</span> other == <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">TilingRuleOutput</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_1_1_neighbor.html">Neighbor</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_1_1_neighbor.html#a4e9ff7d8858234a253342fcdbb935171">NotThis</a>: <span class="keywordflow">return</span> other != <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;            }</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;        }</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160; </div>
+<div class="line"><a name="l00728"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#a4934cc72cbbb6d928ec20ca7f4cd3cde">  728</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html#a4934cc72cbbb6d928ec20ca7f4cd3cde">RuleMatches</a>(<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a> rule, Vector3Int position, ITilemap tilemap, <span class="keywordtype">int</span> angle)</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;        {</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;            var minCount = Math.Min(rule.m_Neighbors.Count, rule.m_NeighborPositions.Count);</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; minCount ; i++)</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;            {</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;                <span class="keywordtype">int</span> neighbor = rule.m_Neighbors[i];</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;                Vector3Int positionOffset = <a class="code" href="class_unity_engine_1_1_rule_tile.html#a23fdfb41e7950cec1a34417d163c885e">GetRotatedPosition</a>(rule.m_NeighborPositions[i], angle);</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;                TileBase other = tilemap.GetTile(<a class="code" href="class_unity_engine_1_1_rule_tile.html#a5af897e44787606d6c4caa5fc65e2f3b">GetOffsetPosition</a>(position, positionOffset));</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;                <span class="keywordflow">if</span> (!<a class="code" href="class_unity_engine_1_1_rule_tile.html#a2d00a7e7ccb441dbba77eac87a578ef0">RuleMatch</a>(neighbor, other))</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;                {</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;                }</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;            }</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;        }</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160; </div>
+<div class="line"><a name="l00753"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#adf546878e7211bad69bf7a050c7617b7">  753</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html#adf546878e7211bad69bf7a050c7617b7">RuleMatches</a>(<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a> rule, Vector3Int position, ITilemap tilemap, <span class="keywordtype">bool</span> mirrorX, <span class="keywordtype">bool</span> mirrorY)</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;        {</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;            var minCount = Math.Min(rule.m_Neighbors.Count, rule.m_NeighborPositions.Count);</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; minCount; i++)</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;            {</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;                <span class="keywordtype">int</span> neighbor = rule.m_Neighbors[i];</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;                Vector3Int positionOffset = <a class="code" href="class_unity_engine_1_1_rule_tile.html#a387889fcd9a4c06dac2107d01512756d">GetMirroredPosition</a>(rule.m_NeighborPositions[i], mirrorX, mirrorY);</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;                TileBase other = tilemap.GetTile(<a class="code" href="class_unity_engine_1_1_rule_tile.html#a5af897e44787606d6c4caa5fc65e2f3b">GetOffsetPosition</a>(position, positionOffset));</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;                <span class="keywordflow">if</span> (!<a class="code" href="class_unity_engine_1_1_rule_tile.html#a2d00a7e7ccb441dbba77eac87a578ef0">RuleMatch</a>(neighbor, other))</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;                {</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;                }</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;            }</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;        }</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160; </div>
+<div class="line"><a name="l00775"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#a23fdfb41e7950cec1a34417d163c885e">  775</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> Vector3Int <a class="code" href="class_unity_engine_1_1_rule_tile.html#a23fdfb41e7950cec1a34417d163c885e">GetRotatedPosition</a>(Vector3Int position, <span class="keywordtype">int</span> rotation)</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;        {</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;            <span class="keywordflow">switch</span> (rotation)</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;            {</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;                <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;                    <span class="keywordflow">return</span> position;</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;                <span class="keywordflow">case</span> 90:</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">new</span> Vector3Int(position.y, -position.x, 0);</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;                <span class="keywordflow">case</span> 180:</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">new</span> Vector3Int(-position.x, -position.y, 0);</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;                <span class="keywordflow">case</span> 270:</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">new</span> Vector3Int(-position.y, position.x, 0);</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;            }</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;            <span class="keywordflow">return</span> position;</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;        }</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160; </div>
+<div class="line"><a name="l00798"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#a387889fcd9a4c06dac2107d01512756d">  798</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> Vector3Int <a class="code" href="class_unity_engine_1_1_rule_tile.html#a387889fcd9a4c06dac2107d01512756d">GetMirroredPosition</a>(Vector3Int position, <span class="keywordtype">bool</span> mirrorX, <span class="keywordtype">bool</span> mirrorY)</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;        {</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;            <span class="keywordflow">if</span> (mirrorX)</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;                position.x *= -1;</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;            <span class="keywordflow">if</span> (mirrorY)</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;                position.y *= -1;</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;            <span class="keywordflow">return</span> position;</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;        }</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160; </div>
+<div class="line"><a name="l00813"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#a5af897e44787606d6c4caa5fc65e2f3b">  813</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> Vector3Int <a class="code" href="class_unity_engine_1_1_rule_tile.html#a5af897e44787606d6c4caa5fc65e2f3b">GetOffsetPosition</a>(Vector3Int position, Vector3Int offset)</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;        {</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;            <span class="keywordflow">return</span> position + offset;</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;        }</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160; </div>
+<div class="line"><a name="l00824"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_rule_tile.html#a36fcd587d44d2520ff19757538288efd">  824</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> Vector3Int <a class="code" href="class_unity_engine_1_1_rule_tile.html#a36fcd587d44d2520ff19757538288efd">GetOffsetPositionReverse</a>(Vector3Int position, Vector3Int offset)</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;        {</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;            <span class="keywordflow">return</span> position - offset;</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;        }</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;    }</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_html_ab1a3be390066d2eaa43006059ba8a042"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#ab1a3be390066d2eaa43006059ba8a042">UnityEngine.RuleTile.TilingRuleOutput.m_MaxAnimationSpeed</a></div><div class="ttdeci">float m_MaxAnimationSpeed</div><div class="ttdoc">The output maximum Animation Speed for this Rule.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00086">RuleTile.cs:86</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_html"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">UnityEngine.RuleTile.TilingRule</a></div><div class="ttdoc">The data structure holding the Rule information for matching Rule Tiles with its neighbors.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8pixel-perfect_0d5_80_81_2_samples~_2_scenes_01and_01_extras_2_scenes_2_rule_01_tiles_2_scripts_2_rule_tile_8cs_source.html#l00015">RuleTile.cs:15</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_adf546878e7211bad69bf7a050c7617b7"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#adf546878e7211bad69bf7a050c7617b7">UnityEngine.RuleTile.RuleMatches</a></div><div class="ttdeci">bool RuleMatches(TilingRule rule, Vector3Int position, ITilemap tilemap, bool mirrorX, bool mirrorY)</div><div class="ttdoc">Checks if there is a match given the neighbor matching rule and a Tile with mirrored axii.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00753">RuleTile.cs:753</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_html_a55c2ec947a31c054734132b2ca1f91aa"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#a55c2ec947a31c054734132b2ca1f91aa">UnityEngine.RuleTile.TilingRuleOutput.m_PerlinScale</a></div><div class="ttdeci">float m_PerlinScale</div><div class="ttdoc">The perlin scale factor for this Rule.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00090">RuleTile.cs:90</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_html_ad13ea577f3bdd1c91f9b35153d469e9d"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#ad13ea577f3bdd1c91f9b35153d469e9d">UnityEngine.RuleTile.TilingRuleOutput.m_RandomTransform</a></div><div class="ttdeci">Transform m_RandomTransform</div><div class="ttdoc">The randomized transform output for this Rule.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00102">RuleTile.cs:102</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a8ebcbdd54be271d2822736053723a6d5"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a8ebcbdd54be271d2822736053723a6d5">UnityEngine.RuleTile.m_RotationCount</a></div><div class="ttdeci">int m_RotationCount</div><div class="ttdoc">Number of rotations the RuleTile can be rotated by for matching.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00056">RuleTile.cs:56</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_html_a992fb9ad851969da704c34fec053dc38"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#a992fb9ad851969da704c34fec053dc38">UnityEngine.RuleTile.TilingRuleOutput.m_ColliderType</a></div><div class="ttdeci">Tile.ColliderType m_ColliderType</div><div class="ttdoc">The output Collider Type for this Rule.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00098">RuleTile.cs:98</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_1_1_neighbor_html_a4e9ff7d8858234a253342fcdbb935171"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_1_1_neighbor.html#a4e9ff7d8858234a253342fcdbb935171">UnityEngine.RuleTile.TilingRuleOutput.Neighbor.NotThis</a></div><div class="ttdeci">const int NotThis</div><div class="ttdoc">The Rule Tile will check if the contents of the cell in that direction is not an instance of this Rul...</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00118">RuleTile.cs:118</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a5de8e8950278bed45467e76e7f9c18ff"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a5de8e8950278bed45467e76e7f9c18ff">UnityEngine.RuleTile.UpdateNeighborPositions</a></div><div class="ttdeci">void UpdateNeighborPositions()</div><div class="ttdoc">Updates the neighboring positions of this RuleTile</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00293">RuleTile.cs:293</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html">UnityEngine.RuleTile</a></div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8pixel-perfect_0d5_80_81_2_samples~_2_scenes_01and_01_extras_2_scenes_2_rule_01_tiles_2_scripts_2_rule_tile_8cs_source.html#l00009">RuleTile.cs:9</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_html_a8ef8962533b59743c43db74885ee6238"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#a8ef8962533b59743c43db74885ee6238">UnityEngine.RuleTile.TilingRule.GetNeighbors</a></div><div class="ttdeci">Dictionary&lt; Vector3Int, int &gt; GetNeighbors()</div><div class="ttdoc">Returns all neighbors of this Tile as a dictionary</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00226">RuleTile.cs:226</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a372055c7c52186fa0c136f52bf07f899"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a372055c7c52186fa0c136f52bf07f899">UnityEngine.RuleTile.m_NeighborType</a></div><div class="ttdeci">sealed override Type m_NeighborType</div><div class="ttdoc">Returns the Neighbor Rule Class type for this Rule Tile.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00020">RuleTile.cs:20</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_ab1bd7b0668656d2beabf4cd7da4bbf56"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#ab1bd7b0668656d2beabf4cd7da4bbf56">UnityEngine.RuleTile.RefreshTile</a></div><div class="ttdeci">override void RefreshTile(Vector3Int position, ITilemap tilemap)</div><div class="ttdoc">This method is called when the tile is refreshed.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00562">RuleTile.cs:562</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a23fdfb41e7950cec1a34417d163c885e"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a23fdfb41e7950cec1a34417d163c885e">UnityEngine.RuleTile.GetRotatedPosition</a></div><div class="ttdeci">virtual Vector3Int GetRotatedPosition(Vector3Int position, int rotation)</div><div class="ttdoc">Gets a rotated position given its original position and the rotation in degrees.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00775">RuleTile.cs:775</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_html_a2fa91a9f4198ae21eae577e60e0b7b71"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#a2fa91a9f4198ae21eae577e60e0b7b71">UnityEngine.RuleTile.TilingRule.GetBounds</a></div><div class="ttdeci">BoundsInt GetBounds()</div><div class="ttdoc">Gets the cell bounds of the TilingRule.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00250">RuleTile.cs:250</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_html_afe0cda84ee0906035b86819ec4216647"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#afe0cda84ee0906035b86819ec4216647">UnityEngine.RuleTile.TilingRuleOutput.Transform</a></div><div class="ttdeci">Transform</div><div class="ttdoc">The enumeration for the transform rule used when matching Rule Tiles.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00124">RuleTile.cs:124</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a2d00a7e7ccb441dbba77eac87a578ef0"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a2d00a7e7ccb441dbba77eac87a578ef0">UnityEngine.RuleTile.RuleMatch</a></div><div class="ttdeci">virtual bool RuleMatch(int neighbor, TileBase other)</div><div class="ttdoc">Checks if there is a match given the neighbor matching rule and a Tile.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00707">RuleTile.cs:707</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_1_1_neighbor_html_a74e10882ec027091bb38aa6f3a4dada6"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_1_1_neighbor.html#a74e10882ec027091bb38aa6f3a4dada6">UnityEngine.RuleTile.TilingRuleOutput.Neighbor.This</a></div><div class="ttdeci">const int This</div><div class="ttdoc">The Rule Tile will check if the contents of the cell in that direction is an instance of this Rule Ti...</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00113">RuleTile.cs:113</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a5af897e44787606d6c4caa5fc65e2f3b"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a5af897e44787606d6c4caa5fc65e2f3b">UnityEngine.RuleTile.GetOffsetPosition</a></div><div class="ttdeci">virtual Vector3Int GetOffsetPosition(Vector3Int position, Vector3Int offset)</div><div class="ttdoc">Get the offset for the given position with the given offset.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00813">RuleTile.cs:813</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_html_ac0e780823df3b3296c3ff230413f3dee"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#ac0e780823df3b3296c3ff230413f3dee">UnityEngine.RuleTile.TilingRule.ApplyNeighbors</a></div><div class="ttdeci">void ApplyNeighbors(Dictionary&lt; Vector3Int, int &gt; dict)</div><div class="ttdoc">Applies the values from the given dictionary as this Tile's neighbors</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00240">RuleTile.cs:240</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a4ced13d2af68dce3cd3c9573c8edb2dc"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a4ced13d2af68dce3cd3c9573c8edb2dc">UnityEngine.RuleTile.neighborPositions</a></div><div class="ttdeci">HashSet&lt; Vector3Int &gt; neighborPositions</div><div class="ttdoc">Returns a set of neighboring positions for this RuleTile</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00278">RuleTile.cs:278</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a2314abdeeed77039ab390d88658ceb09"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a2314abdeeed77039ab390d88658ceb09">UnityEngine.RuleTile.ApplyRandomTransform</a></div><div class="ttdeci">virtual Matrix4x4 ApplyRandomTransform(TilingRuleOutput.Transform type, Matrix4x4 original, float perlinScale, Vector3Int position)</div><div class="ttdoc">Returns a random transform matrix given the random transform rule.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00668">RuleTile.cs:668</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_html_a6abb8070d8ff9afe6fd58869ec8f88d1"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#a6abb8070d8ff9afe6fd58869ec8f88d1">UnityEngine.RuleTile.TilingRuleOutput.m_GameObject</a></div><div class="ttdeci">GameObject m_GameObject</div><div class="ttdoc">The output GameObject for this Rule.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00076">RuleTile.cs:76</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_html_ab5f56742b83061b5b9dfe426ca93420a"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#ab5f56742b83061b5b9dfe426ca93420a">UnityEngine.RuleTile.TilingRuleOutput.OutputSprite</a></div><div class="ttdeci">OutputSprite</div><div class="ttdoc">The Output for the Tile which fits this Rule.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00151">RuleTile.cs:151</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_html_aa93cfbc10f45c0773f111646ba88f467"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#aa93cfbc10f45c0773f111646ba88f467">UnityEngine.RuleTile.TilingRuleOutput.m_Sprites</a></div><div class="ttdeci">Sprite[] m_Sprites</div><div class="ttdoc">The output Sprites for this Rule.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00072">RuleTile.cs:72</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_ae0fde3f32e2c9e811effe2b365fc1422"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#ae0fde3f32e2c9e811effe2b365fc1422">UnityEngine.RuleTile.GetCustomFields</a></div><div class="ttdeci">FieldInfo[] GetCustomFields(bool isOverrideInstance)</div><div class="ttdoc">Returns custom fields for this RuleTile</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00691">RuleTile.cs:691</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_tilemaps_html"><div class="ttname"><a href="namespace_unity_engine_1_1_tilemaps.html">UnityEngine.Tilemaps</a></div><div class="ttdef"><b>Definition:</b> <a href="_grid_information_8cs_source.html#l00005">GridInformation.cs:5</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_1_1_neighbor_html"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_1_1_neighbor.html">UnityEngine.RuleTile.TilingRuleOutput.Neighbor</a></div><div class="ttdoc">The enumeration for matching Neighbors when matching Rule Tiles</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00107">RuleTile.cs:107</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a0c2f1e62f1b2316964944fb9af5b02ab"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a0c2f1e62f1b2316964944fb9af5b02ab">UnityEngine.RuleTile.GetTileAnimationData</a></div><div class="ttdeci">override bool GetTileAnimationData(Vector3Int position, ITilemap tilemap, ref TileAnimationData tileAnimationData)</div><div class="ttdoc">Retrieves any tile animation data from the scripted tile.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00539">RuleTile.cs:539</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a402c83679101cd205c4c6b5fb6350acf"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a402c83679101cd205c4c6b5fb6350acf">UnityEngine.RuleTile.m_DefaultGameObject</a></div><div class="ttdeci">GameObject m_DefaultGameObject</div><div class="ttdoc">The Default GameObject set when creating a new Rule.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00042">RuleTile.cs:42</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_html_adfa2cdc67f06595c9dce7ab77629319b"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#adfa2cdc67f06595c9dce7ab77629319b">UnityEngine.RuleTile.TilingRule.m_RuleTransform</a></div><div class="ttdeci">Transform m_RuleTransform</div><div class="ttdoc">The transform matching Rule for this Rule.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8pixel-perfect_0d5_80_81_2_samples~_2_scenes_01and_01_extras_2_scenes_2_rule_01_tiles_2_scripts_2_rule_tile_8cs_source.html#l00021">RuleTile.cs:21</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_abc08969cc48b923de3748a49d7d6d4e9"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#abc08969cc48b923de3748a49d7d6d4e9">UnityEngine.RuleTile.GetTileData</a></div><div class="ttdeci">override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)</div><div class="ttdoc">Retrieves any tile rendering data from the scripted tile.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00394">RuleTile.cs:394</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_html_a29c83a0b9767e5b8e830e8369c186071"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#a29c83a0b9767e5b8e830e8369c186071">UnityEngine.RuleTile.TilingRule.Clone</a></div><div class="ttdeci">TilingRule Clone()</div><div class="ttdoc">This clones a copy of the TilingRule.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00202">RuleTile.cs:202</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a4833f70e53aa664eb8226a1e2d9e36a3"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a4833f70e53aa664eb8226a1e2d9e36a3">UnityEngine.RuleTile.RuleMatches</a></div><div class="ttdeci">virtual bool RuleMatches(TilingRule rule, Vector3Int position, ITilemap tilemap, ref Matrix4x4 transform)</div><div class="ttdoc">Does a Rule Match given a Tiling Rule and neighboring Tiles.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00599">RuleTile.cs:599</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a5be42696a09c3467f3f178c943443f65"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a5be42696a09c3467f3f178c943443f65">UnityEngine.RuleTile.StartUp</a></div><div class="ttdeci">override bool StartUp(Vector3Int position, ITilemap tilemap, GameObject instantiatedGameObject)</div><div class="ttdoc">StartUp is called on the first frame of the running Scene.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00343">RuleTile.cs:343</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a4934cc72cbbb6d928ec20ca7f4cd3cde"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a4934cc72cbbb6d928ec20ca7f4cd3cde">UnityEngine.RuleTile.RuleMatches</a></div><div class="ttdeci">bool RuleMatches(TilingRule rule, Vector3Int position, ITilemap tilemap, int angle)</div><div class="ttdoc">Checks if there is a match given the neighbor matching rule and a Tile with a rotation angle.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00728">RuleTile.cs:728</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a7535932a28053b3533a82afc9f63270c"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a7535932a28053b3533a82afc9f63270c">UnityEngine.RuleTile.m_DefaultColliderType</a></div><div class="ttdeci">Tile.ColliderType m_DefaultColliderType</div><div class="ttdoc">The Default Collider Type set when creating a new Rule.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8pixel-perfect_0d5_80_81_2_samples~_2_scenes_01and_01_extras_2_scenes_2_rule_01_tiles_2_scripts_2_rule_tile_8cs_source.html#l00012">RuleTile.cs:12</a></div></div>
+<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition:</b> <a href="_preserve_dependency_attribute_8cs_source.html#l00030">PreserveDependencyAttribute.cs:30</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_html_a5b013c786ffbf197cb278839f06323c0"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#a5b013c786ffbf197cb278839f06323c0">UnityEngine.RuleTile.TilingRuleOutput.m_MinAnimationSpeed</a></div><div class="ttdeci">float m_MinAnimationSpeed</div><div class="ttdoc">The output minimum Animation Speed for this Rule.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00081">RuleTile.cs:81</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a6b34e9ca87e1f4fab49cd17bd00d3115"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a6b34e9ca87e1f4fab49cd17bd00d3115">UnityEngine.RuleTile.m_TilingRules</a></div><div class="ttdeci">List&lt; TilingRule &gt; m_TilingRules</div><div class="ttdoc">A list of Tiling Rules for the Rule Tile.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8pixel-perfect_0d5_80_81_2_samples~_2_scenes_01and_01_extras_2_scenes_2_rule_01_tiles_2_scripts_2_rule_tile_8cs_source.html#l00044">RuleTile.cs:44</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_tilemaps_1_1_rule_override_tile_html"><div class="ttname"><a href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html">UnityEngine.Tilemaps.RuleOverrideTile</a></div><div class="ttdoc">Rule Override Tiles are Tiles which can override a subset of Rules for a given Rule Tile to provide s...</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_8cs_source.html#l00018">RuleOverrideTile.cs:18</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_html_a3d9d3c29ee076d0e6f9d83817d56bd8a"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#a3d9d3c29ee076d0e6f9d83817d56bd8a">UnityEngine.RuleTile.TilingRuleOutput.m_Id</a></div><div class="ttdeci">int m_Id</div><div class="ttdoc">Id for this Rule.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00068">RuleTile.cs:68</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a21639ca96b4be7fa98c80f0fd931e949"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a21639ca96b4be7fa98c80f0fd931e949">UnityEngine.RuleTile.m_DefaultSprite</a></div><div class="ttdeci">Sprite m_DefaultSprite</div><div class="ttdoc">The Default Sprite set when creating a new Rule.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8pixel-perfect_0d5_80_81_2_samples~_2_scenes_01and_01_extras_2_scenes_2_rule_01_tiles_2_scripts_2_rule_tile_8cs_source.html#l00011">RuleTile.cs:11</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_html_af5741b2d3712390bd1937ab9c80ea93b"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html#af5741b2d3712390bd1937ab9c80ea93b">UnityEngine.RuleTile.TilingRule.m_NeighborPositions</a></div><div class="ttdeci">List&lt; Vector3Int &gt; m_NeighborPositions</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00182">RuleTile.cs:182</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a36fcd587d44d2520ff19757538288efd"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a36fcd587d44d2520ff19757538288efd">UnityEngine.RuleTile.GetOffsetPositionReverse</a></div><div class="ttdeci">virtual Vector3Int GetOffsetPositionReverse(Vector3Int position, Vector3Int offset)</div><div class="ttdoc">Get the reversed offset for the given position with the given offset.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00824">RuleTile.cs:824</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a215895abbf4940f35472154e37392c68"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a215895abbf4940f35472154e37392c68">UnityEngine.RuleTile.GetPerlinValue</a></div><div class="ttdeci">static float GetPerlinValue(Vector3Int position, float scale, float offset)</div><div class="ttdoc">Returns a Perlin Noise value based on the given inputs.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00437">RuleTile.cs:437</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_html_a731e08cac62307ec44c886b9e784e670"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html#a731e08cac62307ec44c886b9e784e670">UnityEngine.RuleTile.TilingRuleOutput.m_Output</a></div><div class="ttdeci">OutputSprite m_Output</div><div class="ttdoc">The output type for this Rule.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00094">RuleTile.cs:94</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a1607f69b9f0a92b1aa5bd8eafa3402cf"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a1607f69b9f0a92b1aa5bd8eafa3402cf">UnityEngine.RuleTile.m_RotationAngle</a></div><div class="ttdeci">virtual int m_RotationAngle</div><div class="ttdoc">Angle in which the RuleTile is rotated by for matching in Degrees.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00051">RuleTile.cs:51</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_dont_override_html"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_dont_override.html">UnityEngine.RuleTile.DontOverride</a></div><div class="ttdoc">Attribute which marks a property which cannot be overridden by a RuleOverrideTile</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00267">RuleTile.cs:267</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html_a387889fcd9a4c06dac2107d01512756d"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html#a387889fcd9a4c06dac2107d01512756d">UnityEngine.RuleTile.GetMirroredPosition</a></div><div class="ttdeci">virtual Vector3Int GetMirroredPosition(Vector3Int position, bool mirrorX, bool mirrorY)</div><div class="ttdoc">Gets a mirrored position given its original position and the mirroring axii.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00798">RuleTile.cs:798</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_output_html"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule_output.html">UnityEngine.RuleTile.TilingRuleOutput</a></div><div class="ttdoc">The data structure holding the Rule information for matching Rule Tiles with its neighbors.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8tilemap_8extras_0d3_80_82_2_runtime_2_tiles_2_rule_tile_2_rule_tile_8cs_source.html#l00063">RuleTile.cs:63</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

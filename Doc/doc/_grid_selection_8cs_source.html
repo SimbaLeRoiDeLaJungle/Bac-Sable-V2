@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridSelection.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_df381046aaab1e560c209bd4c9981ca6.html">com.unity.2d.tilemap@1.0.0</a></li><li class="navelem"><a class="el" href="dir_0d21ded2fd5e96c0f4a77865c032209d.html">Editor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GridSelection.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Scripting.APIUpdating;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> Object = <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Object;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor_1_1_tilemaps.html">UnityEditor.Tilemaps</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    [MovedFrom(<span class="keyword">true</span>, <span class="stringliteral">&quot;UnityEditor&quot;</span>, <span class="stringliteral">&quot;UnityEditor&quot;</span>)]</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html">GridSelection</a> : ScriptableObject</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> kUpdateGridSelection = L10n.Tr(<span class="stringliteral">&quot;Update Grid Selection&quot;</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a68218e93ea1763742316afda799afcc2">   16</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">event</span> Action <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a68218e93ea1763742316afda799afcc2">gridSelectionChanged</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">private</span> BoundsInt m_Position;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">private</span> GameObject m_Target;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">private</span> Object m_PreviousSelection;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#ac18b80bbee8816ab48355e648b480f57">   24</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#ac18b80bbee8816ab48355e648b480f57">active</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> Selection.activeObject is <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html">GridSelection</a> &amp;&amp; selection.m_Target != <span class="keyword">null</span>; } }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html">GridSelection</a> selection { <span class="keyword">get</span> { <span class="keywordflow">return</span> Selection.activeObject as <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html">GridSelection</a>; } }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> BoundsInt <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a333d45d34f4ee7c0543337fe4b256204">position</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a333d45d34f4ee7c0543337fe4b256204">   30</a></span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> selection != <span class="keyword">null</span> ? selection.m_Position : <span class="keyword">new</span> BoundsInt(); }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keyword">set</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keywordflow">if</span> (selection != <span class="keyword">null</span> &amp;&amp; selection.m_Position != value)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    RegisterUndo();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    selection.m_Position = value;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a68218e93ea1763742316afda799afcc2">gridSelectionChanged</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                        <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a68218e93ea1763742316afda799afcc2">gridSelectionChanged</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a6c77796bfe7647d767d4e51a0d507942">   45</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> GameObject <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a6c77796bfe7647d767d4e51a0d507942">target</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> selection != <span class="keyword">null</span> ? selection.m_Target : <span class="keyword">null</span>; } }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a0762a157aeba5e4d34726628a7cbe792">   48</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> Grid <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a0762a157aeba5e4d34726628a7cbe792">grid</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> selection != <span class="keyword">null</span> &amp;&amp; selection.m_Target != <span class="keyword">null</span> ? selection.m_Target.GetComponentInParent&lt;Grid&gt;() : <span class="keyword">null</span>; } }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#aea6be8df937441ef6f5db149325bf923">   53</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#aea6be8df937441ef6f5db149325bf923">Select</a>(Object <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a6c77796bfe7647d767d4e51a0d507942">target</a>, BoundsInt bounds)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html">GridSelection</a> newSelection = CreateInstance&lt;GridSelection&gt;();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            newSelection.m_PreviousSelection = Selection.activeObject;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            newSelection.m_Target = <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a6c77796bfe7647d767d4e51a0d507942">target</a> as GameObject;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            newSelection.m_Position = bounds;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            Selection.activeObject = newSelection;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a68218e93ea1763742316afda799afcc2">gridSelectionChanged</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a68218e93ea1763742316afda799afcc2">gridSelectionChanged</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a2a8518ef72d51e65958f3fd3e2d4f4d1">   65</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a2a8518ef72d51e65958f3fd3e2d4f4d1">Clear</a>()</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#ac18b80bbee8816ab48355e648b480f57">active</a>)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                RegisterUndo();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                selection.m_Position = <span class="keyword">new</span> BoundsInt();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                Selection.activeObject = selection.m_PreviousSelection;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a68218e93ea1763742316afda799afcc2">gridSelectionChanged</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a68218e93ea1763742316afda799afcc2">gridSelectionChanged</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">void</span> RegisterUndo()</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">if</span> (selection != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                Undo.RegisterCompleteObjectUndo(selection, kUpdateGridSelection);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_selection_html_ac18b80bbee8816ab48355e648b480f57"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#ac18b80bbee8816ab48355e648b480f57">UnityEditor.Tilemaps.GridSelection.active</a></div><div class="ttdeci">static bool active</div><div class="ttdoc">Whether there is an active GridSelection made on a GridLayout.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_selection_8cs_source.html#l00024">GridSelection.cs:24</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_selection_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html">UnityEditor.Tilemaps.GridSelection</a></div><div class="ttdoc">Stores the selection made on a GridLayout.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_selection_8cs_source.html#l00011">GridSelection.cs:11</a></div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_tilemaps_html"><div class="ttname"><a href="namespace_unity_editor_1_1_tilemaps.html">UnityEditor.Tilemaps</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00008">GameObjectBrush.cs:8</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_selection_html_a0762a157aeba5e4d34726628a7cbe792"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a0762a157aeba5e4d34726628a7cbe792">UnityEditor.Tilemaps.GridSelection.grid</a></div><div class="ttdeci">static Grid? grid</div><div class="ttdoc">The Grid of the target of the active GridSelection.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_selection_8cs_source.html#l00048">GridSelection.cs:48</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_selection_html_a6c77796bfe7647d767d4e51a0d507942"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a6c77796bfe7647d767d4e51a0d507942">UnityEditor.Tilemaps.GridSelection.target</a></div><div class="ttdeci">static GameObject? target</div><div class="ttdoc">The GameObject of the GridLayout where the active GridSelection was made.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_selection_8cs_source.html#l00045">GridSelection.cs:45</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_selection_html_a2a8518ef72d51e65958f3fd3e2d4f4d1"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a2a8518ef72d51e65958f3fd3e2d4f4d1">UnityEditor.Tilemaps.GridSelection.Clear</a></div><div class="ttdeci">static void Clear()</div><div class="ttdoc">Clears the active GridSelection.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_selection_8cs_source.html#l00065">GridSelection.cs:65</a></div></div>
+<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition:</b> <a href="_preserve_dependency_attribute_8cs_source.html#l00030">PreserveDependencyAttribute.cs:30</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_selection_html_a68218e93ea1763742316afda799afcc2"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a68218e93ea1763742316afda799afcc2">UnityEditor.Tilemaps.GridSelection.gridSelectionChanged</a></div><div class="ttdeci">static Action gridSelectionChanged</div><div class="ttdoc">Callback for when the active GridSelection has changed.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_selection_8cs_source.html#l00016">GridSelection.cs:16</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_selection_html_aea6be8df937441ef6f5db149325bf923"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#aea6be8df937441ef6f5db149325bf923">UnityEditor.Tilemaps.GridSelection.Select</a></div><div class="ttdeci">static void Select(Object target, BoundsInt bounds)</div><div class="ttdoc">Creates a new GridSelection and sets it as the active GridSelection.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_selection_8cs_source.html#l00053">GridSelection.cs:53</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_selection_html_a333d45d34f4ee7c0543337fe4b256204"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_selection.html#a333d45d34f4ee7c0543337fe4b256204">UnityEditor.Tilemaps.GridSelection.position</a></div><div class="ttdeci">static BoundsInt? position</div><div class="ttdoc">The cell coordinates of the active GridSelection made on the GridLayout.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_selection_8cs_source.html#l00030">GridSelection.cs:30</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

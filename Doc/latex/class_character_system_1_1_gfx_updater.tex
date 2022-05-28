@@ -1,0 +1,216 @@
+\hypertarget{class_character_system_1_1_gfx_updater}{}\doxysection{Référence de la classe Character\+System.\+Gfx\+Updater}
+\label{class_character_system_1_1_gfx_updater}\index{CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}}
+
+
+Gère les graphismes des characters  
+
+
+
+
+Graphe d\textquotesingle{}héritage de Character\+System.\+Gfx\+Updater\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{class_character_system_1_1_gfx_updater__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Character\+System.\+Gfx\+Updater\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_system_1_1_gfx_updater__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_character_system_1_1_gfx_updater_ab72f9d660ddc08caa40872d0ad6780b9}{Update\+Gfx}} (bool is\+Grounded, float x\+Vel, \mbox{\hyperlink{struct_character_system_1_1_character_state}{Character\+State}} state, \mbox{\hyperlink{class_utilitary_1_1_timer}{Timer}} charge\+Timer)
+\begin{DoxyCompactList}\small\item\em Met a jour les Graphisme jouer dans \mbox{\hyperlink{class_character_system_1_1_player_controller_acc62b8497aa264096077e5825f57f5d1}{Player\+Controller.\+Custom\+Update()}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_character_system_1_1_gfx_updater_a8b36b581bd068b5cff082107e7873435}{Set\+Character}} (\mbox{\hyperlink{class_character_system_1_1_character}{Character}} \mbox{\hyperlink{class_character_system_1_1_gfx_updater_a15b8baddc97801ffd68c257e4251ef59}{character}})
+\begin{DoxyCompactList}\small\item\em Met a jour le character et l\textquotesingle{}animator \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_character_system_1_1_gfx_updater_ade50e1301be2d72202f70eb6ec4efe54}{Launch\+Action}} (\mbox{\hyperlink{_game_action_8cs_a5827805c542ab9cccf700dc3697cbafc}{Game\+Action}} action)
+\begin{DoxyCompactList}\small\item\em Pour passer \mbox{\hyperlink{class_character_system_1_1_gfx_updater}{Gfx\+Updater}} en mode lancement d\textquotesingle{}action \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_character_system_1_1_gfx_updater_a5bc7b29fe4ffa736d02c2d9a166edce7}{Is\+In\+Attack\+Animation}} ()
+\begin{DoxyCompactList}\small\item\em Revoi vrai tant que le character est entrain d\textquotesingle{}effectuer l\textquotesingle{}attaque. A\+T\+T\+A\+C\+K\+T\+Y\+PE \+: ~\newline
+ (Contact) Les dégats sont appliqué quand cette fonction renvoi vrai.~\newline
+ (Distance) Le projectil est envoyer quand cette fonction renvoi vrai. ~\newline
+ \end{DoxyCompactList}\item 
+I\+Enumerator \mbox{\hyperlink{class_character_system_1_1_gfx_updater_a2bab13d3ce2b5956dd2d770b91e46892}{Ready}} ()
+\begin{DoxyCompactList}\small\item\em Pour sychronysé avec le \mbox{\hyperlink{class_character_system_1_1_player_controller}{Player\+Controller}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_character_system_1_1_gfx_updater_a9f0bfd3af388443e06019d4e0ad8aebb}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Mono\+Beahviours Abstract Method \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+Animator \mbox{\hyperlink{class_character_system_1_1_gfx_updater_a7c103c6579f8b3f4c880eb81573df9ec}{animator}}
+\item 
+\mbox{\hyperlink{class_character_system_1_1_character}{Character}} \mbox{\hyperlink{class_character_system_1_1_gfx_updater_a15b8baddc97801ffd68c257e4251ef59}{character}}
+\item 
+bool \mbox{\hyperlink{class_character_system_1_1_gfx_updater_afcb1b3c1a94e2f686e9c44bfc2edcc5d}{\+\_\+launch\+Attack}}
+\item 
+\mbox{\hyperlink{_game_action_8cs_a5827805c542ab9cccf700dc3697cbafc}{Game\+Action}} \mbox{\hyperlink{class_character_system_1_1_gfx_updater_aef2dde9d9b867562187c453dc9600464}{\+\_\+current\+Action}}
+\item 
+bool \mbox{\hyperlink{class_character_system_1_1_gfx_updater_ae803e1416e60bbf7e6c99381d613de4b}{\+\_\+ready}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Gère les graphismes des characters 
+
+Pour comprendre cette classe il faut aller faire un tour ici \+: Tu selectionne le game\+Object \char`\"{}\+Player/\+Gfx\char`\"{}, et tu va dans widow/animation ici tu peux looker animator et animation pour voir comment c\textquotesingle{}est construit 
+
+Définition à la ligne 13 du fichier Gfx\+Updater.\+cs.
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_character_system_1_1_gfx_updater_a9f0bfd3af388443e06019d4e0ad8aebb}\label{class_character_system_1_1_gfx_updater_a9f0bfd3af388443e06019d4e0ad8aebb}} 
+\index{CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}!Awake@{Awake}}
+\index{Awake@{Awake}!CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Character\+System.\+Gfx\+Updater.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mono\+Beahviours Abstract Method 
+
+
+
+Définition à la ligne 28 du fichier Gfx\+Updater.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_gfx_updater_a5bc7b29fe4ffa736d02c2d9a166edce7}\label{class_character_system_1_1_gfx_updater_a5bc7b29fe4ffa736d02c2d9a166edce7}} 
+\index{CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}!IsInAttackAnimation@{IsInAttackAnimation}}
+\index{IsInAttackAnimation@{IsInAttackAnimation}!CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}}
+\doxysubsubsection{\texorpdfstring{IsInAttackAnimation()}{IsInAttackAnimation()}}
+{\footnotesize\ttfamily bool Character\+System.\+Gfx\+Updater.\+Is\+In\+Attack\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Revoi vrai tant que le character est entrain d\textquotesingle{}effectuer l\textquotesingle{}attaque. A\+T\+T\+A\+C\+K\+T\+Y\+PE \+: ~\newline
+ (Contact) Les dégats sont appliqué quand cette fonction renvoi vrai.~\newline
+ (Distance) Le projectil est envoyer quand cette fonction renvoi vrai. ~\newline
+ 
+
+
+
+Définition à la ligne 111 du fichier Gfx\+Updater.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_gfx_updater_ade50e1301be2d72202f70eb6ec4efe54}\label{class_character_system_1_1_gfx_updater_ade50e1301be2d72202f70eb6ec4efe54}} 
+\index{CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}!LaunchAction@{LaunchAction}}
+\index{LaunchAction@{LaunchAction}!CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}}
+\doxysubsubsection{\texorpdfstring{LaunchAction()}{LaunchAction()}}
+{\footnotesize\ttfamily void Character\+System.\+Gfx\+Updater.\+Launch\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_game_action_8cs_a5827805c542ab9cccf700dc3697cbafc}{Game\+Action}}}]{action }\end{DoxyParamCaption})}
+
+
+
+Pour passer \mbox{\hyperlink{class_character_system_1_1_gfx_updater}{Gfx\+Updater}} en mode lancement d\textquotesingle{}action 
+
+
+
+Définition à la ligne 96 du fichier Gfx\+Updater.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_gfx_updater_a2bab13d3ce2b5956dd2d770b91e46892}\label{class_character_system_1_1_gfx_updater_a2bab13d3ce2b5956dd2d770b91e46892}} 
+\index{CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}!Ready@{Ready}}
+\index{Ready@{Ready}!CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}}
+\doxysubsubsection{\texorpdfstring{Ready()}{Ready()}}
+{\footnotesize\ttfamily I\+Enumerator Character\+System.\+Gfx\+Updater.\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pour sychronysé avec le \mbox{\hyperlink{class_character_system_1_1_player_controller}{Player\+Controller}}. 
+
+
+
+Définition à la ligne 136 du fichier Gfx\+Updater.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_gfx_updater_a8b36b581bd068b5cff082107e7873435}\label{class_character_system_1_1_gfx_updater_a8b36b581bd068b5cff082107e7873435}} 
+\index{CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}!SetCharacter@{SetCharacter}}
+\index{SetCharacter@{SetCharacter}!CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}}
+\doxysubsubsection{\texorpdfstring{SetCharacter()}{SetCharacter()}}
+{\footnotesize\ttfamily void Character\+System.\+Gfx\+Updater.\+Set\+Character (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_character_system_1_1_character}{Character}}}]{character }\end{DoxyParamCaption})}
+
+
+
+Met a jour le character et l\textquotesingle{}animator 
+
+
+
+Définition à la ligne 85 du fichier Gfx\+Updater.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_gfx_updater_ab72f9d660ddc08caa40872d0ad6780b9}\label{class_character_system_1_1_gfx_updater_ab72f9d660ddc08caa40872d0ad6780b9}} 
+\index{CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}!UpdateGfx@{UpdateGfx}}
+\index{UpdateGfx@{UpdateGfx}!CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}}
+\doxysubsubsection{\texorpdfstring{UpdateGfx()}{UpdateGfx()}}
+{\footnotesize\ttfamily void Character\+System.\+Gfx\+Updater.\+Update\+Gfx (\begin{DoxyParamCaption}\item[{bool}]{is\+Grounded,  }\item[{float}]{x\+Vel,  }\item[{\mbox{\hyperlink{struct_character_system_1_1_character_state}{Character\+State}}}]{state,  }\item[{\mbox{\hyperlink{class_utilitary_1_1_timer}{Timer}}}]{charge\+Timer }\end{DoxyParamCaption})}
+
+
+
+Met a jour les Graphisme jouer dans \mbox{\hyperlink{class_character_system_1_1_player_controller_acc62b8497aa264096077e5825f57f5d1}{Player\+Controller.\+Custom\+Update()}} 
+
+
+
+Définition à la ligne 39 du fichier Gfx\+Updater.\+cs.
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_character_system_1_1_gfx_updater_aef2dde9d9b867562187c453dc9600464}\label{class_character_system_1_1_gfx_updater_aef2dde9d9b867562187c453dc9600464}} 
+\index{CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}!\_currentAction@{\_currentAction}}
+\index{\_currentAction@{\_currentAction}!CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}}
+\doxysubsubsection{\texorpdfstring{\_currentAction}{\_currentAction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_game_action_8cs_a5827805c542ab9cccf700dc3697cbafc}{Game\+Action}} Character\+System.\+Gfx\+Updater.\+\_\+current\+Action\hspace{0.3cm}{\ttfamily [private]}}
+
+Si une action est demender 
+
+Définition à la ligne 18 du fichier Gfx\+Updater.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_gfx_updater_afcb1b3c1a94e2f686e9c44bfc2edcc5d}\label{class_character_system_1_1_gfx_updater_afcb1b3c1a94e2f686e9c44bfc2edcc5d}} 
+\index{CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}!\_launchAttack@{\_launchAttack}}
+\index{\_launchAttack@{\_launchAttack}!CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}}
+\doxysubsubsection{\texorpdfstring{\_launchAttack}{\_launchAttack}}
+{\footnotesize\ttfamily bool Character\+System.\+Gfx\+Updater.\+\_\+launch\+Attack\hspace{0.3cm}{\ttfamily [private]}}
+
+Set dans Launch\+Action, un-\/set dans Update\+Gfx quand l\textquotesingle{}attaque est lancé 
+
+Définition à la ligne 17 du fichier Gfx\+Updater.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_gfx_updater_ae803e1416e60bbf7e6c99381d613de4b}\label{class_character_system_1_1_gfx_updater_ae803e1416e60bbf7e6c99381d613de4b}} 
+\index{CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}!\_ready@{\_ready}}
+\index{\_ready@{\_ready}!CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}}
+\doxysubsubsection{\texorpdfstring{\_ready}{\_ready}}
+{\footnotesize\ttfamily bool Character\+System.\+Gfx\+Updater.\+\_\+ready = true\hspace{0.3cm}{\ttfamily [private]}}
+
+utiliser pour checker quand l\textquotesingle{}animation de l\textquotesingle{}attaque est finie 
+
+Définition à la ligne 19 du fichier Gfx\+Updater.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_gfx_updater_a7c103c6579f8b3f4c880eb81573df9ec}\label{class_character_system_1_1_gfx_updater_a7c103c6579f8b3f4c880eb81573df9ec}} 
+\index{CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}!animator@{animator}}
+\index{animator@{animator}!CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}}
+\doxysubsubsection{\texorpdfstring{animator}{animator}}
+{\footnotesize\ttfamily Animator Character\+System.\+Gfx\+Updater.\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne 15 du fichier Gfx\+Updater.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_gfx_updater_a15b8baddc97801ffd68c257e4251ef59}\label{class_character_system_1_1_gfx_updater_a15b8baddc97801ffd68c257e4251ef59}} 
+\index{CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}!character@{character}}
+\index{character@{character}!CharacterSystem.GfxUpdater@{CharacterSystem.GfxUpdater}}
+\doxysubsubsection{\texorpdfstring{character}{character}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_character_system_1_1_character}{Character}} Character\+System.\+Gfx\+Updater.\+character\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne 16 du fichier Gfx\+Updater.\+cs.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+/home/simba/\+Unity\+Project/\+Bac à Sable/\+Assets/\+Simba/\+Scirpts/\+Character System/\+Player/\+Gfx/\mbox{\hyperlink{_gfx_updater_8cs}{Gfx\+Updater.\+cs}}\end{DoxyCompactItemize}

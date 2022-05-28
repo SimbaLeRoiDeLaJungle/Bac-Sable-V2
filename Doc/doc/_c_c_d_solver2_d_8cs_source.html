@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.animation@8.0.1/IK/Runtime/CCDSolver2D.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_6cbc2cf28c1ecf4e247ef2386a6cccaf.html">com.unity.2d.animation@8.0.1</a></li><li class="navelem"><a class="el" href="dir_9fb99b0510a70b98894b51983ab6b550.html">IK</a></li><li class="navelem"><a class="el" href="dir_b288542e7ff7e3d9f4faa7726a8e758b.html">Runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CCDSolver2D.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Profiling;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Scripting.APIUpdating;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_u2_d.html">U2D</a>.<a class="code" href="namespace_unity_engine_1_1_u2_d_1_1_common.html">Common</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="namespace_unity_engine_1_1_u2_d_1_1_i_k.html">    6</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine_1_1_u2_d_1_1_i_k.html">UnityEngine.U2D.IK</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    [MovedFrom(<span class="stringliteral">&quot;UnityEngine.Experimental.U2D.IK&quot;</span>)]</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    [<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_solver2_d_menu_attribute.html">Solver2DMenuAttribute</a>(<span class="stringliteral">&quot;Chain (CCD)&quot;</span>)]</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html">   13</a></span>&#160;    <span class="keyword">public</span> sealed <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html">CCDSolver2D</a> : <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_solver2_d.html">Solver2D</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">float</span> kMinTolerance = 0.001f;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">int</span> kMinIterations = 1;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">float</span> kMinVelocity = 0.01f;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">float</span> kMaxVelocity = 1f;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">private</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html">IKChain2D</a> m_Chain = <span class="keyword">new</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html">IKChain2D</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        [SerializeField][Range(kMinIterations, 50)]</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">int</span> m_Iterations = 10;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        [SerializeField][Range(kMinTolerance, 0.1f)]</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">float</span> m_Tolerance = 0.01f;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        [SerializeField][Range(0f, 1f)]</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">float</span> m_Velocity = 0.5f;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">private</span> Vector3[] m_Positions;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#af02001a7935b8599ad8218897c41afd1">iterations</a></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#af02001a7935b8599ad8218897c41afd1">   36</a></span>&#160;        {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Iterations; }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keyword">set</span> { m_Iterations = Mathf.Max(value, kMinIterations); }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#acd763f4a5265c5483b7238435f848eb5">tolerance</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#acd763f4a5265c5483b7238435f848eb5">   45</a></span>&#160;        {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Tolerance; }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keyword">set</span> { m_Tolerance = Mathf.Max(value, kMinTolerance); }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#aeed7c7ed07e3264d4affd8382918f133">velocity</a></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#aeed7c7ed07e3264d4affd8382918f133">   54</a></span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Velocity; }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keyword">set</span> { m_Velocity = Mathf.Clamp01(value); }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#a741300ad4526472b0aea6ac37eb1f3a1">   63</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#a741300ad4526472b0aea6ac37eb1f3a1">GetChainCount</a>()</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#ad51a92b22334f85a6265dc92d3b07f36">   73</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html">IKChain2D</a> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#ad51a92b22334f85a6265dc92d3b07f36">GetChain</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">return</span> m_Chain;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#a6234655a82f34e47edcffd36d1eb8c39">   81</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#a6234655a82f34e47edcffd36d1eb8c39">DoPrepare</a>()</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">if</span> (m_Positions == <span class="keyword">null</span> || m_Positions.Length != m_Chain.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html#af7583105d80b3f745a62b93ab83a6b4a">transformCount</a>)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                m_Positions = <span class="keyword">new</span> Vector3[m_Chain.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html#af7583105d80b3f745a62b93ab83a6b4a">transformCount</a>];</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_Chain.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html#af7583105d80b3f745a62b93ab83a6b4a">transformCount</a>; ++i)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                m_Positions[i] = m_Chain.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html#adf5116dbf7370eeb19e45ca2ad6a732a">transforms</a>[i].position;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#af3907a8a98fd752426444e9ca7214609">   94</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#af3907a8a98fd752426444e9ca7214609">DoUpdateIK</a>(List&lt;Vector3&gt; effectorPositions)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            Profiler.BeginSample(<span class="stringliteral">&quot;CCDSolver2D.DoUpdateIK&quot;</span>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            Vector3 effectorPosition = effectorPositions[0];</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            Vector2 effectorLocalPosition2D = m_Chain.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html#adf5116dbf7370eeb19e45ca2ad6a732a">transforms</a>[0].InverseTransformPoint(effectorPosition);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            effectorPosition = m_Chain.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html#adf5116dbf7370eeb19e45ca2ad6a732a">transforms</a>[0].TransformPoint(effectorLocalPosition2D);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">if</span> (CCD2D.Solve(effectorPosition, <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_solver2_d.html#a7bc24d717de36e2fa5238e1938bba0cb">GetPlaneRootTransform</a>().forward, <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#af02001a7935b8599ad8218897c41afd1">iterations</a>, <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#acd763f4a5265c5483b7238435f848eb5">tolerance</a>, Mathf.Lerp(kMinVelocity, kMaxVelocity, m_Velocity), ref m_Positions))</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_Chain.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html#af7583105d80b3f745a62b93ab83a6b4a">transformCount</a> - 1; ++i)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    Vector3 startLocalPosition = m_Chain.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html#adf5116dbf7370eeb19e45ca2ad6a732a">transforms</a>[i + 1].localPosition;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                    Vector3 endLocalPosition = m_Chain.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html#adf5116dbf7370eeb19e45ca2ad6a732a">transforms</a>[i].InverseTransformPoint(m_Positions[i + 1]);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                    m_Chain.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html#adf5116dbf7370eeb19e45ca2ad6a732a">transforms</a>[i].localRotation *= Quaternion.FromToRotation(startLocalPosition, endLocalPosition);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            Profiler.EndSample();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d_html_aeed7c7ed07e3264d4affd8382918f133"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#aeed7c7ed07e3264d4affd8382918f133">UnityEngine.U2D.IK.CCDSolver2D.velocity</a></div><div class="ttdeci">float velocity</div><div class="ttdoc">Get and Set the solver velocity.</div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00054">CCDSolver2D.cs:54</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_1_1_i_k_html"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d_1_1_i_k.html">UnityEngine.U2D.IK</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_solver2_d_html_a7bc24d717de36e2fa5238e1938bba0cb"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_solver2_d.html#a7bc24d717de36e2fa5238e1938bba0cb">UnityEngine.U2D.IK.Solver2D.GetPlaneRootTransform</a></div><div class="ttdeci">virtual Transform GetPlaneRootTransform()</div><div class="ttdoc">Override to return the root Unity Transform of the Solver. The default implementation returns the roo...</div><div class="ttdef"><b>Definition:</b> <a href="_solver2_d_8cs_source.html#l00271">Solver2D.cs:271</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d_html_adf5116dbf7370eeb19e45ca2ad6a732a"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html#adf5116dbf7370eeb19e45ca2ad6a732a">UnityEngine.U2D.IK.IKChain2D.transforms</a></div><div class="ttdeci">Transform[] transforms</div><div class="ttdoc">Get the Unity Transforms that are in the IK Chain.</div><div class="ttdef"><b>Definition:</b> <a href="_i_k_chain2_d_8cs_source.html#l00055">IKChain2D.cs:55</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d_html_a741300ad4526472b0aea6ac37eb1f3a1"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#a741300ad4526472b0aea6ac37eb1f3a1">UnityEngine.U2D.IK.CCDSolver2D.GetChainCount</a></div><div class="ttdeci">override int GetChainCount()</div><div class="ttdoc">Returns the number of chain in the solver.</div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00063">CCDSolver2D.cs:63</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d_html"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html">UnityEngine.U2D.IK.CCDSolver2D</a></div><div class="ttdoc">Component for 2D Cyclic Coordinate Descent (CCD) IK.</div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00013">CCDSolver2D.cs:13</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d_html_af7583105d80b3f745a62b93ab83a6b4a"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html#af7583105d80b3f745a62b93ab83a6b4a">UnityEngine.U2D.IK.IKChain2D.transformCount</a></div><div class="ttdeci">int transformCount</div><div class="ttdoc">Get and Set the number of Unity Transforms in the IK Chain.</div><div class="ttdef"><b>Definition:</b> <a href="_i_k_chain2_d_8cs_source.html#l00086">IKChain2D.cs:86</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d_html"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html">UnityEngine.U2D.IK.IKChain2D</a></div><div class="ttdoc">Class for storing data for a 2D IK Chain.</div><div class="ttdef"><b>Definition:</b> <a href="_i_k_chain2_d_8cs_source.html#l00012">IKChain2D.cs:12</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_solver2_d_menu_attribute_html"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_solver2_d_menu_attribute.html">UnityEngine.U2D.IK.Solver2DMenuAttribute</a></div><div class="ttdoc">Attribute to add a menu item in IKManager2D to create the Solver.</div><div class="ttdef"><b>Definition:</b> <a href="_solver2_d_menu_attribute_8cs_source.html#l00012">Solver2DMenuAttribute.cs:12</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d_html_af02001a7935b8599ad8218897c41afd1"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#af02001a7935b8599ad8218897c41afd1">UnityEngine.U2D.IK.CCDSolver2D.iterations</a></div><div class="ttdeci">int iterations</div><div class="ttdoc">Get and Set the solver's itegration count.</div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00036">CCDSolver2D.cs:36</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html">UnityEngine.U2D</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d_html_af3907a8a98fd752426444e9ca7214609"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#af3907a8a98fd752426444e9ca7214609">UnityEngine.U2D.IK.CCDSolver2D.DoUpdateIK</a></div><div class="ttdeci">override void DoUpdateIK(List&lt; Vector3 &gt; effectorPositions)</div><div class="ttdoc">DoUpdateIK override from base class.</div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00094">CCDSolver2D.cs:94</a></div></div>
+<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition:</b> <a href="_preserve_dependency_attribute_8cs_source.html#l00030">PreserveDependencyAttribute.cs:30</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d_html_acd763f4a5265c5483b7238435f848eb5"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#acd763f4a5265c5483b7238435f848eb5">UnityEngine.U2D.IK.CCDSolver2D.tolerance</a></div><div class="ttdeci">float tolerance</div><div class="ttdoc">Get and Set target distance tolerance.</div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00045">CCDSolver2D.cs:45</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_1_1_common_html"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d_1_1_common.html">UnityEngine.U2D.Common</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_animation_previewable_8cs_source.html#l00003">IAnimationPreviewable.cs:3</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_solver2_d_html"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_solver2_d.html">UnityEngine.U2D.IK.Solver2D</a></div><div class="ttdoc">Abstract class for implementing a 2D IK Solver.</div><div class="ttdef"><b>Definition:</b> <a href="_solver2_d_8cs_source.html#l00013">Solver2D.cs:13</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d_html_ad51a92b22334f85a6265dc92d3b07f36"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#ad51a92b22334f85a6265dc92d3b07f36">UnityEngine.U2D.IK.CCDSolver2D.GetChain</a></div><div class="ttdeci">override IKChain2D GetChain(int index)</div><div class="ttdoc">Gets the chain in the solver by index.</div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00073">CCDSolver2D.cs:73</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d_html_a6234655a82f34e47edcffd36d1eb8c39"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_c_c_d_solver2_d.html#a6234655a82f34e47edcffd36d1eb8c39">UnityEngine.U2D.IK.CCDSolver2D.DoPrepare</a></div><div class="ttdeci">override void DoPrepare()</div><div class="ttdoc">DoPrepare override from base class.</div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00081">CCDSolver2D.cs:81</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

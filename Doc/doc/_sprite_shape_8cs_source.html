@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.spriteshape@8.0.0/Runtime/SpriteShape.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_833882404abc6786b9b639e971041c98.html">com.unity.2d.spriteshape@8.0.0</a></li><li class="navelem"><a class="el" href="dir_d0254b26150eaeed273b721470b19cf5.html">Runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SpriteShape.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine_1_1_u2_d.html">UnityEngine.U2D</a></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="namespace_unity_engine_1_1_u2_d.html#a3ed4cf4389cef867ed0a312dbff2d85c">    9</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="namespace_unity_engine_1_1_u2_d.html#a3ed4cf4389cef867ed0a312dbff2d85c">ShapeTangentMode</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        Linear = 0,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        Continuous = 1,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        Broken = 2,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    };</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88">   22</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88">CornerType</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88aedad3464fd01df57e3ceac77f6bf8e88">OuterTopLeft</a>,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88aead316afe107fb672a239b7048c79c13">OuterTopRight</a>,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88a08ff5791b15a758f603b577221d6c432">OuterBottomLeft</a>,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88ab52345571f2fcadb47d3e551f51f5c33">OuterBottomRight</a>,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88a4de079ed32540d21bb03ce39991bee25">InnerTopLeft</a>,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88a74c307bfea5ec4aeb394c92de36f5c01">InnerTopRight</a>,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88abac250f6fc33c3c8d3d8f5d2783e012d">InnerBottomLeft</a>,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88a0589ab1796c22c4d03e734dfeab1214a">InnerBottomRight</a>,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    };</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="namespace_unity_engine_1_1_u2_d.html#a597da726120d89d5fd6041955c6535ee">   45</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="namespace_unity_engine_1_1_u2_d.html#a597da726120d89d5fd6041955c6535ee">QualityDetail</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_u2_d.html#a597da726120d89d5fd6041955c6535eea655d20c1ca69519ca647684edbb2db35">High</a> = 16,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_u2_d.html#a597da726120d89d5fd6041955c6535eea55c6b09cbca39ef0cdb728eb112a5049">Mid</a> = 8,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_u2_d.html#a597da726120d89d5fd6041955c6535eea28d0edd045e05cf5af64e35ae0c4c6ef">Low</a> = 4</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406">   58</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406">Corner</a></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406abcfaccebf745acfd5e75351095a5394a">Disable</a> = 0,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406a086247a9b57fde6eefee2a0c4752242d">Automatic</a> = 1,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406a7e96ac57251678c0126d6307ed690032">Stretched</a> = 2,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    [<a class="code" href="namespace_system.html">System</a>.Serializable]</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html">   72</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html">SplineControlPoint</a></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#af55e84047c5fd46e4b7f3be81816a7a1">   75</a></span>&#160;        <span class="keyword">public</span> Vector3 <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#af55e84047c5fd46e4b7f3be81816a7a1">position</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a13e8272cc2522d59efef9bc1b9fd77a6">   77</a></span>&#160;        <span class="keyword">public</span> Vector3 <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a13e8272cc2522d59efef9bc1b9fd77a6">leftTangent</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a48c662d6717066b3a8b24c3a24b2ff4a">   79</a></span>&#160;        <span class="keyword">public</span> Vector3 <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a48c662d6717066b3a8b24c3a24b2ff4a">rightTangent</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#ac20afb83a74cf020fd5f6d8b8685d64a">   81</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="namespace_unity_engine_1_1_u2_d.html#a3ed4cf4389cef867ed0a312dbff2d85c">ShapeTangentMode</a> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#ac20afb83a74cf020fd5f6d8b8685d64a">mode</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#aea5435a967ce19f51427664309caa3c4">   83</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#aea5435a967ce19f51427664309caa3c4">height</a> = 1f;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#af5cff246a33ec38b0bb3c4d2666b3ab9">   85</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#af5cff246a33ec38b0bb3c4d2666b3ab9">spriteIndex</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a77b52eed9d74cf820ba4bb0dc9d0cf0f">   87</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a77b52eed9d74cf820ba4bb0dc9d0cf0f">corner</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406">Corner</a> m_CornerMode;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keyword">public</span> <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406">Corner</a> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#aeaa7b4347da30949da9d02469c226b2f">cornerMode</a></div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#aeaa7b4347da30949da9d02469c226b2f">   93</a></span>&#160;        {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keyword">get</span> =&gt; m_CornerMode;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keyword">set</span> =&gt; m_CornerMode = value;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a9e852ae95ec0b4c8e517fc3454ab8124">  102</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a9e852ae95ec0b4c8e517fc3454ab8124">GetHashCode</a>()</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">return</span>  ((<span class="keywordtype">int</span>)<a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#af55e84047c5fd46e4b7f3be81816a7a1">position</a>.x).GetHashCode() ^ ((int)<a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#af55e84047c5fd46e4b7f3be81816a7a1">position</a>.y).GetHashCode() ^ <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#af55e84047c5fd46e4b7f3be81816a7a1">position</a>.GetHashCode() ^</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    (<a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a13e8272cc2522d59efef9bc1b9fd77a6">leftTangent</a>.GetHashCode() &lt;&lt; 2) ^ (<a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a48c662d6717066b3a8b24c3a24b2ff4a">rightTangent</a>.GetHashCode() &gt;&gt; 2) ^  ((<span class="keywordtype">int</span>)<a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#ac20afb83a74cf020fd5f6d8b8685d64a">mode</a>).<a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a9e852ae95ec0b4c8e517fc3454ab8124">GetHashCode</a>() ^</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#aea5435a967ce19f51427664309caa3c4">height</a>.GetHashCode() ^ <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#af5cff246a33ec38b0bb3c4d2666b3ab9">spriteIndex</a>.GetHashCode() ^ <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a77b52eed9d74cf820ba4bb0dc9d0cf0f">corner</a>.GetHashCode() ^ (m_CornerMode.GetHashCode() &lt;&lt; 2);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    [<a class="code" href="namespace_system.html">System</a>.Serializable]</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html">  114</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html">AngleRange</a> : ICloneable</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a6781df26c08869e8f4fc18354279cd48">start</a></div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a6781df26c08869e8f4fc18354279cd48">  118</a></span>&#160;        {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Start; }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keyword">set</span> { m_Start = value; }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#aa8929ac9918e1c3c48fd198540492758">end</a></div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#aa8929ac9918e1c3c48fd198540492758">  125</a></span>&#160;        {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_End; }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="keyword">set</span> { m_End = value; }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#ac06268a36c50ce9426118178b86de515">order</a></div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#ac06268a36c50ce9426118178b86de515">  132</a></span>&#160;        {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Order; }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="keyword">set</span> { m_Order = value; }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keyword">public</span> List&lt;Sprite&gt; <a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a1c13a5dfc2f26480382a90fc1e60e235">sprites</a></div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a1c13a5dfc2f26480382a90fc1e60e235">  139</a></span>&#160;        {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Sprites; }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="keyword">set</span> { m_Sprites = value; }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordtype">float</span> m_Start;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordtype">float</span> m_End;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordtype">int</span> m_Order;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        List&lt;Sprite&gt; m_Sprites = <span class="keyword">new</span> List&lt;Sprite&gt;();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        </div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a184c4707f2d200efc42d45d118bc84de">  157</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">object</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a184c4707f2d200efc42d45d118bc84de">Clone</a>()</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html">AngleRange</a> clone = this.MemberwiseClone() as <a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html">AngleRange</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            clone.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a1c13a5dfc2f26480382a90fc1e60e235">sprites</a> = <span class="keyword">new</span> List&lt;Sprite&gt;(clone.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a1c13a5dfc2f26480382a90fc1e60e235">sprites</a>);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordflow">return</span> clone;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#aebb9e9d3fcc57fd5d893cbacf0d632ee">  170</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#aebb9e9d3fcc57fd5d893cbacf0d632ee">Equals</a>(<span class="keywordtype">object</span> obj)</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            var other = obj as <a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html">AngleRange</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="keywordflow">if</span> (other == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordtype">bool</span> equals = <a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a6781df26c08869e8f4fc18354279cd48">start</a>.Equals(other.start) &amp;&amp; <a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#aa8929ac9918e1c3c48fd198540492758">end</a>.Equals(other.end) &amp;&amp; <a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#ac06268a36c50ce9426118178b86de515">order</a>.Equals(other.order);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordflow">if</span> (!equals)</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a1c13a5dfc2f26480382a90fc1e60e235">sprites</a>.Count != other.sprites.Count)</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a1c13a5dfc2f26480382a90fc1e60e235">sprites</a>.Count; ++i)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a1c13a5dfc2f26480382a90fc1e60e235">sprites</a>[i] != other.sprites[i])</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        </div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a3e42272300d549bbe5b015664613c06a">  196</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a3e42272300d549bbe5b015664613c06a">GetHashCode</a>()</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="keywordtype">int</span> hashCode = <a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a6781df26c08869e8f4fc18354279cd48">start</a>.GetHashCode() ^ <a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#aa8929ac9918e1c3c48fd198540492758">end</a>.GetHashCode() ^ <a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#ac06268a36c50ce9426118178b86de515">order</a>.GetHashCode();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a1c13a5dfc2f26480382a90fc1e60e235">sprites</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a1c13a5dfc2f26480382a90fc1e60e235">sprites</a>.Count; i++)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                    Sprite sprite = <a class="code" href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a1c13a5dfc2f26480382a90fc1e60e235">sprites</a>[i];</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                    <span class="keywordflow">if</span> (sprite)</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                        hashCode = hashCode * 16777619 ^ (sprite.GetHashCode() + i);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <span class="keywordflow">return</span> hashCode;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    [<a class="code" href="namespace_system.html">System</a>.Serializable]</div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html">  218</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html">CornerSprite</a> : ICloneable</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keyword">public</span> <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88">CornerType</a> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#a10ea4ab5cce5c2ee8f911596d12b1a58">cornerType</a></div>
+<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#a10ea4ab5cce5c2ee8f911596d12b1a58">  223</a></span>&#160;        {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_CornerType; }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="keyword">set</span> { m_CornerType = value; }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keyword">public</span> List&lt;Sprite&gt; <a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#ade628ce8593c07fa456491e8161fda8f">sprites</a></div>
+<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#ade628ce8593c07fa456491e8161fda8f">  230</a></span>&#160;        {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Sprites; }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            <span class="keyword">set</span> { m_Sprites = value; }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88">CornerType</a> m_CornerType;               </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        List&lt;Sprite&gt; m_Sprites;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#abd748513c5b3d543c815f2203673e855">  244</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">object</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#abd748513c5b3d543c815f2203673e855">Clone</a>()</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html">CornerSprite</a> clone = this.MemberwiseClone() as <a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html">CornerSprite</a>;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            clone.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#ade628ce8593c07fa456491e8161fda8f">sprites</a> = <span class="keyword">new</span> List&lt;Sprite&gt;(clone.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#ade628ce8593c07fa456491e8161fda8f">sprites</a>);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            <span class="keywordflow">return</span> clone;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#a485d028cef3cb40cc68a10c3428b634f">  257</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#a485d028cef3cb40cc68a10c3428b634f">Equals</a>(<span class="keywordtype">object</span> obj)</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            var other = obj as <a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html">CornerSprite</a>;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <span class="keywordflow">if</span> (other == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#a10ea4ab5cce5c2ee8f911596d12b1a58">cornerType</a>.Equals(other.cornerType))</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#ade628ce8593c07fa456491e8161fda8f">sprites</a>.Count != other.sprites.Count)</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#ade628ce8593c07fa456491e8161fda8f">sprites</a>.Count; ++i)</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#ade628ce8593c07fa456491e8161fda8f">sprites</a>[i] != other.sprites[i])</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        }</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#adff72d6bb994710a04f21d3ae623e7d8">  281</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#adff72d6bb994710a04f21d3ae623e7d8">GetHashCode</a>()</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        {</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <span class="keywordtype">int</span> hashCode = <a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#a10ea4ab5cce5c2ee8f911596d12b1a58">cornerType</a>.GetHashCode();</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#ade628ce8593c07fa456491e8161fda8f">sprites</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            {</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#ade628ce8593c07fa456491e8161fda8f">sprites</a>.Count; i++)</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                {</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                    Sprite sprite = <a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#ade628ce8593c07fa456491e8161fda8f">sprites</a>[i];</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                    <span class="keywordflow">if</span> (sprite)</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                    {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                        hashCode ^= (i + 1);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                        hashCode ^= sprite.GetHashCode();</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                    }</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            }</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="keywordflow">return</span> hashCode;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        }</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    }</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    [HelpURLAttribute(<span class="stringliteral">&quot;https://docs.unity3d.com/Packages/com.unity.2d.spriteshape@latest/index.html?subfolder=/manual/SSProfile.html&quot;</span>)]</div>
+<div class="line"><a name="l00306"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_sprite_shape.html">  306</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_u2_d_1_1_sprite_shape.html">SpriteShape</a> : ScriptableObject</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    {</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keyword">public</span> List&lt;AngleRange&gt; <a class="code" href="class_unity_engine_1_1_u2_d_1_1_sprite_shape.html#a70cabd8d3a3a5ed2a84f8c59749c14f2">angleRanges</a></div>
+<div class="line"><a name="l00310"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_sprite_shape.html#a70cabd8d3a3a5ed2a84f8c59749c14f2">  310</a></span>&#160;        {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Angles; }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            <span class="keyword">set</span> { m_Angles = value; }</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        }</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keyword">public</span> Texture2D <a class="code" href="class_unity_engine_1_1_u2_d_1_1_sprite_shape.html#a45183685c043eeb9f84223c7fceb6f33">fillTexture</a></div>
+<div class="line"><a name="l00317"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_sprite_shape.html#a45183685c043eeb9f84223c7fceb6f33">  317</a></span>&#160;        {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_FillTexture; }</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            <span class="keyword">set</span> { m_FillTexture = value; }</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        }</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="keyword">public</span> List&lt;CornerSprite&gt; <a class="code" href="class_unity_engine_1_1_u2_d_1_1_sprite_shape.html#af62fbce8b28f2f158f660d0fc3a04856">cornerSprites</a></div>
+<div class="line"><a name="l00324"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_sprite_shape.html#af62fbce8b28f2f158f660d0fc3a04856">  324</a></span>&#160;        {</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_CornerSprites; }</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <span class="keyword">set</span> { m_CornerSprites = value; }</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_sprite_shape.html#af75e8546fc6d2a2c46593ac8441e9963">fillOffset</a></div>
+<div class="line"><a name="l00331"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_sprite_shape.html#af75e8546fc6d2a2c46593ac8441e9963">  331</a></span>&#160;        {</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_FillOffset; }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            <span class="keyword">set</span> { m_FillOffset = value; }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        }</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_sprite_shape.html#a08e6b57bd8caf9478de007bde48fac26">useSpriteBorders</a></div>
+<div class="line"><a name="l00338"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_sprite_shape.html#a08e6b57bd8caf9478de007bde48fac26">  338</a></span>&#160;        {</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_UseSpriteBorders; }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            <span class="keyword">set</span> { m_UseSpriteBorders = value; }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        List&lt;AngleRange&gt; m_Angles = <span class="keyword">new</span> List&lt;AngleRange&gt;();</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        Texture2D m_FillTexture;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        List&lt;CornerSprite&gt; m_CornerSprites = <span class="keyword">new</span> List&lt;CornerSprite&gt;();</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <span class="keywordtype">float</span> m_FillOffset;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keywordtype">bool</span> m_UseSpriteBorders = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        </div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="preprocessor">#if UNITY_EDITOR        </span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keyword">event</span> Action&lt;SpriteShape&gt; onReset = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="preprocessor">#endif        </span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="keyword">private</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html">CornerSprite</a> GetCornerSprite(<a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88">CornerType</a> cornerType)</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        {</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            var cornerSprite = <span class="keyword">new</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html">CornerSprite</a>();</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            cornerSprite.cornerType = cornerType;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            cornerSprite.sprites = <span class="keyword">new</span> List&lt;Sprite&gt;();</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            cornerSprite.sprites.Insert(0, <span class="keyword">null</span>);</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            <span class="keywordflow">return</span> cornerSprite;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        }</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        <span class="keywordtype">void</span> ResetCornerList()</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        {</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;            m_CornerSprites.Clear();</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;            m_CornerSprites.Insert(0, GetCornerSprite(<a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88">CornerType</a>.OuterTopLeft));</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;            m_CornerSprites.Insert(1, GetCornerSprite(<a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88">CornerType</a>.OuterTopRight));</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;            m_CornerSprites.Insert(2, GetCornerSprite(<a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88">CornerType</a>.OuterBottomLeft));</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            m_CornerSprites.Insert(3, GetCornerSprite(<a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88">CornerType</a>.OuterBottomRight));</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            m_CornerSprites.Insert(4, GetCornerSprite(<a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88">CornerType</a>.InnerTopLeft));</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            m_CornerSprites.Insert(5, GetCornerSprite(<a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88">CornerType</a>.InnerTopRight));</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            m_CornerSprites.Insert(6, GetCornerSprite(<a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88">CornerType</a>.InnerBottomLeft));</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;            m_CornerSprites.Insert(7, GetCornerSprite(<a class="code" href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88">CornerType</a>.InnerBottomRight));</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        }</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordtype">void</span> OnValidate()</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        {</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;            <span class="keywordflow">if</span> (m_CornerSprites.Count != 8)</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                ResetCornerList();</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        }</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <span class="keywordtype">void</span> Reset()</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        {</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            m_Angles.Clear();</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;            ResetCornerList();</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;            onReset?.Invoke(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="preprocessor">#endif            </span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        }</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160; </div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">int</span> GetSpriteShapeHashCode(SpriteShape spriteShape)</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        {</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            <span class="comment">// useSpriteBorders, fillOffset and fillTexture are hashChecked elsewhere.</span></div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            unchecked</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            {</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                <span class="keywordtype">int</span> hashCode = (int)2166136261;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160; </div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;                hashCode = hashCode * 16777619 ^ spriteShape.angleRanges.Count;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160; </div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; spriteShape.angleRanges.Count; ++i)</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;                {</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                    hashCode = hashCode * 16777619 ^ (spriteShape.angleRanges[i].GetHashCode() + i);</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                }</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                hashCode = hashCode * 16777619 ^ spriteShape.cornerSprites.Count;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160; </div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; spriteShape.cornerSprites.Count; ++i)</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;                {</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;                    hashCode = hashCode * 16777619 ^ (spriteShape.cornerSprites[i].GetHashCode() + i);</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;                }</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160; </div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                <span class="keywordflow">return</span> hashCode;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;            }</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        }</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160; </div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    }</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_sprite_shape_html_a45183685c043eeb9f84223c7fceb6f33"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_sprite_shape.html#a45183685c043eeb9f84223c7fceb6f33">UnityEngine.U2D.SpriteShape.fillTexture</a></div><div class="ttdeci">Texture2D fillTexture</div><div class="ttdoc">Fill Texture to be used for inner geometry in case of closed shapes. The Texture wrap mode should be ...</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00317">SpriteShape.cs:317</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_ac2d2426630c26f7c789bbee4be139406abcfaccebf745acfd5e75351095a5394a"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406abcfaccebf745acfd5e75351095a5394a">UnityEngine.U2D.Corner.Disable</a></div><div class="ttdeci">@ Disable</div><div class="ttdoc">No corners.</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_corner_sprite_html_a485d028cef3cb40cc68a10c3428b634f"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#a485d028cef3cb40cc68a10c3428b634f">UnityEngine.U2D.CornerSprite.Equals</a></div><div class="ttdeci">override bool Equals(object obj)</div><div class="ttdoc">Test for Equality.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00257">SpriteShape.cs:257</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_control_point_html"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html">UnityEngine.U2D.SplineControlPoint</a></div><div class="ttdoc">Spline control point that holds information for constructing the Bezier curve and SpriteShape geometr...</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00072">SpriteShape.cs:72</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_control_point_html_aeaa7b4347da30949da9d02469c226b2f"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#aeaa7b4347da30949da9d02469c226b2f">UnityEngine.U2D.SplineControlPoint.cornerMode</a></div><div class="ttdeci">Corner cornerMode</div><div class="ttdoc">Corner mode of control point.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00093">SpriteShape.cs:93</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_angle_range_html_a1c13a5dfc2f26480382a90fc1e60e235"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a1c13a5dfc2f26480382a90fc1e60e235">UnityEngine.U2D.AngleRange.sprites</a></div><div class="ttdeci">List&lt; Sprite &gt; sprites</div><div class="ttdoc">List of sprites that are used to render the edge. The sprite index of control point can be used to se...</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00139">SpriteShape.cs:139</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_control_point_html_aea5435a967ce19f51427664309caa3c4"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#aea5435a967ce19f51427664309caa3c4">UnityEngine.U2D.SplineControlPoint.height</a></div><div class="ttdeci">float height</div><div class="ttdoc">Height of control point used when generating SpriteShape geometry.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00083">SpriteShape.cs:83</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_ab6c0770f6d887c251d0e9d0e9a5e9c88aedad3464fd01df57e3ceac77f6bf8e88"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88aedad3464fd01df57e3ceac77f6bf8e88">UnityEngine.U2D.CornerType.OuterTopLeft</a></div><div class="ttdeci">@ OuterTopLeft</div><div class="ttdoc">Outer top left Corner.</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_angle_range_html_a184c4707f2d200efc42d45d118bc84de"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a184c4707f2d200efc42d45d118bc84de">UnityEngine.U2D.AngleRange.Clone</a></div><div class="ttdeci">object Clone()</div><div class="ttdoc">Clone object.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00157">SpriteShape.cs:157</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_ab6c0770f6d887c251d0e9d0e9a5e9c88ab52345571f2fcadb47d3e551f51f5c33"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88ab52345571f2fcadb47d3e551f51f5c33">UnityEngine.U2D.CornerType.OuterBottomRight</a></div><div class="ttdeci">@ OuterBottomRight</div><div class="ttdoc">Outer bottom right Corner.</div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_a3ed4cf4389cef867ed0a312dbff2d85c"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#a3ed4cf4389cef867ed0a312dbff2d85c">UnityEngine.U2D.ShapeTangentMode</a></div><div class="ttdeci">ShapeTangentMode</div><div class="ttdoc">Tangent mode for control points that defines the bezier curve.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00009">SpriteShape.cs:9</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_ab6c0770f6d887c251d0e9d0e9a5e9c88"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88">UnityEngine.U2D.CornerType</a></div><div class="ttdeci">CornerType</div><div class="ttdoc">Corner type to assign sprite.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00022">SpriteShape.cs:22</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_angle_range_html"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_angle_range.html">UnityEngine.U2D.AngleRange</a></div><div class="ttdoc">Angle Range defines constraints and list of sprites to be used to render edges of SpriteShape.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00114">SpriteShape.cs:114</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_sprite_shape_html"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_sprite_shape.html">UnityEngine.U2D.SpriteShape</a></div><div class="ttdoc">SpriteShape contains the parameters that define how SpriteShape geometry is generated from a Spline.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00306">SpriteShape.cs:306</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_ab6c0770f6d887c251d0e9d0e9a5e9c88a0589ab1796c22c4d03e734dfeab1214a"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88a0589ab1796c22c4d03e734dfeab1214a">UnityEngine.U2D.CornerType.InnerBottomRight</a></div><div class="ttdeci">@ InnerBottomRight</div><div class="ttdoc">Inner bottom right Corner.</div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_ab6c0770f6d887c251d0e9d0e9a5e9c88aead316afe107fb672a239b7048c79c13"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88aead316afe107fb672a239b7048c79c13">UnityEngine.U2D.CornerType.OuterTopRight</a></div><div class="ttdeci">@ OuterTopRight</div><div class="ttdoc">Outer top right Corner.</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_control_point_html_af55e84047c5fd46e4b7f3be81816a7a1"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#af55e84047c5fd46e4b7f3be81816a7a1">UnityEngine.U2D.SplineControlPoint.position</a></div><div class="ttdeci">Vector3 position</div><div class="ttdoc">Position of control point.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00075">SpriteShape.cs:75</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_corner_sprite_html"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html">UnityEngine.U2D.CornerSprite</a></div><div class="ttdoc">Corner Sprite used to specify corner type and associated sprites.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00218">SpriteShape.cs:218</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_ac2d2426630c26f7c789bbee4be139406a7e96ac57251678c0126d6307ed690032"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406a7e96ac57251678c0126d6307ed690032">UnityEngine.U2D.Corner.Stretched</a></div><div class="ttdeci">@ Stretched</div><div class="ttdoc">The sprite at this control point is used to create a curved corner.</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_sprite_shape_html_a70cabd8d3a3a5ed2a84f8c59749c14f2"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_sprite_shape.html#a70cabd8d3a3a5ed2a84f8c59749c14f2">UnityEngine.U2D.SpriteShape.angleRanges</a></div><div class="ttdeci">List&lt; AngleRange &gt; angleRanges</div><div class="ttdoc">List of AngleRanges.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00310">SpriteShape.cs:310</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_corner_sprite_html_adff72d6bb994710a04f21d3ae623e7d8"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#adff72d6bb994710a04f21d3ae623e7d8">UnityEngine.U2D.CornerSprite.GetHashCode</a></div><div class="ttdeci">override int GetHashCode()</div><div class="ttdoc">Get hash code for this CornerSprite.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00281">SpriteShape.cs:281</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_sprite_shape_html_af62fbce8b28f2f158f660d0fc3a04856"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_sprite_shape.html#af62fbce8b28f2f158f660d0fc3a04856">UnityEngine.U2D.SpriteShape.cornerSprites</a></div><div class="ttdeci">List&lt; CornerSprite &gt; cornerSprites</div><div class="ttdoc">Sprites to be used for corners.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00324">SpriteShape.cs:324</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_control_point_html_a9e852ae95ec0b4c8e517fc3454ab8124"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a9e852ae95ec0b4c8e517fc3454ab8124">UnityEngine.U2D.SplineControlPoint.GetHashCode</a></div><div class="ttdeci">override int GetHashCode()</div><div class="ttdoc">Get hash code for this Spline control point.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00102">SpriteShape.cs:102</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_corner_sprite_html_a10ea4ab5cce5c2ee8f911596d12b1a58"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#a10ea4ab5cce5c2ee8f911596d12b1a58">UnityEngine.U2D.CornerSprite.cornerType</a></div><div class="ttdeci">CornerType cornerType</div><div class="ttdoc">Type of corner.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00223">SpriteShape.cs:223</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html">UnityEngine.U2D</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_a597da726120d89d5fd6041955c6535eea55c6b09cbca39ef0cdb728eb112a5049"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#a597da726120d89d5fd6041955c6535eea55c6b09cbca39ef0cdb728eb112a5049">UnityEngine.U2D.QualityDetail.Mid</a></div><div class="ttdeci">@ Mid</div><div class="ttdoc">Medium level of detail (8).</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_control_point_html_a13e8272cc2522d59efef9bc1b9fd77a6"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a13e8272cc2522d59efef9bc1b9fd77a6">UnityEngine.U2D.SplineControlPoint.leftTangent</a></div><div class="ttdeci">Vector3 leftTangent</div><div class="ttdoc">Left tangent of control point.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00077">SpriteShape.cs:77</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_control_point_html_ac20afb83a74cf020fd5f6d8b8685d64a"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#ac20afb83a74cf020fd5f6d8b8685d64a">UnityEngine.U2D.SplineControlPoint.mode</a></div><div class="ttdeci">ShapeTangentMode mode</div><div class="ttdoc">Tangent mode of control point.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00081">SpriteShape.cs:81</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_angle_range_html_aebb9e9d3fcc57fd5d893cbacf0d632ee"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#aebb9e9d3fcc57fd5d893cbacf0d632ee">UnityEngine.U2D.AngleRange.Equals</a></div><div class="ttdeci">override bool Equals(object obj)</div><div class="ttdoc">Test for Equality.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00170">SpriteShape.cs:170</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_ac2d2426630c26f7c789bbee4be139406"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406">UnityEngine.U2D.Corner</a></div><div class="ttdeci">Corner</div><div class="ttdoc">Corner mode that defines how corners are handled when generating SpriteShape geometry.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00058">SpriteShape.cs:58</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_sprite_shape_html_a08e6b57bd8caf9478de007bde48fac26"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_sprite_shape.html#a08e6b57bd8caf9478de007bde48fac26">UnityEngine.U2D.SpriteShape.useSpriteBorders</a></div><div class="ttdeci">bool useSpriteBorders</div><div class="ttdoc">Use borders of sprites when generating edge geometry.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00338">SpriteShape.cs:338</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_a597da726120d89d5fd6041955c6535eea655d20c1ca69519ca647684edbb2db35"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#a597da726120d89d5fd6041955c6535eea655d20c1ca69519ca647684edbb2db35">UnityEngine.U2D.QualityDetail.High</a></div><div class="ttdeci">@ High</div><div class="ttdoc">Highest level of detail (16).</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_control_point_html_a77b52eed9d74cf820ba4bb0dc9d0cf0f"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a77b52eed9d74cf820ba4bb0dc9d0cf0f">UnityEngine.U2D.SplineControlPoint.corner</a></div><div class="ttdeci">bool corner</div><div class="ttdoc">Enable corners of control point.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00087">SpriteShape.cs:87</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_control_point_html_a48c662d6717066b3a8b24c3a24b2ff4a"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a48c662d6717066b3a8b24c3a24b2ff4a">UnityEngine.U2D.SplineControlPoint.rightTangent</a></div><div class="ttdeci">Vector3 rightTangent</div><div class="ttdoc">Right tangent of control point.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00079">SpriteShape.cs:79</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_ab6c0770f6d887c251d0e9d0e9a5e9c88a4de079ed32540d21bb03ce39991bee25"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88a4de079ed32540d21bb03ce39991bee25">UnityEngine.U2D.CornerType.InnerTopLeft</a></div><div class="ttdeci">@ InnerTopLeft</div><div class="ttdoc">Inner top left Corner.</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_angle_range_html_a3e42272300d549bbe5b015664613c06a"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a3e42272300d549bbe5b015664613c06a">UnityEngine.U2D.AngleRange.GetHashCode</a></div><div class="ttdeci">override int GetHashCode()</div><div class="ttdoc">Get hash code for this AngleRange.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00196">SpriteShape.cs:196</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_ab6c0770f6d887c251d0e9d0e9a5e9c88a74c307bfea5ec4aeb394c92de36f5c01"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88a74c307bfea5ec4aeb394c92de36f5c01">UnityEngine.U2D.CornerType.InnerTopRight</a></div><div class="ttdeci">@ InnerTopRight</div><div class="ttdoc">Inner top right Corner.</div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_ab6c0770f6d887c251d0e9d0e9a5e9c88a08ff5791b15a758f603b577221d6c432"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88a08ff5791b15a758f603b577221d6c432">UnityEngine.U2D.CornerType.OuterBottomLeft</a></div><div class="ttdeci">@ OuterBottomLeft</div><div class="ttdoc">Outer bottom left Corner.</div></div>
+<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition:</b> <a href="_preserve_dependency_attribute_8cs_source.html#l00030">PreserveDependencyAttribute.cs:30</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_sprite_shape_html_af75e8546fc6d2a2c46593ac8441e9963"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_sprite_shape.html#af75e8546fc6d2a2c46593ac8441e9963">UnityEngine.U2D.SpriteShape.fillOffset</a></div><div class="ttdeci">float fillOffset</div><div class="ttdoc">Fill offset for the closed shape.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00331">SpriteShape.cs:331</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_angle_range_html_a6781df26c08869e8f4fc18354279cd48"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#a6781df26c08869e8f4fc18354279cd48">UnityEngine.U2D.AngleRange.start</a></div><div class="ttdeci">float start</div><div class="ttdoc">Start angle of AngleRange.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00118">SpriteShape.cs:118</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_angle_range_html_ac06268a36c50ce9426118178b86de515"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#ac06268a36c50ce9426118178b86de515">UnityEngine.U2D.AngleRange.order</a></div><div class="ttdeci">int order</div><div class="ttdoc">Render order for this AngleRange.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00132">SpriteShape.cs:132</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_control_point_html_af5cff246a33ec38b0bb3c4d2666b3ab9"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#af5cff246a33ec38b0bb3c4d2666b3ab9">UnityEngine.U2D.SplineControlPoint.spriteIndex</a></div><div class="ttdeci">int spriteIndex</div><div class="ttdoc">Sprite index used for rendering at start of this control point along the edge.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00085">SpriteShape.cs:85</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_ac2d2426630c26f7c789bbee4be139406a086247a9b57fde6eefee2a0c4752242d"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406a086247a9b57fde6eefee2a0c4752242d">UnityEngine.U2D.Corner.Automatic</a></div><div class="ttdeci">@ Automatic</div><div class="ttdoc">Automatically use respective corner sprite if 1) angle is within range 2) control point and neighbour...</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_corner_sprite_html_ade628ce8593c07fa456491e8161fda8f"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#ade628ce8593c07fa456491e8161fda8f">UnityEngine.U2D.CornerSprite.sprites</a></div><div class="ttdeci">List&lt; Sprite &gt; sprites</div><div class="ttdoc">List of sprites associated with this corner.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00230">SpriteShape.cs:230</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_ab6c0770f6d887c251d0e9d0e9a5e9c88abac250f6fc33c3c8d3d8f5d2783e012d"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#ab6c0770f6d887c251d0e9d0e9a5e9c88abac250f6fc33c3c8d3d8f5d2783e012d">UnityEngine.U2D.CornerType.InnerBottomLeft</a></div><div class="ttdeci">@ InnerBottomLeft</div><div class="ttdoc">Inner bottom left Corner.</div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_a597da726120d89d5fd6041955c6535eea28d0edd045e05cf5af64e35ae0c4c6ef"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#a597da726120d89d5fd6041955c6535eea28d0edd045e05cf5af64e35ae0c4c6ef">UnityEngine.U2D.QualityDetail.Low</a></div><div class="ttdeci">@ Low</div><div class="ttdoc">Low level of detail (4).</div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_corner_sprite_html_abd748513c5b3d543c815f2203673e855"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_corner_sprite.html#abd748513c5b3d543c815f2203673e855">UnityEngine.U2D.CornerSprite.Clone</a></div><div class="ttdeci">object Clone()</div><div class="ttdoc">Clone this object.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00244">SpriteShape.cs:244</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_angle_range_html_aa8929ac9918e1c3c48fd198540492758"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_angle_range.html#aa8929ac9918e1c3c48fd198540492758">UnityEngine.U2D.AngleRange.end</a></div><div class="ttdeci">float end</div><div class="ttdoc">End angle of AngleRange. Angles cannot overlap with others.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00125">SpriteShape.cs:125</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_a597da726120d89d5fd6041955c6535ee"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#a597da726120d89d5fd6041955c6535ee">UnityEngine.U2D.QualityDetail</a></div><div class="ttdeci">QualityDetail</div><div class="ttdoc">Level of detail of generated SpriteShape geometry.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00045">SpriteShape.cs:45</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Assets/Simba/Scirpts/Static Manager/GameController.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_158af4e89fe28c6233fdc636e282763b.html">Simba</a></li><li class="navelem"><a class="el" href="dir_7fd08fc4bf1ab871205d67b083a39232.html">Scirpts</a></li><li class="navelem"><a class="el" href="dir_e092b1d85e7bef095637f5180698029d.html">Static Manager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GameController.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_game_controller_8cs.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System.Collections;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_character_system.html">CharacterSystem</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_static_manager.html">StaticManager</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_static_manager_1_1_game_controller.html">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_static_manager_1_1_game_controller.html">GameController</a> : MonoBehaviour</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_static_manager_1_1_game_controller.html#abaa6860dc131a1f8b0a409b5c1da287e">   13</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_static_manager_1_1_game_controller.html">GameController</a> <a class="code" href="class_static_manager_1_1_game_controller.html#abaa6860dc131a1f8b0a409b5c1da287e">instance</a>; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_static_manager_1_1_game_controller.html#aeb38e8a247cf3decba13566faa7001fe">   14</a></span>&#160;        [SerializeField] <a class="code" href="class_character_system_1_1_player_controller.html">PlayerController</a> <a class="code" href="class_static_manager_1_1_game_controller.html#aeb38e8a247cf3decba13566faa7001fe">playerController</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_static_manager_1_1_game_controller.html#a92e52184bc539de252478b7ee796d829">   15</a></span>&#160;        [SerializeField] List&lt;Character&gt; <a class="code" href="class_static_manager_1_1_game_controller.html#a92e52184bc539de252478b7ee796d829">characters</a>;  </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_static_manager_1_1_game_controller.html#a5132eef0f6fdf4cba89e1669e8600847">   16</a></span>&#160;        <span class="keyword">public</span> List&lt;Character&gt; <a class="code" href="class_static_manager_1_1_game_controller.html#a5132eef0f6fdf4cba89e1669e8600847">Characters</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code" href="class_static_manager_1_1_game_controller.html#a92e52184bc539de252478b7ee796d829">characters</a>; } } </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_static_manager_1_1_game_controller.html#ae14cb37fb018243961377c85080d3a66">   17</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_character_system_1_1_player_controller.html">PlayerController</a> <a class="code" href="class_character_system_1_1_player_controller.html">PlayerController</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code" href="class_static_manager_1_1_game_controller.html#aeb38e8a247cf3decba13566faa7001fe">playerController</a>; } }</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_static_manager_1_1_game_controller.html#a94afb5660df8f5a56f61dd097c15c69a">   18</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_static_manager_1_1_game_controller.html#a94afb5660df8f5a56f61dd097c15c69a">currentCharacter</a> = 0; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_static_manager_1_1_game_controller.html#ac61c69bb96672be95321b4b5877c24a8">   26</a></span>&#160;<span class="comment"></span>        <span class="keywordtype">void</span> <a class="code" href="class_static_manager_1_1_game_controller.html#ac61c69bb96672be95321b4b5877c24a8">Start</a>()</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="class_static_manager_1_1_game_controller.html#abaa6860dc131a1f8b0a409b5c1da287e">instance</a> == <span class="keyword">null</span>){</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <a class="code" href="class_static_manager_1_1_game_controller.html#abaa6860dc131a1f8b0a409b5c1da287e">instance</a> = <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_static_manager_1_1_game_controller.html#aff31dcc22843e666f6eb9395a73361ea">   39</a></span>&#160;<span class="comment"></span>        <span class="keywordtype">void</span> <a class="code" href="class_static_manager_1_1_game_controller.html#aff31dcc22843e666f6eb9395a73361ea">FixedUpdate</a>()</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <a class="code" href="class_static_manager_1_1_game_controller.html#aeb38e8a247cf3decba13566faa7001fe">playerController</a>.<a class="code" href="class_character_system_1_1_player_controller.html#acc62b8497aa264096077e5825f57f5d1">CustomUpdate</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_static_manager_1_1_game_controller.html#ad8642aca1ddf630fbf05c4a8f113262a">   50</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_static_manager_1_1_game_controller.html#ad8642aca1ddf630fbf05c4a8f113262a">SwitchCharacter</a>(){</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="class_static_manager_1_1_game_controller.html#a94afb5660df8f5a56f61dd097c15c69a">currentCharacter</a> = (<a class="code" href="class_static_manager_1_1_game_controller.html#a94afb5660df8f5a56f61dd097c15c69a">currentCharacter</a> == 0)? 1 : 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="class_character_system_1_1_character.html">Character</a> character = <a class="code" href="class_static_manager_1_1_game_controller.html#a92e52184bc539de252478b7ee796d829">characters</a>[<a class="code" href="class_static_manager_1_1_game_controller.html#a94afb5660df8f5a56f61dd097c15c69a">currentCharacter</a>];</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="class_static_manager_1_1_game_controller.html#aeb38e8a247cf3decba13566faa7001fe">playerController</a>.<a class="code" href="class_character_system_1_1_player_controller.html#a6dea85f7b515551a0a29ff3d91a3e15b">SetCharacter</a>(character);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_static_manager_1_1_game_controller_html_a94afb5660df8f5a56f61dd097c15c69a"><div class="ttname"><a href="class_static_manager_1_1_game_controller.html#a94afb5660df8f5a56f61dd097c15c69a">StaticManager.GameController.currentCharacter</a></div><div class="ttdeci">int currentCharacter</div><div class="ttdef"><b>Definition:</b> <a href="_game_controller_8cs_source.html#l00018">GameController.cs:18</a></div></div>
+<div class="ttc" id="aclass_static_manager_1_1_game_controller_html_a92e52184bc539de252478b7ee796d829"><div class="ttname"><a href="class_static_manager_1_1_game_controller.html#a92e52184bc539de252478b7ee796d829">StaticManager.GameController.characters</a></div><div class="ttdeci">List&lt; Character &gt; characters</div><div class="ttdef"><b>Definition:</b> <a href="_game_controller_8cs_source.html#l00015">GameController.cs:15</a></div></div>
+<div class="ttc" id="aclass_character_system_1_1_character_html"><div class="ttname"><a href="class_character_system_1_1_character.html">CharacterSystem.Character</a></div><div class="ttdef"><b>Definition:</b> <a href="_character_8cs_source.html#l00010">Character.cs:10</a></div></div>
+<div class="ttc" id="aclass_static_manager_1_1_game_controller_html_a5132eef0f6fdf4cba89e1669e8600847"><div class="ttname"><a href="class_static_manager_1_1_game_controller.html#a5132eef0f6fdf4cba89e1669e8600847">StaticManager.GameController.Characters</a></div><div class="ttdeci">List&lt; Character &gt; Characters</div><div class="ttdef"><b>Definition:</b> <a href="_game_controller_8cs_source.html#l00016">GameController.cs:16</a></div></div>
+<div class="ttc" id="aclass_static_manager_1_1_game_controller_html_abaa6860dc131a1f8b0a409b5c1da287e"><div class="ttname"><a href="class_static_manager_1_1_game_controller.html#abaa6860dc131a1f8b0a409b5c1da287e">StaticManager.GameController.instance</a></div><div class="ttdeci">static GameController instance</div><div class="ttdef"><b>Definition:</b> <a href="_game_controller_8cs_source.html#l00013">GameController.cs:13</a></div></div>
+<div class="ttc" id="aclass_character_system_1_1_player_controller_html"><div class="ttname"><a href="class_character_system_1_1_player_controller.html">CharacterSystem.PlayerController</a></div><div class="ttdoc">Permet de controller le joueur.</div><div class="ttdef"><b>Definition:</b> <a href="_player_controller_8cs_source.html#l00014">PlayerController.cs:14</a></div></div>
+<div class="ttc" id="anamespace_character_system_html"><div class="ttname"><a href="namespace_character_system.html">CharacterSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="_character_8cs_source.html#l00007">Character.cs:7</a></div></div>
+<div class="ttc" id="aclass_static_manager_1_1_game_controller_html_aff31dcc22843e666f6eb9395a73361ea"><div class="ttname"><a href="class_static_manager_1_1_game_controller.html#aff31dcc22843e666f6eb9395a73361ea">StaticManager.GameController.FixedUpdate</a></div><div class="ttdeci">void FixedUpdate()</div><div class="ttdoc">MonoBeahviours Abstract Method</div><div class="ttdef"><b>Definition:</b> <a href="_game_controller_8cs_source.html#l00039">GameController.cs:39</a></div></div>
+<div class="ttc" id="aclass_static_manager_1_1_game_controller_html_ad8642aca1ddf630fbf05c4a8f113262a"><div class="ttname"><a href="class_static_manager_1_1_game_controller.html#ad8642aca1ddf630fbf05c4a8f113262a">StaticManager.GameController.SwitchCharacter</a></div><div class="ttdeci">void SwitchCharacter()</div><div class="ttdoc">Permet de changer le personnage (au niveau du PlayerController)</div><div class="ttdef"><b>Definition:</b> <a href="_game_controller_8cs_source.html#l00050">GameController.cs:50</a></div></div>
+<div class="ttc" id="aclass_static_manager_1_1_game_controller_html_ac61c69bb96672be95321b4b5877c24a8"><div class="ttname"><a href="class_static_manager_1_1_game_controller.html#ac61c69bb96672be95321b4b5877c24a8">StaticManager.GameController.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">MonoBeahviours Abstract Method</div><div class="ttdef"><b>Definition:</b> <a href="_game_controller_8cs_source.html#l00026">GameController.cs:26</a></div></div>
+<div class="ttc" id="aclass_character_system_1_1_player_controller_html_a6dea85f7b515551a0a29ff3d91a3e15b"><div class="ttname"><a href="class_character_system_1_1_player_controller.html#a6dea85f7b515551a0a29ff3d91a3e15b">CharacterSystem.PlayerController.SetCharacter</a></div><div class="ttdeci">void SetCharacter(Character character)</div><div class="ttdoc">Permet de changer le Character (change aussi le GfxUpdater)</div><div class="ttdef"><b>Definition:</b> <a href="_player_controller_8cs_source.html#l00152">PlayerController.cs:152</a></div></div>
+<div class="ttc" id="aclass_static_manager_1_1_game_controller_html"><div class="ttname"><a href="class_static_manager_1_1_game_controller.html">StaticManager.GameController</a></div><div class="ttdoc">Le controller principale du jeu</div><div class="ttdef"><b>Definition:</b> <a href="_game_controller_8cs_source.html#l00011">GameController.cs:11</a></div></div>
+<div class="ttc" id="anamespace_static_manager_html"><div class="ttname"><a href="namespace_static_manager.html">StaticManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_camera_script_8cs_source.html#l00004">CameraScript.cs:4</a></div></div>
+<div class="ttc" id="aclass_character_system_1_1_player_controller_html_acc62b8497aa264096077e5825f57f5d1"><div class="ttname"><a href="class_character_system_1_1_player_controller.html#acc62b8497aa264096077e5825f57f5d1">CharacterSystem.PlayerController.CustomUpdate</a></div><div class="ttdeci">void CustomUpdate()</div><div class="ttdoc">Update pricipale, jouer à l'interieur de GameController</div><div class="ttdef"><b>Definition:</b> <a href="_player_controller_8cs_source.html#l00060">PlayerController.cs:60</a></div></div>
+<div class="ttc" id="aclass_static_manager_1_1_game_controller_html_aeb38e8a247cf3decba13566faa7001fe"><div class="ttname"><a href="class_static_manager_1_1_game_controller.html#aeb38e8a247cf3decba13566faa7001fe">StaticManager.GameController.playerController</a></div><div class="ttdeci">PlayerController playerController</div><div class="ttdef"><b>Definition:</b> <a href="_game_controller_8cs_source.html#l00014">GameController.cs:14</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

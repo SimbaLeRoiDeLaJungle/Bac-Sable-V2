@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.psdimporter@7.0.0/Editor/PSDPlugin/PsdFile/ImageResources/Thumbnail.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_add22153e3689fb5fa51bb96dd750e47.html">com.unity.2d.psdimporter@7.0.0</a></li><li class="navelem"><a class="el" href="dir_cfa45458f05ce64844a62c52b8bc1800.html">Editor</a></li><li class="navelem"><a class="el" href="dir_2700592a767754f8d6d0d089d57e4f32.html">PSDPlugin</a></li><li class="navelem"><a class="el" href="dir_7c478c9fd7f51f41f0e65e551f8e75c3.html">PsdFile</a></li><li class="navelem"><a class="el" href="dir_1a0c084ace2a7afdab6082d86fa32d8a.html">ImageResources</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Thumbnail.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Photoshop PSD FileType Plugin for Paint.NET</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// http://psdplugin.codeplex.com/</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// This software is provided under the MIT License:</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//   Copyright (c) 2006-2007 Frank Blumenberg</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//   Copyright (c) 2010-2013 Tao Yue</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// Portions of this file are provided under the BSD 3-clause License:</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//   Copyright (c) 2006, Jonas Beckeman</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// See LICENSE.txt for complete licensing and attribution information.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.IO;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Diagnostics;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_p_d_n_wrapper.html">PDNWrapper</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//using PDNWrapper.Imaging;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_photoshop_file.html">PhotoshopFile</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">internal</span> <span class="keyword">class </span>Thumbnail : RawImageResource</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">public</span> Thumbnail(ResourceID <span class="keywordtype">id</span>, <span class="keywordtype">string</span> name)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            : base(id, name)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">public</span> Thumbnail(PsdBinaryReader psdReader, ResourceID <span class="keywordtype">id</span>, <span class="keywordtype">string</span> name, <span class="keywordtype">int</span> numBytes)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            : base(psdReader, <span class="stringliteral">&quot;8BIM&quot;</span>, id, name, numBytes)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keyword">using</span> (var memoryStream = <span class="keyword">new</span> MemoryStream(Data))</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keyword">using</span> (var reader = <span class="keyword">new</span> PsdBinaryReader(memoryStream, psdReader))</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    <span class="keyword">const</span> <span class="keywordtype">int</span> HEADER_LENGTH = 28;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    var format = reader.ReadUInt32();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    <span class="comment">//var width = reader.ReadUInt32();</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    <span class="comment">//var height = reader.ReadUInt32();</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    <span class="comment">//var widthBytes = reader.ReadUInt32();</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                    <span class="comment">//var size = reader.ReadUInt32();</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    <span class="comment">//var compressedSize = reader.ReadUInt32();</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    <span class="comment">//var bitPerPixel = reader.ReadUInt16();</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    <span class="comment">//var planes = reader.ReadUInt16();</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    <span class="comment">// Raw RGB bitmap</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    <span class="keywordflow">if</span> (format == 0)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                        <span class="comment">//Image = new Bitmap((int)width, (int)height, PixelFormat.Format24bppRgb);</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    <span class="comment">// JPEG bitmap</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (format == 1)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                        <span class="keywordtype">byte</span>[] imgData = reader.ReadBytes(numBytes - HEADER_LENGTH);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                        <span class="keyword">using</span> (MemoryStream stream = <span class="keyword">new</span> MemoryStream(imgData))</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                        {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                            <span class="comment">//var bitmap = new Bitmap(stream);</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                            <span class="comment">//Image = (Bitmap)bitmap.Clone();</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                        <span class="comment">// Reverse BGR pixels from old thumbnail format</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                        <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == ResourceID.ThumbnailBgr)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                        {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                            <span class="comment">//for(int y=0;y&lt;m_thumbnailImage.Height;y++)</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                            <span class="comment">//  for (int x = 0; x &lt; m_thumbnailImage.Width; x++)</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                            <span class="comment">//  {</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                            <span class="comment">//    Color c=m_thumbnailImage.GetPixel(x,y);</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                            <span class="comment">//    Color c2=Color.FromArgb(c.B, c.G, c.R);</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                            <span class="comment">//    m_thumbnailImage.SetPixel(x, y, c);</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                            <span class="comment">//  }</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                        <span class="keywordflow">throw</span> <span class="keyword">new</span> PsdInvalidException(<span class="stringliteral">&quot;Unknown thumbnail format.&quot;</span>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespace_p_d_n_wrapper_html"><div class="ttname"><a href="namespace_p_d_n_wrapper.html">PDNWrapper</a></div><div class="ttdef"><b>Definition:</b> <a href="_bitmap_layer_8cs_source.html#l00003">BitmapLayer.cs:3</a></div></div>
+<div class="ttc" id="anamespace_photoshop_file_html"><div class="ttname"><a href="namespace_photoshop_file.html">PhotoshopFile</a></div><div class="ttdef"><b>Definition:</b> <a href="_endian_reverser_8cs_source.html#l00016">EndianReverser.cs:16</a></div></div>
+<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition:</b> <a href="_preserve_dependency_attribute_8cs_source.html#l00030">PreserveDependencyAttribute.cs:30</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

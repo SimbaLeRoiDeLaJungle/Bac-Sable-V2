@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridBrushEditorBase.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_df381046aaab1e560c209bd4c9981ca6.html">com.unity.2d.tilemap@1.0.0</a></li><li class="navelem"><a class="el" href="dir_0d21ded2fd5e96c0f4a77865c032209d.html">Editor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GridBrushEditorBase.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Scripting.APIUpdating;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_tilemaps.html">Tilemaps</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor_1_1_tilemaps.html">UnityEditor.Tilemaps</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    [MovedFrom(<span class="keyword">true</span>, <span class="stringliteral">&quot;UnityEditor&quot;</span>, <span class="stringliteral">&quot;UnityEditor&quot;</span>)]</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    [CustomEditor(typeof(GridBrushBase))]</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html">   10</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html">GridBrushEditorBase</a> : Editor</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">class </span>Styles</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly Color activeColor = <span class="keyword">new</span> Color(1f, .5f, 0f);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly Color executingColor = <span class="keyword">new</span> Color(1f, .75f, 0.25f);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a7cf2cdc4d61ba6ce0a4c466b90f0c94a">canChangeZPosition</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a7cf2cdc4d61ba6ce0a4c466b90f0c94a">   21</a></span>&#160;        {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keyword">set</span> {}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#aa9830d303eac11dfec69a873e4be38e2">   33</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#aa9830d303eac11dfec69a873e4be38e2">OnPaintSceneGUI</a>(GridLayout gridLayout, GameObject brushTarget, BoundsInt position, GridBrushBase.Tool tool, <span class="keywordtype">bool</span> executing)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            OnPaintSceneGUIInternal(gridLayout, brushTarget, position, tool, executing);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a13760f0252f6a38958577a6645acd867">   40</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a13760f0252f6a38958577a6645acd867">OnPaintInspectorGUI</a>()</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            OnInspectorGUI();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a9dc414b133da6a69588d577197d1fc0d">   47</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a9dc414b133da6a69588d577197d1fc0d">OnSelectionInspectorGUI</a>() {}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#ac2917fd5771565cc405ea44e2b1bce1e">   53</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#ac2917fd5771565cc405ea44e2b1bce1e">OnSelectionSceneGUI</a>(GridLayout gridLayout, GameObject brushTarget) {}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a555dadf4f88b73a0ebd36120eda87c30">   61</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a555dadf4f88b73a0ebd36120eda87c30">OnSceneGUI</a>(GridLayout gridLayout, GameObject brushTarget) {}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a88d0d0479a6364cd616288ce4c653777">   65</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a88d0d0479a6364cd616288ce4c653777">OnMouseLeave</a>() {}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a6d28dd7810a8592c7fd7f2b4098c133c">   69</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a6d28dd7810a8592c7fd7f2b4098c133c">OnMouseEnter</a>() {}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a9c8c3aa32d6e0e74ecd9148bdca2541f">   74</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a9c8c3aa32d6e0e74ecd9148bdca2541f">OnToolActivated</a>(GridBrushBase.Tool tool) {}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#ad7ebf95d166dfd78848b89fa176b549b">   79</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#ad7ebf95d166dfd78848b89fa176b549b">OnToolDeactivated</a>(GridBrushBase.Tool tool) {}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#add342c0de6e519a46dd224bd0fe1afbd">   85</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#add342c0de6e519a46dd224bd0fe1afbd">RegisterUndo</a>(GameObject brushTarget, GridBrushBase.Tool tool) {}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a2b580d1da5736f6fbe990d751f42b0d5">   88</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> GameObject[] <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a2b580d1da5736f6fbe990d751f42b0d5">validTargets</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> <span class="keyword">null</span>; } }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">void</span> OnEditStart(GridLayout gridLayout, GameObject brushTarget)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            SetBufferSyncTile(brushTarget, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">void</span> OnEditEnd(GridLayout gridLayout, GameObject brushTarget)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            SetBufferSyncTile(brushTarget, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> SetBufferSyncTile(GameObject brushTarget, <span class="keywordtype">bool</span> active)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">if</span> (brushTarget == <span class="keyword">null</span> || !Tilemap.HasSyncTileCallback())</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            var tilemaps = brushTarget.GetComponentsInChildren&lt;Tilemap&gt;();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">foreach</span> (var tilemap <span class="keywordflow">in</span> tilemaps)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                tilemap.bufferSyncTile = active;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">void</span> OnSceneGUIInternal(GridLayout gridLayout, GameObject brushTarget, BoundsInt position, GridBrushBase.Tool tool, <span class="keywordtype">bool</span> executing)</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">if</span> (Event.current.type != EventType.Repaint)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">if</span> (tool == GridBrushBase.Tool.Select ||</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                tool == GridBrushBase.Tool.Move)</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                <span class="keywordflow">if</span> (GridSelection.active &amp;&amp; !executing)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                    Color color = Styles.activeColor;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                    GridEditorUtility.DrawGridMarquee(gridLayout, position, color);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">void</span> OnPaintSceneGUIInternal(GridLayout gridLayout, GameObject brushTarget, BoundsInt position, GridBrushBase.Tool tool, <span class="keywordtype">bool</span> executing)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">if</span> (Event.current.type != EventType.Repaint)</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            Color color = Color.white;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="keywordflow">if</span> (tool == GridBrushBase.Tool.Pick &amp;&amp; executing)</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                color = Color.cyan;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keywordflow">if</span> (tool == GridBrushBase.Tool.Paint &amp;&amp; executing)</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                color = Color.yellow;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">if</span> (tool == GridBrushBase.Tool.Select ||</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                tool == GridBrushBase.Tool.Move)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                <span class="keywordflow">if</span> (executing)</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                    color = Styles.executingColor;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (GridSelection.active)</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                    color = Styles.activeColor;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <span class="keywordflow">if</span> (brushTarget != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                var targetLayout = brushTarget.GetComponent&lt;GridLayout&gt;();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                <span class="keywordflow">if</span> (targetLayout != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                    gridLayout = targetLayout;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">if</span> (position.zMin != 0)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                var zeroBounds = position;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                zeroBounds.z = 0;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                GridEditorUtility.DrawGridMarquee(gridLayout, zeroBounds, color);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                color = Color.blue;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            GridEditorUtility.DrawGridMarquee(gridLayout, position, color);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base_html_a555dadf4f88b73a0ebd36120eda87c30"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a555dadf4f88b73a0ebd36120eda87c30">UnityEditor.Tilemaps.GridBrushEditorBase.OnSceneGUI</a></div><div class="ttdeci">virtual void OnSceneGUI(GridLayout gridLayout, GameObject brushTarget)</div><div class="ttdoc">Callback for painting custom gizmos for the GridBrush for the brush target</div><div class="ttdef"><b>Definition:</b> <a href="_grid_brush_editor_base_8cs_source.html#l00061">GridBrushEditorBase.cs:61</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base_html_a13760f0252f6a38958577a6645acd867"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a13760f0252f6a38958577a6645acd867">UnityEditor.Tilemaps.GridBrushEditorBase.OnPaintInspectorGUI</a></div><div class="ttdeci">virtual void OnPaintInspectorGUI()</div><div class="ttdoc">Callback for painting the inspector GUI for the GridBrush in the tilemap palette.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_brush_editor_base_8cs_source.html#l00040">GridBrushEditorBase.cs:40</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base_html_add342c0de6e519a46dd224bd0fe1afbd"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#add342c0de6e519a46dd224bd0fe1afbd">UnityEditor.Tilemaps.GridBrushEditorBase.RegisterUndo</a></div><div class="ttdeci">virtual void RegisterUndo(GameObject brushTarget, GridBrushBase.Tool tool)</div><div class="ttdoc">Callback for registering an Undo action before the GridBrushBase does the current GridBrushBase::ref:...</div><div class="ttdef"><b>Definition:</b> <a href="_grid_brush_editor_base_8cs_source.html#l00085">GridBrushEditorBase.cs:85</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base_html_a7cf2cdc4d61ba6ce0a4c466b90f0c94a"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a7cf2cdc4d61ba6ce0a4c466b90f0c94a">UnityEditor.Tilemaps.GridBrushEditorBase.canChangeZPosition</a></div><div class="ttdeci">virtual bool canChangeZPosition</div><div class="ttdoc">Checks if the Brush allows the changing of Z Position.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_brush_editor_base_8cs_source.html#l00021">GridBrushEditorBase.cs:21</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base_html_aa9830d303eac11dfec69a873e4be38e2"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#aa9830d303eac11dfec69a873e4be38e2">UnityEditor.Tilemaps.GridBrushEditorBase.OnPaintSceneGUI</a></div><div class="ttdeci">virtual void OnPaintSceneGUI(GridLayout gridLayout, GameObject brushTarget, BoundsInt position, GridBrushBase.Tool tool, bool executing)</div><div class="ttdoc">Callback for painting the GUI for the GridBrush in the Scene view.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_brush_editor_base_8cs_source.html#l00033">GridBrushEditorBase.cs:33</a></div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_tilemaps_html"><div class="ttname"><a href="namespace_unity_editor_1_1_tilemaps.html">UnityEditor.Tilemaps</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00008">GameObjectBrush.cs:8</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base_html_a6d28dd7810a8592c7fd7f2b4098c133c"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a6d28dd7810a8592c7fd7f2b4098c133c">UnityEditor.Tilemaps.GridBrushEditorBase.OnMouseEnter</a></div><div class="ttdeci">virtual void OnMouseEnter()</div><div class="ttdoc">Callback when the mouse cursor enters a paintable region.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_brush_editor_base_8cs_source.html#l00069">GridBrushEditorBase.cs:69</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base_html_a9dc414b133da6a69588d577197d1fc0d"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a9dc414b133da6a69588d577197d1fc0d">UnityEditor.Tilemaps.GridBrushEditorBase.OnSelectionInspectorGUI</a></div><div class="ttdeci">virtual void OnSelectionInspectorGUI()</div><div class="ttdoc">Callback for drawing the Inspector GUI when there is an active GridSelection made in a GridLayout.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_brush_editor_base_8cs_source.html#l00047">GridBrushEditorBase.cs:47</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base_html_ac2917fd5771565cc405ea44e2b1bce1e"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#ac2917fd5771565cc405ea44e2b1bce1e">UnityEditor.Tilemaps.GridBrushEditorBase.OnSelectionSceneGUI</a></div><div class="ttdeci">virtual void OnSelectionSceneGUI(GridLayout gridLayout, GameObject brushTarget)</div><div class="ttdoc">Callback for painting custom gizmos when there is an active GridSelection made in a GridLayout.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_brush_editor_base_8cs_source.html#l00053">GridBrushEditorBase.cs:53</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base_html_a2b580d1da5736f6fbe990d751f42b0d5"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a2b580d1da5736f6fbe990d751f42b0d5">UnityEditor.Tilemaps.GridBrushEditorBase.validTargets</a></div><div class="ttdeci">virtual GameObject[] validTargets</div><div class="ttdoc">Returns all valid targets that the brush can edit.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_brush_editor_base_8cs_source.html#l00088">GridBrushEditorBase.cs:88</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_tilemaps_html"><div class="ttname"><a href="namespace_unity_engine_1_1_tilemaps.html">UnityEngine.Tilemaps</a></div><div class="ttdef"><b>Definition:</b> <a href="_grid_information_8cs_source.html#l00005">GridInformation.cs:5</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html">UnityEditor.Tilemaps.GridBrushEditorBase</a></div><div class="ttdoc">Base class for Grid Brush Editor.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_brush_editor_base_8cs_source.html#l00010">GridBrushEditorBase.cs:10</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base_html_a9c8c3aa32d6e0e74ecd9148bdca2541f"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a9c8c3aa32d6e0e74ecd9148bdca2541f">UnityEditor.Tilemaps.GridBrushEditorBase.OnToolActivated</a></div><div class="ttdeci">virtual void OnToolActivated(GridBrushBase.Tool tool)</div><div class="ttdoc">Callback when a GridBrushBase.Tool is activated.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_brush_editor_base_8cs_source.html#l00074">GridBrushEditorBase.cs:74</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base_html_ad7ebf95d166dfd78848b89fa176b549b"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#ad7ebf95d166dfd78848b89fa176b549b">UnityEditor.Tilemaps.GridBrushEditorBase.OnToolDeactivated</a></div><div class="ttdeci">virtual void OnToolDeactivated(GridBrushBase.Tool tool)</div><div class="ttdoc">Callback when a GridBrushBase.Tool is deactivated.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_brush_editor_base_8cs_source.html#l00079">GridBrushEditorBase.cs:79</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base_html_a88d0d0479a6364cd616288ce4c653777"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html#a88d0d0479a6364cd616288ce4c653777">UnityEditor.Tilemaps.GridBrushEditorBase.OnMouseLeave</a></div><div class="ttdeci">virtual void OnMouseLeave()</div><div class="ttdoc">Callback when the mouse cursor leaves a paintable region.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_brush_editor_base_8cs_source.html#l00065">GridBrushEditorBase.cs:65</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

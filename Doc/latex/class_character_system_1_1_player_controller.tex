@@ -1,0 +1,236 @@
+\hypertarget{class_character_system_1_1_player_controller}{}\doxysection{Référence de la classe Character\+System.\+Player\+Controller}
+\label{class_character_system_1_1_player_controller}\index{CharacterSystem.PlayerController@{CharacterSystem.PlayerController}}
+
+
+Permet de controller le joueur.  
+
+
+
+
+Graphe d\textquotesingle{}héritage de Character\+System.\+Player\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{class_character_system_1_1_player_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Character\+System.\+Player\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_system_1_1_player_controller__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_character_system_1_1_player_controller_acc62b8497aa264096077e5825f57f5d1}{Custom\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Update pricipale, jouer à l\textquotesingle{}interieur de Game\+Controller \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_character_system_1_1_player_controller_a3c75f7822fb9197d659055975a4bed53}{Moove\+Control}} (Vector2 axes\+Input, bool is\+Grounded)
+\begin{DoxyCompactList}\small\item\em Gére les mouvements + saut en fonction des inputs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_character_system_1_1_player_controller_a6dea85f7b515551a0a29ff3d91a3e15b}{Set\+Character}} (\mbox{\hyperlink{class_character_system_1_1_character}{Character}} \mbox{\hyperlink{class_character_system_1_1_player_controller_a63a98c4ad12053ae91facbbf938da432}{character}})
+\begin{DoxyCompactList}\small\item\em Permet de changer le \mbox{\hyperlink{class_character_system_1_1_character}{Character}} (change aussi le \mbox{\hyperlink{class_character_system_1_1_gfx_updater}{Gfx\+Updater}}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Propriétés}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_character_system_1_1_player_controller_aeec64596e047ad48710c0c007402578d}{direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_character_system_1_1_player_controller_a659cb7dd95dbd643529fe1e7dbda46fe}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Mono\+Beahviours Abstract Method \end{DoxyCompactList}\item 
+I\+Enumerator \mbox{\hyperlink{class_character_system_1_1_player_controller_ab2bfc0bed2e9d086da85a8e1ae319f94}{Launch\+Attack}} (\mbox{\hyperlink{_game_action_8cs_a5827805c542ab9cccf700dc3697cbafc}{Game\+Action}} action)
+\begin{DoxyCompactList}\small\item\em Pour lancer une attaque en syncro avec le \mbox{\hyperlink{class_character_system_1_1_gfx_updater}{Gfx\+Updater}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_character_system_1_1_character}{Character}} \mbox{\hyperlink{class_character_system_1_1_player_controller_a63a98c4ad12053ae91facbbf938da432}{character}}
+\item 
+\mbox{\hyperlink{class_character_system_1_1_gfx_updater}{Gfx\+Updater}} \mbox{\hyperlink{class_character_system_1_1_player_controller_af5dc0435aa69ca405f7be3c412aeadbf}{gfx}}
+\item 
+Rigidbody2D \mbox{\hyperlink{class_character_system_1_1_player_controller_a0b6f8d05e8b8a783d97364e36442b539}{rb}}
+\item 
+\mbox{\hyperlink{class_character_system_1_1_ground_checker}{Ground\+Checker}} \mbox{\hyperlink{class_character_system_1_1_player_controller_a59d0acd28b33895adf3a577e414ad900}{ground\+Checker}}
+\item 
+\mbox{\hyperlink{class_attack_system_1_1_attack_hit_box}{Attack\+Hit\+Box}} \mbox{\hyperlink{class_character_system_1_1_player_controller_a76d5733360ef0900f6ef80aba7ec087c}{attack\+Hit\+Box}}
+\item 
+\mbox{\hyperlink{struct_character_system_1_1_character_state}{Character\+State}} \mbox{\hyperlink{class_character_system_1_1_player_controller_a6516d88f610d1800aaca3b1431581678}{state}}
+\item 
+\mbox{\hyperlink{class_utilitary_1_1_timer}{Timer}} \mbox{\hyperlink{class_character_system_1_1_player_controller_ae38481b4de00015778333a0307fae850}{action\+Timer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Permet de controller le joueur. 
+
+Sa loop est a l\textquotesingle{}interieur de Game\+Controller. 
+
+Définition à la ligne 14 du fichier Player\+Controller.\+cs.
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_character_system_1_1_player_controller_acc62b8497aa264096077e5825f57f5d1}\label{class_character_system_1_1_player_controller_acc62b8497aa264096077e5825f57f5d1}} 
+\index{CharacterSystem.PlayerController@{CharacterSystem.PlayerController}!CustomUpdate@{CustomUpdate}}
+\index{CustomUpdate@{CustomUpdate}!CharacterSystem.PlayerController@{CharacterSystem.PlayerController}}
+\doxysubsubsection{\texorpdfstring{CustomUpdate()}{CustomUpdate()}}
+{\footnotesize\ttfamily void Character\+System.\+Player\+Controller.\+Custom\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update pricipale, jouer à l\textquotesingle{}interieur de Game\+Controller 
+
+
+
+Définition à la ligne 60 du fichier Player\+Controller.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_player_controller_ab2bfc0bed2e9d086da85a8e1ae319f94}\label{class_character_system_1_1_player_controller_ab2bfc0bed2e9d086da85a8e1ae319f94}} 
+\index{CharacterSystem.PlayerController@{CharacterSystem.PlayerController}!LaunchAttack@{LaunchAttack}}
+\index{LaunchAttack@{LaunchAttack}!CharacterSystem.PlayerController@{CharacterSystem.PlayerController}}
+\doxysubsubsection{\texorpdfstring{LaunchAttack()}{LaunchAttack()}}
+{\footnotesize\ttfamily I\+Enumerator Character\+System.\+Player\+Controller.\+Launch\+Attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_game_action_8cs_a5827805c542ab9cccf700dc3697cbafc}{Game\+Action}}}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Pour lancer une attaque en syncro avec le \mbox{\hyperlink{class_character_system_1_1_gfx_updater}{Gfx\+Updater}} 
+
+
+
+Définition à la ligne 163 du fichier Player\+Controller.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_player_controller_a3c75f7822fb9197d659055975a4bed53}\label{class_character_system_1_1_player_controller_a3c75f7822fb9197d659055975a4bed53}} 
+\index{CharacterSystem.PlayerController@{CharacterSystem.PlayerController}!MooveControl@{MooveControl}}
+\index{MooveControl@{MooveControl}!CharacterSystem.PlayerController@{CharacterSystem.PlayerController}}
+\doxysubsubsection{\texorpdfstring{MooveControl()}{MooveControl()}}
+{\footnotesize\ttfamily void Character\+System.\+Player\+Controller.\+Moove\+Control (\begin{DoxyParamCaption}\item[{Vector2}]{axes\+Input,  }\item[{bool}]{is\+Grounded }\end{DoxyParamCaption})}
+
+
+
+Gére les mouvements + saut en fonction des inputs. 
+
+
+
+Définition à la ligne 126 du fichier Player\+Controller.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_player_controller_a6dea85f7b515551a0a29ff3d91a3e15b}\label{class_character_system_1_1_player_controller_a6dea85f7b515551a0a29ff3d91a3e15b}} 
+\index{CharacterSystem.PlayerController@{CharacterSystem.PlayerController}!SetCharacter@{SetCharacter}}
+\index{SetCharacter@{SetCharacter}!CharacterSystem.PlayerController@{CharacterSystem.PlayerController}}
+\doxysubsubsection{\texorpdfstring{SetCharacter()}{SetCharacter()}}
+{\footnotesize\ttfamily void Character\+System.\+Player\+Controller.\+Set\+Character (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_character_system_1_1_character}{Character}}}]{character }\end{DoxyParamCaption})}
+
+
+
+Permet de changer le \mbox{\hyperlink{class_character_system_1_1_character}{Character}} (change aussi le \mbox{\hyperlink{class_character_system_1_1_gfx_updater}{Gfx\+Updater}}) 
+
+
+
+Définition à la ligne 152 du fichier Player\+Controller.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_player_controller_a659cb7dd95dbd643529fe1e7dbda46fe}\label{class_character_system_1_1_player_controller_a659cb7dd95dbd643529fe1e7dbda46fe}} 
+\index{CharacterSystem.PlayerController@{CharacterSystem.PlayerController}!Start@{Start}}
+\index{Start@{Start}!CharacterSystem.PlayerController@{CharacterSystem.PlayerController}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Character\+System.\+Player\+Controller.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mono\+Beahviours Abstract Method 
+
+
+
+Définition à la ligne 39 du fichier Player\+Controller.\+cs.
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_character_system_1_1_player_controller_ae38481b4de00015778333a0307fae850}\label{class_character_system_1_1_player_controller_ae38481b4de00015778333a0307fae850}} 
+\index{CharacterSystem.PlayerController@{CharacterSystem.PlayerController}!actionTimer@{actionTimer}}
+\index{actionTimer@{actionTimer}!CharacterSystem.PlayerController@{CharacterSystem.PlayerController}}
+\doxysubsubsection{\texorpdfstring{actionTimer}{actionTimer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_utilitary_1_1_timer}{Timer}} Character\+System.\+Player\+Controller.\+action\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+Permet de regarder la charge des attaques 
+
+Définition à la ligne 27 du fichier Player\+Controller.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_player_controller_a76d5733360ef0900f6ef80aba7ec087c}\label{class_character_system_1_1_player_controller_a76d5733360ef0900f6ef80aba7ec087c}} 
+\index{CharacterSystem.PlayerController@{CharacterSystem.PlayerController}!attackHitBox@{attackHitBox}}
+\index{attackHitBox@{attackHitBox}!CharacterSystem.PlayerController@{CharacterSystem.PlayerController}}
+\doxysubsubsection{\texorpdfstring{attackHitBox}{attackHitBox}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_attack_system_1_1_attack_hit_box}{Attack\+Hit\+Box}} Character\+System.\+Player\+Controller.\+attack\+Hit\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne 23 du fichier Player\+Controller.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_player_controller_a63a98c4ad12053ae91facbbf938da432}\label{class_character_system_1_1_player_controller_a63a98c4ad12053ae91facbbf938da432}} 
+\index{CharacterSystem.PlayerController@{CharacterSystem.PlayerController}!character@{character}}
+\index{character@{character}!CharacterSystem.PlayerController@{CharacterSystem.PlayerController}}
+\doxysubsubsection{\texorpdfstring{character}{character}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_character_system_1_1_character}{Character}} Character\+System.\+Player\+Controller.\+character\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne 17 du fichier Player\+Controller.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_player_controller_af5dc0435aa69ca405f7be3c412aeadbf}\label{class_character_system_1_1_player_controller_af5dc0435aa69ca405f7be3c412aeadbf}} 
+\index{CharacterSystem.PlayerController@{CharacterSystem.PlayerController}!gfx@{gfx}}
+\index{gfx@{gfx}!CharacterSystem.PlayerController@{CharacterSystem.PlayerController}}
+\doxysubsubsection{\texorpdfstring{gfx}{gfx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_character_system_1_1_gfx_updater}{Gfx\+Updater}} Character\+System.\+Player\+Controller.\+gfx\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne 20 du fichier Player\+Controller.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_player_controller_a59d0acd28b33895adf3a577e414ad900}\label{class_character_system_1_1_player_controller_a59d0acd28b33895adf3a577e414ad900}} 
+\index{CharacterSystem.PlayerController@{CharacterSystem.PlayerController}!groundChecker@{groundChecker}}
+\index{groundChecker@{groundChecker}!CharacterSystem.PlayerController@{CharacterSystem.PlayerController}}
+\doxysubsubsection{\texorpdfstring{groundChecker}{groundChecker}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_character_system_1_1_ground_checker}{Ground\+Checker}} Character\+System.\+Player\+Controller.\+ground\+Checker\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne 22 du fichier Player\+Controller.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_player_controller_a0b6f8d05e8b8a783d97364e36442b539}\label{class_character_system_1_1_player_controller_a0b6f8d05e8b8a783d97364e36442b539}} 
+\index{CharacterSystem.PlayerController@{CharacterSystem.PlayerController}!rb@{rb}}
+\index{rb@{rb}!CharacterSystem.PlayerController@{CharacterSystem.PlayerController}}
+\doxysubsubsection{\texorpdfstring{rb}{rb}}
+{\footnotesize\ttfamily Rigidbody2D Character\+System.\+Player\+Controller.\+rb\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne 21 du fichier Player\+Controller.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_player_controller_a6516d88f610d1800aaca3b1431581678}\label{class_character_system_1_1_player_controller_a6516d88f610d1800aaca3b1431581678}} 
+\index{CharacterSystem.PlayerController@{CharacterSystem.PlayerController}!state@{state}}
+\index{state@{state}!CharacterSystem.PlayerController@{CharacterSystem.PlayerController}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_character_system_1_1_character_state}{Character\+State}} Character\+System.\+Player\+Controller.\+state\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne 26 du fichier Player\+Controller.\+cs.
+
+
+
+\doxysubsection{Documentation des propriétés}
+\mbox{\Hypertarget{class_character_system_1_1_player_controller_aeec64596e047ad48710c0c007402578d}\label{class_character_system_1_1_player_controller_aeec64596e047ad48710c0c007402578d}} 
+\index{CharacterSystem.PlayerController@{CharacterSystem.PlayerController}!direction@{direction}}
+\index{direction@{direction}!CharacterSystem.PlayerController@{CharacterSystem.PlayerController}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily bool Character\+System.\+Player\+Controller.\+direction\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+vrai $<$=$>$ le joeur regarde a droite et faux $<$=$>$ le joueur regarde à gauche 
+
+Définition à la ligne 30 du fichier Player\+Controller.\+cs.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+/home/simba/\+Unity\+Project/\+Bac à Sable/\+Assets/\+Simba/\+Scirpts/\+Character System/\+Player/\mbox{\hyperlink{_player_controller_8cs}{Player\+Controller.\+cs}}\end{DoxyCompactItemize}

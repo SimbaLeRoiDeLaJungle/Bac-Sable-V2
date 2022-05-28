@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.animation@8.0.1/Editor/ICharacterDataProvider.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_6cbc2cf28c1ecf4e247ef2386a6cccaf.html">com.unity.2d.animation@8.0.1</a></li><li class="navelem"><a class="el" href="dir_fe14c7676fb41ad3338788a8b5881895.html">Editor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ICharacterDataProvider.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Scripting.APIUpdating;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_u2_d.html">U2D</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor_1_1_u2_d_1_1_animation.html">UnityEditor.U2D.Animation</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    [MovedFrom(<span class="stringliteral">&quot;UnityEditor.U2D.Experimental.Animation&quot;</span>)]</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_character_data_provider.html">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_character_data_provider.html">ICharacterDataProvider</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html">CharacterData</a> <a class="code" href="interface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_character_data_provider.html#a62590dd87eec0c5f2946045afaf77749">GetCharacterData</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="interface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_character_data_provider.html#a7a01adbb4435bf63c40dfc5b6c43b734">SetCharacterData</a>(<a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html">CharacterData</a> characterData);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    [MovedFrom(<span class="stringliteral">&quot;UnityEditor.U2D.Experimental.Animation&quot;</span>)]</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html">   31</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">struct </span><a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html">CharacterData</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html#a9449ca47d508331e6376059ffdef0548">   36</a></span>&#160;        <span class="keyword">public</span> SpriteBone[] <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html#a9449ca47d508331e6376059ffdef0548">bones</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html#a782880ffa001e45f3bef8df3c897a2ea">   41</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part.html">CharacterPart</a>[] <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html#a782880ffa001e45f3bef8df3c897a2ea">parts</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html#afd16418be2721f84598650a521081589">   45</a></span>&#160;        <span class="keyword">public</span> Vector2Int <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html#afd16418be2721f84598650a521081589">dimension</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html#a7876cfea0de625edbc50beb985549db6">   49</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_group.html">CharacterGroup</a>[] <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html#a7876cfea0de625edbc50beb985549db6">characterGroups</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html#a6931d99309f3e237d0f3eb06b16e0614">   53</a></span>&#160;        <span class="keyword">public</span> Vector2 <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html#a6931d99309f3e237d0f3eb06b16e0614">pivot</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        [Obsolete(<span class="stringliteral">&quot;boneReadOnly is no longer part of CharacterData. To check if character has Main Skeleton assigned to it, please use IMainSkeletonDataProvider instead.&quot;</span>)]</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html#a610dd064d2f59a53dc145546a39a06f2">   58</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html#a610dd064d2f59a53dc145546a39a06f2">boneReadOnly</a>; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">internal</span> <span class="keyword">interface </span>ICharacterOrder</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">int</span> order { <span class="keyword">get</span>; <span class="keyword">set</span>;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    [MovedFrom(<span class="stringliteral">&quot;UnityEditor.U2D.Experimental.Animation&quot;</span>)]</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_group.html">   71</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">struct </span><a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_group.html">CharacterGroup</a> : ICharacterOrder</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_group.html#a79728b1d2eeaa50c33b5196bda92f3a3">   76</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_group.html#a79728b1d2eeaa50c33b5196bda92f3a3">name</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_group.html#abf3a43148fb7d353d322f2997b861c4f">   80</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_group.html#abf3a43148fb7d353d322f2997b861c4f">parentGroup</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">int</span> m_Order;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_group.html#ad20d9595f2eab113d57d084fe4ce6908">order</a></div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_group.html#ad20d9595f2eab113d57d084fe4ce6908">   89</a></span>&#160;        {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keyword">get</span> =&gt; m_Order;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keyword">set</span> =&gt; m_Order = value;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    [MovedFrom(<span class="stringliteral">&quot;UnityEditor.U2D.Experimental.Animation&quot;</span>)]</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part.html">  100</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">struct </span><a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part.html">CharacterPart</a> : ICharacterOrder</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part.html#ad3c7479ea7c9184e65707eafe34f5d26">  105</a></span>&#160;        <span class="keyword">public</span> RectInt <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part.html#ad3c7479ea7c9184e65707eafe34f5d26">spritePosition</a>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part.html#afe035cd8b2fb11c326b17853940ec639">  109</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part.html#afe035cd8b2fb11c326b17853940ec639">spriteId</a>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part.html#ae6b9eadab5040cf21b4828143b71b9a2">  113</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span>[] <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part.html#ae6b9eadab5040cf21b4828143b71b9a2">bones</a>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part.html#a0459f5c275cfe06dc2c5d567ec90d85c">  117</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part.html#a0459f5c275cfe06dc2c5d567ec90d85c">parentGroup</a>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordtype">int</span> m_Order;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part.html#acde98f089df3af0dec53299eacc4e9e5">order</a></div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part.html#acde98f089df3af0dec53299eacc4e9e5">  126</a></span>&#160;        {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="keyword">get</span> =&gt; m_Order;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keyword">set</span> =&gt; m_Order = value;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_main_skeleton_data_provider.html">  134</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_main_skeleton_data_provider.html">IMainSkeletonDataProvider</a></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_main_skeleton_data.html">MainSkeletonData</a> <a class="code" href="interface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_main_skeleton_data_provider.html#aca774f82dfc889a027fb0b4dcde1ed1f">GetMainSkeletonData</a>();</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_main_skeleton_data.html">  146</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">struct </span><a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_main_skeleton_data.html">MainSkeletonData</a></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    {</div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_main_skeleton_data.html#aaa08d208d7fbb4636b6682689f914d3b">  151</a></span>&#160;        <span class="keyword">public</span> SpriteBone[] <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_main_skeleton_data.html#aaa08d208d7fbb4636b6682689f914d3b">bones</a>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part_html_acde98f089df3af0dec53299eacc4e9e5"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part.html#acde98f089df3af0dec53299eacc4e9e5">UnityEditor.U2D.Animation.CharacterPart.order</a></div><div class="ttdeci">int order</div><div class="ttdoc">The order of the part in the list</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00126">ICharacterDataProvider.cs:126</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data_html_a610dd064d2f59a53dc145546a39a06f2"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html#a610dd064d2f59a53dc145546a39a06f2">UnityEditor.U2D.Animation.CharacterData.boneReadOnly</a></div><div class="ttdeci">bool boneReadOnly</div><div class="ttdoc">Bones are readonly</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00058">ICharacterDataProvider.cs:58</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part_html_ae6b9eadab5040cf21b4828143b71b9a2"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part.html#ae6b9eadab5040cf21b4828143b71b9a2">UnityEditor.U2D.Animation.CharacterPart.bones</a></div><div class="ttdeci">int[] bones</div><div class="ttdoc">Bones influencing the Sprite</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00113">ICharacterDataProvider.cs:113</a></div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_u2_d_1_1_animation_html"><div class="ttname"><a href="namespace_unity_editor_1_1_u2_d_1_1_animation.html">UnityEditor.U2D.Animation</a></div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8animation_0d8_80_81_2_editor_2_analytics_8cs_source.html#l00009">Analytics.cs:9</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data_html"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html">UnityEditor.U2D.Animation.CharacterData</a></div><div class="ttdoc">Data structure that represents a character setup</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00031">ICharacterDataProvider.cs:31</a></div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_character_data_provider_html_a62590dd87eec0c5f2946045afaf77749"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_character_data_provider.html#a62590dd87eec0c5f2946045afaf77749">UnityEditor.U2D.Animation.ICharacterDataProvider.GetCharacterData</a></div><div class="ttdeci">CharacterData GetCharacterData()</div><div class="ttdoc">Returns the CharacterData structure that represents the Character composition.</div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_group_html_ad20d9595f2eab113d57d084fe4ce6908"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_group.html#ad20d9595f2eab113d57d084fe4ce6908">UnityEditor.U2D.Animation.CharacterGroup.order</a></div><div class="ttdeci">int order</div><div class="ttdoc">The order of the group in the list</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00089">ICharacterDataProvider.cs:89</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_group_html_a79728b1d2eeaa50c33b5196bda92f3a3"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_group.html#a79728b1d2eeaa50c33b5196bda92f3a3">UnityEditor.U2D.Animation.CharacterGroup.name</a></div><div class="ttdeci">string name</div><div class="ttdoc">Name of the CharacterGroup</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00076">ICharacterDataProvider.cs:76</a></div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_character_data_provider_html_a7a01adbb4435bf63c40dfc5b6c43b734"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_character_data_provider.html#a7a01adbb4435bf63c40dfc5b6c43b734">UnityEditor.U2D.Animation.ICharacterDataProvider.SetCharacterData</a></div><div class="ttdeci">void SetCharacterData(CharacterData characterData)</div><div class="ttdoc">Sets the CharacterData structure that represents to the data provider</div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part_html_ad3c7479ea7c9184e65707eafe34f5d26"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part.html#ad3c7479ea7c9184e65707eafe34f5d26">UnityEditor.U2D.Animation.CharacterPart.spritePosition</a></div><div class="ttdeci">RectInt spritePosition</div><div class="ttdoc">Position for the Sprite in the character</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00105">ICharacterDataProvider.cs:105</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_group_html"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_group.html">UnityEditor.U2D.Animation.CharacterGroup</a></div><div class="ttdoc">Data structure representing CharacterPart grouping</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00071">ICharacterDataProvider.cs:71</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_group_html_abf3a43148fb7d353d322f2997b861c4f"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_group.html#abf3a43148fb7d353d322f2997b861c4f">UnityEditor.U2D.Animation.CharacterGroup.parentGroup</a></div><div class="ttdeci">int parentGroup</div><div class="ttdoc">The parent group index it belongs to. Set to -1 if does not have a parent.</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00080">ICharacterDataProvider.cs:80</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data_html_a782880ffa001e45f3bef8df3c897a2ea"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html#a782880ffa001e45f3bef8df3c897a2ea">UnityEditor.U2D.Animation.CharacterData.parts</a></div><div class="ttdeci">CharacterPart[] parts</div><div class="ttdoc">Parts of the character</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00041">ICharacterDataProvider.cs:41</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html">UnityEngine.U2D</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_main_skeleton_data_html_aaa08d208d7fbb4636b6682689f914d3b"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_main_skeleton_data.html#aaa08d208d7fbb4636b6682689f914d3b">UnityEditor.U2D.Animation.MainSkeletonData.bones</a></div><div class="ttdeci">SpriteBone[] bones</div><div class="ttdoc">Returns skeleton bones from the Main Skeleton asset.</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00151">ICharacterDataProvider.cs:151</a></div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_main_skeleton_data_provider_html"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_main_skeleton_data_provider.html">UnityEditor.U2D.Animation.IMainSkeletonDataProvider</a></div><div class="ttdoc">An interface that provides data from the Main Skeleton.</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00134">ICharacterDataProvider.cs:134</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data_html_a6931d99309f3e237d0f3eb06b16e0614"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html#a6931d99309f3e237d0f3eb06b16e0614">UnityEditor.U2D.Animation.CharacterData.pivot</a></div><div class="ttdeci">Vector2 pivot</div><div class="ttdoc">Character pivot. The value is a normalized value between (0,0) and (1,1) where (1,...</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00053">ICharacterDataProvider.cs:53</a></div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_main_skeleton_data_provider_html_aca774f82dfc889a027fb0b4dcde1ed1f"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_main_skeleton_data_provider.html#aca774f82dfc889a027fb0b4dcde1ed1f">UnityEditor.U2D.Animation.IMainSkeletonDataProvider.GetMainSkeletonData</a></div><div class="ttdeci">MainSkeletonData GetMainSkeletonData()</div><div class="ttdoc">Returns Main Skeleton data.</div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_main_skeleton_data_html"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_main_skeleton_data.html">UnityEditor.U2D.Animation.MainSkeletonData</a></div><div class="ttdoc">Data structure providing the Main Skeleton data.</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00146">ICharacterDataProvider.cs:146</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part_html"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part.html">UnityEditor.U2D.Animation.CharacterPart</a></div><div class="ttdoc">Data structure representing a character part</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00100">ICharacterDataProvider.cs:100</a></div></div>
+<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition:</b> <a href="_preserve_dependency_attribute_8cs_source.html#l00030">PreserveDependencyAttribute.cs:30</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part_html_afe035cd8b2fb11c326b17853940ec639"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part.html#afe035cd8b2fb11c326b17853940ec639">UnityEditor.U2D.Animation.CharacterPart.spriteId</a></div><div class="ttdeci">string spriteId</div><div class="ttdoc">Sprite ID</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00109">ICharacterDataProvider.cs:109</a></div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_character_data_provider_html"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_character_data_provider.html">UnityEditor.U2D.Animation.ICharacterDataProvider</a></div><div class="ttdoc">An interface that allows Sprite Editor Modules to edit Character data for user custom importer.</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00012">ICharacterDataProvider.cs:12</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data_html_a7876cfea0de625edbc50beb985549db6"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html#a7876cfea0de625edbc50beb985549db6">UnityEditor.U2D.Animation.CharacterData.characterGroups</a></div><div class="ttdeci">CharacterGroup[] characterGroups</div><div class="ttdoc">Character grouping information</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00049">ICharacterDataProvider.cs:49</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data_html_afd16418be2721f84598650a521081589"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html#afd16418be2721f84598650a521081589">UnityEditor.U2D.Animation.CharacterData.dimension</a></div><div class="ttdeci">Vector2Int dimension</div><div class="ttdoc">The dimension of the character required</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00045">ICharacterDataProvider.cs:45</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data_html_a9449ca47d508331e6376059ffdef0548"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_data.html#a9449ca47d508331e6376059ffdef0548">UnityEditor.U2D.Animation.CharacterData.bones</a></div><div class="ttdeci">SpriteBone[] bones</div><div class="ttdoc">SpriteBones influencing the Character</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00036">ICharacterDataProvider.cs:36</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part_html_a0459f5c275cfe06dc2c5d567ec90d85c"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_character_part.html#a0459f5c275cfe06dc2c5d567ec90d85c">UnityEditor.U2D.Animation.CharacterPart.parentGroup</a></div><div class="ttdeci">int parentGroup</div><div class="ttdoc">CharacterGroup that the part belongs to</div><div class="ttdef"><b>Definition:</b> <a href="_i_character_data_provider_8cs_source.html#l00117">ICharacterDataProvider.cs:117</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

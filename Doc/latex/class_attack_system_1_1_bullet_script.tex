@@ -1,0 +1,152 @@
+\hypertarget{class_attack_system_1_1_bullet_script}{}\doxysection{Référence de la classe Attack\+System.\+Bullet\+Script}
+\label{class_attack_system_1_1_bullet_script}\index{AttackSystem.BulletScript@{AttackSystem.BulletScript}}
+
+
+Attacher a un Prefab de type \char`\"{}projectile\char`\"{}.  
+
+
+
+
+Graphe d\textquotesingle{}héritage de Attack\+System.\+Bullet\+Script\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{class_attack_system_1_1_bullet_script__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Attack\+System.\+Bullet\+Script\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{class_attack_system_1_1_bullet_script__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_attack_system_1_1_bullet_script_a1db169fa0401841e31c8c74a39686d4a}{Launch}} (bool \mbox{\hyperlink{class_attack_system_1_1_bullet_script_a33231679184554c5492da450cb5a2d6f}{direction}}, float speed, int p\+\_\+power)
+\end{DoxyCompactItemize}
+\doxysubsection*{Propriétés}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_attack_system_1_1_bullet_script_afeae46831619241b769be1c8a37c7d10}{power}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_attack_system_1_1_bullet_script_a33231679184554c5492da450cb5a2d6f}{direction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_attack_system_1_1_bullet_script_a8ab4a374ac830fb764d6a174836d9f44}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Mono\+Behaviour Abstract Method \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_attack_system_1_1_bullet_script_af1621662622a4664849a089764c92920}{On\+Trigger\+Enter2D}} (Collider2D other)
+\begin{DoxyCompactList}\small\item\em Mono\+Behaviour Abstract Method \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+Rigidbody2D \mbox{\hyperlink{class_attack_system_1_1_bullet_script_ae0913569e224096136cfda9be47c3726}{rb}}
+\item 
+Layer\+Mask \mbox{\hyperlink{class_attack_system_1_1_bullet_script_a00ac1a5f048c2a2c974f1ec5f7eb4fbb}{contact\+Layers}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Attacher a un Prefab de type \char`\"{}projectile\char`\"{}. 
+
+
+
+Définition à la ligne 9 du fichier Bullet\+Script.\+cs.
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_attack_system_1_1_bullet_script_a8ab4a374ac830fb764d6a174836d9f44}\label{class_attack_system_1_1_bullet_script_a8ab4a374ac830fb764d6a174836d9f44}} 
+\index{AttackSystem.BulletScript@{AttackSystem.BulletScript}!Awake@{Awake}}
+\index{Awake@{Awake}!AttackSystem.BulletScript@{AttackSystem.BulletScript}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Attack\+System.\+Bullet\+Script.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mono\+Behaviour Abstract Method 
+
+
+
+Définition à la ligne 25 du fichier Bullet\+Script.\+cs.
+
+\mbox{\Hypertarget{class_attack_system_1_1_bullet_script_a1db169fa0401841e31c8c74a39686d4a}\label{class_attack_system_1_1_bullet_script_a1db169fa0401841e31c8c74a39686d4a}} 
+\index{AttackSystem.BulletScript@{AttackSystem.BulletScript}!Launch@{Launch}}
+\index{Launch@{Launch}!AttackSystem.BulletScript@{AttackSystem.BulletScript}}
+\doxysubsubsection{\texorpdfstring{Launch()}{Launch()}}
+{\footnotesize\ttfamily void Attack\+System.\+Bullet\+Script.\+Launch (\begin{DoxyParamCaption}\item[{bool}]{direction,  }\item[{float}]{speed,  }\item[{int}]{p\+\_\+power }\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne 34 du fichier Bullet\+Script.\+cs.
+
+\mbox{\Hypertarget{class_attack_system_1_1_bullet_script_af1621662622a4664849a089764c92920}\label{class_attack_system_1_1_bullet_script_af1621662622a4664849a089764c92920}} 
+\index{AttackSystem.BulletScript@{AttackSystem.BulletScript}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!AttackSystem.BulletScript@{AttackSystem.BulletScript}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter2D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily void Attack\+System.\+Bullet\+Script.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mono\+Behaviour Abstract Method 
+
+
+
+Définition à la ligne 51 du fichier Bullet\+Script.\+cs.
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_attack_system_1_1_bullet_script_a00ac1a5f048c2a2c974f1ec5f7eb4fbb}\label{class_attack_system_1_1_bullet_script_a00ac1a5f048c2a2c974f1ec5f7eb4fbb}} 
+\index{AttackSystem.BulletScript@{AttackSystem.BulletScript}!contactLayers@{contactLayers}}
+\index{contactLayers@{contactLayers}!AttackSystem.BulletScript@{AttackSystem.BulletScript}}
+\doxysubsubsection{\texorpdfstring{contactLayers}{contactLayers}}
+{\footnotesize\ttfamily Layer\+Mask Attack\+System.\+Bullet\+Script.\+contact\+Layers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne 13 du fichier Bullet\+Script.\+cs.
+
+\mbox{\Hypertarget{class_attack_system_1_1_bullet_script_ae0913569e224096136cfda9be47c3726}\label{class_attack_system_1_1_bullet_script_ae0913569e224096136cfda9be47c3726}} 
+\index{AttackSystem.BulletScript@{AttackSystem.BulletScript}!rb@{rb}}
+\index{rb@{rb}!AttackSystem.BulletScript@{AttackSystem.BulletScript}}
+\doxysubsubsection{\texorpdfstring{rb}{rb}}
+{\footnotesize\ttfamily Rigidbody2D Attack\+System.\+Bullet\+Script.\+rb\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne 12 du fichier Bullet\+Script.\+cs.
+
+
+
+\doxysubsection{Documentation des propriétés}
+\mbox{\Hypertarget{class_attack_system_1_1_bullet_script_a33231679184554c5492da450cb5a2d6f}\label{class_attack_system_1_1_bullet_script_a33231679184554c5492da450cb5a2d6f}} 
+\index{AttackSystem.BulletScript@{AttackSystem.BulletScript}!direction@{direction}}
+\index{direction@{direction}!AttackSystem.BulletScript@{AttackSystem.BulletScript}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily bool Attack\+System.\+Bullet\+Script.\+direction\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Définition à la ligne 17 du fichier Bullet\+Script.\+cs.
+
+\mbox{\Hypertarget{class_attack_system_1_1_bullet_script_afeae46831619241b769be1c8a37c7d10}\label{class_attack_system_1_1_bullet_script_afeae46831619241b769be1c8a37c7d10}} 
+\index{AttackSystem.BulletScript@{AttackSystem.BulletScript}!power@{power}}
+\index{power@{power}!AttackSystem.BulletScript@{AttackSystem.BulletScript}}
+\doxysubsubsection{\texorpdfstring{power}{power}}
+{\footnotesize\ttfamily int Attack\+System.\+Bullet\+Script.\+power\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+Définition à la ligne 16 du fichier Bullet\+Script.\+cs.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+/home/simba/\+Unity\+Project/\+Bac à Sable/\+Assets/\+Simba/\+Scirpts/\+Attack System/\mbox{\hyperlink{_bullet_script_8cs}{Bullet\+Script.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,451 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.tilemap.extras@3.0.2/Editor/Tiles/RuleOverrideTile/RuleOverrideTileEditor.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_39a2cd9064c52ac43c6a4ca83a34fdd0.html">com.unity.2d.tilemap.extras@3.0.2</a></li><li class="navelem"><a class="el" href="dir_0a69fbcecdca417feaeb1320cdb487cb.html">Editor</a></li><li class="navelem"><a class="el" href="dir_a81d7387083182bc24b1ecf6346667ab.html">Tiles</a></li><li class="navelem"><a class="el" href="dir_2fd1d9ecc16ef573a64a5fbf6efbd529.html">RuleOverrideTile</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">RuleOverrideTileEditor.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_tilemaps.html">Tilemaps</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEditorInternal;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    [CustomEditor(typeof(<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html">RuleOverrideTile</a>))]</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html">RuleOverrideTileEditor</a> : Editor</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">class </span>Styles</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a> = EditorGUIUtility.TrTextContent(<span class="stringliteral">&quot;Tile&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                , <span class="stringliteral">&quot;The Rule Tile to override.&quot;</span>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">   23</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html">RuleOverrideTile</a> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a> =&gt; target as <a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html">RuleOverrideTile</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">public</span> RuleTileEditor <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a810a626a2c223f6d86cf265eaf4eb6ce">ruleTileEditor</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#a810a626a2c223f6d86cf265eaf4eb6ce">   28</a></span>&#160;        {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keyword">get</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">if</span> (m_RuleTileEditorTarget != <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a2443685ef00789355f730b5340f0b517">m_Tile</a>)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    DestroyImmediate(m_RuleTileEditor);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    m_RuleTileEditor = Editor.CreateEditor(<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a7b3259c58f995b9764f8849e7a5fd6cb">m_InstanceTile</a>) as RuleTileEditor;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                    m_RuleTileEditorTarget = <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a2443685ef00789355f730b5340f0b517">m_Tile</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keywordflow">return</span> m_RuleTileEditor;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        RuleTileEditor m_RuleTileEditor;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a> m_RuleTileEditorTarget;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#a88c7ab77806caffb41edfebb2d01feda">   47</a></span>&#160;        <span class="keyword">public</span> List&lt;KeyValuePair&lt;Sprite, Sprite&gt;&gt; <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a88c7ab77806caffb41edfebb2d01feda">m_Sprites</a> = <span class="keyword">new</span> List&lt;KeyValuePair&lt;Sprite, Sprite&gt;&gt;();</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#a04fe4b109649aec9fe4085aeda2f6605">   51</a></span>&#160;        <span class="keyword">public</span> List&lt;KeyValuePair&lt;GameObject, GameObject&gt;&gt; <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a04fe4b109649aec9fe4085aeda2f6605">m_GameObjects</a> = <span class="keyword">new</span> List&lt;KeyValuePair&lt;GameObject, GameObject&gt;&gt;();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">private</span> ReorderableList m_SpriteList;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">private</span> ReorderableList m_GameObjectList;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">int</span> m_MissingOriginalSpriteIndex;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">int</span> m_MissingOriginalGameObjectIndex;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#ac0f67f98dc1aef6e486a875349b9e2e4">   60</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#ac0f67f98dc1aef6e486a875349b9e2e4">k_SpriteElementHeight</a> = 48;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#a33bbf48fe62385b5c8392e3cb85c12eb">   64</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a33bbf48fe62385b5c8392e3cb85c12eb">k_GameObjectElementHeight</a> = 16;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#a1ea042665ba2e9c1d4c7a20905fce22e">   68</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a1ea042665ba2e9c1d4c7a20905fce22e">k_PaddingBetweenRules</a> = 4;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#aab882a9aae96f813951099df1ea485dc">   73</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#aab882a9aae96f813951099df1ea485dc">OnEnable</a>()</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">if</span> (m_SpriteList == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                m_SpriteList = <span class="keyword">new</span> ReorderableList(<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a88c7ab77806caffb41edfebb2d01feda">m_Sprites</a>, typeof(KeyValuePair&lt;Sprite, Sprite&gt;), <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                m_SpriteList.drawHeaderCallback = <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a6b6ec220ae62ad9bb6f7ece31f51010d">DrawSpriteListHeader</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                m_SpriteList.drawElementCallback = <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3454c34cff63a68c115fcb7120c76a7e">DrawSpriteElement</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                m_SpriteList.elementHeightCallback = <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a4fd686a9027acf3539310aff0d8c7517">GetSpriteElementHeight</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">if</span> (m_GameObjectList == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                m_GameObjectList = <span class="keyword">new</span> ReorderableList(<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a04fe4b109649aec9fe4085aeda2f6605">m_GameObjects</a>, typeof(KeyValuePair&lt;Sprite, Sprite&gt;), <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                m_GameObjectList.drawHeaderCallback = <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a56f912e31bff089934a3ac3e6b549e8b">DrawGameObjectListHeader</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                m_GameObjectList.drawElementCallback = <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#afc0274dcea5042d63cd69df574713730">DrawGameObjectElement</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                m_GameObjectList.elementHeightCallback = <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#abc73e9b6863a49023cd11a940c9b9174">GetGameObjectElementHeight</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#a08c90cd4a66e3d7afb088b7f1ce5ea45">   94</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a08c90cd4a66e3d7afb088b7f1ce5ea45">OnDisable</a>()</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            DestroyImmediate(<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a810a626a2c223f6d86cf265eaf4eb6ce">ruleTileEditor</a>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            m_RuleTileEditorTarget = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#a0988f0e21e6d98a409e0d6a7e2b50b39">  103</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a0988f0e21e6d98a409e0d6a7e2b50b39">OnInspectorGUI</a>()</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            serializedObject.UpdateIfRequiredOrScript();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a75accc4edf916303c40706abc53897d0">DrawTileField</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#aab505679362e4d8f5e9964904e3fcfa9">DrawCustomFields</a>();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a6c3bd5d53c145e4d636fe348eb55208b">GetOverrides</a>(<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a88c7ab77806caffb41edfebb2d01feda">m_Sprites</a>, ref m_MissingOriginalSpriteIndex);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a6c3bd5d53c145e4d636fe348eb55208b">GetOverrides</a>(<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a04fe4b109649aec9fe4085aeda2f6605">m_GameObjects</a>, ref m_MissingOriginalGameObjectIndex);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            m_SpriteList.DoLayoutList();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a6e3b41f06989715c61c602b63b9eccc8">ApplyOverrides</a>(<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a88c7ab77806caffb41edfebb2d01feda">m_Sprites</a>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a7138cf6753135b7716aec22bdc542f30">SaveTile</a>();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            m_GameObjectList.DoLayoutList();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a6e3b41f06989715c61c602b63b9eccc8">ApplyOverrides</a>(<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a04fe4b109649aec9fe4085aeda2f6605">m_GameObjects</a>);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a7138cf6753135b7716aec22bdc542f30">SaveTile</a>();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#a6b6ec220ae62ad9bb6f7ece31f51010d">  134</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a6b6ec220ae62ad9bb6f7ece31f51010d">DrawSpriteListHeader</a>(Rect rect)</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keywordtype">float</span> xMax = rect.xMax;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            rect.xMax = rect.xMax / 2.0f;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            GUI.Label(rect, <span class="stringliteral">&quot;Original Sprite&quot;</span>, EditorStyles.label);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            rect.xMin = rect.xMax;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            rect.xMax = xMax;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            GUI.Label(rect, <span class="stringliteral">&quot;Override Sprite&quot;</span>, EditorStyles.label);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#a56f912e31bff089934a3ac3e6b549e8b">  148</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a56f912e31bff089934a3ac3e6b549e8b">DrawGameObjectListHeader</a>(Rect rect)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordtype">float</span> xMax = rect.xMax;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            rect.xMax = rect.xMax / 2.0f;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            GUI.Label(rect, <span class="stringliteral">&quot;Original GameObject&quot;</span>, EditorStyles.label);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            rect.xMin = rect.xMax;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            rect.xMax = xMax;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            GUI.Label(rect, <span class="stringliteral">&quot;Override GameObject&quot;</span>, EditorStyles.label);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#a4fd686a9027acf3539310aff0d8c7517">  163</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a4fd686a9027acf3539310aff0d8c7517">GetSpriteElementHeight</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordtype">float</span> height = <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#ac0f67f98dc1aef6e486a875349b9e2e4">k_SpriteElementHeight</a> + <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a1ea042665ba2e9c1d4c7a20905fce22e">k_PaddingBetweenRules</a>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordtype">bool</span> isMissing = index &gt;= m_MissingOriginalSpriteIndex;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="keywordflow">if</span> (isMissing)</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                height += 16;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordflow">return</span> height;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#abc73e9b6863a49023cd11a940c9b9174">  179</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#abc73e9b6863a49023cd11a940c9b9174">GetGameObjectElementHeight</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordtype">float</span> height = <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a33bbf48fe62385b5c8392e3cb85c12eb">k_GameObjectElementHeight</a> + <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a1ea042665ba2e9c1d4c7a20905fce22e">k_PaddingBetweenRules</a>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="keywordtype">bool</span> isMissing = index &gt;= m_MissingOriginalGameObjectIndex;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <span class="keywordflow">if</span> (isMissing)</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                height += 16;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keywordflow">return</span> height;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3454c34cff63a68c115fcb7120c76a7e">  197</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3454c34cff63a68c115fcb7120c76a7e">DrawSpriteElement</a>(Rect rect, <span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> active, <span class="keywordtype">bool</span> focused)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordtype">bool</span> isMissing = index &gt;= m_MissingOriginalSpriteIndex;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="keywordflow">if</span> (isMissing)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                EditorGUI.HelpBox(<span class="keyword">new</span> Rect(rect.xMin, rect.yMin, rect.width, 16), <span class="stringliteral">&quot;Original Sprite missing&quot;</span>, MessageType.Warning);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                rect.yMin += 16;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            Sprite originalSprite = <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a88c7ab77806caffb41edfebb2d01feda">m_Sprites</a>[index].Key;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            Sprite overrideSprite = <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a88c7ab77806caffb41edfebb2d01feda">m_Sprites</a>[index].Value;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            rect.y += 2;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            rect.height -= <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a1ea042665ba2e9c1d4c7a20905fce22e">k_PaddingBetweenRules</a>;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            rect.xMax = rect.xMax / 2.0f;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keyword">using</span> (<span class="keyword">new</span> EditorGUI.DisabledScope(<span class="keyword">true</span>))</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                EditorGUI.ObjectField(<span class="keyword">new</span> Rect(rect.xMin, rect.yMin, rect.height, rect.height), originalSprite, typeof(Sprite), <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            rect.xMin = rect.xMax;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            rect.xMax *= 2.0f;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            overrideSprite = EditorGUI.ObjectField(<span class="keyword">new</span> Rect(rect.xMin, rect.yMin, rect.height, rect.height), overrideSprite, typeof(Sprite), <span class="keyword">false</span>) as Sprite;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a88c7ab77806caffb41edfebb2d01feda">m_Sprites</a>[index] = <span class="keyword">new</span> KeyValuePair&lt;Sprite, Sprite&gt;(originalSprite, overrideSprite);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#afc0274dcea5042d63cd69df574713730">  231</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#afc0274dcea5042d63cd69df574713730">DrawGameObjectElement</a>(Rect rect, <span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> active, <span class="keywordtype">bool</span> focused)</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="keywordtype">bool</span> isMissing = index &gt;= m_MissingOriginalGameObjectIndex;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <span class="keywordflow">if</span> (isMissing)</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                EditorGUI.HelpBox(<span class="keyword">new</span> Rect(rect.xMin, rect.yMin, rect.width, 16), <span class="stringliteral">&quot;Original GameObject missing&quot;</span>, MessageType.Warning);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                rect.yMin += 16;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            }</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            GameObject originalGameObject = <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a04fe4b109649aec9fe4085aeda2f6605">m_GameObjects</a>[index].Key;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            GameObject overrideGameObject = <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a04fe4b109649aec9fe4085aeda2f6605">m_GameObjects</a>[index].Value;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            rect.y += 2;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            rect.height -= <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a1ea042665ba2e9c1d4c7a20905fce22e">k_PaddingBetweenRules</a>;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            rect.xMax = rect.xMax / 2.0f;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="keyword">using</span> (<span class="keyword">new</span> EditorGUI.DisabledScope(<span class="keyword">true</span>))</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                EditorGUI.ObjectField(<span class="keyword">new</span> Rect(rect.xMin, rect.yMin, rect.width, rect.height), originalGameObject, typeof(GameObject), <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            rect.xMin = rect.xMax;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            rect.xMax *= 2.0f;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            overrideGameObject = EditorGUI.ObjectField(<span class="keyword">new</span> Rect(rect.xMin, rect.yMin, rect.width, rect.height), overrideGameObject, typeof(GameObject), <span class="keyword">false</span>) as GameObject;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a04fe4b109649aec9fe4085aeda2f6605">m_GameObjects</a>[index] = <span class="keyword">new</span> KeyValuePair&lt;GameObject, GameObject&gt;(originalGameObject, overrideGameObject);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        }</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00261"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#a75accc4edf916303c40706abc53897d0">  261</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a75accc4edf916303c40706abc53897d0">DrawTileField</a>()</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a> tile = EditorGUILayout.ObjectField(Styles.overrideTile, <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a2443685ef00789355f730b5340f0b517">m_Tile</a>, typeof(<a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>), <span class="keyword">false</span>) as <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                <span class="keywordflow">if</span> (!LoopCheck(tile))</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                    <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a2443685ef00789355f730b5340f0b517">m_Tile</a> = tile;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                    <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a7138cf6753135b7716aec22bdc542f30">SaveTile</a>();</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                    Debug.LogWarning(<span class="stringliteral">&quot;Circular tile reference&quot;</span>);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                }</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            <span class="keywordtype">bool</span> LoopCheck(<a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a> checkTile)</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                <span class="keywordflow">if</span> (!<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a7b3259c58f995b9764f8849e7a5fd6cb">m_InstanceTile</a>)</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                HashSet&lt;RuleTile&gt; renferenceTils = <span class="keyword">new</span> HashSet&lt;RuleTile&gt;();</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                Add(<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a7b3259c58f995b9764f8849e7a5fd6cb">m_InstanceTile</a>);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                <span class="keywordflow">return</span> renferenceTils.Contains(checkTile);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                <span class="keywordtype">void</span> Add(<a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a> ruleTile)</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                {</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                    <span class="keywordflow">if</span> (renferenceTils.Contains(ruleTile))</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                    renferenceTils.Add(ruleTile);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                    var overrideTiles = RuleTileEditor.FindAffectedOverrideTiles(ruleTile);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                    <span class="keywordflow">foreach</span> (var <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a> <span class="keywordflow">in</span> overrideTiles)</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                        Add(<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a7b3259c58f995b9764f8849e7a5fd6cb">m_InstanceTile</a>);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                }</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            }</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        }</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="line"><a name="l00306"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#aab505679362e4d8f5e9964904e3fcfa9">  306</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#aab505679362e4d8f5e9964904e3fcfa9">DrawCustomFields</a>()</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        {</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a810a626a2c223f6d86cf265eaf4eb6ce">ruleTileEditor</a>)</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            {</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a810a626a2c223f6d86cf265eaf4eb6ce">ruleTileEditor</a>.target.hideFlags = HideFlags.None;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a810a626a2c223f6d86cf265eaf4eb6ce">ruleTileEditor</a>.DrawCustomFields(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a810a626a2c223f6d86cf265eaf4eb6ce">ruleTileEditor</a>.target.hideFlags = HideFlags.NotEditable;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            }</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        }</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> SaveInstanceTileAsset()</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            <span class="keywordtype">bool</span> assetChanged = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a7b3259c58f995b9764f8849e7a5fd6cb">m_InstanceTile</a>)</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            {</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                <span class="keywordflow">if</span> (!<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a2443685ef00789355f730b5340f0b517">m_Tile</a> || <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a7b3259c58f995b9764f8849e7a5fd6cb">m_InstanceTile</a>.GetType() != <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a2443685ef00789355f730b5340f0b517">m_Tile</a>.GetType())</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                {</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                    DestroyImmediate(<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a7b3259c58f995b9764f8849e7a5fd6cb">m_InstanceTile</a>, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                    <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a7b3259c58f995b9764f8849e7a5fd6cb">m_InstanceTile</a> = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                    assetChanged = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            }</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a7b3259c58f995b9764f8849e7a5fd6cb">m_InstanceTile</a>)</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a2443685ef00789355f730b5340f0b517">m_Tile</a>)</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                    var t = <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a2443685ef00789355f730b5340f0b517">m_Tile</a>.GetType();</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                    <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a> instanceTile = ScriptableObject.CreateInstance(t) as <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                    instanceTile.hideFlags = HideFlags.NotEditable;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                    AssetDatabase.AddObjectToAsset(instanceTile, <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>);</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                    <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a7b3259c58f995b9764f8849e7a5fd6cb">m_InstanceTile</a> = instanceTile;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                    assetChanged = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a7b3259c58f995b9764f8849e7a5fd6cb">m_InstanceTile</a>)</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            {</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                <span class="keywordtype">string</span> instanceTileName = <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a2443685ef00789355f730b5340f0b517">m_Tile</a>.name + <span class="stringliteral">&quot; (Override)&quot;</span>;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a7b3259c58f995b9764f8849e7a5fd6cb">m_InstanceTile</a>.name != instanceTileName)</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                {</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                    <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a7b3259c58f995b9764f8849e7a5fd6cb">m_InstanceTile</a>.name = instanceTileName;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                    assetChanged = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                }</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            }</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            <span class="keywordflow">if</span> (assetChanged)</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            {</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                EditorUtility.SetDirty(<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a7b3259c58f995b9764f8849e7a5fd6cb">m_InstanceTile</a>);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                AssetDatabase.SaveAssetIfDirty(<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a7b3259c58f995b9764f8849e7a5fd6cb">m_InstanceTile</a>);   </div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            }</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        }</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160; </div>
+<div class="line"><a name="l00362"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#a7138cf6753135b7716aec22bdc542f30">  362</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a7138cf6753135b7716aec22bdc542f30">SaveTile</a>()</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        {</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            EditorUtility.SetDirty(target);</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            SceneView.RepaintAll();</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            SaveInstanceTileAsset();</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        </div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a7b3259c58f995b9764f8849e7a5fd6cb">m_InstanceTile</a>)</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;            {</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a8c3699cd5d33a8ae61ff3b2dc1c18bd4">Override</a>();</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                RuleTileEditor.UpdateAffectedOverrideTiles(<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">overrideTile</a>.<a class="code" href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a7b3259c58f995b9764f8849e7a5fd6cb">m_InstanceTile</a>);</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            }</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160; </div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a810a626a2c223f6d86cf265eaf4eb6ce">ruleTileEditor</a> &amp;&amp; <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a810a626a2c223f6d86cf265eaf4eb6ce">ruleTileEditor</a>.m_PreviewTilemaps != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            {</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                <span class="keywordflow">foreach</span> (var tilemap <span class="keywordflow">in</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a810a626a2c223f6d86cf265eaf4eb6ce">ruleTileEditor</a>.m_PreviewTilemaps)</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                    tilemap.RefreshAllTiles();</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            }</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        }</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
+<div class="line"><a name="l00390"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#a61c14d2162f78f323364da4777a2d6a7">  390</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> Texture2D <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a61c14d2162f78f323364da4777a2d6a7">RenderStaticPreview</a>(<span class="keywordtype">string</span> assetPath, Object[] subAssets, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height)</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        {</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a810a626a2c223f6d86cf265eaf4eb6ce">ruleTileEditor</a>)</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a810a626a2c223f6d86cf265eaf4eb6ce">ruleTileEditor</a>.RenderStaticPreview(assetPath, subAssets, width, height);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160; </div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            <span class="keywordflow">return</span> base.RenderStaticPreview(assetPath, subAssets, width, height);</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        }</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
+<div class="line"><a name="l00402"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#a313eb853ecb9a920c70f3ac8dd7c5afd">  402</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a313eb853ecb9a920c70f3ac8dd7c5afd">HasPreviewGUI</a>()</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        {</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a810a626a2c223f6d86cf265eaf4eb6ce">ruleTileEditor</a>)</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a810a626a2c223f6d86cf265eaf4eb6ce">ruleTileEditor</a>.HasPreviewGUI();</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160; </div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        }</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
+<div class="line"><a name="l00413"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#af46e6f627c9737835d39ab696e6af93e">  413</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#af46e6f627c9737835d39ab696e6af93e">OnPreviewSettings</a>()</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        {</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a810a626a2c223f6d86cf265eaf4eb6ce">ruleTileEditor</a>)</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;                <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a810a626a2c223f6d86cf265eaf4eb6ce">ruleTileEditor</a>.OnPreviewSettings();</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        }</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_rule_override_tile_editor.html#a231be792f437f0807c4631c31e666962">  424</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a231be792f437f0807c4631c31e666962">OnPreviewGUI</a>(Rect rect, GUIStyle background)</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        {</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a810a626a2c223f6d86cf265eaf4eb6ce">ruleTileEditor</a>)</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;                <a class="code" href="class_unity_editor_1_1_rule_override_tile_editor.html#a810a626a2c223f6d86cf265eaf4eb6ce">ruleTileEditor</a>.OnPreviewGUI(rect, background);</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        }</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    }</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_a88c7ab77806caffb41edfebb2d01feda"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#a88c7ab77806caffb41edfebb2d01feda">UnityEditor.RuleOverrideTileEditor.m_Sprites</a></div><div class="ttdeci">List&lt; KeyValuePair&lt; Sprite, Sprite &gt; &gt; m_Sprites</div><div class="ttdoc">List of Sprites and overriding Sprites</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00047">RuleOverrideTileEditor.cs:47</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_tilemaps_1_1_rule_override_tile_html_a8c3699cd5d33a8ae61ff3b2dc1c18bd4"><div class="ttname"><a href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a8c3699cd5d33a8ae61ff3b2dc1c18bd4">UnityEngine.Tilemaps.RuleOverrideTile.Override</a></div><div class="ttdeci">virtual void Override()</div><div class="ttdoc">Updates the Rules with the Overrides set for this RuleOverrideTile</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_8cs_source.html#l00272">RuleOverrideTile.cs:272</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_afc0274dcea5042d63cd69df574713730"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#afc0274dcea5042d63cd69df574713730">UnityEditor.RuleOverrideTileEditor.DrawGameObjectElement</a></div><div class="ttdeci">void DrawGameObjectElement(Rect rect, int index, bool active, bool focused)</div><div class="ttdoc">Draws the GameObject element for the RuleOverride list</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00231">RuleOverrideTileEditor.cs:231</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_a7138cf6753135b7716aec22bdc542f30"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#a7138cf6753135b7716aec22bdc542f30">UnityEditor.RuleOverrideTileEditor.SaveTile</a></div><div class="ttdeci">void SaveTile()</div><div class="ttdoc">Saves any changes to the RuleOverrideTile</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00362">RuleOverrideTileEditor.cs:362</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_a231be792f437f0807c4631c31e666962"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#a231be792f437f0807c4631c31e666962">UnityEditor.RuleOverrideTileEditor.OnPreviewGUI</a></div><div class="ttdeci">override void OnPreviewGUI(Rect rect, GUIStyle background)</div><div class="ttdoc">Draws the preview GUI for the RuleTile</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00424">RuleOverrideTileEditor.cs:424</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_tilemaps_1_1_rule_override_tile_html_a6e3b41f06989715c61c602b63b9eccc8"><div class="ttname"><a href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a6e3b41f06989715c61c602b63b9eccc8">UnityEngine.Tilemaps.RuleOverrideTile.ApplyOverrides</a></div><div class="ttdeci">void ApplyOverrides(IList&lt; KeyValuePair&lt; Sprite, Sprite &gt;&gt; overrides)</div><div class="ttdoc">Applies overrides to this</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_8cs_source.html#l00175">RuleOverrideTile.cs:175</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_a810a626a2c223f6d86cf265eaf4eb6ce"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#a810a626a2c223f6d86cf265eaf4eb6ce">UnityEditor.RuleOverrideTileEditor.ruleTileEditor</a></div><div class="ttdeci">RuleTileEditor ruleTileEditor</div><div class="ttdoc">The RuleTileEditor for the overridden instance of the RuleTile</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00028">RuleOverrideTileEditor.cs:28</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_a04fe4b109649aec9fe4085aeda2f6605"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#a04fe4b109649aec9fe4085aeda2f6605">UnityEditor.RuleOverrideTileEditor.m_GameObjects</a></div><div class="ttdeci">List&lt; KeyValuePair&lt; GameObject, GameObject &gt; &gt; m_GameObjects</div><div class="ttdoc">List of GameObjects and overriding GameObjects</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00051">RuleOverrideTileEditor.cs:51</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_a08c90cd4a66e3d7afb088b7f1ce5ea45"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#a08c90cd4a66e3d7afb088b7f1ce5ea45">UnityEditor.RuleOverrideTileEditor.OnDisable</a></div><div class="ttdeci">virtual void OnDisable()</div><div class="ttdoc">OnDisable for the RuleOverrideTileEditor</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00094">RuleOverrideTileEditor.cs:94</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html">UnityEngine.RuleTile</a></div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8pixel-perfect_0d5_80_81_2_samples~_2_scenes_01and_01_extras_2_scenes_2_rule_01_tiles_2_scripts_2_rule_tile_8cs_source.html#l00009">RuleTile.cs:9</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_a4fd686a9027acf3539310aff0d8c7517"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#a4fd686a9027acf3539310aff0d8c7517">UnityEditor.RuleOverrideTileEditor.GetSpriteElementHeight</a></div><div class="ttdeci">float GetSpriteElementHeight(int index)</div><div class="ttdoc">Gets the GUI element height for a Sprite element with the given index</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00163">RuleOverrideTileEditor.cs:163</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_a6b6ec220ae62ad9bb6f7ece31f51010d"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#a6b6ec220ae62ad9bb6f7ece31f51010d">UnityEditor.RuleOverrideTileEditor.DrawSpriteListHeader</a></div><div class="ttdeci">void DrawSpriteListHeader(Rect rect)</div><div class="ttdoc">Draws the header for the Sprite list</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00134">RuleOverrideTileEditor.cs:134</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html">UnityEditor.RuleOverrideTileEditor</a></div><div class="ttdoc">The Editor for a RuleOverrideTileEditor.</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00012">RuleOverrideTileEditor.cs:12</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_tilemaps_1_1_rule_override_tile_html_a6c3bd5d53c145e4d636fe348eb55208b"><div class="ttname"><a href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a6c3bd5d53c145e4d636fe348eb55208b">UnityEngine.Tilemaps.RuleOverrideTile.GetOverrides</a></div><div class="ttdeci">void GetOverrides(List&lt; KeyValuePair&lt; Sprite, Sprite &gt;&gt; overrides, ref int validCount)</div><div class="ttdoc">Gets overrides for this</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_8cs_source.html#l00204">RuleOverrideTile.cs:204</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_a33bbf48fe62385b5c8392e3cb85c12eb"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#a33bbf48fe62385b5c8392e3cb85c12eb">UnityEditor.RuleOverrideTileEditor.k_GameObjectElementHeight</a></div><div class="ttdeci">static float k_GameObjectElementHeight</div><div class="ttdoc">Height for a GameObject Element</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00064">RuleOverrideTileEditor.cs:64</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_a75accc4edf916303c40706abc53897d0"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#a75accc4edf916303c40706abc53897d0">UnityEditor.RuleOverrideTileEditor.DrawTileField</a></div><div class="ttdeci">void DrawTileField()</div><div class="ttdoc">Draws a field for the RuleTile be overridden</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00261">RuleOverrideTileEditor.cs:261</a></div></div>
+<div class="ttc" id="anamespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8animation_0d8_80_81_2_editor_2_analytics_8cs_source.html#l00009">Analytics.cs:9</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_aab505679362e4d8f5e9964904e3fcfa9"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#aab505679362e4d8f5e9964904e3fcfa9">UnityEditor.RuleOverrideTileEditor.DrawCustomFields</a></div><div class="ttdeci">void DrawCustomFields()</div><div class="ttdoc">Draw editor fields for custom properties for the RuleOverrideTile</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00306">RuleOverrideTileEditor.cs:306</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_tilemaps_html"><div class="ttname"><a href="namespace_unity_engine_1_1_tilemaps.html">UnityEngine.Tilemaps</a></div><div class="ttdef"><b>Definition:</b> <a href="_grid_information_8cs_source.html#l00005">GridInformation.cs:5</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_a1ea042665ba2e9c1d4c7a20905fce22e"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#a1ea042665ba2e9c1d4c7a20905fce22e">UnityEditor.RuleOverrideTileEditor.k_PaddingBetweenRules</a></div><div class="ttdeci">static float k_PaddingBetweenRules</div><div class="ttdoc">Padding between Rule Elements</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00068">RuleOverrideTileEditor.cs:68</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_a3532b6c348b18ee87cb3e3d56b48f652"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#a3532b6c348b18ee87cb3e3d56b48f652">UnityEditor.RuleOverrideTileEditor.overrideTile</a></div><div class="ttdeci">RuleOverrideTile overrideTile</div><div class="ttdoc">The RuleOverrideTile being edited</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00023">RuleOverrideTileEditor.cs:23</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_a313eb853ecb9a920c70f3ac8dd7c5afd"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#a313eb853ecb9a920c70f3ac8dd7c5afd">UnityEditor.RuleOverrideTileEditor.HasPreviewGUI</a></div><div class="ttdeci">override bool HasPreviewGUI()</div><div class="ttdoc">Whether the RuleOverrideTile has a preview GUI</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00402">RuleOverrideTileEditor.cs:402</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_a3454c34cff63a68c115fcb7120c76a7e"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#a3454c34cff63a68c115fcb7120c76a7e">UnityEditor.RuleOverrideTileEditor.DrawSpriteElement</a></div><div class="ttdeci">void DrawSpriteElement(Rect rect, int index, bool active, bool focused)</div><div class="ttdoc">Draws the Sprite element for the RuleOverride list</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00197">RuleOverrideTileEditor.cs:197</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_ac0f67f98dc1aef6e486a875349b9e2e4"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#ac0f67f98dc1aef6e486a875349b9e2e4">UnityEditor.RuleOverrideTileEditor.k_SpriteElementHeight</a></div><div class="ttdeci">static float k_SpriteElementHeight</div><div class="ttdoc">Height for a Sprite Element</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00060">RuleOverrideTileEditor.cs:60</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_abc73e9b6863a49023cd11a940c9b9174"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#abc73e9b6863a49023cd11a940c9b9174">UnityEditor.RuleOverrideTileEditor.GetGameObjectElementHeight</a></div><div class="ttdeci">float GetGameObjectElementHeight(int index)</div><div class="ttdoc">Gets the GUI element height for a GameObject element with the given index</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00179">RuleOverrideTileEditor.cs:179</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_aab882a9aae96f813951099df1ea485dc"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#aab882a9aae96f813951099df1ea485dc">UnityEditor.RuleOverrideTileEditor.OnEnable</a></div><div class="ttdeci">virtual void OnEnable()</div><div class="ttdoc">OnEnable for the RuleOverrideTileEditor</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00073">RuleOverrideTileEditor.cs:73</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_tilemaps_1_1_rule_override_tile_html_a2443685ef00789355f730b5340f0b517"><div class="ttname"><a href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a2443685ef00789355f730b5340f0b517">UnityEngine.Tilemaps.RuleOverrideTile.m_Tile</a></div><div class="ttdeci">RuleTile m_Tile</div><div class="ttdoc">The RuleTile to override</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_8cs_source.html#l00140">RuleOverrideTile.cs:140</a></div></div>
+<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition:</b> <a href="_preserve_dependency_attribute_8cs_source.html#l00030">PreserveDependencyAttribute.cs:30</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_a61c14d2162f78f323364da4777a2d6a7"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#a61c14d2162f78f323364da4777a2d6a7">UnityEditor.RuleOverrideTileEditor.RenderStaticPreview</a></div><div class="ttdeci">override Texture2D RenderStaticPreview(string assetPath, Object[] subAssets, int width, int height)</div><div class="ttdoc">Renders a static preview Texture2D for a RuleOverrideTile asset</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00390">RuleOverrideTileEditor.cs:390</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_a0988f0e21e6d98a409e0d6a7e2b50b39"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#a0988f0e21e6d98a409e0d6a7e2b50b39">UnityEditor.RuleOverrideTileEditor.OnInspectorGUI</a></div><div class="ttdeci">override void OnInspectorGUI()</div><div class="ttdoc">Draws the Inspector GUI for the RuleOverrideTileEditor</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00103">RuleOverrideTileEditor.cs:103</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_tilemaps_1_1_rule_override_tile_html"><div class="ttname"><a href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html">UnityEngine.Tilemaps.RuleOverrideTile</a></div><div class="ttdoc">Rule Override Tiles are Tiles which can override a subset of Rules for a given Rule Tile to provide s...</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_8cs_source.html#l00018">RuleOverrideTile.cs:18</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_tilemaps_1_1_rule_override_tile_html_a7b3259c58f995b9764f8849e7a5fd6cb"><div class="ttname"><a href="class_unity_engine_1_1_tilemaps_1_1_rule_override_tile.html#a7b3259c58f995b9764f8849e7a5fd6cb">UnityEngine.Tilemaps.RuleOverrideTile.m_InstanceTile</a></div><div class="ttdeci">RuleTile m_InstanceTile</div><div class="ttdoc">Returns the Rule Tile for retrieving TileData</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_8cs_source.html#l00153">RuleOverrideTile.cs:153</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_af46e6f627c9737835d39ab696e6af93e"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#af46e6f627c9737835d39ab696e6af93e">UnityEditor.RuleOverrideTileEditor.OnPreviewSettings</a></div><div class="ttdeci">override void OnPreviewSettings()</div><div class="ttdoc">Updates preview settings for the RuleOverrideTile.</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00413">RuleOverrideTileEditor.cs:413</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_rule_override_tile_editor_html_a56f912e31bff089934a3ac3e6b549e8b"><div class="ttname"><a href="class_unity_editor_1_1_rule_override_tile_editor.html#a56f912e31bff089934a3ac3e6b549e8b">UnityEditor.RuleOverrideTileEditor.DrawGameObjectListHeader</a></div><div class="ttdeci">void DrawGameObjectListHeader(Rect rect)</div><div class="ttdoc">Draws the header for the GameObject list</div><div class="ttdef"><b>Definition:</b> <a href="_rule_override_tile_editor_8cs_source.html#l00148">RuleOverrideTileEditor.cs:148</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

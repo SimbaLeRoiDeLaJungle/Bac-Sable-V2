@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/EditorTools/FlipTool.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_df381046aaab1e560c209bd4c9981ca6.html">com.unity.2d.tilemap@1.0.0</a></li><li class="navelem"><a class="el" href="dir_0d21ded2fd5e96c0f4a77865c032209d.html">Editor</a></li><li class="navelem"><a class="el" href="dir_ada0ab607736a321fecd682016d7414b.html">EditorTools</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">FlipTool.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.EditorTools;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor_1_1_tilemaps.html">UnityEditor.Tilemaps</a></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_flip_tool.html">    9</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_tool.html">FlipTool</a> : <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html">TilemapEditorTool</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_flip_tool.html#ad7dee41688b1c753a9101a1f2460a7be">   15</a></span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_tool.html#ad7dee41688b1c753a9101a1f2460a7be">Flip</a>(GridBrushBase.FlipAxis axis)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html">GridPaintingState</a>.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html#a8e6606eb39acceb586d94baebdffc6b7">gridBrush</a> == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            var grid = <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html">GridPaintingState</a>.activeGrid;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">if</span> (grid == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                grid = <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html">GridPaintingState</a>.lastActiveGrid;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">if</span> (grid != <span class="keyword">null</span> &amp;&amp; grid.isActive)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html">GridPaintingState</a>.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html#a8e6606eb39acceb586d94baebdffc6b7">gridBrush</a>.Flip(axis, grid.cellLayout);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                grid.Repaint();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html">GridPaintingState</a>.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html#abec2c42300cf7e4fe474b2cdd1876e86">scenePaintTarget</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                var gridLayout = <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html">GridPaintingState</a>.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html#abec2c42300cf7e4fe474b2cdd1876e86">scenePaintTarget</a>.GetComponentInParent&lt;GridLayout&gt;();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">if</span> (gridLayout != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html">GridPaintingState</a>.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html#a8e6606eb39acceb586d94baebdffc6b7">gridBrush</a>.Flip(axis, gridLayout.cellLayout);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_flip_tool.html#a88b873fe493de9727bc91c8db3446452">   42</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_tool.html#a88b873fe493de9727bc91c8db3446452">OnToolGUI</a>(EditorWindow window)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            ToolManager.RestorePreviousTool();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_flip_x_tool.html">   51</a></span>&#160;    <span class="keyword">public</span> sealed <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_x_tool.html">FlipXTool</a> : <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_tool.html">FlipTool</a></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">class </span>Styles</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_x_tool.html#a027d0343d65792cf7d6096b3d51e9b33">tooltipStringFormat</a> = L10n.Tr(<span class="stringliteral">&quot;|Flips the contents of the brush in the X Axis. ({0})&quot;</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_x_tool.html#a6f683982c7403e73ef5cefbc4e5bfde9">shortcutId</a> = <span class="stringliteral">&quot;Grid Painting/Flip X&quot;</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> GUIContent toolContent = EditorGUIUtility.IconContent(<span class="stringliteral">&quot;Packages/com.unity.2d.tilemap/Editor/Icons/Grid.FlipX.png&quot;</span>, <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a7b4f6d59e09a97588f3cf0fb85d94d62">GetTooltipText</a>(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_x_tool.html#a027d0343d65792cf7d6096b3d51e9b33">tooltipStringFormat</a>, <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_x_tool.html#a6f683982c7403e73ef5cefbc4e5bfde9">shortcutId</a>));</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_x_tool.html#a027d0343d65792cf7d6096b3d51e9b33">tooltipStringFormat</a></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_flip_x_tool.html#a027d0343d65792cf7d6096b3d51e9b33">   64</a></span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> Styles.tooltipStringFormat; }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_x_tool.html#a6f683982c7403e73ef5cefbc4e5bfde9">shortcutId</a></div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_flip_x_tool.html#a6f683982c7403e73ef5cefbc4e5bfde9">   72</a></span>&#160;        {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> Styles.shortcutId; }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> GUIContent <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_x_tool.html#a41df42e8842d87c6f0cee5ad137e8b60">toolbarIcon</a></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_flip_x_tool.html#a41df42e8842d87c6f0cee5ad137e8b60">   80</a></span>&#160;        {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> Styles.toolContent; }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_flip_x_tool.html#ae6dd7f9800b172eb74809eddacff15d4">   87</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_x_tool.html#ae6dd7f9800b172eb74809eddacff15d4">OnActivated</a>()</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_tool.html#ad7dee41688b1c753a9101a1f2460a7be">Flip</a>(GridBrushBase.FlipAxis.X);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_flip_y_tool.html">   96</a></span>&#160;    <span class="keyword">public</span> sealed <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_y_tool.html">FlipYTool</a> : <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_tool.html">FlipTool</a></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">class </span>Styles</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_y_tool.html#a0610140e08fd09f415e490663d60bfe7">tooltipStringFormat</a> = L10n.Tr(<span class="stringliteral">&quot;|Flips the contents of the brush in the Y axis. ({0})&quot;</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_y_tool.html#afd6278aee2a725fff6ba57ef32505c97">shortcutId</a> = <span class="stringliteral">&quot;Grid Painting/Flip Y&quot;</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> GUIContent toolContent = EditorGUIUtility.IconContent(<span class="stringliteral">&quot;Packages/com.unity.2d.tilemap/Editor/Icons/Grid.FlipY.png&quot;</span>, <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a7b4f6d59e09a97588f3cf0fb85d94d62">GetTooltipText</a>(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_y_tool.html#a0610140e08fd09f415e490663d60bfe7">tooltipStringFormat</a>, <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_y_tool.html#afd6278aee2a725fff6ba57ef32505c97">shortcutId</a>));</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_y_tool.html#a0610140e08fd09f415e490663d60bfe7">tooltipStringFormat</a></div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_flip_y_tool.html#a0610140e08fd09f415e490663d60bfe7">  109</a></span>&#160;        {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> Styles.tooltipStringFormat; }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_y_tool.html#afd6278aee2a725fff6ba57ef32505c97">shortcutId</a></div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_flip_y_tool.html#afd6278aee2a725fff6ba57ef32505c97">  117</a></span>&#160;        {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> Styles.shortcutId; }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> GUIContent <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_y_tool.html#a36fae12705e1c2d393f2070ffd277f66">toolbarIcon</a></div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_flip_y_tool.html#a36fae12705e1c2d393f2070ffd277f66">  125</a></span>&#160;        {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> Styles.toolContent; }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_flip_y_tool.html#a0378a62db06cacf3bab28de464a273ef">  132</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_y_tool.html#a0378a62db06cacf3bab28de464a273ef">OnActivated</a>()</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_flip_tool.html#ad7dee41688b1c753a9101a1f2460a7be">Flip</a>(GridBrushBase.FlipAxis.Y);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_flip_y_tool_html_a0378a62db06cacf3bab28de464a273ef"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_flip_y_tool.html#a0378a62db06cacf3bab28de464a273ef">UnityEditor.Tilemaps.FlipYTool.OnActivated</a></div><div class="ttdeci">override void OnActivated()</div><div class="ttdoc">Action when FlipYTool is activated</div><div class="ttdef"><b>Definition:</b> <a href="_flip_tool_8cs_source.html#l00132">FlipTool.cs:132</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_flip_x_tool_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_flip_x_tool.html">UnityEditor.Tilemaps.FlipXTool</a></div><div class="ttdoc">Tool for doing a flip X action with the Tile Palette</div><div class="ttdef"><b>Definition:</b> <a href="_flip_tool_8cs_source.html#l00051">FlipTool.cs:51</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_painting_state_html_a8e6606eb39acceb586d94baebdffc6b7"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html#a8e6606eb39acceb586d94baebdffc6b7">UnityEditor.Tilemaps.GridPaintingState.gridBrush</a></div><div class="ttdeci">static GridBrushBase? gridBrush</div><div class="ttdoc">The currently active brush for the Tile Palette</div><div class="ttdef"><b>Definition:</b> <a href="_grid_painting_state_8cs_source.html#l00161">GridPaintingState.cs:161</a></div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_tilemaps_html"><div class="ttname"><a href="namespace_unity_editor_1_1_tilemaps.html">UnityEditor.Tilemaps</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00008">GameObjectBrush.cs:8</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html">UnityEditor.Tilemaps.TilemapEditorTool</a></div><div class="ttdoc">A base class for Editor Tools which work with the Tile Palette and GridBrushes</div><div class="ttdef"><b>Definition:</b> <a href="_tilemap_editor_tool_8cs_source.html#l00013">TilemapEditorTool.cs:13</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_painting_state_html_abec2c42300cf7e4fe474b2cdd1876e86"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html#abec2c42300cf7e4fe474b2cdd1876e86">UnityEditor.Tilemaps.GridPaintingState.scenePaintTarget</a></div><div class="ttdeci">static GameObject scenePaintTarget</div><div class="ttdoc">The currently active target for the Tile Palette</div><div class="ttdef"><b>Definition:</b> <a href="_grid_painting_state_8cs_source.html#l00143">GridPaintingState.cs:143</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_flip_tool_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_flip_tool.html">UnityEditor.Tilemaps.FlipTool</a></div><div class="ttdoc">Tool for doing a flip action with the Tile Palette</div><div class="ttdef"><b>Definition:</b> <a href="_flip_tool_8cs_source.html#l00009">FlipTool.cs:9</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_flip_x_tool_html_a41df42e8842d87c6f0cee5ad137e8b60"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_flip_x_tool.html#a41df42e8842d87c6f0cee5ad137e8b60">UnityEditor.Tilemaps.FlipXTool.toolbarIcon</a></div><div class="ttdeci">override GUIContent toolbarIcon</div><div class="ttdoc">Toolbar Icon for the FlipXTool</div><div class="ttdef"><b>Definition:</b> <a href="_flip_tool_8cs_source.html#l00080">FlipTool.cs:80</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_flip_x_tool_html_a027d0343d65792cf7d6096b3d51e9b33"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_flip_x_tool.html#a027d0343d65792cf7d6096b3d51e9b33">UnityEditor.Tilemaps.FlipXTool.tooltipStringFormat</a></div><div class="ttdeci">override string tooltipStringFormat</div><div class="ttdoc">Tooltip String Format for the FlipXTool</div><div class="ttdef"><b>Definition:</b> <a href="_flip_tool_8cs_source.html#l00064">FlipTool.cs:64</a></div></div>
+<div class="ttc" id="anamespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8animation_0d8_80_81_2_editor_2_analytics_8cs_source.html#l00009">Analytics.cs:9</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_html_a7b4f6d59e09a97588f3cf0fb85d94d62"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a7b4f6d59e09a97588f3cf0fb85d94d62">UnityEditor.Tilemaps.TilemapEditorTool.GetTooltipText</a></div><div class="ttdeci">static string GetTooltipText(string tooltipStringFormat, string shortcutId)</div><div class="ttdoc">Gets the text for the tooltip given a tooltip string format and the shortcut combination for a toolti...</div><div class="ttdef"><b>Definition:</b> <a href="_tilemap_editor_tool_8cs_source.html#l00082">TilemapEditorTool.cs:82</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_flip_y_tool_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_flip_y_tool.html">UnityEditor.Tilemaps.FlipYTool</a></div><div class="ttdoc">Tool for doing a flip Y action with the Tile Palette</div><div class="ttdef"><b>Definition:</b> <a href="_flip_tool_8cs_source.html#l00096">FlipTool.cs:96</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_flip_y_tool_html_a0610140e08fd09f415e490663d60bfe7"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_flip_y_tool.html#a0610140e08fd09f415e490663d60bfe7">UnityEditor.Tilemaps.FlipYTool.tooltipStringFormat</a></div><div class="ttdeci">override string tooltipStringFormat</div><div class="ttdoc">Tooltip String Format for the FlipYTool</div><div class="ttdef"><b>Definition:</b> <a href="_flip_tool_8cs_source.html#l00109">FlipTool.cs:109</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_painting_state_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html">UnityEditor.Tilemaps.GridPaintingState</a></div><div class="ttdoc">GridPaintingState controls the state of objects for painting with a Tile Palette.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_painting_state_8cs_source.html#l00018">GridPaintingState.cs:18</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_flip_x_tool_html_ae6dd7f9800b172eb74809eddacff15d4"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_flip_x_tool.html#ae6dd7f9800b172eb74809eddacff15d4">UnityEditor.Tilemaps.FlipXTool.OnActivated</a></div><div class="ttdeci">override void OnActivated()</div><div class="ttdoc">Action when FlipXTool is activated</div><div class="ttdef"><b>Definition:</b> <a href="_flip_tool_8cs_source.html#l00087">FlipTool.cs:87</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_flip_tool_html_a88b873fe493de9727bc91c8db3446452"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_flip_tool.html#a88b873fe493de9727bc91c8db3446452">UnityEditor.Tilemaps.FlipTool.OnToolGUI</a></div><div class="ttdeci">override void OnToolGUI(EditorWindow window)</div><div class="ttdoc">Handles GUI for the FlipTool when the Tool is active</div><div class="ttdef"><b>Definition:</b> <a href="_flip_tool_8cs_source.html#l00042">FlipTool.cs:42</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_flip_y_tool_html_a36fae12705e1c2d393f2070ffd277f66"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_flip_y_tool.html#a36fae12705e1c2d393f2070ffd277f66">UnityEditor.Tilemaps.FlipYTool.toolbarIcon</a></div><div class="ttdeci">override GUIContent toolbarIcon</div><div class="ttdoc">Toolbar Icon for the FlipYTool</div><div class="ttdef"><b>Definition:</b> <a href="_flip_tool_8cs_source.html#l00125">FlipTool.cs:125</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_flip_x_tool_html_a6f683982c7403e73ef5cefbc4e5bfde9"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_flip_x_tool.html#a6f683982c7403e73ef5cefbc4e5bfde9">UnityEditor.Tilemaps.FlipXTool.shortcutId</a></div><div class="ttdeci">override string shortcutId</div><div class="ttdoc">Shortcut Id for the FlipXTool</div><div class="ttdef"><b>Definition:</b> <a href="_flip_tool_8cs_source.html#l00072">FlipTool.cs:72</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_flip_tool_html_ad7dee41688b1c753a9101a1f2460a7be"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_flip_tool.html#ad7dee41688b1c753a9101a1f2460a7be">UnityEditor.Tilemaps.FlipTool.Flip</a></div><div class="ttdeci">void Flip(GridBrushBase.FlipAxis axis)</div><div class="ttdoc">Handles flipping in the given direction when the FlipTool is activated</div><div class="ttdef"><b>Definition:</b> <a href="_flip_tool_8cs_source.html#l00015">FlipTool.cs:15</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_flip_y_tool_html_afd6278aee2a725fff6ba57ef32505c97"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_flip_y_tool.html#afd6278aee2a725fff6ba57ef32505c97">UnityEditor.Tilemaps.FlipYTool.shortcutId</a></div><div class="ttdeci">override string shortcutId</div><div class="ttdoc">Shortcut Id for the FlipYTool</div><div class="ttdef"><b>Definition:</b> <a href="_flip_tool_8cs_source.html#l00117">FlipTool.cs:117</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

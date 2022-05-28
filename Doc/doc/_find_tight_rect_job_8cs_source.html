@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.common@7.0.0/Editor/ImagePacker/Jobs/FindTightRectJob.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_13c1890f42caf04e391d54eaba5958a9.html">com.unity.2d.common@7.0.0</a></li><li class="navelem"><a class="el" href="dir_4596cea7739001bdd98549fa4ac34348.html">Editor</a></li><li class="navelem"><a class="el" href="dir_a6d976bae05acda7b07b1b9bde06bf41.html">ImagePacker</a></li><li class="navelem"><a class="el" href="dir_acdbc687a5789d882f30cfc862b8d070.html">Jobs</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">FindTightRectJob.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity.html">Unity</a>.Collections;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity.html">Unity</a>.Collections.LowLevel.Unsafe;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity.html">Unity</a>.Jobs;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor_1_1_u2_d_1_1_common.html">UnityEditor.U2D.Common</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">internal</span> <span class="keyword">struct </span>FindTightRectJob : IJobParallelFor</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        [<a class="code" href="namespace_unity_editor_1_1_timeline.html#af9aefa8b1ec710da91fbc7bdf0bcafbca131fb182a881796e7606ed6da27f1197">ReadOnly</a>]</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        [DeallocateOnJobCompletion]</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        NativeArray&lt;IntPtr&gt; m_Buffers;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        [<a class="code" href="namespace_unity_editor_1_1_timeline.html#af9aefa8b1ec710da91fbc7bdf0bcafbca131fb182a881796e7606ed6da27f1197">ReadOnly</a>]</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">int</span> m_Width;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        [<a class="code" href="namespace_unity_editor_1_1_timeline.html#af9aefa8b1ec710da91fbc7bdf0bcafbca131fb182a881796e7606ed6da27f1197">ReadOnly</a>]</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">int</span> m_Height;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        NativeArray&lt;RectInt&gt; m_Output;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">public</span> unsafe <span class="keywordtype">void</span> Execute(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            var rect = <span class="keyword">new</span> RectInt(m_Width, m_Height, 0, 0);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            var color = (Color32*)m_Buffers[index].ToPointer();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_Height; ++i)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; m_Width; ++j)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                    <span class="keywordflow">if</span> (color-&gt;a != 0)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                        rect.x = Mathf.Min(j, rect.x);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                        rect.y = Mathf.Min(i, rect.y);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                        rect.width = Mathf.Max(j, rect.width);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                        rect.height = Mathf.Max(i, rect.height);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                    ++color;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            rect.width = Mathf.Max(0, rect.width - rect.x + 1);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            rect.height = Mathf.Max(0, rect.height - rect.y + 1);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            m_Output[index] = rect;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> unsafe RectInt[] Execute(NativeArray&lt;Color32&gt;[] buffers, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            var job = <span class="keyword">new</span> FindTightRectJob();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            job.m_Buffers = <span class="keyword">new</span> NativeArray&lt;IntPtr&gt;(buffers.Length, Allocator.TempJob);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; buffers.Length; ++i)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                job.m_Buffers[i] = <span class="keyword">new</span> IntPtr(buffers[i].GetUnsafeReadOnlyPtr());</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            job.m_Output = <span class="keyword">new</span> NativeArray&lt;RectInt&gt;(buffers.Length, Allocator.TempJob);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            job.m_Width = width;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            job.m_Height = height;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="comment">// Ensure all jobs are completed before we return since we don&#39;t own the buffers</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            job.Schedule(buffers.Length, 1).Complete();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            var rects = job.m_Output.ToArray();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            job.m_Output.Dispose();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">return</span> rects;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespace_unity_html"><div class="ttname"><a href="namespace_unity.html">Unity</a></div><div class="ttdef"><b>Definition:</b> <a href="_build_asset_bundle_8cs_source.html#l00004">BuildAssetBundle.cs:4</a></div></div>
+<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition:</b> <a href="_preserve_dependency_attribute_8cs_source.html#l00030">PreserveDependencyAttribute.cs:30</a></div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_u2_d_1_1_common_html"><div class="ttname"><a href="namespace_unity_editor_1_1_u2_d_1_1_common.html">UnityEditor.U2D.Common</a></div><div class="ttdef"><b>Definition:</b> <a href="_image_packer_8cs_source.html#l00008">ImagePacker.cs:8</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_timeline_html_af9aefa8b1ec710da91fbc7bdf0bcafbca131fb182a881796e7606ed6da27f1197"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#af9aefa8b1ec710da91fbc7bdf0bcafbca131fb182a881796e7606ed6da27f1197">UnityEditor.Timeline.TimelineModes.ReadOnly</a></div><div class="ttdeci">@ ReadOnly</div><div class="ttdoc">The timeline is not editable. (the TimelineAsset file is either readonly on disk or locked by source ...</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

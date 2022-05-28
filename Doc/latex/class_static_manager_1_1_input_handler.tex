@@ -1,0 +1,175 @@
+\hypertarget{class_static_manager_1_1_input_handler}{}\doxysection{Référence de la classe Static\+Manager.\+Input\+Handler}
+\label{class_static_manager_1_1_input_handler}\index{StaticManager.InputHandler@{StaticManager.InputHandler}}
+
+
+Stock les inputs.  
+
+
+
+
+Graphe d\textquotesingle{}héritage de Static\+Manager.\+Input\+Handler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{class_static_manager_1_1_input_handler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Static\+Manager.\+Input\+Handler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{class_static_manager_1_1_input_handler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_static_manager_1_1_input_handler_aae1898104292bf9dad7ca1b404383903}{Key\+Down}} (\mbox{\hyperlink{_game_action_8cs_a5827805c542ab9cccf700dc3697cbafc}{Game\+Action}} action)
+\begin{DoxyCompactList}\small\item\em Retourne vrai si la key qui correspond a action est actuellement presser. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_static_manager_1_1_input_handler_adea4411895fb265128c15cce41b21cd2}{Key\+Release}} (\mbox{\hyperlink{_game_action_8cs_a5827805c542ab9cccf700dc3697cbafc}{Game\+Action}} action)
+\begin{DoxyCompactList}\small\item\em Retourne vrai si la key qui correspond a action vien d\textquotesingle{}etre relacher. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_static_manager_1_1_input_handler_aebab4e7df727dd6b2b926dd1f0f22510}{Key\+Pressed}} (\mbox{\hyperlink{_game_action_8cs_a5827805c542ab9cccf700dc3697cbafc}{Game\+Action}} action)
+\begin{DoxyCompactList}\small\item\em Retourne vrai si la key qui correspond a action vien juste d\textquotesingle{}etre presser. \end{DoxyCompactList}\item 
+static Vector2 \mbox{\hyperlink{class_static_manager_1_1_input_handler_ae480bbdd62ace8c83848ca726873493e}{Get\+Axes\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Retourne un Vecteur2 = (x,y) avec -\/1$<$= x, y $<$= 1 qui correspond aux inputs horizontaux et latéraux. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_static_manager_1_1_input_handler_a2acc92d2db7b9a040da42d53c6f7a2df}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Mono\+Beahviours Abstract Method \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_static_manager_1_1_input_handler_a48fd9aad688095cd5a7c958a14d82d36}{Fixed\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Mono\+Beahviours Abstract Method \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés statiques}
+\begin{DoxyCompactItemize}
+\item 
+static Dictionary$<$ Key\+Code, bool\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_static_manager_1_1_input_handler_ac7e4e704b93ebda489e6e76f896d2a14}{inputs}}
+\item 
+static Dictionary$<$ \mbox{\hyperlink{_game_action_8cs_a5827805c542ab9cccf700dc3697cbafc}{Game\+Action}}, Key\+Code $>$ \mbox{\hyperlink{class_static_manager_1_1_input_handler_a90f5731e52be3eba818d43d650852e1f}{personal\+Key}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Stock les inputs. 
+
+Utilités \+: ~\newline
+ (i) Pour savoir quelle touche est pressé, relaché. (ii) Pour faire l\textquotesingle{}interface entre les commandes dans settings et les inputs du joueur 
+
+Définition à la ligne 13 du fichier Input\+Handler.\+cs.
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_static_manager_1_1_input_handler_a48fd9aad688095cd5a7c958a14d82d36}\label{class_static_manager_1_1_input_handler_a48fd9aad688095cd5a7c958a14d82d36}} 
+\index{StaticManager.InputHandler@{StaticManager.InputHandler}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!StaticManager.InputHandler@{StaticManager.InputHandler}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void Static\+Manager.\+Input\+Handler.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mono\+Beahviours Abstract Method 
+
+
+
+Définition à la ligne 47 du fichier Input\+Handler.\+cs.
+
+\mbox{\Hypertarget{class_static_manager_1_1_input_handler_ae480bbdd62ace8c83848ca726873493e}\label{class_static_manager_1_1_input_handler_ae480bbdd62ace8c83848ca726873493e}} 
+\index{StaticManager.InputHandler@{StaticManager.InputHandler}!GetAxesInput@{GetAxesInput}}
+\index{GetAxesInput@{GetAxesInput}!StaticManager.InputHandler@{StaticManager.InputHandler}}
+\doxysubsubsection{\texorpdfstring{GetAxesInput()}{GetAxesInput()}}
+{\footnotesize\ttfamily static Vector2 Static\+Manager.\+Input\+Handler.\+Get\+Axes\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne un Vecteur2 = (x,y) avec -\/1$<$= x, y $<$= 1 qui correspond aux inputs horizontaux et latéraux. 
+
+
+
+Définition à la ligne 94 du fichier Input\+Handler.\+cs.
+
+\mbox{\Hypertarget{class_static_manager_1_1_input_handler_aae1898104292bf9dad7ca1b404383903}\label{class_static_manager_1_1_input_handler_aae1898104292bf9dad7ca1b404383903}} 
+\index{StaticManager.InputHandler@{StaticManager.InputHandler}!KeyDown@{KeyDown}}
+\index{KeyDown@{KeyDown}!StaticManager.InputHandler@{StaticManager.InputHandler}}
+\doxysubsubsection{\texorpdfstring{KeyDown()}{KeyDown()}}
+{\footnotesize\ttfamily static bool Static\+Manager.\+Input\+Handler.\+Key\+Down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_game_action_8cs_a5827805c542ab9cccf700dc3697cbafc}{Game\+Action}}}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne vrai si la key qui correspond a action est actuellement presser. 
+
+
+
+Définition à la ligne 61 du fichier Input\+Handler.\+cs.
+
+\mbox{\Hypertarget{class_static_manager_1_1_input_handler_aebab4e7df727dd6b2b926dd1f0f22510}\label{class_static_manager_1_1_input_handler_aebab4e7df727dd6b2b926dd1f0f22510}} 
+\index{StaticManager.InputHandler@{StaticManager.InputHandler}!KeyPressed@{KeyPressed}}
+\index{KeyPressed@{KeyPressed}!StaticManager.InputHandler@{StaticManager.InputHandler}}
+\doxysubsubsection{\texorpdfstring{KeyPressed()}{KeyPressed()}}
+{\footnotesize\ttfamily static bool Static\+Manager.\+Input\+Handler.\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_game_action_8cs_a5827805c542ab9cccf700dc3697cbafc}{Game\+Action}}}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne vrai si la key qui correspond a action vien juste d\textquotesingle{}etre presser. 
+
+
+
+Définition à la ligne 83 du fichier Input\+Handler.\+cs.
+
+\mbox{\Hypertarget{class_static_manager_1_1_input_handler_adea4411895fb265128c15cce41b21cd2}\label{class_static_manager_1_1_input_handler_adea4411895fb265128c15cce41b21cd2}} 
+\index{StaticManager.InputHandler@{StaticManager.InputHandler}!KeyRelease@{KeyRelease}}
+\index{KeyRelease@{KeyRelease}!StaticManager.InputHandler@{StaticManager.InputHandler}}
+\doxysubsubsection{\texorpdfstring{KeyRelease()}{KeyRelease()}}
+{\footnotesize\ttfamily static bool Static\+Manager.\+Input\+Handler.\+Key\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_game_action_8cs_a5827805c542ab9cccf700dc3697cbafc}{Game\+Action}}}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne vrai si la key qui correspond a action vien d\textquotesingle{}etre relacher. 
+
+
+
+Définition à la ligne 72 du fichier Input\+Handler.\+cs.
+
+\mbox{\Hypertarget{class_static_manager_1_1_input_handler_a2acc92d2db7b9a040da42d53c6f7a2df}\label{class_static_manager_1_1_input_handler_a2acc92d2db7b9a040da42d53c6f7a2df}} 
+\index{StaticManager.InputHandler@{StaticManager.InputHandler}!Start@{Start}}
+\index{Start@{Start}!StaticManager.InputHandler@{StaticManager.InputHandler}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Static\+Manager.\+Input\+Handler.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mono\+Beahviours Abstract Method 
+
+
+
+Définition à la ligne 25 du fichier Input\+Handler.\+cs.
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_static_manager_1_1_input_handler_ac7e4e704b93ebda489e6e76f896d2a14}\label{class_static_manager_1_1_input_handler_ac7e4e704b93ebda489e6e76f896d2a14}} 
+\index{StaticManager.InputHandler@{StaticManager.InputHandler}!inputs@{inputs}}
+\index{inputs@{inputs}!StaticManager.InputHandler@{StaticManager.InputHandler}}
+\doxysubsubsection{\texorpdfstring{inputs}{inputs}}
+{\footnotesize\ttfamily Dictionary$<$Key\+Code, bool\mbox{[}$\,$\mbox{]}$>$ Static\+Manager.\+Input\+Handler.\+inputs\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+stock les inputs des deux dernière fixed\+Update. La première(indice 0) est la plus ancienne 
+
+Définition à la ligne 15 du fichier Input\+Handler.\+cs.
+
+\mbox{\Hypertarget{class_static_manager_1_1_input_handler_a90f5731e52be3eba818d43d650852e1f}\label{class_static_manager_1_1_input_handler_a90f5731e52be3eba818d43d650852e1f}} 
+\index{StaticManager.InputHandler@{StaticManager.InputHandler}!personalKey@{personalKey}}
+\index{personalKey@{personalKey}!StaticManager.InputHandler@{StaticManager.InputHandler}}
+\doxysubsubsection{\texorpdfstring{personalKey}{personalKey}}
+{\footnotesize\ttfamily Dictionary$<$\mbox{\hyperlink{_game_action_8cs_a5827805c542ab9cccf700dc3697cbafc}{Game\+Action}}, Key\+Code$>$ Static\+Manager.\+Input\+Handler.\+personal\+Key\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Stock les controles choisi par l\textquotesingle{}utilisateur 
+
+Définition à la ligne 17 du fichier Input\+Handler.\+cs.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+/home/simba/\+Unity\+Project/\+Bac à Sable/\+Assets/\+Simba/\+Scirpts/\+Static Manager/\mbox{\hyperlink{_input_handler_8cs}{Input\+Handler.\+cs}}\end{DoxyCompactItemize}

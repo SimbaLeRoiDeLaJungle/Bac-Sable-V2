@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.spriteshape@8.0.0/Runtime/Spline.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_833882404abc6786b9b639e971041c98.html">com.unity.2d.spriteshape@8.0.0</a></li><li class="navelem"><a class="el" href="dir_d0254b26150eaeed273b721470b19cf5.html">Runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Spline.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine_1_1_u2_d.html">UnityEngine.U2D</a></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="comment">// Spline Internal Meta Data.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">internal</span> <span class="keyword">struct </span>SplinePointMetaData</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> height;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keyword">public</span> uint spriteIndex;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> cornerMode;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    };    </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html">   18</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html">Spline</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> readonly <span class="keywordtype">string</span> KErrorMessage = <span class="stringliteral">&quot;Internal error: Point too close to neighbor&quot;</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> readonly <span class="keywordtype">float</span> KEpsilon = 0.01f;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">bool</span> m_IsOpenEnded;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">private</span> List&lt;SplineControlPoint&gt; m_ControlPoints = <span class="keyword">new</span> List&lt;SplineControlPoint&gt;();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#ae160225cb010bfcae7e2e164167bae52">isOpenEnded</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#ae160225cb010bfcae7e2e164167bae52">   31</a></span>&#160;        {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keyword">get</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a9651453288efd6bad1eb8c310d9d6717">GetPointCount</a>() &lt; 3)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keywordflow">return</span> m_IsOpenEnded;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keyword">set</span> { m_IsOpenEnded = value; }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">bool</span> IsPositionValid(<span class="keywordtype">int</span> index, <span class="keywordtype">int</span> next, Vector3 point)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordtype">int</span> prev = (index == 0) ? (m_ControlPoints.Count - 1) : (index - 1);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            next = (next &gt;= m_ControlPoints.Count) ? 0 : next;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">if</span> (prev &gt;= 0)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                Vector3 diff = m_ControlPoints[prev].position - point;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">if</span> (diff.magnitude &lt; KEpsilon)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">if</span> (next &lt; m_ControlPoints.Count)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                Vector3 diff = m_ControlPoints[next].position - point;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordflow">if</span> (diff.magnitude &lt; KEpsilon)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a9b120687554fc3982d98c8277086e2bb">   64</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a9b120687554fc3982d98c8277086e2bb">Clear</a>()</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            m_ControlPoints.Clear();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a9651453288efd6bad1eb8c310d9d6717">   73</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a9651453288efd6bad1eb8c310d9d6717">GetPointCount</a>()</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">return</span> m_ControlPoints.Count;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a4055815c87d8c2583197ab0eaedf565c">   84</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a4055815c87d8c2583197ab0eaedf565c">InsertPointAt</a>(<span class="keywordtype">int</span> index, Vector3 point)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">if</span> (!IsPositionValid(index, index, point))</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentException(KErrorMessage);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            m_ControlPoints.Insert(index, <span class="keyword">new</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html">SplineControlPoint</a> { position = point, height = 1.0f, cornerMode = <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406">Corner</a>.Automatic });</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#ad3c8e4b23d71c0e2de1bbbfc0483ff6b">   95</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#ad3c8e4b23d71c0e2de1bbbfc0483ff6b">RemovePointAt</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">if</span> (m_ControlPoints.Count &gt; 2)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                m_ControlPoints.RemoveAt(index);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a2039957af0a5af9aa8dcdb53207b3ba8">  106</a></span>&#160;        <span class="keyword">public</span> Vector3 <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a2039957af0a5af9aa8dcdb53207b3ba8">GetPosition</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">return</span> m_ControlPoints[index].position;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#ab27acbe20c0d669edcebcf771ac5cf10">  117</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#ab27acbe20c0d669edcebcf771ac5cf10">SetPosition</a>(<span class="keywordtype">int</span> index, Vector3 point)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">if</span> (!IsPositionValid(index, index + 1, point))</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentException(KErrorMessage);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html">SplineControlPoint</a> newPoint = m_ControlPoints[index];</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            newPoint.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#af55e84047c5fd46e4b7f3be81816a7a1">position</a> = point;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            m_ControlPoints[index] = newPoint;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a592e6c6a491efd98cf6407bc69c7b2df">  131</a></span>&#160;        <span class="keyword">public</span> Vector3 <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a592e6c6a491efd98cf6407bc69c7b2df">GetLeftTangent</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <a class="code" href="namespace_unity_engine_1_1_u2_d.html#a3ed4cf4389cef867ed0a312dbff2d85c">ShapeTangentMode</a> mode = <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a7264f3f3031e1286d153f30efae82209">GetTangentMode</a>(index);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordflow">if</span> (mode == <a class="code" href="namespace_unity_engine_1_1_u2_d.html#a3ed4cf4389cef867ed0a312dbff2d85c">ShapeTangentMode</a>.Linear)</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                <span class="keywordflow">return</span> Vector3.zero;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="keywordflow">return</span> m_ControlPoints[index].leftTangent;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a2d0f870b7f8f494741aea2f76d6b7fc3">  146</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a2d0f870b7f8f494741aea2f76d6b7fc3">SetLeftTangent</a>(<span class="keywordtype">int</span> index, Vector3 tangent)</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <a class="code" href="namespace_unity_engine_1_1_u2_d.html#a3ed4cf4389cef867ed0a312dbff2d85c">ShapeTangentMode</a> mode = <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a7264f3f3031e1286d153f30efae82209">GetTangentMode</a>(index);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordflow">if</span> (mode == <a class="code" href="namespace_unity_engine_1_1_u2_d.html#a3ed4cf4389cef867ed0a312dbff2d85c">ShapeTangentMode</a>.Linear)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html">SplineControlPoint</a> newPoint = m_ControlPoints[index];</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            newPoint.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a13e8272cc2522d59efef9bc1b9fd77a6">leftTangent</a> = tangent;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            m_ControlPoints[index] = newPoint;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a5fe9ad2c66abc9e28ce4ff8f6dece5ed">  163</a></span>&#160;        <span class="keyword">public</span> Vector3 <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a5fe9ad2c66abc9e28ce4ff8f6dece5ed">GetRightTangent</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <a class="code" href="namespace_unity_engine_1_1_u2_d.html#a3ed4cf4389cef867ed0a312dbff2d85c">ShapeTangentMode</a> mode = <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a7264f3f3031e1286d153f30efae82209">GetTangentMode</a>(index);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordflow">if</span> (mode == <a class="code" href="namespace_unity_engine_1_1_u2_d.html#a3ed4cf4389cef867ed0a312dbff2d85c">ShapeTangentMode</a>.Linear)</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                <span class="keywordflow">return</span> Vector3.zero;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="keywordflow">return</span> m_ControlPoints[index].rightTangent;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#ac67439f0409ea838ecfcb2126826c229">  178</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#ac67439f0409ea838ecfcb2126826c229">SetRightTangent</a>(<span class="keywordtype">int</span> index, Vector3 tangent)</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <a class="code" href="namespace_unity_engine_1_1_u2_d.html#a3ed4cf4389cef867ed0a312dbff2d85c">ShapeTangentMode</a> mode = <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a7264f3f3031e1286d153f30efae82209">GetTangentMode</a>(index);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordflow">if</span> (mode == <a class="code" href="namespace_unity_engine_1_1_u2_d.html#a3ed4cf4389cef867ed0a312dbff2d85c">ShapeTangentMode</a>.Linear)</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html">SplineControlPoint</a> newPoint = m_ControlPoints[index];</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            newPoint.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a48c662d6717066b3a8b24c3a24b2ff4a">rightTangent</a> = tangent;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            m_ControlPoints[index] = newPoint;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a7264f3f3031e1286d153f30efae82209">  195</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="namespace_unity_engine_1_1_u2_d.html#a3ed4cf4389cef867ed0a312dbff2d85c">ShapeTangentMode</a> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a7264f3f3031e1286d153f30efae82209">GetTangentMode</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="keywordflow">return</span> m_ControlPoints[index].mode;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a6dd24a347236eed9c15d11aaa8ca5476">  205</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a6dd24a347236eed9c15d11aaa8ca5476">SetTangentMode</a>(<span class="keywordtype">int</span> index, <a class="code" href="namespace_unity_engine_1_1_u2_d.html#a3ed4cf4389cef867ed0a312dbff2d85c">ShapeTangentMode</a> mode)</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html">SplineControlPoint</a> newPoint = m_ControlPoints[index];</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            newPoint.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#ac20afb83a74cf020fd5f6d8b8685d64a">mode</a> = mode;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            m_ControlPoints[index] = newPoint;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#af9b24d13eb593ceff915ab04d7d0aac2">  217</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#af9b24d13eb593ceff915ab04d7d0aac2">GetHeight</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <span class="keywordflow">return</span> m_ControlPoints[index].height;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#aeb18a44041b12d7c6fe4df22b1d81d2c">  227</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#aeb18a44041b12d7c6fe4df22b1d81d2c">SetHeight</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">float</span> value)</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            m_ControlPoints[index].height = value;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        }</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#ab4f223ca5c95133babac6d376bcdd159">  237</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#ab4f223ca5c95133babac6d376bcdd159">GetSpriteIndex</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="keywordflow">return</span> m_ControlPoints[index].spriteIndex;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a1936f5f04514a62bd3bf507eee76df28">  247</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a1936f5f04514a62bd3bf507eee76df28">SetSpriteIndex</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">int</span> value)</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            m_ControlPoints[index].spriteIndex = value;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a9e670286d69b656628fea5d0e7e2c723">  257</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a9e670286d69b656628fea5d0e7e2c723">GetCorner</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            <span class="keywordflow">return</span> GetCornerMode(index) != <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406">Corner</a>.Disable;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#af5674c7a194e0ee85ec25551fd3c14a3">  267</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#af5674c7a194e0ee85ec25551fd3c14a3">SetCorner</a>(<span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> value)</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            m_ControlPoints[index].corner = value;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            m_ControlPoints[index].cornerMode = value ? <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406">Corner</a>.Automatic : <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406">Corner</a>.Disable;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">void</span> SetCornerMode(<span class="keywordtype">int</span> index, <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406">Corner</a> value)</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        {</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            m_ControlPoints[index].corner = (value != <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406">Corner</a>.Disable);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            m_ControlPoints[index].cornerMode = value;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        }</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keyword">internal</span> <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406">Corner</a> GetCornerMode(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        {</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            <span class="keywordflow">if</span> (m_ControlPoints[index].cornerMode == <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406">Corner</a>.Disable)</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            {</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                <span class="comment">// For backward compatibility.</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                <span class="keywordflow">if</span> (m_ControlPoints[index].corner)</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                {</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                    m_ControlPoints[index].cornerMode = <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406">Corner</a>.Automatic;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                    <span class="keywordflow">return</span> <a class="code" href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406">Corner</a>.Automatic;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            <span class="keywordflow">return</span> m_ControlPoints[index].cornerMode;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        }</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_spline.html#aa06ed16e9db7e23eb843459ce64d88ae">  297</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#aa06ed16e9db7e23eb843459ce64d88ae">GetHashCode</a>()</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            unchecked</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            {</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                <span class="keywordtype">int</span> hashCode = (int)2166136261;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_unity_engine_1_1_u2_d_1_1_spline.html#a9651453288efd6bad1eb8c310d9d6717">GetPointCount</a>(); ++i)</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                    hashCode = hashCode * 16777619 ^ m_ControlPoints[i].GetHashCode();</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                hashCode = hashCode * 16777619 ^ m_IsOpenEnded.GetHashCode();</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                <span class="keywordflow">return</span> hashCode;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        }        </div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    }</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_a4055815c87d8c2583197ab0eaedf565c"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#a4055815c87d8c2583197ab0eaedf565c">UnityEngine.U2D.Spline.InsertPointAt</a></div><div class="ttdeci">void InsertPointAt(int index, Vector3 point)</div><div class="ttdoc">Insert control point at index.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00084">Spline.cs:84</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_a2039957af0a5af9aa8dcdb53207b3ba8"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#a2039957af0a5af9aa8dcdb53207b3ba8">UnityEngine.U2D.Spline.GetPosition</a></div><div class="ttdeci">Vector3 GetPosition(int index)</div><div class="ttdoc">Get position of control point at index.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00106">Spline.cs:106</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_control_point_html"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html">UnityEngine.U2D.SplineControlPoint</a></div><div class="ttdoc">Spline control point that holds information for constructing the Bezier curve and SpriteShape geometr...</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00072">SpriteShape.cs:72</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_af5674c7a194e0ee85ec25551fd3c14a3"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#af5674c7a194e0ee85ec25551fd3c14a3">UnityEngine.U2D.Spline.SetCorner</a></div><div class="ttdeci">void SetCorner(int index, bool value)</div><div class="ttdoc">Set corner mode to automatic or disabled.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00267">Spline.cs:267</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_ad3c8e4b23d71c0e2de1bbbfc0483ff6b"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#ad3c8e4b23d71c0e2de1bbbfc0483ff6b">UnityEngine.U2D.Spline.RemovePointAt</a></div><div class="ttdeci">void RemovePointAt(int index)</div><div class="ttdoc">Remove a control point from the Spline at index.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00095">Spline.cs:95</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_a3ed4cf4389cef867ed0a312dbff2d85c"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#a3ed4cf4389cef867ed0a312dbff2d85c">UnityEngine.U2D.ShapeTangentMode</a></div><div class="ttdeci">ShapeTangentMode</div><div class="ttdoc">Tangent mode for control points that defines the bezier curve.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00009">SpriteShape.cs:9</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_a5fe9ad2c66abc9e28ce4ff8f6dece5ed"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#a5fe9ad2c66abc9e28ce4ff8f6dece5ed">UnityEngine.U2D.Spline.GetRightTangent</a></div><div class="ttdeci">Vector3 GetRightTangent(int index)</div><div class="ttdoc">Get right tangent of control point at index,</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00163">Spline.cs:163</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_control_point_html_af55e84047c5fd46e4b7f3be81816a7a1"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#af55e84047c5fd46e4b7f3be81816a7a1">UnityEngine.U2D.SplineControlPoint.position</a></div><div class="ttdeci">Vector3 position</div><div class="ttdoc">Position of control point.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00075">SpriteShape.cs:75</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_a9e670286d69b656628fea5d0e7e2c723"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#a9e670286d69b656628fea5d0e7e2c723">UnityEngine.U2D.Spline.GetCorner</a></div><div class="ttdeci">bool GetCorner(int index)</div><div class="ttdoc">Test if a corner mode is enabled at control point.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00257">Spline.cs:257</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_a1936f5f04514a62bd3bf507eee76df28"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#a1936f5f04514a62bd3bf507eee76df28">UnityEngine.U2D.Spline.SetSpriteIndex</a></div><div class="ttdeci">void SetSpriteIndex(int index, int value)</div><div class="ttdoc">Set Sprite index to be used for rendering edge starting at control point.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00247">Spline.cs:247</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_a9b120687554fc3982d98c8277086e2bb"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#a9b120687554fc3982d98c8277086e2bb">UnityEngine.U2D.Spline.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdoc">Clear all control points.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00064">Spline.cs:64</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_ab27acbe20c0d669edcebcf771ac5cf10"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#ab27acbe20c0d669edcebcf771ac5cf10">UnityEngine.U2D.Spline.SetPosition</a></div><div class="ttdeci">void SetPosition(int index, Vector3 point)</div><div class="ttdoc">Set position of control point at index.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00117">Spline.cs:117</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_aa06ed16e9db7e23eb843459ce64d88ae"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#aa06ed16e9db7e23eb843459ce64d88ae">UnityEngine.U2D.Spline.GetHashCode</a></div><div class="ttdeci">override int GetHashCode()</div><div class="ttdoc">Get hash code for this Spline to test for changes.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00297">Spline.cs:297</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html">UnityEngine.U2D</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_control_point_html_a13e8272cc2522d59efef9bc1b9fd77a6"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a13e8272cc2522d59efef9bc1b9fd77a6">UnityEngine.U2D.SplineControlPoint.leftTangent</a></div><div class="ttdeci">Vector3 leftTangent</div><div class="ttdoc">Left tangent of control point.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00077">SpriteShape.cs:77</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_control_point_html_ac20afb83a74cf020fd5f6d8b8685d64a"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#ac20afb83a74cf020fd5f6d8b8685d64a">UnityEngine.U2D.SplineControlPoint.mode</a></div><div class="ttdeci">ShapeTangentMode mode</div><div class="ttdoc">Tangent mode of control point.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00081">SpriteShape.cs:81</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html_ac2d2426630c26f7c789bbee4be139406"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html#ac2d2426630c26f7c789bbee4be139406">UnityEngine.U2D.Corner</a></div><div class="ttdeci">Corner</div><div class="ttdoc">Corner mode that defines how corners are handled when generating SpriteShape geometry.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00058">SpriteShape.cs:58</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_a2d0f870b7f8f494741aea2f76d6b7fc3"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#a2d0f870b7f8f494741aea2f76d6b7fc3">UnityEngine.U2D.Spline.SetLeftTangent</a></div><div class="ttdeci">void SetLeftTangent(int index, Vector3 tangent)</div><div class="ttdoc">Set left tangent of control point at index.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00146">Spline.cs:146</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html">UnityEngine.U2D.Spline</a></div><div class="ttdoc">Spline contains control points used to define curve/outline for generating SpriteShape geometry.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00018">Spline.cs:18</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_a9651453288efd6bad1eb8c310d9d6717"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#a9651453288efd6bad1eb8c310d9d6717">UnityEngine.U2D.Spline.GetPointCount</a></div><div class="ttdeci">int GetPointCount()</div><div class="ttdoc">Get Spline's control point count.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00073">Spline.cs:73</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_af9b24d13eb593ceff915ab04d7d0aac2"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#af9b24d13eb593ceff915ab04d7d0aac2">UnityEngine.U2D.Spline.GetHeight</a></div><div class="ttdeci">float GetHeight(int index)</div><div class="ttdoc">Get height of control point at index.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00217">Spline.cs:217</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_a7264f3f3031e1286d153f30efae82209"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#a7264f3f3031e1286d153f30efae82209">UnityEngine.U2D.Spline.GetTangentMode</a></div><div class="ttdeci">ShapeTangentMode GetTangentMode(int index)</div><div class="ttdoc">Get tangent mode of control point at index.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00195">Spline.cs:195</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_ab4f223ca5c95133babac6d376bcdd159"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#ab4f223ca5c95133babac6d376bcdd159">UnityEngine.U2D.Spline.GetSpriteIndex</a></div><div class="ttdeci">int GetSpriteIndex(int index)</div><div class="ttdoc">Get Sprite index to be used for rendering edge starting at control point.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00237">Spline.cs:237</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_control_point_html_a48c662d6717066b3a8b24c3a24b2ff4a"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline_control_point.html#a48c662d6717066b3a8b24c3a24b2ff4a">UnityEngine.U2D.SplineControlPoint.rightTangent</a></div><div class="ttdeci">Vector3 rightTangent</div><div class="ttdoc">Right tangent of control point.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_shape_8cs_source.html#l00079">SpriteShape.cs:79</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_a6dd24a347236eed9c15d11aaa8ca5476"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#a6dd24a347236eed9c15d11aaa8ca5476">UnityEngine.U2D.Spline.SetTangentMode</a></div><div class="ttdeci">void SetTangentMode(int index, ShapeTangentMode mode)</div><div class="ttdoc">Set the tangent mode of control point at index.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00205">Spline.cs:205</a></div></div>
+<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition:</b> <a href="_preserve_dependency_attribute_8cs_source.html#l00030">PreserveDependencyAttribute.cs:30</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_aeb18a44041b12d7c6fe4df22b1d81d2c"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#aeb18a44041b12d7c6fe4df22b1d81d2c">UnityEngine.U2D.Spline.SetHeight</a></div><div class="ttdeci">void SetHeight(int index, float value)</div><div class="ttdoc">Set height of control point at index.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00227">Spline.cs:227</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_ae160225cb010bfcae7e2e164167bae52"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#ae160225cb010bfcae7e2e164167bae52">UnityEngine.U2D.Spline.isOpenEnded</a></div><div class="ttdeci">bool isOpenEnded</div><div class="ttdoc">Get/Set Spline's shape to open ended or closed.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00031">Spline.cs:31</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_a592e6c6a491efd98cf6407bc69c7b2df"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#a592e6c6a491efd98cf6407bc69c7b2df">UnityEngine.U2D.Spline.GetLeftTangent</a></div><div class="ttdeci">Vector3 GetLeftTangent(int index)</div><div class="ttdoc">Get left tangent of control point at index.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00131">Spline.cs:131</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_spline_html_ac67439f0409ea838ecfcb2126826c229"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_spline.html#ac67439f0409ea838ecfcb2126826c229">UnityEngine.U2D.Spline.SetRightTangent</a></div><div class="ttdeci">void SetRightTangent(int index, Vector3 tangent)</div><div class="ttdoc">Set right tangent of control point at index.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8spriteshape_0d8_80_80_2_runtime_2_spline_8cs_source.html#l00178">Spline.cs:178</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

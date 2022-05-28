@@ -1,0 +1,731 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.tilemap.extras@3.0.2/Editor/Brushes/GameObjectBrush/GameObjectBrush.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_39a2cd9064c52ac43c6a4ca83a34fdd0.html">com.unity.2d.tilemap.extras@3.0.2</a></li><li class="navelem"><a class="el" href="dir_0a69fbcecdca417feaeb1320cdb487cb.html">Editor</a></li><li class="navelem"><a class="el" href="dir_85a05a355f74ca9080ce1dd22b19e59f.html">Brushes</a></li><li class="navelem"><a class="el" href="dir_ef3dc558f9caff79057a0a4f275f176c.html">GameObjectBrush</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GameObjectBrush.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.SceneManagement;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.SceneManagement;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> Object = <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Object;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="namespace_unity_editor_1_1_tilemaps.html">    8</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor_1_1_tilemaps.html">UnityEditor.Tilemaps</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    [HelpURL(<span class="stringliteral">&quot;https://docs.unity3d.com/Packages/com.unity.2d.tilemap.extras@latest/index.html?subfolder=/manual/GameObjectBrush.html&quot;</span>)]</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    [CustomGridBrush(<span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="stringliteral">&quot;GameObject Brush&quot;</span>)]</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html">   16</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html">GameObjectBrush</a> : GridBrushBase</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        [Serializable]</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">internal</span> <span class="keyword">class </span>HiddenGridLayout</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keyword">public</span> Vector3 cellSize = Vector3.one;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keyword">public</span> Vector3 cellGap = Vector3.zero;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keyword">public</span> GridLayout.CellLayout cellLayout = GridLayout.CellLayout.Rectangle;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">public</span> GridLayout.CellSwizzle cellSwizzle = GridLayout.CellSwizzle.XYZ;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">private</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html">BrushCell</a>[] m_Cells;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">private</span> Vector3Int m_Size;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">private</span> Vector3Int m_Pivot;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        [HideInInspector]</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">bool</span> m_CanChangeZPosition;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        [SerializeField] </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        [HideInInspector] </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">internal</span> HiddenGridLayout hiddenGridLayout = <span class="keyword">new</span> HiddenGridLayout();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        [HideInInspector]</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2dd6ecfa194c577da135fe54d8812190">   48</a></span>&#160;        <span class="keyword">public</span> GameObject <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2dd6ecfa194c577da135fe54d8812190">hiddenGrid</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ae67e2d464272db10363f9b1f4ae915fd">   53</a></span>&#160;        <span class="keyword">public</span> Vector3 <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ae67e2d464272db10363f9b1f4ae915fd">m_Anchor</a> = <span class="keyword">new</span> Vector3(0.5f, 0.5f, 0.5f);</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a271cb42ca9a5731f7f4605d61b1bb53b">   55</a></span>&#160;        <span class="keyword">public</span> Vector3Int <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a271cb42ca9a5731f7f4605d61b1bb53b">size</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Size; } <span class="keyword">set</span> { m_Size = value; SizeUpdated(); } }</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">   57</a></span>&#160;        <span class="keyword">public</span> Vector3Int <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Pivot; } <span class="keyword">set</span> { m_Pivot = value; } }</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a72db08da26f1198edb4430878574680a">   59</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html">BrushCell</a>[] <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a72db08da26f1198edb4430878574680a">cells</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Cells; } }</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ace207001ca5d89bdbdeaddadf714c638">   61</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ace207001ca5d89bdbdeaddadf714c638">cellCount</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Cells != <span class="keyword">null</span> ? m_Cells.Length : 0; } }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a62eb2052dac4cbd5bd99be9c058638ac">sizeCount</a></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a62eb2052dac4cbd5bd99be9c058638ac">   64</a></span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Size.x * m_Size.y * m_Size.z; }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#afc0487ad6615d35d69f2d6de823b3d36">canChangeZPosition</a></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#afc0487ad6615d35d69f2d6de823b3d36">   69</a></span>&#160;        {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_CanChangeZPosition; }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keyword">set</span> { m_CanChangeZPosition = value; }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#aa823890a563f17bf49917a84d72df432">   77</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#aa823890a563f17bf49917a84d72df432">GameObjectBrush</a>()</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a365a4053c1e69e8773b0d0620764162e">Init</a>(Vector3Int.one, Vector3Int.zero);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            SizeUpdated();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> OnEnable()</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2dd6ecfa194c577da135fe54d8812190">hiddenGrid</a> = <span class="keyword">new</span> GameObject();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2dd6ecfa194c577da135fe54d8812190">hiddenGrid</a>.name = <span class="stringliteral">&quot;(Paint on SceneRoot)&quot;</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2dd6ecfa194c577da135fe54d8812190">hiddenGrid</a>.hideFlags = HideFlags.HideAndDontSave;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2dd6ecfa194c577da135fe54d8812190">hiddenGrid</a>.transform.position = Vector3.zero;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            var grid = <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2dd6ecfa194c577da135fe54d8812190">hiddenGrid</a>.AddComponent&lt;Grid&gt;();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            grid.cellSize = hiddenGridLayout.cellSize;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            grid.cellGap = hiddenGridLayout.cellGap;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            grid.cellSwizzle = hiddenGridLayout.cellSwizzle;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            grid.cellLayout = hiddenGridLayout.cellLayout;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> OnDisable()</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            DestroyImmediate(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2dd6ecfa194c577da135fe54d8812190">hiddenGrid</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a365a4053c1e69e8773b0d0620764162e">  105</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a365a4053c1e69e8773b0d0620764162e">Init</a>(Vector3Int <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a271cb42ca9a5731f7f4605d61b1bb53b">size</a>)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a365a4053c1e69e8773b0d0620764162e">Init</a>(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a271cb42ca9a5731f7f4605d61b1bb53b">size</a>, Vector3Int.zero);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            SizeUpdated();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ad575519d80d5f034fda166d1134da688">  114</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ad575519d80d5f034fda166d1134da688">Init</a>(Vector3Int <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a271cb42ca9a5731f7f4605d61b1bb53b">size</a>, Vector3Int <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            m_Size = <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a271cb42ca9a5731f7f4605d61b1bb53b">size</a>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            m_Pivot = <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            SizeUpdated();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a8177e6c069a90f8828465898fb2cd705">  128</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a8177e6c069a90f8828465898fb2cd705">Paint</a>(GridLayout gridLayout, GameObject brushTarget, Vector3Int position)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            Vector3Int min = position - <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            BoundsInt bounds = <span class="keyword">new</span> BoundsInt(min, m_Size);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            GetGrid(ref gridLayout, ref brushTarget);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a1ef0a26c008abd63682be12806c0bc4f">BoxFill</a>(gridLayout, brushTarget, bounds);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> PaintCell(GridLayout grid, Vector3Int position, Transform parent, BrushCell cell)</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">if</span> (cell.gameObject == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            var existingGO = GetObjectInCell(grid, parent, position);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="keywordflow">if</span> (existingGO == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                SetSceneCell(grid, parent, position, cell.gameObject, cell.offset, cell.scale, cell.orientation, <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ae67e2d464272db10363f9b1f4ae915fd">m_Anchor</a>);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a9e84be84fc328ddd395074d2666c44cb">  156</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a9e84be84fc328ddd395074d2666c44cb">Erase</a>(GridLayout gridLayout, GameObject brushTarget, Vector3Int position)</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            Vector3Int min = position - <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            BoundsInt bounds = <span class="keyword">new</span> BoundsInt(min, m_Size);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            GetGrid(ref gridLayout, ref brushTarget);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a5c573563c79d8263b884d11cef9782d0">BoxErase</a>(gridLayout, brushTarget, bounds);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> EraseCell(GridLayout grid, Vector3Int position, Transform parent)</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            ClearSceneCell(grid, parent, position);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a1ef0a26c008abd63682be12806c0bc4f">  177</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a1ef0a26c008abd63682be12806c0bc4f">BoxFill</a>(GridLayout gridLayout, GameObject brushTarget, BoundsInt position)</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            GetGrid(ref gridLayout, ref brushTarget);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordflow">foreach</span> (Vector3Int location <span class="keywordflow">in</span> position.allPositionsWithin)</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                Vector3Int local = location - position.min;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html">BrushCell</a> cell = m_Cells[<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a26ae236604d9400a387565c695d5db5e">GetCellIndexWrapAround</a>(local.x, local.y, local.z)];</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                PaintCell(gridLayout, location, brushTarget != <span class="keyword">null</span> ? brushTarget.transform : <span class="keyword">null</span>, cell);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a5c573563c79d8263b884d11cef9782d0">  196</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a5c573563c79d8263b884d11cef9782d0">BoxErase</a>(GridLayout gridLayout, GameObject brushTarget, BoundsInt position)</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            GetGrid(ref gridLayout, ref brushTarget);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="keywordflow">foreach</span> (Vector3Int location <span class="keywordflow">in</span> position.allPositionsWithin)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                EraseCell(gridLayout, location, brushTarget != <span class="keyword">null</span> ? brushTarget.transform : <span class="keyword">null</span>);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a59cb1ae6ffe9df8a8748cdef8a825806">  212</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a59cb1ae6ffe9df8a8748cdef8a825806">FloodFill</a>(GridLayout gridLayout, GameObject brushTarget, Vector3Int position)</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            Debug.LogWarning(<span class="stringliteral">&quot;FloodFill not supported&quot;</span>);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a0696515b0ab3d115bebbbce217f7339e">  222</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a0696515b0ab3d115bebbbce217f7339e">Rotate</a>(RotationDirection direction, GridLayout.CellLayout layout)</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            Vector3Int oldSize = m_Size;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html">BrushCell</a>[] oldCells = m_Cells.Clone() as <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html">BrushCell</a>[];</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a271cb42ca9a5731f7f4605d61b1bb53b">size</a> = <span class="keyword">new</span> Vector3Int(oldSize.y, oldSize.x, oldSize.z);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            BoundsInt oldBounds = <span class="keyword">new</span> BoundsInt(Vector3Int.zero, oldSize);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="keywordflow">foreach</span> (Vector3Int oldPos <span class="keywordflow">in</span> oldBounds.allPositionsWithin)</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                <span class="keywordtype">int</span> newX = direction == RotationDirection.Clockwise ? oldSize.y - oldPos.y - 1 : oldPos.y;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                <span class="keywordtype">int</span> newY = direction == RotationDirection.Clockwise ? oldPos.x : oldSize.x - oldPos.x - 1;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                <span class="keywordtype">int</span> toIndex = <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#aa07574b5bd3aaab76b4c663479e3e8b2">GetCellIndex</a>(newX, newY, oldPos.z);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                <span class="keywordtype">int</span> fromIndex = <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#aa07574b5bd3aaab76b4c663479e3e8b2">GetCellIndex</a>(oldPos.x, oldPos.y, oldPos.z, oldSize.x, oldSize.y, oldSize.z);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                m_Cells[toIndex] = oldCells[fromIndex];</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <span class="keywordtype">int</span> newPivotX = direction == RotationDirection.Clockwise ? oldSize.y - <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>.y - 1 : <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>.y;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="keywordtype">int</span> newPivotY = direction == RotationDirection.Clockwise ? <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>.x : oldSize.x - <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>.x - 1;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a> = <span class="keyword">new</span> Vector3Int(newPivotX, newPivotY, <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>.z);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            Matrix4x4 rotation = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0f, 0f, direction == RotationDirection.Clockwise ? 90f : -90f), Vector3.one);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            Quaternion orientation = Quaternion.Euler(0f, 0f, direction == RotationDirection.Clockwise ? 90f : -90f);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            <span class="keywordflow">foreach</span> (<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html">BrushCell</a> cell <span class="keywordflow">in</span> m_Cells)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                cell.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#a44223c8c0b1df930fca111b2b49e9813">offset</a> = rotation * cell.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#a44223c8c0b1df930fca111b2b49e9813">offset</a>;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                cell.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#aa75d9402d3abc35271d7f27e3e2c9ae0">orientation</a> = cell.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#aa75d9402d3abc35271d7f27e3e2c9ae0">orientation</a> * orientation;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            }</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a1a06213feb23290a8efcc474549ccedc">  254</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a1a06213feb23290a8efcc474549ccedc">Flip</a>(FlipAxis flip, GridLayout.CellLayout layout)</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <span class="keywordflow">if</span> (flip == FlipAxis.X)</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                FlipX();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                FlipY();</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ae9740a5e98c7b85d0299fd55fb3f50f4">  270</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ae9740a5e98c7b85d0299fd55fb3f50f4">Pick</a>(GridLayout gridLayout, GameObject brushTarget, BoundsInt position, Vector3Int <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>)</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#adf0f59884c0c59db516323e50681595e">Reset</a>();</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2f5990fe6bcc9ff45556564046afe580">UpdateSizeAndPivot</a>(<span class="keyword">new</span> Vector3Int(position.size.x, position.size.y, 1), <span class="keyword">new</span> Vector3Int(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>.x, <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>.y, 0));</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            GetGrid(ref gridLayout, ref brushTarget);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <span class="keywordflow">foreach</span> (Vector3Int pos <span class="keywordflow">in</span> position.allPositionsWithin)</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                Vector3Int brushPosition = <span class="keyword">new</span> Vector3Int(pos.x - position.x, pos.y - position.y, 0);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                PickCell(pos, brushPosition, gridLayout, brushTarget != <span class="keyword">null</span> ? brushTarget.transform : <span class="keyword">null</span>);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            }</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> PickCell(Vector3Int position, Vector3Int brushPosition, GridLayout grid, Transform parent)</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        {</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            Vector3 cellCenter = grid.LocalToWorld(grid.CellToLocalInterpolated(position + <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ae67e2d464272db10363f9b1f4ae915fd">m_Anchor</a>));</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            GameObject go = GetObjectInCell(grid, parent, position);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            <span class="keywordflow">if</span> (go != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                Object prefab = PrefabUtility.GetCorrespondingObjectFromSource(go);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                <span class="keywordflow">if</span> (prefab)</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                    <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ae8b0368781ed9f30d2bd6168153cd0fc">SetGameObject</a>(brushPosition, (GameObject) prefab);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                {</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                    GameObject newInstance = Instantiate(go);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                    newInstance.hideFlags = HideFlags.HideAndDontSave;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                    newInstance.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                    <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ae8b0368781ed9f30d2bd6168153cd0fc">SetGameObject</a>(brushPosition, newInstance);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#abf93f441510c1babfe71ab4af1680f48">SetOffset</a>(brushPosition, go.transform.position - cellCenter);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a60dafb3a957bc041ab644b39f31a6804">SetScale</a>(brushPosition, go.transform.localScale);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a7faa121eacc1119dccd97105cb4b6b0d">SetOrientation</a>(brushPosition, go.transform.localRotation);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00317"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ab7286b8a91afda4e4d73a4f0c8057792">  317</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ab7286b8a91afda4e4d73a4f0c8057792">MoveStart</a>(GridLayout gridLayout, GameObject brushTarget, BoundsInt position)</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        {</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#adf0f59884c0c59db516323e50681595e">Reset</a>();</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2f5990fe6bcc9ff45556564046afe580">UpdateSizeAndPivot</a>(<span class="keyword">new</span> Vector3Int(position.size.x, position.size.y, 1), Vector3Int.zero);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            GetGrid(ref gridLayout, ref brushTarget);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            var targetTransform = brushTarget != <span class="keyword">null</span> ? brushTarget.transform : <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            <span class="keywordflow">foreach</span> (Vector3Int pos <span class="keywordflow">in</span> position.allPositionsWithin)</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                Vector3Int brushPosition = <span class="keyword">new</span> Vector3Int(pos.x - position.x, pos.y - position.y, 0);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                PickCell(pos, brushPosition, gridLayout, targetTransform);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                ClearSceneCell(gridLayout, targetTransform, pos);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            }</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        }</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00340"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a211c4481b10781355337dcf1a3b24ac8">  340</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a211c4481b10781355337dcf1a3b24ac8">MoveEnd</a>(GridLayout gridLayout, GameObject brushTarget, BoundsInt position)</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        {</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            GetGrid(ref gridLayout, ref brushTarget);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a8177e6c069a90f8828465898fb2cd705">Paint</a>(gridLayout, brushTarget, position.min);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#adf0f59884c0c59db516323e50681595e">Reset</a>();</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        }</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> GetGrid(ref GridLayout gridLayout, ref GameObject brushTarget)</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        {</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            <span class="keywordflow">if</span> (brushTarget == <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2dd6ecfa194c577da135fe54d8812190">hiddenGrid</a>)</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                brushTarget = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            <span class="keywordflow">if</span> (brushTarget != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            {</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                var targetGridLayout = brushTarget.GetComponent&lt;GridLayout&gt;();</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                <span class="keywordflow">if</span> (targetGridLayout != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                    gridLayout = targetGridLayout;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            }</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        }</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        </div>
+<div class="line"><a name="l00360"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#adf0f59884c0c59db516323e50681595e">  360</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#adf0f59884c0c59db516323e50681595e">Reset</a>()</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        {</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            <span class="keywordflow">foreach</span> (var cell <span class="keywordflow">in</span> m_Cells)</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            {</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                <span class="keywordflow">if</span> (cell.gameObject != <span class="keyword">null</span> &amp;&amp; !EditorUtility.IsPersistent(cell.gameObject))</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                {</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                    DestroyImmediate(cell.gameObject);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                }</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                cell.gameObject = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;            }</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2f5990fe6bcc9ff45556564046afe580">UpdateSizeAndPivot</a>(Vector3Int.one, Vector3Int.zero);</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        }</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> FlipX()</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        {</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            BrushCell[] oldCells = m_Cells.Clone() as BrushCell[];</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            BoundsInt oldBounds = <span class="keyword">new</span> BoundsInt(Vector3Int.zero, m_Size);</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160; </div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            <span class="keywordflow">foreach</span> (Vector3Int oldPos <span class="keywordflow">in</span> oldBounds.allPositionsWithin)</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            {</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                <span class="keywordtype">int</span> newX = m_Size.x - oldPos.x - 1;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                <span class="keywordtype">int</span> toIndex = <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#aa07574b5bd3aaab76b4c663479e3e8b2">GetCellIndex</a>(newX, oldPos.y, oldPos.z);</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                <span class="keywordtype">int</span> fromIndex = <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#aa07574b5bd3aaab76b4c663479e3e8b2">GetCellIndex</a>(oldPos);</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                m_Cells[toIndex] = oldCells[fromIndex];</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            }</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            <span class="keywordtype">int</span> newPivotX = m_Size.x - <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>.x - 1;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a> = <span class="keyword">new</span> Vector3Int(newPivotX, <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>.y, <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>.z);</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            Matrix4x4 flip = Matrix4x4.TRS(Vector3.zero, Quaternion.identity, <span class="keyword">new</span> Vector3(-1f, 1f, 1f));</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;            Quaternion orientation = Quaternion.Euler(0f, 0f, -180f);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;            </div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;            <span class="keywordflow">foreach</span> (BrushCell cell <span class="keywordflow">in</span> m_Cells)</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            {</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                Vector3 oldOffset = cell.offset;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                cell.offset = flip * oldOffset;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                cell.orientation = cell.orientation*orientation;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            }</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        }</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> FlipY()</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        {</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;            BrushCell[] oldCells = m_Cells.Clone() as BrushCell[];</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;            BoundsInt oldBounds = <span class="keyword">new</span> BoundsInt(Vector3Int.zero, m_Size);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            <span class="keywordflow">foreach</span> (Vector3Int oldPos <span class="keywordflow">in</span> oldBounds.allPositionsWithin)</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            {</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;                <span class="keywordtype">int</span> newY = m_Size.y - oldPos.y - 1;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                <span class="keywordtype">int</span> toIndex = <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#aa07574b5bd3aaab76b4c663479e3e8b2">GetCellIndex</a>(oldPos.x, newY, oldPos.z);</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                <span class="keywordtype">int</span> fromIndex = <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#aa07574b5bd3aaab76b4c663479e3e8b2">GetCellIndex</a>(oldPos);</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                m_Cells[toIndex] = oldCells[fromIndex];</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            }</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160; </div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;            <span class="keywordtype">int</span> newPivotY = m_Size.y - <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>.y - 1;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a> = <span class="keyword">new</span> Vector3Int(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>.x, newPivotY, <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>.z);</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            Matrix4x4 flip = Matrix4x4.TRS(Vector3.zero, Quaternion.identity, <span class="keyword">new</span> Vector3(1f, -1f, 1f));</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            Quaternion orientation = Quaternion.Euler(0f, 0f, -180f);</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            <span class="keywordflow">foreach</span> (BrushCell cell <span class="keywordflow">in</span> m_Cells)</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            {</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;                Vector3 oldOffset = cell.offset;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;                cell.offset = flip * oldOffset;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;                cell.orientation = cell.orientation * orientation;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            }</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        }</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
+<div class="line"><a name="l00427"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2f5990fe6bcc9ff45556564046afe580">  427</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2f5990fe6bcc9ff45556564046afe580">UpdateSizeAndPivot</a>(Vector3Int <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a271cb42ca9a5731f7f4605d61b1bb53b">size</a>, Vector3Int <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>)</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        {</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;            m_Size = <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a271cb42ca9a5731f7f4605d61b1bb53b">size</a>;</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;            m_Pivot = <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;            SizeUpdated();</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        }</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160; </div>
+<div class="line"><a name="l00439"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ae8b0368781ed9f30d2bd6168153cd0fc">  439</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ae8b0368781ed9f30d2bd6168153cd0fc">SetGameObject</a>(Vector3Int position, GameObject go)</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        {</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;            <span class="keywordflow">if</span> (ValidateCellPosition(position))</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;                m_Cells[<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#aa07574b5bd3aaab76b4c663479e3e8b2">GetCellIndex</a>(position)].<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#af972c252a6d82fae4c877a73f6d9c3d5">gameObject</a> = go;</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        }</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160; </div>
+<div class="line"><a name="l00450"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#abf93f441510c1babfe71ab4af1680f48">  450</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#abf93f441510c1babfe71ab4af1680f48">SetOffset</a>(Vector3Int position, Vector3 offset)</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;        {</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;            <span class="keywordflow">if</span> (ValidateCellPosition(position))</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                m_Cells[<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#aa07574b5bd3aaab76b4c663479e3e8b2">GetCellIndex</a>(position)].<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#a44223c8c0b1df930fca111b2b49e9813">offset</a> = offset;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        }</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160; </div>
+<div class="line"><a name="l00461"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a7faa121eacc1119dccd97105cb4b6b0d">  461</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a7faa121eacc1119dccd97105cb4b6b0d">SetOrientation</a>(Vector3Int position, Quaternion orientation)</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        {</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;            <span class="keywordflow">if</span> (ValidateCellPosition(position))</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                m_Cells[<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#aa07574b5bd3aaab76b4c663479e3e8b2">GetCellIndex</a>(position)].<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#aa75d9402d3abc35271d7f27e3e2c9ae0">orientation</a> = orientation;</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        }</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160; </div>
+<div class="line"><a name="l00472"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a60dafb3a957bc041ab644b39f31a6804">  472</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a60dafb3a957bc041ab644b39f31a6804">SetScale</a>(Vector3Int position, Vector3 scale)</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        {</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;            <span class="keywordflow">if</span> (ValidateCellPosition(position))</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;                m_Cells[<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#aa07574b5bd3aaab76b4c663479e3e8b2">GetCellIndex</a>(position)].<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#a88a559c117d2443c1925f186f939e71c">scale</a> = scale;</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        }</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160; </div>
+<div class="line"><a name="l00481"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#aa07574b5bd3aaab76b4c663479e3e8b2">  481</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#aa07574b5bd3aaab76b4c663479e3e8b2">GetCellIndex</a>(Vector3Int brushPosition)</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;        {</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#aa07574b5bd3aaab76b4c663479e3e8b2">GetCellIndex</a>(brushPosition.x, brushPosition.y, brushPosition.z);</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        }</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160; </div>
+<div class="line"><a name="l00491"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a8e4124f78a88c79b3b212ee6a9d1f303">  491</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a8e4124f78a88c79b3b212ee6a9d1f303">GetCellIndex</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> z)</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        {</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;            <span class="keywordflow">return</span> x + m_Size.x * y + m_Size.x * m_Size.y * z;</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;        }</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160; </div>
+<div class="line"><a name="l00504"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ad2e9b7b05f460ce2610140e791ffdb9c">  504</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ad2e9b7b05f460ce2610140e791ffdb9c">GetCellIndex</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> z, <span class="keywordtype">int</span> sizex, <span class="keywordtype">int</span> sizey, <span class="keywordtype">int</span> sizez)</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;        {</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;            <span class="keywordflow">return</span> x + sizex * y + sizex * sizey * z;</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        }</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160; </div>
+<div class="line"><a name="l00514"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a26ae236604d9400a387565c695d5db5e">  514</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a26ae236604d9400a387565c695d5db5e">GetCellIndexWrapAround</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> z)</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;        {</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;            <span class="keywordflow">return</span> (x % m_Size.x) + m_Size.x * (y % m_Size.y) + m_Size.x * m_Size.y * (z % m_Size.z);</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        }</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160; </div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        <span class="keyword">private</span> GameObject GetObjectInCell(GridLayout grid, Transform parent, Vector3Int position)</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;        {</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;            <span class="keywordtype">int</span> childCount;</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;            GameObject[] sceneChildren = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;            <span class="keywordflow">if</span> (parent == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;            {</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;                var scene = SceneManager.GetActiveScene();</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;                sceneChildren = scene.GetRootGameObjects();</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;                childCount = scene.rootCount;</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;            }</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;            {</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                childCount = parent.childCount;</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;            }</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;            var anchorCellOffset = Vector3Int.FloorToInt(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ae67e2d464272db10363f9b1f4ae915fd">m_Anchor</a>);</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;            var cellSize = grid.cellSize;</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;            anchorCellOffset.x = cellSize.x == 0 ? 0 : anchorCellOffset.x;</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;            anchorCellOffset.y = cellSize.y == 0 ? 0 : anchorCellOffset.y;</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;            anchorCellOffset.z = cellSize.z == 0 ? 0 : anchorCellOffset.z;</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160; </div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;            <span class="keywordflow">for</span> (var i = 0; i &lt; childCount; i++)</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;            {</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;                var child = sceneChildren == <span class="keyword">null</span> ? parent.GetChild(i) : sceneChildren[i].transform;</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;                <span class="keywordflow">if</span> (position == grid.WorldToCell(child.position) - anchorCellOffset)</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;                    <span class="keywordflow">return</span> child.gameObject;</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;            }</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        }</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160; </div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">bool</span> ValidateCellPosition(Vector3Int position)</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        {</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;            var valid =</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;                position.x &gt;= 0 &amp;&amp; position.x &lt; <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a271cb42ca9a5731f7f4605d61b1bb53b">size</a>.x &amp;&amp;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;                position.y &gt;= 0 &amp;&amp; position.y &lt; <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a271cb42ca9a5731f7f4605d61b1bb53b">size</a>.y &amp;&amp;</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;                position.z &gt;= 0 &amp;&amp; position.z &lt; <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a271cb42ca9a5731f7f4605d61b1bb53b">size</a>.z;</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;            <span class="keywordflow">if</span> (!valid)</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentException(<span class="keywordtype">string</span>.Format(<span class="stringliteral">&quot;Position {0} is an invalid cell position. Valid range is between [{1}, {2}).&quot;</span>, position, Vector3Int.zero, <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a271cb42ca9a5731f7f4605d61b1bb53b">size</a>));</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;        }</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160; </div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">void</span> SizeUpdated(<span class="keywordtype">bool</span> keepContents = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;        {</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;            Array.Resize(ref m_Cells, <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a62eb2052dac4cbd5bd99be9c058638ac">sizeCount</a>);</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;            BoundsInt bounds = <span class="keyword">new</span> BoundsInt(Vector3Int.zero, m_Size);</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;            <span class="keywordflow">foreach</span> (Vector3Int pos <span class="keywordflow">in</span> bounds.allPositionsWithin)</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;            {</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;                <span class="keywordflow">if</span> (keepContents || m_Cells[<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#aa07574b5bd3aaab76b4c663479e3e8b2">GetCellIndex</a>(pos)] == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;                    m_Cells[<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#aa07574b5bd3aaab76b4c663479e3e8b2">GetCellIndex</a>(pos)] = <span class="keyword">new</span> BrushCell();</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;            }</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;        }</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160; </div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> SetSceneCell(GridLayout grid, Transform parent, Vector3Int position, GameObject go, Vector3 offset, Vector3 scale, Quaternion orientation, Vector3 anchor)</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;        {</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;            <span class="keywordflow">if</span> (go == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160; </div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;            GameObject instance;</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;            <span class="keywordflow">if</span> (PrefabUtility.IsPartOfPrefabAsset(go))</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;            {</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;                instance = (GameObject) PrefabUtility.InstantiatePrefab(go, parent != <span class="keyword">null</span> ? parent.root.gameObject.scene : SceneManager.GetActiveScene());</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;                instance.transform.parent = parent;</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;            }</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;            {</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;                instance = Instantiate(go, parent);</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;                instance.name = go.name;</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;                instance.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;                <span class="keywordflow">foreach</span> (var renderer <span class="keywordflow">in</span> instance.GetComponentsInChildren&lt;Renderer&gt;())</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;                {</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;                    renderer.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;                }</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;            }</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160; </div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;            Undo.RegisterCreatedObjectUndo(instance, <span class="stringliteral">&quot;Paint GameObject&quot;</span>);</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;            instance.transform.position = grid.LocalToWorld(grid.CellToLocalInterpolated(<span class="keyword">new</span> Vector3Int(position.x, position.y, position.z) + anchor));</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;            instance.transform.localRotation = orientation;</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;            instance.transform.localScale = scale;</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;            instance.transform.Translate(offset);</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;        }</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160; </div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> ClearSceneCell(GridLayout grid, Transform parent, Vector3Int position)</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;        {</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;            GameObject erased = GetObjectInCell(grid, parent, <span class="keyword">new</span> Vector3Int(position.x, position.y, position.z));</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;            <span class="keywordflow">if</span> (erased != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;                Undo.DestroyObjectImmediate(erased);</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;        }</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160; </div>
+<div class="line"><a name="l00610"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a4a6bf8d39719f99310b1bc177e3fa8c0">  610</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a4a6bf8d39719f99310b1bc177e3fa8c0">GetHashCode</a>()</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;        {</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;            <span class="keywordtype">int</span> hash = 0;</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;            unchecked</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;            {</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;                <span class="keywordflow">foreach</span> (var cell <span class="keywordflow">in</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a72db08da26f1198edb4430878574680a">cells</a>)</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;                {</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;                    hash = hash * 33 + cell.GetHashCode();</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;                }</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;            }</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;            <span class="keywordflow">return</span> hash;</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;        }</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160; </div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;        <span class="keyword">internal</span> <span class="keywordtype">void</span> UpdateHiddenGridLayout()</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;        {</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;            var grid = <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2dd6ecfa194c577da135fe54d8812190">hiddenGrid</a>.GetComponent&lt;Grid&gt;();</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;            hiddenGridLayout.cellSize = grid.cellSize;</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;            hiddenGridLayout.cellGap = grid.cellGap;</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;            hiddenGridLayout.cellSwizzle = grid.cellSwizzle;</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;            hiddenGridLayout.cellLayout = grid.cellLayout;</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;        }</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160; </div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;        [Serializable]</div>
+<div class="line"><a name="l00636"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html">  636</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html">BrushCell</a></div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;        {</div>
+<div class="line"><a name="l00641"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#af972c252a6d82fae4c877a73f6d9c3d5">  641</a></span>&#160;            <span class="keyword">public</span> GameObject <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#af972c252a6d82fae4c877a73f6d9c3d5">gameObject</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> m_GameObject; } <span class="keyword">set</span> { m_GameObject = value; } }</div>
+<div class="line"><a name="l00645"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#a44223c8c0b1df930fca111b2b49e9813">  645</a></span>&#160;            <span class="keyword">public</span> Vector3 <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#a44223c8c0b1df930fca111b2b49e9813">offset</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Offset; } <span class="keyword">set</span> { m_Offset = value; } }</div>
+<div class="line"><a name="l00649"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#a88a559c117d2443c1925f186f939e71c">  649</a></span>&#160;            <span class="keyword">public</span> Vector3 <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#a88a559c117d2443c1925f186f939e71c">scale</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Scale; } <span class="keyword">set</span> { m_Scale = value; } }</div>
+<div class="line"><a name="l00653"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#aa75d9402d3abc35271d7f27e3e2c9ae0">  653</a></span>&#160;            <span class="keyword">public</span> Quaternion <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#aa75d9402d3abc35271d7f27e3e2c9ae0">orientation</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Orientation; } <span class="keyword">set</span> { m_Orientation = value; } }</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;            </div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;            [SerializeField]</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;            <span class="keyword">private</span> GameObject m_GameObject;</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;            [SerializeField]</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;            Vector3 m_Offset = Vector3.zero;</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;            [SerializeField]</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;            Vector3 m_Scale = Vector3.one;</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;            [SerializeField]</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;            Quaternion m_Orientation = Quaternion.identity;</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160; </div>
+<div class="line"><a name="l00668"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#ae6d1bc70322f0c9b1d65748e41ace339">  668</a></span>&#160;            <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#ae6d1bc70322f0c9b1d65748e41ace339">GetHashCode</a>()</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;            {</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;                <span class="keywordtype">int</span> hash;</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;                unchecked</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;                {</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;                    hash = <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#af972c252a6d82fae4c877a73f6d9c3d5">gameObject</a> != <span class="keyword">null</span> ? <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#af972c252a6d82fae4c877a73f6d9c3d5">gameObject</a>.GetInstanceID() : 0;</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;                    hash = hash * 33 + <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#a44223c8c0b1df930fca111b2b49e9813">offset</a>.GetHashCode();</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;                    hash = hash * 33 + <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#a88a559c117d2443c1925f186f939e71c">scale</a>.GetHashCode();</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;                    hash = hash * 33 + <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#aa75d9402d3abc35271d7f27e3e2c9ae0">orientation</a>.GetHashCode();</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;                }</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;                <span class="keywordflow">return</span> hash;</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;            }</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;        }</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;    }</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160; </div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;    [CustomEditor(typeof(GameObjectBrush))]</div>
+<div class="line"><a name="l00687"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html">  687</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html">GameObjectBrushEditor</a> : <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html">GridBrushEditorBase</a></div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;    {</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">bool</span> hiddenGridFoldout;</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;        <span class="keyword">private</span> Editor hiddenGridEditor;</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160; </div>
+<div class="line"><a name="l00695"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1e81875f4fe90972ea5941897307818d">  695</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html">GameObjectBrush</a> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1e81875f4fe90972ea5941897307818d">brush</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> target as <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html">GameObjectBrush</a>; } }</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160; </div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#ae38ea3c7574c4928b6666e5d94c29982">canChangeZPosition</a></div>
+<div class="line"><a name="l00699"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#ae38ea3c7574c4928b6666e5d94c29982">  699</a></span>&#160;        {</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1e81875f4fe90972ea5941897307818d">brush</a>.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#afc0487ad6615d35d69f2d6de823b3d36">canChangeZPosition</a>; }</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;            <span class="keyword">set</span> { <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1e81875f4fe90972ea5941897307818d">brush</a>.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#afc0487ad6615d35d69f2d6de823b3d36">canChangeZPosition</a> = value; }</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;        }</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;        </div>
+<div class="line"><a name="l00713"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a03a72c00d867390c4ec00d55015353a0">  713</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a03a72c00d867390c4ec00d55015353a0">OnPaintSceneGUI</a>(GridLayout gridLayout, GameObject brushTarget, BoundsInt position, GridBrushBase.Tool tool, <span class="keywordtype">bool</span> executing)</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;        {</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;            BoundsInt gizmoRect = position;</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160; </div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;            <span class="keywordflow">if</span> (tool == GridBrushBase.Tool.Paint || tool == GridBrushBase.Tool.Erase)</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;                gizmoRect = <span class="keyword">new</span> BoundsInt(position.min - <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1e81875f4fe90972ea5941897307818d">brush</a>.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">pivot</a>, <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1e81875f4fe90972ea5941897307818d">brush</a>.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a271cb42ca9a5731f7f4605d61b1bb53b">size</a>);</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;            </div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;            base.OnPaintSceneGUI(gridLayout, brushTarget, gizmoRect, tool, executing);</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;        }</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160; </div>
+<div class="line"><a name="l00727"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1cf928715cfb18c7123cc7b68c635061">  727</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1cf928715cfb18c7123cc7b68c635061">OnPaintInspectorGUI</a>()</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;        {</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;            EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;            base.OnInspectorGUI();</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;            <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck() &amp;&amp; <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1e81875f4fe90972ea5941897307818d">brush</a>.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ace207001ca5d89bdbdeaddadf714c638">cellCount</a> != <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1e81875f4fe90972ea5941897307818d">brush</a>.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a62eb2052dac4cbd5bd99be9c058638ac">sizeCount</a>)</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;            {</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;                <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1e81875f4fe90972ea5941897307818d">brush</a>.SizeUpdated(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;            }</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160; </div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;            hiddenGridFoldout = EditorGUILayout.Foldout(hiddenGridFoldout, <span class="stringliteral">&quot;SceneRoot Grid&quot;</span>);</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;            <span class="keywordflow">if</span> (hiddenGridFoldout)</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;            {</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;                EditorGUI.indentLevel++;</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;                <span class="keyword">using</span> (<span class="keyword">new</span> EditorGUI.DisabledScope(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html">GridPaintingState</a>.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html#abec2c42300cf7e4fe474b2cdd1876e86">scenePaintTarget</a> != <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1e81875f4fe90972ea5941897307818d">brush</a>.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2dd6ecfa194c577da135fe54d8812190">hiddenGrid</a>))</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;                {</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;                    <span class="keywordflow">if</span> (hiddenGridEditor == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;                    {</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;                        hiddenGridEditor = Editor.CreateEditor(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1e81875f4fe90972ea5941897307818d">brush</a>.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2dd6ecfa194c577da135fe54d8812190">hiddenGrid</a>.GetComponent&lt;Grid&gt;());</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;                    }</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;                    <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1e81875f4fe90972ea5941897307818d">brush</a>.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2dd6ecfa194c577da135fe54d8812190">hiddenGrid</a>.hideFlags = HideFlags.None;</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;                    EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;                    hiddenGridEditor.OnInspectorGUI();</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;                    <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;                    {</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;                        <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1e81875f4fe90972ea5941897307818d">brush</a>.UpdateHiddenGridLayout();</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;                        EditorUtility.SetDirty(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1e81875f4fe90972ea5941897307818d">brush</a>);</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;                        SceneView.RepaintAll();</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;                    }</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;                    <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1e81875f4fe90972ea5941897307818d">brush</a>.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2dd6ecfa194c577da135fe54d8812190">hiddenGrid</a>.hideFlags = HideFlags.HideAndDontSave;</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;                }</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;                EditorGUI.indentLevel--;</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;            }</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;        }</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160; </div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> GameObject[] <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a50c7572e790cdc927a664c4de598a82a">validTargets</a></div>
+<div class="line"><a name="l00765"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a50c7572e790cdc927a664c4de598a82a">  765</a></span>&#160;        {</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;            <span class="keyword">get</span></div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;            {</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;                StageHandle currentStageHandle = StageUtility.GetCurrentStageHandle();</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;                var results = currentStageHandle.FindComponentsOfType&lt;GridLayout&gt;().Where(x =&gt;</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;                {</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;                    GameObject gameObject;</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;                    <span class="keywordflow">return</span> (gameObject = x.gameObject).scene.isLoaded</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;                           &amp;&amp; gameObject.activeInHierarchy;</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;                }).Select(x =&gt; x.gameObject);</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;                <span class="keywordflow">return</span> results.Prepend(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1e81875f4fe90972ea5941897307818d">brush</a>.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2dd6ecfa194c577da135fe54d8812190">hiddenGrid</a>).ToArray();</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;            }</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;        }</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160; </div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;    }</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell_html_aa75d9402d3abc35271d7f27e3e2c9ae0"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#aa75d9402d3abc35271d7f27e3e2c9ae0">UnityEditor.Tilemaps.GameObjectBrush.BrushCell.orientation</a></div><div class="ttdeci">Quaternion orientation</div><div class="ttdoc">Orientatio of the GameObject when painted.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00653">GameObjectBrush.cs:653</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor_html_a50c7572e790cdc927a664c4de598a82a"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a50c7572e790cdc927a664c4de598a82a">UnityEditor.Tilemaps.GameObjectBrushEditor.validTargets</a></div><div class="ttdeci">override GameObject[] validTargets</div><div class="ttdoc">The targets that the GameObjectBrush can paint on</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00765">GameObjectBrush.cs:765</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a1ef0a26c008abd63682be12806c0bc4f"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a1ef0a26c008abd63682be12806c0bc4f">UnityEditor.Tilemaps.GameObjectBrush.BoxFill</a></div><div class="ttdeci">override void BoxFill(GridLayout gridLayout, GameObject brushTarget, BoundsInt position)</div><div class="ttdoc">Box fills GameObjects into given bounds within the selected layers. The GameObjectBrush overrides thi...</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00177">GameObjectBrush.cs:177</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a211c4481b10781355337dcf1a3b24ac8"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a211c4481b10781355337dcf1a3b24ac8">UnityEditor.Tilemaps.GameObjectBrush.MoveEnd</a></div><div class="ttdeci">override void MoveEnd(GridLayout gridLayout, GameObject brushTarget, BoundsInt position)</div><div class="ttdoc">MoveEnd is called when user has ended the move of the area previously selected with the selection mar...</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00340">GameObjectBrush.cs:340</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a2f5990fe6bcc9ff45556564046afe580"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2f5990fe6bcc9ff45556564046afe580">UnityEditor.Tilemaps.GameObjectBrush.UpdateSizeAndPivot</a></div><div class="ttdeci">void UpdateSizeAndPivot(Vector3Int size, Vector3Int pivot)</div><div class="ttdoc">Updates the size, pivot and the number of layers of the brush.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00427">GameObjectBrush.cs:427</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a5c573563c79d8263b884d11cef9782d0"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a5c573563c79d8263b884d11cef9782d0">UnityEditor.Tilemaps.GameObjectBrush.BoxErase</a></div><div class="ttdeci">override void BoxErase(GridLayout gridLayout, GameObject brushTarget, BoundsInt position)</div><div class="ttdoc">Erases GameObjects from given bounds within the selected layers. The GameObjectBrush overrides this t...</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00196">GameObjectBrush.cs:196</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a2dd6ecfa194c577da135fe54d8812190"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a2dd6ecfa194c577da135fe54d8812190">UnityEditor.Tilemaps.GameObjectBrush.hiddenGrid</a></div><div class="ttdeci">GameObject hiddenGrid</div><div class="ttdoc">GameObject used for painting onto the Scene root</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00048">GameObjectBrush.cs:48</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_ace207001ca5d89bdbdeaddadf714c638"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ace207001ca5d89bdbdeaddadf714c638">UnityEditor.Tilemaps.GameObjectBrush.cellCount</a></div><div class="ttdeci">int? cellCount</div><div class="ttdoc">Number of brush cells in the brush.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00061">GameObjectBrush.cs:61</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_ae9740a5e98c7b85d0299fd55fb3f50f4"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ae9740a5e98c7b85d0299fd55fb3f50f4">UnityEditor.Tilemaps.GameObjectBrush.Pick</a></div><div class="ttdeci">override void Pick(GridLayout gridLayout, GameObject brushTarget, BoundsInt position, Vector3Int pivot)</div><div class="ttdoc">Picks child GameObjects given the coordinates of the cells. The GameObjectBrush overrides this to pro...</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00270">GameObjectBrush.cs:270</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor_html_a03a72c00d867390c4ec00d55015353a0"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a03a72c00d867390c4ec00d55015353a0">UnityEditor.Tilemaps.GameObjectBrushEditor.OnPaintSceneGUI</a></div><div class="ttdeci">override void OnPaintSceneGUI(GridLayout gridLayout, GameObject brushTarget, BoundsInt position, GridBrushBase.Tool tool, bool executing)</div><div class="ttdoc">Callback for painting the GUI for the GridBrush in the Scene View. The GameObjectBrush Editor overrid...</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00713">GameObjectBrush.cs:713</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_ae67e2d464272db10363f9b1f4ae915fd"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ae67e2d464272db10363f9b1f4ae915fd">UnityEditor.Tilemaps.GameObjectBrush.m_Anchor</a></div><div class="ttdeci">Vector3 m_Anchor</div><div class="ttdoc">Anchor Point of the Instantiated GameObject in the cell when painting</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00053">GameObjectBrush.cs:53</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor_html_ae38ea3c7574c4928b6666e5d94c29982"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#ae38ea3c7574c4928b6666e5d94c29982">UnityEditor.Tilemaps.GameObjectBrushEditor.canChangeZPosition</a></div><div class="ttdeci">override bool canChangeZPosition</div><div class="ttdoc">Whether the GridBrush can change Z Position.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00699">GameObjectBrush.cs:699</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a9e84be84fc328ddd395074d2666c44cb"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a9e84be84fc328ddd395074d2666c44cb">UnityEditor.Tilemaps.GameObjectBrush.Erase</a></div><div class="ttdeci">override void Erase(GridLayout gridLayout, GameObject brushTarget, Vector3Int position)</div><div class="ttdoc">Erases GameObjects in a given position within the selected layers. The GameObjectBrush overrides this...</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00156">GameObjectBrush.cs:156</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a8177e6c069a90f8828465898fb2cd705"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a8177e6c069a90f8828465898fb2cd705">UnityEditor.Tilemaps.GameObjectBrush.Paint</a></div><div class="ttdeci">override void Paint(GridLayout gridLayout, GameObject brushTarget, Vector3Int position)</div><div class="ttdoc">Paints GameObjects into a given position within the selected layers. The GameObjectBrush overrides th...</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00128">GameObjectBrush.cs:128</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a26ae236604d9400a387565c695d5db5e"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a26ae236604d9400a387565c695d5db5e">UnityEditor.Tilemaps.GameObjectBrush.GetCellIndexWrapAround</a></div><div class="ttdeci">int GetCellIndexWrapAround(int x, int y, int z)</div><div class="ttdoc">Gets the index to the GameObjectBrush::ref::BrushCell based on the position of the BrushCell....</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00514">GameObjectBrush.cs:514</a></div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_tilemaps_html"><div class="ttname"><a href="namespace_unity_editor_1_1_tilemaps.html">UnityEditor.Tilemaps</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00008">GameObjectBrush.cs:8</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_adf0f59884c0c59db516323e50681595e"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#adf0f59884c0c59db516323e50681595e">UnityEditor.Tilemaps.GameObjectBrush.Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdoc">Clears all data of the brush.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00360">GameObjectBrush.cs:360</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a3d4131a27a4216fde83968b3f93d7736"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a3d4131a27a4216fde83968b3f93d7736">UnityEditor.Tilemaps.GameObjectBrush.pivot</a></div><div class="ttdeci">Vector3Int pivot</div><div class="ttdoc">Pivot of the brush.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00057">GameObjectBrush.cs:57</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a1a06213feb23290a8efcc474549ccedc"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a1a06213feb23290a8efcc474549ccedc">UnityEditor.Tilemaps.GameObjectBrush.Flip</a></div><div class="ttdeci">override void Flip(FlipAxis flip, GridLayout.CellLayout layout)</div><div class="ttdoc">Flips the brush in the given axis.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00254">GameObjectBrush.cs:254</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_abf93f441510c1babfe71ab4af1680f48"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#abf93f441510c1babfe71ab4af1680f48">UnityEditor.Tilemaps.GameObjectBrush.SetOffset</a></div><div class="ttdeci">void SetOffset(Vector3Int position, Vector3 offset)</div><div class="ttdoc">Sets a position offset at the position in the brush.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00450">GameObjectBrush.cs:450</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a72db08da26f1198edb4430878574680a"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a72db08da26f1198edb4430878574680a">UnityEditor.Tilemaps.GameObjectBrush.cells</a></div><div class="ttdeci">BrushCell[] cells</div><div class="ttdoc">All the brush cells the brush holds.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00059">GameObjectBrush.cs:59</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html">UnityEditor.Tilemaps.GameObjectBrush.BrushCell</a></div><div class="ttdoc">Brush Cell stores the data to be painted in a grid cell.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00636">GameObjectBrush.cs:636</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell_html_a44223c8c0b1df930fca111b2b49e9813"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#a44223c8c0b1df930fca111b2b49e9813">UnityEditor.Tilemaps.GameObjectBrush.BrushCell.offset</a></div><div class="ttdeci">Vector3 offset</div><div class="ttdoc">Position offset of the GameObject when painted.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00645">GameObjectBrush.cs:645</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a60dafb3a957bc041ab644b39f31a6804"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a60dafb3a957bc041ab644b39f31a6804">UnityEditor.Tilemaps.GameObjectBrush.SetScale</a></div><div class="ttdeci">void SetScale(Vector3Int position, Vector3 scale)</div><div class="ttdoc">Sets a scale at the position in the brush.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00472">GameObjectBrush.cs:472</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_painting_state_html_abec2c42300cf7e4fe474b2cdd1876e86"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html#abec2c42300cf7e4fe474b2cdd1876e86">UnityEditor.Tilemaps.GridPaintingState.scenePaintTarget</a></div><div class="ttdeci">static GameObject scenePaintTarget</div><div class="ttdoc">The currently active target for the Tile Palette</div><div class="ttdef"><b>Definition:</b> <a href="_grid_painting_state_8cs_source.html#l00143">GridPaintingState.cs:143</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_ad2e9b7b05f460ce2610140e791ffdb9c"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ad2e9b7b05f460ce2610140e791ffdb9c">UnityEditor.Tilemaps.GameObjectBrush.GetCellIndex</a></div><div class="ttdeci">int GetCellIndex(int x, int y, int z, int sizex, int sizey, int sizez)</div><div class="ttdoc">Gets the index to the GameObjectBrush::ref::BrushCell based on the position of the BrushCell.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00504">GameObjectBrush.cs:504</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a8e4124f78a88c79b3b212ee6a9d1f303"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a8e4124f78a88c79b3b212ee6a9d1f303">UnityEditor.Tilemaps.GameObjectBrush.GetCellIndex</a></div><div class="ttdeci">int GetCellIndex(int x, int y, int z)</div><div class="ttdoc">Gets the index to the GameObjectBrush::ref::BrushCell based on the position of the BrushCell.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00491">GameObjectBrush.cs:491</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a7faa121eacc1119dccd97105cb4b6b0d"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a7faa121eacc1119dccd97105cb4b6b0d">UnityEditor.Tilemaps.GameObjectBrush.SetOrientation</a></div><div class="ttdeci">void SetOrientation(Vector3Int position, Quaternion orientation)</div><div class="ttdoc">Sets an orientation at the position in the brush.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00461">GameObjectBrush.cs:461</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a365a4053c1e69e8773b0d0620764162e"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a365a4053c1e69e8773b0d0620764162e">UnityEditor.Tilemaps.GameObjectBrush.Init</a></div><div class="ttdeci">void Init(Vector3Int size)</div><div class="ttdoc">Initializes the content of the GameObjectBrush.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00105">GameObjectBrush.cs:105</a></div></div>
+<div class="ttc" id="anamespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8animation_0d8_80_81_2_editor_2_analytics_8cs_source.html#l00009">Analytics.cs:9</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_aa07574b5bd3aaab76b4c663479e3e8b2"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#aa07574b5bd3aaab76b4c663479e3e8b2">UnityEditor.Tilemaps.GameObjectBrush.GetCellIndex</a></div><div class="ttdeci">int GetCellIndex(Vector3Int brushPosition)</div><div class="ttdoc">Gets the index to the GameObjectBrush::ref::BrushCell based on the position of the BrushCell.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00481">GameObjectBrush.cs:481</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_brush_editor_base.html">UnityEditor.Tilemaps.GridBrushEditorBase</a></div><div class="ttdoc">Base class for Grid Brush Editor.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_brush_editor_base_8cs_source.html#l00010">GridBrushEditorBase.cs:10</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a271cb42ca9a5731f7f4605d61b1bb53b"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a271cb42ca9a5731f7f4605d61b1bb53b">UnityEditor.Tilemaps.GameObjectBrush.size</a></div><div class="ttdeci">Vector3Int size</div><div class="ttdoc">Size of the brush in cells.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00055">GameObjectBrush.cs:55</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html">UnityEditor.Tilemaps.GameObjectBrush</a></div><div class="ttdoc">This Brush instances, places and manipulates GameObjects onto the scene. Use this as an example to cr...</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00016">GameObjectBrush.cs:16</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor_html_a1cf928715cfb18c7123cc7b68c635061"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1cf928715cfb18c7123cc7b68c635061">UnityEditor.Tilemaps.GameObjectBrushEditor.OnPaintInspectorGUI</a></div><div class="ttdeci">override void OnPaintInspectorGUI()</div><div class="ttdoc">Callback for painting the inspector GUI for the GameObjectBrush in the tilemap palette....</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00727">GameObjectBrush.cs:727</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell_html_af972c252a6d82fae4c877a73f6d9c3d5"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#af972c252a6d82fae4c877a73f6d9c3d5">UnityEditor.Tilemaps.GameObjectBrush.BrushCell.gameObject</a></div><div class="ttdeci">GameObject gameObject</div><div class="ttdoc">GameObject to be placed when painting.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00641">GameObjectBrush.cs:641</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_ab7286b8a91afda4e4d73a4f0c8057792"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ab7286b8a91afda4e4d73a4f0c8057792">UnityEditor.Tilemaps.GameObjectBrush.MoveStart</a></div><div class="ttdeci">override void MoveStart(GridLayout gridLayout, GameObject brushTarget, BoundsInt position)</div><div class="ttdoc">MoveStart is called when user starts moving the area previously selected with the selection marquee....</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00317">GameObjectBrush.cs:317</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a59cb1ae6ffe9df8a8748cdef8a825806"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a59cb1ae6ffe9df8a8748cdef8a825806">UnityEditor.Tilemaps.GameObjectBrush.FloodFill</a></div><div class="ttdeci">override void FloodFill(GridLayout gridLayout, GameObject brushTarget, Vector3Int position)</div><div class="ttdoc">This is not supported but it should floodfill GameObjects starting from a given position within the s...</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00212">GameObjectBrush.cs:212</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_painting_state_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html">UnityEditor.Tilemaps.GridPaintingState</a></div><div class="ttdoc">GridPaintingState controls the state of objects for painting with a Tile Palette.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_painting_state_8cs_source.html#l00018">GridPaintingState.cs:18</a></div></div>
+<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition:</b> <a href="_preserve_dependency_attribute_8cs_source.html#l00030">PreserveDependencyAttribute.cs:30</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a62eb2052dac4cbd5bd99be9c058638ac"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a62eb2052dac4cbd5bd99be9c058638ac">UnityEditor.Tilemaps.GameObjectBrush.sizeCount</a></div><div class="ttdeci">int sizeCount</div><div class="ttdoc">Number of brush cells based on size.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00064">GameObjectBrush.cs:64</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a4a6bf8d39719f99310b1bc177e3fa8c0"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a4a6bf8d39719f99310b1bc177e3fa8c0">UnityEditor.Tilemaps.GameObjectBrush.GetHashCode</a></div><div class="ttdeci">override int GetHashCode()</div><div class="ttdoc">Hashes the contents of the brush.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00610">GameObjectBrush.cs:610</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_ad575519d80d5f034fda166d1134da688"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ad575519d80d5f034fda166d1134da688">UnityEditor.Tilemaps.GameObjectBrush.Init</a></div><div class="ttdeci">void Init(Vector3Int size, Vector3Int pivot)</div><div class="ttdoc">Initializes the content of the GameObjectBrush.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00114">GameObjectBrush.cs:114</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor_html_a1e81875f4fe90972ea5941897307818d"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html#a1e81875f4fe90972ea5941897307818d">UnityEditor.Tilemaps.GameObjectBrushEditor.brush</a></div><div class="ttdeci">GameObjectBrush brush</div><div class="ttdoc">The GameObjectBrush for this Editor</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00695">GameObjectBrush.cs:695</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_aa823890a563f17bf49917a84d72df432"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#aa823890a563f17bf49917a84d72df432">UnityEditor.Tilemaps.GameObjectBrush.GameObjectBrush</a></div><div class="ttdeci">GameObjectBrush()</div><div class="ttdoc">This Brush instances, places and manipulates GameObjects onto the scene.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00077">GameObjectBrush.cs:77</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell_html_ae6d1bc70322f0c9b1d65748e41ace339"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#ae6d1bc70322f0c9b1d65748e41ace339">UnityEditor.Tilemaps.GameObjectBrush.BrushCell.GetHashCode</a></div><div class="ttdeci">override int GetHashCode()</div><div class="ttdoc">Hashes the contents of the brush cell.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00668">GameObjectBrush.cs:668</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_ae8b0368781ed9f30d2bd6168153cd0fc"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#ae8b0368781ed9f30d2bd6168153cd0fc">UnityEditor.Tilemaps.GameObjectBrush.SetGameObject</a></div><div class="ttdeci">void SetGameObject(Vector3Int position, GameObject go)</div><div class="ttdoc">Sets a GameObject at the position in the brush.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00439">GameObjectBrush.cs:439</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_a0696515b0ab3d115bebbbce217f7339e"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#a0696515b0ab3d115bebbbce217f7339e">UnityEditor.Tilemaps.GameObjectBrush.Rotate</a></div><div class="ttdeci">override void Rotate(RotationDirection direction, GridLayout.CellLayout layout)</div><div class="ttdoc">Rotates the brush by 90 degrees in the given direction.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00222">GameObjectBrush.cs:222</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_html_afc0487ad6615d35d69f2d6de823b3d36"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush.html#afc0487ad6615d35d69f2d6de823b3d36">UnityEditor.Tilemaps.GameObjectBrush.canChangeZPosition</a></div><div class="ttdeci">bool canChangeZPosition</div><div class="ttdoc">Whether the brush can change Z Position</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00069">GameObjectBrush.cs:69</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_editor.html">UnityEditor.Tilemaps.GameObjectBrushEditor</a></div><div class="ttdoc">The Brush Editor for a GameObject Brush.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00687">GameObjectBrush.cs:687</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell_html_a88a559c117d2443c1925f186f939e71c"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_game_object_brush_1_1_brush_cell.html#a88a559c117d2443c1925f186f939e71c">UnityEditor.Tilemaps.GameObjectBrush.BrushCell.scale</a></div><div class="ttdeci">Vector3 scale</div><div class="ttdoc">Scale of the GameObject when painted.</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00649">GameObjectBrush.cs:649</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

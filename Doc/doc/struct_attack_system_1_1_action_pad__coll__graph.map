@@ -1,0 +1,7 @@
+<map id="AttackSystem.ActionPad" name="AttackSystem.ActionPad">
+<area shape="rect" id="node1" title=" " alt="" coords="178,199,359,225"/>
+<area shape="rect" id="node2" href="$class_attack_system_1_1_attack.html" title=" " alt="" coords="189,95,348,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,135,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="159,5,379,32"/>
+<area shape="rect" id="node5" href="$struct_attack_system_1_1_attack_settings.html" title=" " alt="" coords="403,5,615,32"/>
+</map>

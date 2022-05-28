@@ -1,0 +1,122 @@
+\hypertarget{class_character_system_1_1_ground_checker}{}\doxysection{Référence de la classe Character\+System.\+Ground\+Checker}
+\label{class_character_system_1_1_ground_checker}\index{CharacterSystem.GroundChecker@{CharacterSystem.GroundChecker}}
+
+
+Permet de vérifier si le joueur est au sol ou en saut  
+
+
+
+
+Graphe d\textquotesingle{}héritage de Character\+System.\+Ground\+Checker\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{class_character_system_1_1_ground_checker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Character\+System.\+Ground\+Checker\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{class_character_system_1_1_ground_checker__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_character_system_1_1_ground_checker_a8828381c82a8a019144d7b01e202acb5}{Check\+Ground\+Contact}} ()
+\begin{DoxyCompactList}\small\item\em Renvoi true si le joueur touche le sol, false sinon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_character_system_1_1_ground_checker_a4036e197b6d97ac0233788a604de2a3e}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Mono\+Beahviours Abstract Method \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+Layer\+Mask \mbox{\hyperlink{class_character_system_1_1_ground_checker_aea6731388248d996c79e885f5211d8ed}{ground\+Layers}}
+\item 
+float \mbox{\hyperlink{class_character_system_1_1_ground_checker_a5928d84486aec15083d4cb97dad3a00d}{ray\+Length}}
+\item 
+float \mbox{\hyperlink{class_character_system_1_1_ground_checker_aa777afc07be7b02f5a8eaa3cb9303700}{player\+Size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Permet de vérifier si le joueur est au sol ou en saut 
+
+$<$remark$>$ L\textquotesingle{}idée c\textquotesingle{}est que l\textquotesingle{}on trace un trait de longeur ray\+Lenght en dessous du joueur et si ce trait touche un game\+Object (qui a un collider) qui est dans l\textquotesingle{}un des calques de ground\+Layers alors on renvoi vrai, sinon faux. $<$/remark$>$ 
+
+Définition à la ligne 12 du fichier Ground\+Checker.\+cs.
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_character_system_1_1_ground_checker_a8828381c82a8a019144d7b01e202acb5}\label{class_character_system_1_1_ground_checker_a8828381c82a8a019144d7b01e202acb5}} 
+\index{CharacterSystem.GroundChecker@{CharacterSystem.GroundChecker}!CheckGroundContact@{CheckGroundContact}}
+\index{CheckGroundContact@{CheckGroundContact}!CharacterSystem.GroundChecker@{CharacterSystem.GroundChecker}}
+\doxysubsubsection{\texorpdfstring{CheckGroundContact()}{CheckGroundContact()}}
+{\footnotesize\ttfamily bool Character\+System.\+Ground\+Checker.\+Check\+Ground\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renvoi true si le joueur touche le sol, false sinon. 
+
+
+
+Définition à la ligne 39 du fichier Ground\+Checker.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_ground_checker_a4036e197b6d97ac0233788a604de2a3e}\label{class_character_system_1_1_ground_checker_a4036e197b6d97ac0233788a604de2a3e}} 
+\index{CharacterSystem.GroundChecker@{CharacterSystem.GroundChecker}!Start@{Start}}
+\index{Start@{Start}!CharacterSystem.GroundChecker@{CharacterSystem.GroundChecker}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Character\+System.\+Ground\+Checker.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mono\+Beahviours Abstract Method 
+
+
+
+Définition à la ligne 24 du fichier Ground\+Checker.\+cs.
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_character_system_1_1_ground_checker_aea6731388248d996c79e885f5211d8ed}\label{class_character_system_1_1_ground_checker_aea6731388248d996c79e885f5211d8ed}} 
+\index{CharacterSystem.GroundChecker@{CharacterSystem.GroundChecker}!groundLayers@{groundLayers}}
+\index{groundLayers@{groundLayers}!CharacterSystem.GroundChecker@{CharacterSystem.GroundChecker}}
+\doxysubsubsection{\texorpdfstring{groundLayers}{groundLayers}}
+{\footnotesize\ttfamily Layer\+Mask Character\+System.\+Ground\+Checker.\+ground\+Layers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne 14 du fichier Ground\+Checker.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_ground_checker_aa777afc07be7b02f5a8eaa3cb9303700}\label{class_character_system_1_1_ground_checker_aa777afc07be7b02f5a8eaa3cb9303700}} 
+\index{CharacterSystem.GroundChecker@{CharacterSystem.GroundChecker}!playerSize@{playerSize}}
+\index{playerSize@{playerSize}!CharacterSystem.GroundChecker@{CharacterSystem.GroundChecker}}
+\doxysubsubsection{\texorpdfstring{playerSize}{playerSize}}
+{\footnotesize\ttfamily float Character\+System.\+Ground\+Checker.\+player\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne 16 du fichier Ground\+Checker.\+cs.
+
+\mbox{\Hypertarget{class_character_system_1_1_ground_checker_a5928d84486aec15083d4cb97dad3a00d}\label{class_character_system_1_1_ground_checker_a5928d84486aec15083d4cb97dad3a00d}} 
+\index{CharacterSystem.GroundChecker@{CharacterSystem.GroundChecker}!rayLength@{rayLength}}
+\index{rayLength@{rayLength}!CharacterSystem.GroundChecker@{CharacterSystem.GroundChecker}}
+\doxysubsubsection{\texorpdfstring{rayLength}{rayLength}}
+{\footnotesize\ttfamily float Character\+System.\+Ground\+Checker.\+ray\+Length\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne 15 du fichier Ground\+Checker.\+cs.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+/home/simba/\+Unity\+Project/\+Bac à Sable/\+Assets/\+Simba/\+Scirpts/\+Character System/\+Player/\mbox{\hyperlink{_ground_checker_8cs}{Ground\+Checker.\+cs}}\end{DoxyCompactItemize}

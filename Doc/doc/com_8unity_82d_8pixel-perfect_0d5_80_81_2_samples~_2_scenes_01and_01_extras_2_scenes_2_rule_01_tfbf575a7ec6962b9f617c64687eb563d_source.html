@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.pixel-perfect@5.0.1/Samples~/Scenes and Extras/Scenes/Rule Tiles/Scripts/Editor/RuleTileEditor.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_beaaada65f44e48292c3fcf3259e5961.html">com.unity.2d.pixel-perfect@5.0.1</a></li><li class="navelem"><a class="el" href="dir_fc31c59ebbc11708b292b49c78406ac3.html">Samples~</a></li><li class="navelem"><a class="el" href="dir_4d8f0eb83620e908e096f4f23869f70e.html">Scenes and Extras</a></li><li class="navelem"><a class="el" href="dir_9895e178a0035f1c1beabea177c48984.html">Scenes</a></li><li class="navelem"><a class="el" href="dir_135d4df552b2ee9ce3a9d227d986e208.html">Rule Tiles</a></li><li class="navelem"><a class="el" href="dir_ad3b09430f1452a3030a0f1f2f0abc31.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_bfa6d6579132ef305c82c956edc3a528.html">Editor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">RuleTileEditor.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Reflection;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.Sprites;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> UnityEditorInternal;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Networking;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_tilemaps.html">Tilemaps</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> Object = <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Object;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor.html">UnityEditor</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    [CustomEditor(typeof(<a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>))]</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    [CanEditMultipleObjects]</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">internal</span> <span class="keyword">class </span>RuleTileEditor : Editor</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> s_XIconString = <span class="stringliteral">&quot;iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAABoSURBVDhPnY3BDcAgDAOZhS14dP1O0x2C/LBEgiNSHvfwyZabmV0jZRUpq2zi6f0DJwdcQOEdwwDLypF0zHLMa9+NQRxkQ+ACOT2STVw/q8eY1346ZlE54sYAhVhSDrjwFymrSFnD2gTZpls2OvFUHAAAAABJRU5ErkJggg==&quot;</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> s_Arrow0 = <span class="stringliteral">&quot;iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAACYSURBVDhPzZExDoQwDATzE4oU4QXXcgUFj+YxtETwgpMwXuFcwMFSRMVKKwzZcWzhiMg91jtg34XIntkre5EaT7yjjhI9pOD5Mw5k2X/DdUwFr3cQ7Pu23E/BiwXyWSOxrNqx+ewnsayam5OLBtbOGPUM/r93YZL4/dhpR/amwByGFBz170gNChA6w5bQQMqramBTgJ+Z3A58WuWejPCaHQAAAABJRU5ErkJggg==&quot;</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> s_Arrow1 = <span class="stringliteral">&quot;iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAABqSURBVDhPxYzBDYAgEATpxYcd+PVr0fZ2siZrjmMhFz6STIiDs8XMlpEyi5RkO/d66TcgJUB43JfNBqRkSEYDnYjhbKD5GIUkDqRDwoH3+NgTAw+bL/aoOP4DOgH+iwECEt+IlFmkzGHlAYKAWF9R8zUnAAAAAElFTkSuQmCC&quot;</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> s_Arrow2 = <span class="stringliteral">&quot;iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAAC0SURBVDhPjVE5EsIwDMxPKFKYF9CagoJH8xhaMskLmEGsjOSRkBzYmU2s9a58TUQUmCH1BWEHweuKP+D8tphrWcAHuIGrjPnPNY8X2+DzEWE+FzrdrkNyg2YGNNfRGlyOaZDJOxBrDhgOowaYW8UW0Vau5ZkFmXbbDr+CzOHKmLinAXMEePyZ9dZkZR+s5QX2O8DY3zZ/sgYcdDqeEVp8516o0QQV1qeMwg6C91toYoLoo+kNt/tpKQEVvFQAAAAASUVORK5CYII=&quot;</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> s_Arrow3 = <span class="stringliteral">&quot;iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAAB2SURBVDhPzY1LCoAwEEPnLi48gW5d6p31bH5SMhp0Cq0g+CCLxrzRPqMZ2pRqKG4IqzJc7JepTlbRZXYpWTg4RZE1XAso8VHFKNhQuTjKtZvHUNCEMogO4K3BhvMn9wP4EzoPZ3n0AGTW5fiBVzLAAYTP32C2Ay3agtu9V/9PAAAAAElFTkSuQmCC&quot;</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> s_Arrow5 = <span class="stringliteral">&quot;iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAABqSURBVDhPnY3BCYBADASvFx924NevRdvbyoLBmNuDJQMDGjNxAFhK1DyUQ9fvobCdO+j7+sOKj/uSB+xYHZAxl7IR1wNTXJeVcaAVU+614uWfCT9mVUhknMlxDokd15BYsQrJFHeUQ0+MB5ErsPi/6hO1AAAAAElFTkSuQmCC&quot;</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> s_Arrow6 = <span class="stringliteral">&quot;iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAACaSURBVDhPxZExEkAwEEVzE4UiTqClUDi0w2hlOIEZsV82xCZmQuPPfFn8t1mirLWf7S5flQOXjd64vCuEKWTKVt+6AayH3tIa7yLg6Qh2FcKFB72jBgJeziA1CMHzeaNHjkfwnAK86f3KUafU2ClHIJSzs/8HHLv09M3SaMCxS7ljw/IYJWzQABOQZ66x4h614ahTCL/WT7BSO51b5Z5hSx88AAAAAElFTkSuQmCC&quot;</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> s_Arrow7 = <span class="stringliteral">&quot;iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAABQSURBVDhPYxh8QNle/T8U/4MKEQdAmsz2eICx6W530gygr2aQBmSMphkZYxqErAEXxusKfAYQ7XyyNMIAsgEkaYQBkAFkaYQBsjXSGDAwAAD193z4luKPrAAAAABJRU5ErkJggg==&quot;</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> s_Arrow8 = <span class="stringliteral">&quot;iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAACYSURBVDhPxZE9DoAwCIW9iUOHegJXHRw8tIdx1egJTMSHAeMPaHSR5KVQ+KCkCRF91mdz4VDEWVzXTBgg5U1N5wahjHzXS3iFFVRxAygNVaZxJ6VHGIl2D6oUXP0ijlJuTp724FnID1Lq7uw2QM5+thoKth0N+GGyA7IA3+yM77Ag1e2zkey5gCdAg/h8csy+/89v7E+YkgUntOWeVt2SfAAAAABJRU5ErkJggg==&quot;</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> s_MirrorX = <span class="stringliteral">&quot;iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC41ZYUyZQAAAG1JREFUOE+lj9ENwCAIRB2IFdyRfRiuDSaXAF4MrR9P5eRhHGb2Gxp2oaEjIovTXSrAnPNx6hlgyCZ7o6omOdYOldGIZhAziEmOTSfigLV0RYAB9y9f/7kO8L3WUaQyhCgz0dmCL9CwCw172HgBeyG6oloC8fAAAAAASUVORK5CYII=&quot;</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> s_MirrorY = <span class="stringliteral">&quot;iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC41ZYUyZQAAAG9JREFUOE+djckNACEMAykoLdAjHbPyw1IOJ0L7mAejjFlm9hspyd77Kk+kBAjPOXcakJIh6QaKyOE0EB5dSPJAiUmOiL8PMVGxugsP/0OOib8vsY8yYwy6gRyC8CB5QIWgCMKBLgRSkikEUr5h6wOPWfMoCYILdgAAAABJRU5ErkJggg==&quot;</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">string</span> s_Rotated = <span class="stringliteral">&quot;iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC41ZYUyZQAAAHdJREFUOE+djssNwCAMQxmIFdgx+2S4Vj4YxWlQgcOT8nuG5u5C732Sd3lfLlmPMR4QhXgrTQaimUlA3EtD+CJlBuQ7aUAUMjEAv9gWCQNEPhHJUkYfZ1kEpcxDzioRzGIlr0Qwi0r+Q5rTgM+AAVcygHgt7+HtBZs/2QVWP8ahAAAAAElFTkSuQmCC&quot;</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> Texture2D[] s_Arrows;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> Texture2D[] arrows</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keyword">get</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="keywordflow">if</span> (s_Arrows == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    s_Arrows = <span class="keyword">new</span> Texture2D[10];</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    s_Arrows[0] = Base64ToTexture(s_Arrow0);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    s_Arrows[1] = Base64ToTexture(s_Arrow1);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    s_Arrows[2] = Base64ToTexture(s_Arrow2);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    s_Arrows[3] = Base64ToTexture(s_Arrow3);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    s_Arrows[5] = Base64ToTexture(s_Arrow5);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    s_Arrows[6] = Base64ToTexture(s_Arrow6);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    s_Arrows[7] = Base64ToTexture(s_Arrow7);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    s_Arrows[8] = Base64ToTexture(s_Arrow8);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                    s_Arrows[9] = Base64ToTexture(s_XIconString);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">return</span> s_Arrows;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> Texture2D[] s_AutoTransforms;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> Texture2D[] autoTransforms</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keyword">get</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keywordflow">if</span> (s_AutoTransforms == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    s_AutoTransforms = <span class="keyword">new</span> Texture2D[3];</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    s_AutoTransforms[0] = Base64ToTexture(s_Rotated);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    s_AutoTransforms[1] = Base64ToTexture(s_MirrorX);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    s_AutoTransforms[2] = Base64ToTexture(s_MirrorY);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">return</span> s_AutoTransforms;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">private</span> ReorderableList m_ReorderableList;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a> tile { <span class="keyword">get</span> { <span class="keywordflow">return</span> (target as <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>); } }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">private</span> Rect m_ListRect;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span> k_DefaultElementHeight = 48f;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span> k_PaddingBetweenRules = 13f;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span> k_SingleLineHeight = 16f;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span> k_LabelWidth = 53f;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> OnEnable()</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">if</span> (tile.m_TilingRules == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                tile.m_TilingRules = <span class="keyword">new</span> List&lt;<a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>&gt;();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            m_ReorderableList = <span class="keyword">new</span> ReorderableList(tile.m_TilingRules, typeof(<a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>), <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            m_ReorderableList.drawHeaderCallback = OnDrawHeader;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            m_ReorderableList.drawElementCallback = OnDrawElement;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            m_ReorderableList.elementHeightCallback = GetElementHeight;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            m_ReorderableList.onReorderCallback = ListUpdated;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> ListUpdated(ReorderableList list)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            SaveTile();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">float</span> GetElementHeight(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">if</span> (tile.m_TilingRules != <span class="keyword">null</span> &amp;&amp; tile.m_TilingRules.Count &gt; 0)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="keywordflow">switch</span> (tile.m_TilingRules[index].m_Output)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                    <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>.OutputSprite.Random:</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                        <span class="keywordflow">return</span> k_DefaultElementHeight + k_SingleLineHeight*(tile.m_TilingRules[index].m_Sprites.Length + 3) + k_PaddingBetweenRules;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>.OutputSprite.Animation:</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                        <span class="keywordflow">return</span> k_DefaultElementHeight + k_SingleLineHeight*(tile.m_TilingRules[index].m_Sprites.Length + 2) + k_PaddingBetweenRules;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">return</span> k_DefaultElementHeight + k_PaddingBetweenRules;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> OnDrawElement(Rect rect, <span class="keywordtype">int</span> index, <span class="keywordtype">bool</span> isactive, <span class="keywordtype">bool</span> isfocused)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a> rule = tile.m_TilingRules[index];</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordtype">float</span> yPos = rect.yMin + 2f;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordtype">float</span> height = rect.height - k_PaddingBetweenRules;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordtype">float</span> matrixWidth = k_DefaultElementHeight;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            Rect inspectorRect = <span class="keyword">new</span> Rect(rect.xMin, yPos, rect.width - matrixWidth * 2f - 20f, height);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            Rect matrixRect = <span class="keyword">new</span> Rect(rect.xMax - matrixWidth * 2f - 10f, yPos, matrixWidth, k_DefaultElementHeight);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            Rect spriteRect = <span class="keyword">new</span> Rect(rect.xMax - matrixWidth - 5f, yPos, matrixWidth, k_DefaultElementHeight);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            RuleInspectorOnGUI(inspectorRect, rule);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            RuleMatrixOnGUI(matrixRect, rule);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            SpriteOnGUI(spriteRect, rule);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                SaveTile();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> SaveTile()</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            EditorUtility.SetDirty(target);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            SceneView.RepaintAll();</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> OnDrawHeader(Rect rect)</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            GUI.Label(rect, <span class="stringliteral">&quot;Tiling Rules&quot;</span>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> OnInspectorGUI()</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            tile.m_DefaultSprite = EditorGUILayout.ObjectField(<span class="stringliteral">&quot;Default Sprite&quot;</span>, tile.m_DefaultSprite, typeof(Sprite), <span class="keyword">false</span>) as Sprite;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            tile.m_DefaultColliderType = (Tile.ColliderType)EditorGUILayout.EnumPopup(<span class="stringliteral">&quot;Default Collider&quot;</span>, tile.m_DefaultColliderType);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            EditorGUILayout.Space();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordflow">if</span> (m_ReorderableList != <span class="keyword">null</span> &amp;&amp; tile.m_TilingRules != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                m_ReorderableList.DoLayoutList();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> RuleMatrixOnGUI(Rect rect, <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a> tilingRule)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            Handles.color = EditorGUIUtility.isProSkin ? <span class="keyword">new</span> Color(1f, 1f, 1f, 0.2f) : new Color(0f, 0f, 0f, 0.2f);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordtype">int</span> index = 0;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordtype">float</span> w = rect.width / 3f;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordtype">float</span> h = rect.height / 3f;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = 0; y &lt;= 3; y++)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <span class="keywordtype">float</span> top = rect.yMin + y * h;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                Handles.DrawLine(<span class="keyword">new</span> Vector3(rect.xMin, top), <span class="keyword">new</span> Vector3(rect.xMax, top));</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt;= 3; x++)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                <span class="keywordtype">float</span> left = rect.xMin + x * w;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                Handles.DrawLine(<span class="keyword">new</span> Vector3(left, rect.yMin), <span class="keyword">new</span> Vector3(left, rect.yMax));</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            Handles.color = Color.white;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = 0; y &lt;= 2; y++)</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt;= 2; x++)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                    Rect r = <span class="keyword">new</span> Rect(rect.xMin + x * w, rect.yMin + y * h, w - 1, h - 1);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                    <span class="keywordflow">if</span> (x != 1 || y != 1)</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                    {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                        <span class="keywordflow">switch</span> (tilingRule.m_Neighbors[index])</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                        {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                            <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>.Neighbor.This:</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                                GUI.DrawTexture(r, arrows[y*3 + x]);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                            <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>.Neighbor.NotThis:</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                                GUI.DrawTexture(r, arrows[9]);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                        }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                        <span class="keywordflow">if</span> (Event.current.type == EventType.MouseDown &amp;&amp; r.Contains(Event.current.mousePosition))</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                        {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                            tilingRule.m_Neighbors[index] = (<a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>.Neighbor) (((<span class="keywordtype">int</span>)tilingRule.m_Neighbors[index] + 1) % 3);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                            GUI.changed = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                            Event.current.Use();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                        }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                        index++;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                    }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                    {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                        <span class="keywordflow">switch</span> (tilingRule.m_RuleTransform)</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                        {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                            <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>.Transform.Rotated:</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                                GUI.DrawTexture(r, autoTransforms[0]);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                            <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>.Transform.MirrorX:</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                                GUI.DrawTexture(r, autoTransforms[1]);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                            <span class="keywordflow">case</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>.Transform.MirrorY:</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                                GUI.DrawTexture(r, autoTransforms[2]);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                        }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                        <span class="keywordflow">if</span> (Event.current.type == EventType.MouseDown &amp;&amp; r.Contains(Event.current.mousePosition))</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                        {</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                            tilingRule.m_RuleTransform = (<a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>.Transform)(((<span class="keywordtype">int</span>)tilingRule.m_RuleTransform + 1) % 4);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                            GUI.changed = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                            Event.current.Use();</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                        }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                    }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> OnSelect(<span class="keywordtype">object</span> userdata)</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        {</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            MenuItemData data = (MenuItemData) userdata;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            data.m_Rule.m_RuleTransform = data.m_NewValue;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keyword">private</span> <span class="keyword">class </span>MenuItemData</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a> m_Rule;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="keyword">public</span> <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>.Transform m_NewValue;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="keyword">public</span> MenuItemData(<a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a> mRule, <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>.Transform mNewValue)</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                this.m_Rule = mRule;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                this.m_NewValue = mNewValue;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> SpriteOnGUI(Rect rect, <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a> tilingRule)</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        {</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            tilingRule.m_Sprites[0] = EditorGUI.ObjectField(<span class="keyword">new</span> Rect(rect.xMax - rect.height, rect.yMin, rect.height, rect.height), tilingRule.m_Sprites[0], typeof (Sprite), <span class="keyword">false</span>) as Sprite;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> RuleInspectorOnGUI(Rect rect, <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a> tilingRule)</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <span class="keywordtype">float</span> y = rect.yMin;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            GUI.Label(<span class="keyword">new</span> Rect(rect.xMin, y, k_LabelWidth, k_SingleLineHeight), <span class="stringliteral">&quot;Rule&quot;</span>);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            tilingRule.m_RuleTransform = (<a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>.Transform)EditorGUI.EnumPopup(<span class="keyword">new</span> Rect(rect.xMin + k_LabelWidth, y, rect.width - k_LabelWidth, k_SingleLineHeight), tilingRule.m_RuleTransform);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            y += k_SingleLineHeight;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            GUI.Label(<span class="keyword">new</span> Rect(rect.xMin, y, k_LabelWidth, k_SingleLineHeight), <span class="stringliteral">&quot;Collider&quot;</span>);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            tilingRule.m_ColliderType = (Tile.ColliderType)EditorGUI.EnumPopup(<span class="keyword">new</span> Rect(rect.xMin + k_LabelWidth, y, rect.width - k_LabelWidth, k_SingleLineHeight), tilingRule.m_ColliderType);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            y += k_SingleLineHeight;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            GUI.Label(<span class="keyword">new</span> Rect(rect.xMin, y, k_LabelWidth, k_SingleLineHeight), <span class="stringliteral">&quot;Output&quot;</span>);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            tilingRule.m_Output = (<a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>.OutputSprite)EditorGUI.EnumPopup(<span class="keyword">new</span> Rect(rect.xMin + k_LabelWidth, y, rect.width - k_LabelWidth, k_SingleLineHeight), tilingRule.m_Output);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            y += k_SingleLineHeight;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <span class="keywordflow">if</span> (tilingRule.m_Output == <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>.OutputSprite.Animation)</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                GUI.Label(<span class="keyword">new</span> Rect(rect.xMin, y, k_LabelWidth, k_SingleLineHeight), <span class="stringliteral">&quot;Speed&quot;</span>);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                tilingRule.m_AnimationSpeed = EditorGUI.FloatField(<span class="keyword">new</span> Rect(rect.xMin + k_LabelWidth, y, rect.width - k_LabelWidth, k_SingleLineHeight), tilingRule.m_AnimationSpeed);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                y += k_SingleLineHeight;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            }</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            <span class="keywordflow">if</span> (tilingRule.m_Output == <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>.OutputSprite.Random)</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                GUI.Label(<span class="keyword">new</span> Rect(rect.xMin, y, k_LabelWidth, k_SingleLineHeight), <span class="stringliteral">&quot;Noise&quot;</span>);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                tilingRule.m_PerlinScale = EditorGUI.Slider(<span class="keyword">new</span> Rect(rect.xMin + k_LabelWidth, y, rect.width - k_LabelWidth, k_SingleLineHeight), tilingRule.m_PerlinScale, 0.001f, 0.999f);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                y += k_SingleLineHeight;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                GUI.Label(<span class="keyword">new</span> Rect(rect.xMin, y, k_LabelWidth, k_SingleLineHeight), <span class="stringliteral">&quot;Shuffle&quot;</span>);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                tilingRule.m_RandomTransform = (<a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>.Transform)EditorGUI.EnumPopup(<span class="keyword">new</span> Rect(rect.xMin + k_LabelWidth, y, rect.width - k_LabelWidth, k_SingleLineHeight), tilingRule.m_RandomTransform);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                y += k_SingleLineHeight;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <span class="keywordflow">if</span> (tilingRule.m_Output != <a class="code" href="class_unity_engine_1_1_rule_tile.html">RuleTile</a>.<a class="code" href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">TilingRule</a>.OutputSprite.Single)</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            {</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                GUI.Label(<span class="keyword">new</span> Rect(rect.xMin, y, k_LabelWidth, k_SingleLineHeight), <span class="stringliteral">&quot;Size&quot;</span>);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                EditorGUI.BeginChangeCheck();</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                <span class="keywordtype">int</span> newLength = EditorGUI.IntField(<span class="keyword">new</span> Rect(rect.xMin + k_LabelWidth, y, rect.width - k_LabelWidth, k_SingleLineHeight), tilingRule.m_Sprites.Length);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                <span class="keywordflow">if</span> (EditorGUI.EndChangeCheck())</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                    Array.Resize(ref tilingRule.m_Sprites, Math.Max(newLength, 1));</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                y += k_SingleLineHeight;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; tilingRule.m_Sprites.Length; i++)</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                    tilingRule.m_Sprites[i] = EditorGUI.ObjectField(<span class="keyword">new</span> Rect(rect.xMin + k_LabelWidth, y, rect.width - k_LabelWidth, k_SingleLineHeight), tilingRule.m_Sprites[i], typeof(Sprite), <span class="keyword">false</span>) as Sprite;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                    y += k_SingleLineHeight;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> Texture2D RenderStaticPreview(<span class="keywordtype">string</span> assetPath, Object[] subAssets, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height)</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            <span class="keywordflow">if</span> (tile.m_DefaultSprite != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                Type t = GetType(<span class="stringliteral">&quot;UnityEditor.SpriteUtility&quot;</span>);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                <span class="keywordflow">if</span> (t != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                {</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                    MethodInfo method = t.GetMethod(<span class="stringliteral">&quot;RenderStaticPreview&quot;</span>, <span class="keyword">new</span> Type[] {typeof (Sprite), typeof (Color), typeof (<span class="keywordtype">int</span>), typeof (<span class="keywordtype">int</span>)});</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                    <span class="keywordflow">if</span> (method != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                    {</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                        <span class="keywordtype">object</span> ret = method.Invoke(<span class="stringliteral">&quot;RenderStaticPreview&quot;</span>, <span class="keyword">new</span> <span class="keywordtype">object</span>[] {tile.m_DefaultSprite, Color.white, width, height});</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                        <span class="keywordflow">if</span> (ret is Texture2D)</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                            <span class="keywordflow">return</span> ret as Texture2D;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                    }</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            <span class="keywordflow">return</span> base.RenderStaticPreview(assetPath, subAssets, width, height);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> Type GetType(<span class="keywordtype">string</span> TypeName)</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        {</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            var type = Type.GetType(TypeName);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            <span class="keywordflow">if</span> (type != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                <span class="keywordflow">return</span> type;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keywordflow">if</span> (TypeName.Contains(<span class="stringliteral">&quot;.&quot;</span>))</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                var assemblyName = TypeName.Substring(0, TypeName.IndexOf(<span class="charliteral">&#39;.&#39;</span>));</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                var assembly = Assembly.Load(assemblyName);</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                <span class="keywordflow">if</span> (assembly == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                type = assembly.GetType(TypeName);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                <span class="keywordflow">if</span> (type != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                    <span class="keywordflow">return</span> type;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            }</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            var currentAssembly = Assembly.GetExecutingAssembly();</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            var referencedAssemblies = currentAssembly.GetReferencedAssemblies();</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <span class="keywordflow">foreach</span> (var assemblyName <span class="keywordflow">in</span> referencedAssemblies)</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                var assembly = Assembly.Load(assemblyName);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                <span class="keywordflow">if</span> (assembly != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                {</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                    type = assembly.GetType(TypeName);</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                    <span class="keywordflow">if</span> (type != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                        <span class="keywordflow">return</span> type;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                }</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            }</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> Texture2D Base64ToTexture(<span class="keywordtype">string</span> base64)</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        {</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            Texture2D t = <span class="keyword">new</span> Texture2D(1, 1);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            t.hideFlags = HideFlags.HideAndDontSave;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            t.LoadImage(<a class="code" href="namespace_system.html">System</a>.Convert.FromBase64String(base64));</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            <span class="keywordflow">return</span> t;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        }</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    }</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_1_1_tiling_rule_html"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile_1_1_tiling_rule.html">UnityEngine.RuleTile.TilingRule</a></div><div class="ttdoc">The data structure holding the Rule information for matching Rule Tiles with its neighbors.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8pixel-perfect_0d5_80_81_2_samples~_2_scenes_01and_01_extras_2_scenes_2_rule_01_tiles_2_scripts_2_rule_tile_8cs_source.html#l00015">RuleTile.cs:15</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_rule_tile_html"><div class="ttname"><a href="class_unity_engine_1_1_rule_tile.html">UnityEngine.RuleTile</a></div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8pixel-perfect_0d5_80_81_2_samples~_2_scenes_01and_01_extras_2_scenes_2_rule_01_tiles_2_scripts_2_rule_tile_8cs_source.html#l00009">RuleTile.cs:9</a></div></div>
+<div class="ttc" id="anamespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8animation_0d8_80_81_2_editor_2_analytics_8cs_source.html#l00009">Analytics.cs:9</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_tilemaps_html"><div class="ttname"><a href="namespace_unity_engine_1_1_tilemaps.html">UnityEngine.Tilemaps</a></div><div class="ttdef"><b>Definition:</b> <a href="_grid_information_8cs_source.html#l00005">GridInformation.cs:5</a></div></div>
+<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition:</b> <a href="_preserve_dependency_attribute_8cs_source.html#l00030">PreserveDependencyAttribute.cs:30</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Framework/Control/Cache.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_591242bddbf3a77fcfe0ceaa9dcf5291.html">com.unity.visualscripting@1.7.8</a></li><li class="navelem"><a class="el" href="dir_cef842de0b2ac739f4f8d48bdaa64a67.html">Runtime</a></li><li class="navelem"><a class="el" href="dir_7e0e0525a87550c6cb20b2a91667c5a3.html">VisualScripting.Flow</a></li><li class="navelem"><a class="el" href="dir_da42d6ec92050d7bb2c8b03524c25fd3.html">Framework</a></li><li class="navelem"><a class="el" href="dir_21fb8b84df5c9757b7790635bb92236d.html">Control</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Cache.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_1_1_visual_scripting.html">Unity.VisualScripting</a></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    [UnitCategory(<span class="stringliteral">&quot;Control&quot;</span>)]</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    [UnitOrder(15)]</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_1_1_visual_scripting_1_1_cache.html">    9</a></span>&#160;    <span class="keyword">public</span> sealed <span class="keyword">class </span><a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html">Cache</a> : <a class="code" href="class_unity_1_1_visual_scripting_1_1_unit.html">Unit</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        [DoNotSerialize]</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        [PortLabelHidden]</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_unity_1_1_visual_scripting_1_1_cache.html#a45c9c5118b2bd4652b77d859e4e9b7e5">   17</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_1_1_visual_scripting_1_1_control_input.html">ControlInput</a> <a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#a45c9c5118b2bd4652b77d859e4e9b7e5">enter</a> { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        [DoNotSerialize]</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        [PortLabelHidden]</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_unity_1_1_visual_scripting_1_1_cache.html#aff769758b420b5f418d0a1d6bd48e076">   24</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_1_1_visual_scripting_1_1_value_input.html">ValueInput</a> <a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#aff769758b420b5f418d0a1d6bd48e076">input</a> { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        [DoNotSerialize]</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        [PortLabel(<span class="stringliteral">&quot;Cached&quot;</span>)]</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        [PortLabelHidden]</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_unity_1_1_visual_scripting_1_1_cache.html#a6a77865a60cfb09125673d77779de5e6">   32</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_1_1_visual_scripting_1_1_value_output.html">ValueOutput</a> <a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#a6a77865a60cfb09125673d77779de5e6">output</a> { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        [DoNotSerialize]</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        [PortLabelHidden]</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_unity_1_1_visual_scripting_1_1_cache.html#adb5fe7e540bc3f86a3595bf87525db16">   39</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_unity_1_1_visual_scripting_1_1_control_output.html">ControlOutput</a> <a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#adb5fe7e540bc3f86a3595bf87525db16">exit</a> { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Definition()</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#a45c9c5118b2bd4652b77d859e4e9b7e5">enter</a> = <a class="code" href="class_unity_1_1_visual_scripting_1_1_control_input.html">ControlInput</a>(nameof(<a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#a45c9c5118b2bd4652b77d859e4e9b7e5">enter</a>), Store);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#aff769758b420b5f418d0a1d6bd48e076">input</a> = <a class="code" href="class_unity_1_1_visual_scripting_1_1_value_input.html">ValueInput&lt;object&gt;</a>(nameof(<a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#aff769758b420b5f418d0a1d6bd48e076">input</a>));</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#a6a77865a60cfb09125673d77779de5e6">output</a> = <a class="code" href="class_unity_1_1_visual_scripting_1_1_value_output.html">ValueOutput&lt;object&gt;</a>(nameof(<a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#a6a77865a60cfb09125673d77779de5e6">output</a>));</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#adb5fe7e540bc3f86a3595bf87525db16">exit</a> = <a class="code" href="class_unity_1_1_visual_scripting_1_1_control_output.html">ControlOutput</a>(nameof(<a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#adb5fe7e540bc3f86a3595bf87525db16">exit</a>));</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="class_unity_1_1_visual_scripting_1_1_unit.html#ab22255934a7d1120fd16b634a9b3209d">Requirement</a>(<a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#aff769758b420b5f418d0a1d6bd48e076">input</a>, <a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#a45c9c5118b2bd4652b77d859e4e9b7e5">enter</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="class_unity_1_1_visual_scripting_1_1_unit.html#ac4eeef1b1ebac126bd1099f76d6cd9c0">Assignment</a>(<a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#a45c9c5118b2bd4652b77d859e4e9b7e5">enter</a>, <a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#a6a77865a60cfb09125673d77779de5e6">output</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="class_unity_1_1_visual_scripting_1_1_unit.html#a0bff40bcd694b250c727cc66b2353984">Succession</a>(<a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#a45c9c5118b2bd4652b77d859e4e9b7e5">enter</a>, <a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#adb5fe7e540bc3f86a3595bf87525db16">exit</a>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">private</span> ControlOutput Store(Flow flow)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            flow.SetValue(<a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#a6a77865a60cfb09125673d77779de5e6">output</a>, flow.GetValue(<a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#aff769758b420b5f418d0a1d6bd48e076">input</a>));</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_unity_1_1_visual_scripting_1_1_cache.html#adb5fe7e540bc3f86a3595bf87525db16">exit</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_control_input_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_control_input.html">Unity.VisualScripting.ControlInput</a></div><div class="ttdef"><b>Definition:</b> <a href="_control_input_8cs_source.html#l00008">ControlInput.cs:8</a></div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_control_output_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_control_output.html">Unity.VisualScripting.ControlOutput</a></div><div class="ttdef"><b>Definition:</b> <a href="_control_output_8cs_source.html#l00007">ControlOutput.cs:7</a></div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_cache_html_aff769758b420b5f418d0a1d6bd48e076"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_cache.html#aff769758b420b5f418d0a1d6bd48e076">Unity.VisualScripting.Cache.input</a></div><div class="ttdeci">ValueInput input</div><div class="ttdoc">The value to cache when the node is entered.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_8visualscripting_0d1_87_88_2_runtime_2_visual_scripting_8_flow_2_framework_2_control_2_cache_8cs_source.html#l00024">Cache.cs:24</a></div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_value_output_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_value_output.html">Unity.VisualScripting.ValueOutput</a></div><div class="ttdef"><b>Definition:</b> <a href="_value_output_8cs_source.html#l00007">ValueOutput.cs:7</a></div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_cache_html_a45c9c5118b2bd4652b77d859e4e9b7e5"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_cache.html#a45c9c5118b2bd4652b77d859e4e9b7e5">Unity.VisualScripting.Cache.enter</a></div><div class="ttdeci">ControlInput enter</div><div class="ttdoc">The moment at which to cache the value. The output value will only get updated when this gets trigger...</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_8visualscripting_0d1_87_88_2_runtime_2_visual_scripting_8_flow_2_framework_2_control_2_cache_8cs_source.html#l00017">Cache.cs:17</a></div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_cache_html_a6a77865a60cfb09125673d77779de5e6"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_cache.html#a6a77865a60cfb09125673d77779de5e6">Unity.VisualScripting.Cache.output</a></div><div class="ttdeci">ValueOutput output</div><div class="ttdoc">The cached value, as it was the last time this node was entered.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_8visualscripting_0d1_87_88_2_runtime_2_visual_scripting_8_flow_2_framework_2_control_2_cache_8cs_source.html#l00032">Cache.cs:32</a></div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_unit_html_ac4eeef1b1ebac126bd1099f76d6cd9c0"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_unit.html#ac4eeef1b1ebac126bd1099f76d6cd9c0">Unity.VisualScripting.Unit.Assignment</a></div><div class="ttdeci">void Assignment(ControlInput source, ValueOutput destination)</div><div class="ttdoc">Triggering the source may assign the destination value on the flow.</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00380">Unit.cs:380</a></div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_unit_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_unit.html">Unity.VisualScripting.Unit</a></div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00010">Unit.cs:10</a></div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_cache_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_cache.html">Unity.VisualScripting.Cache</a></div><div class="ttdoc">Caches the input so that all nodes connected to the output retrieve the value only once.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_8visualscripting_0d1_87_88_2_runtime_2_visual_scripting_8_flow_2_framework_2_control_2_cache_8cs_source.html#l00009">Cache.cs:9</a></div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_value_input_html"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_value_input.html">Unity.VisualScripting.ValueInput</a></div><div class="ttdef"><b>Definition:</b> <a href="_value_input_8cs_source.html#l00009">ValueInput.cs:9</a></div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_cache_html_adb5fe7e540bc3f86a3595bf87525db16"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_cache.html#adb5fe7e540bc3f86a3595bf87525db16">Unity.VisualScripting.Cache.exit</a></div><div class="ttdeci">ControlOutput exit</div><div class="ttdoc">The action to execute once the value has been cached.</div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_8visualscripting_0d1_87_88_2_runtime_2_visual_scripting_8_flow_2_framework_2_control_2_cache_8cs_source.html#l00039">Cache.cs:39</a></div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_unit_html_ab22255934a7d1120fd16b634a9b3209d"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_unit.html#ab22255934a7d1120fd16b634a9b3209d">Unity.VisualScripting.Unit.Requirement</a></div><div class="ttdeci">void Requirement(ValueInput source, ControlInput destination)</div><div class="ttdoc">Triggering the destination may fetch the source value.</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00364">Unit.cs:364</a></div></div>
+<div class="ttc" id="aclass_unity_1_1_visual_scripting_1_1_unit_html_a0bff40bcd694b250c727cc66b2353984"><div class="ttname"><a href="class_unity_1_1_visual_scripting_1_1_unit.html#a0bff40bcd694b250c727cc66b2353984">Unity.VisualScripting.Unit.Succession</a></div><div class="ttdeci">void Succession(ControlInput source, ControlOutput destination)</div><div class="ttdoc">Triggering the source may trigger the destination.</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cs_source.html#l00388">Unit.cs:388</a></div></div>
+<div class="ttc" id="anamespace_unity_1_1_visual_scripting_html"><div class="ttname"><a href="namespace_unity_1_1_visual_scripting.html">Unity.VisualScripting</a></div><div class="ttdef"><b>Definition:</b> <a href="_editor_preferences_provider_8cs_source.html#l00003">EditorPreferencesProvider.cs:3</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

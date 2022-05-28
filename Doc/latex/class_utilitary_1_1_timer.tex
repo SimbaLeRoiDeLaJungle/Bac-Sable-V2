@@ -1,0 +1,129 @@
+\hypertarget{class_utilitary_1_1_timer}{}\doxysection{Référence de la classe Utilitary.\+Timer}
+\label{class_utilitary_1_1_timer}\index{Utilitary.Timer@{Utilitary.Timer}}
+
+
+Petit miniteur  
+
+
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_utilitary_1_1_timer_ac0977c25417c33e8f5af88ce03e2ac9b}{Timer}} (float \mbox{\hyperlink{class_utilitary_1_1_timer_a99a5e0472cbe4048c0ed5f55fa78143c}{max\+Time}}, \mbox{\hyperlink{_timer_mode_8cs_aed9a35f11d8cfb1d9946754d01e46ee5}{Timer\+Mode}} \mbox{\hyperlink{class_utilitary_1_1_timer_a43210dad9bd92ddd2e203d0b6e143cdf}{timer\+Mode}}=\mbox{\hyperlink{_timer_mode_8cs_aed9a35f11d8cfb1d9946754d01e46ee5ab5859d8721cfdc0312b2838b9c985bc1}{Timer\+Mode.\+R\+E\+S\+ET}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_utilitary_1_1_timer_a7be1aa37aaa134f804f2c5f2372c52db}{Update}} (float dt)
+\begin{DoxyCompactList}\small\item\em Ajoute dt à time, revoi vrai si time $>$ max\+Time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_utilitary_1_1_timer_a678679e6ac84e2ef321931bf6b460b40}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Met time à 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Propriétés}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_utilitary_1_1_timer_a199f6e3ba38d5f61fe7b3a76f8248e7c}{time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\item 
+float \mbox{\hyperlink{class_utilitary_1_1_timer_a99a5e0472cbe4048c0ed5f55fa78143c}{max\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_timer_mode_8cs_aed9a35f11d8cfb1d9946754d01e46ee5}{Timer\+Mode}} \mbox{\hyperlink{class_utilitary_1_1_timer_a43210dad9bd92ddd2e203d0b6e143cdf}{timer\+Mode}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Petit miniteur 
+
+Timer\+Mode \+: ~\newline
+ L\+O\+CK \+: le temps reste bloqué à max\+Time ~\newline
+ R\+E\+S\+ET \+: le temps se réintialise automatiquement ~\newline
+ I\+G\+N\+O\+RE \+: le temps continue de croitre 
+
+Définition à la ligne 12 du fichier Timer.\+cs.
+
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_utilitary_1_1_timer_ac0977c25417c33e8f5af88ce03e2ac9b}\label{class_utilitary_1_1_timer_ac0977c25417c33e8f5af88ce03e2ac9b}} 
+\index{Utilitary.Timer@{Utilitary.Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!Utilitary.Timer@{Utilitary.Timer}}
+\doxysubsubsection{\texorpdfstring{Timer()}{Timer()}}
+{\footnotesize\ttfamily Utilitary.\+Timer.\+Timer (\begin{DoxyParamCaption}\item[{float}]{max\+Time,  }\item[{\mbox{\hyperlink{_timer_mode_8cs_aed9a35f11d8cfb1d9946754d01e46ee5}{Timer\+Mode}}}]{timer\+Mode = {\ttfamily \mbox{\hyperlink{_timer_mode_8cs_aed9a35f11d8cfb1d9946754d01e46ee5ab5859d8721cfdc0312b2838b9c985bc1}{Timer\+Mode.\+R\+E\+S\+ET}}} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+
+Définition à la ligne 24 du fichier Timer.\+cs.
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_utilitary_1_1_timer_a678679e6ac84e2ef321931bf6b460b40}\label{class_utilitary_1_1_timer_a678679e6ac84e2ef321931bf6b460b40}} 
+\index{Utilitary.Timer@{Utilitary.Timer}!Reset@{Reset}}
+\index{Reset@{Reset}!Utilitary.Timer@{Utilitary.Timer}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Utilitary.\+Timer.\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Met time à 0. 
+
+
+
+Définition à la ligne 55 du fichier Timer.\+cs.
+
+\mbox{\Hypertarget{class_utilitary_1_1_timer_a7be1aa37aaa134f804f2c5f2372c52db}\label{class_utilitary_1_1_timer_a7be1aa37aaa134f804f2c5f2372c52db}} 
+\index{Utilitary.Timer@{Utilitary.Timer}!Update@{Update}}
+\index{Update@{Update}!Utilitary.Timer@{Utilitary.Timer}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily bool Utilitary.\+Timer.\+Update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})}
+
+
+
+Ajoute dt à time, revoi vrai si time $>$ max\+Time. 
+
+
+
+Définition à la ligne 36 du fichier Timer.\+cs.
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_utilitary_1_1_timer_a43210dad9bd92ddd2e203d0b6e143cdf}\label{class_utilitary_1_1_timer_a43210dad9bd92ddd2e203d0b6e143cdf}} 
+\index{Utilitary.Timer@{Utilitary.Timer}!timerMode@{timerMode}}
+\index{timerMode@{timerMode}!Utilitary.Timer@{Utilitary.Timer}}
+\doxysubsubsection{\texorpdfstring{timerMode}{timerMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_timer_mode_8cs_aed9a35f11d8cfb1d9946754d01e46ee5}{Timer\+Mode}} Utilitary.\+Timer.\+timer\+Mode\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne 14 du fichier Timer.\+cs.
+
+
+
+\doxysubsection{Documentation des propriétés}
+\mbox{\Hypertarget{class_utilitary_1_1_timer_a99a5e0472cbe4048c0ed5f55fa78143c}\label{class_utilitary_1_1_timer_a99a5e0472cbe4048c0ed5f55fa78143c}} 
+\index{Utilitary.Timer@{Utilitary.Timer}!maxTime@{maxTime}}
+\index{maxTime@{maxTime}!Utilitary.Timer@{Utilitary.Timer}}
+\doxysubsubsection{\texorpdfstring{maxTime}{maxTime}}
+{\footnotesize\ttfamily float Utilitary.\+Timer.\+max\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+temps limite. 
+
+Définition à la ligne 16 du fichier Timer.\+cs.
+
+\mbox{\Hypertarget{class_utilitary_1_1_timer_a199f6e3ba38d5f61fe7b3a76f8248e7c}\label{class_utilitary_1_1_timer_a199f6e3ba38d5f61fe7b3a76f8248e7c}} 
+\index{Utilitary.Timer@{Utilitary.Timer}!time@{time}}
+\index{time@{time}!Utilitary.Timer@{Utilitary.Timer}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily float Utilitary.\+Timer.\+time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+temps écouler. 
+
+Définition à la ligne 15 du fichier Timer.\+cs.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+/home/simba/\+Unity\+Project/\+Bac à Sable/\+Assets/\+Simba/\+Scirpts/\+Utilitary/\mbox{\hyperlink{_timer_8cs}{Timer.\+cs}}\end{DoxyCompactItemize}

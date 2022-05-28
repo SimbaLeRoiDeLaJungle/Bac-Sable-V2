@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.animation@8.0.1/IK/Runtime/IKUtility.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_6cbc2cf28c1ecf4e247ef2386a6cccaf.html">com.unity.2d.animation@8.0.1</a></li><li class="navelem"><a class="el" href="dir_9fb99b0510a70b98894b51983ab6b550.html">IK</a></li><li class="navelem"><a class="el" href="dir_b288542e7ff7e3d9f4faa7726a8e758b.html">Runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">IKUtility.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Scripting.APIUpdating;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine_1_1_u2_d_1_1_i_k.html">UnityEngine.U2D.IK</a></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    [MovedFrom(<span class="stringliteral">&quot;UnityEngine.Experimental.U2D.IK&quot;</span>)]</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility.html">    9</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility.html">IKUtility</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility.html#acc84a24bc7efd5d98d6e9f9ada22b329">   17</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility.html#acc84a24bc7efd5d98d6e9f9ada22b329">IsDescendentOf</a>(Transform transform, Transform ancestor)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            Debug.Assert(transform != <span class="keyword">null</span>, <span class="stringliteral">&quot;Transform is null&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            Transform currentParent = transform.parent;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">while</span> (currentParent)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <span class="keywordflow">if</span> (currentParent == ancestor)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                currentParent = currentParent.parent;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility.html#aeb21bcbd2bd8fa757726c8604f5d2c4f">   39</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility.html#aeb21bcbd2bd8fa757726c8604f5d2c4f">GetAncestorCount</a>(Transform transform)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            Debug.Assert(transform != <span class="keyword">null</span>, <span class="stringliteral">&quot;Transform is null&quot;</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordtype">int</span> ancestorCount = 0;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">while</span> (transform.parent)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                ++ancestorCount;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                transform = transform.parent;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">return</span> ancestorCount;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility.html#afb4f357011e95fbb71f4afdb1773a253">   60</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility.html#afb4f357011e95fbb71f4afdb1773a253">GetMaxChainCount</a>(<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html">IKChain2D</a> chain)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordtype">int</span> maxChainCount = 0;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">if</span> (chain.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html#a2f94a0b5f662612e9e729d3a22602a78">effector</a>)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                maxChainCount = <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility.html#aeb21bcbd2bd8fa757726c8604f5d2c4f">GetAncestorCount</a>(chain.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html#a2f94a0b5f662612e9e729d3a22602a78">effector</a>) + 1;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">return</span> maxChainCount;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility_html"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility.html">UnityEngine.U2D.IK.IKUtility</a></div><div class="ttdoc">General utilities for 2D IK.</div><div class="ttdef"><b>Definition:</b> <a href="_i_k_utility_8cs_source.html#l00009">IKUtility.cs:9</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_1_1_i_k_html"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d_1_1_i_k.html">UnityEngine.U2D.IK</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d_html_a2f94a0b5f662612e9e729d3a22602a78"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html#a2f94a0b5f662612e9e729d3a22602a78">UnityEngine.U2D.IK.IKChain2D.effector</a></div><div class="ttdeci">Transform effector</div><div class="ttdoc">Get Set the Unity Transform used as IK Effector.</div><div class="ttdef"><b>Definition:</b> <a href="_i_k_chain2_d_8cs_source.html#l00037">IKChain2D.cs:37</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d_html"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_chain2_d.html">UnityEngine.U2D.IK.IKChain2D</a></div><div class="ttdoc">Class for storing data for a 2D IK Chain.</div><div class="ttdef"><b>Definition:</b> <a href="_i_k_chain2_d_8cs_source.html#l00012">IKChain2D.cs:12</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility_html_afb4f357011e95fbb71f4afdb1773a253"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility.html#afb4f357011e95fbb71f4afdb1773a253">UnityEngine.U2D.IK.IKUtility.GetMaxChainCount</a></div><div class="ttdeci">static int GetMaxChainCount(IKChain2D chain)</div><div class="ttdoc">Gets the maximum chain count for a IKChain2D.</div><div class="ttdef"><b>Definition:</b> <a href="_i_k_utility_8cs_source.html#l00060">IKUtility.cs:60</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility_html_aeb21bcbd2bd8fa757726c8604f5d2c4f"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility.html#aeb21bcbd2bd8fa757726c8604f5d2c4f">UnityEngine.U2D.IK.IKUtility.GetAncestorCount</a></div><div class="ttdeci">static int GetAncestorCount(Transform transform)</div><div class="ttdoc">Gets the hierarchy depth of a Unity Transform.</div><div class="ttdef"><b>Definition:</b> <a href="_i_k_utility_8cs_source.html#l00039">IKUtility.cs:39</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility_html_acc84a24bc7efd5d98d6e9f9ada22b329"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility.html#acc84a24bc7efd5d98d6e9f9ada22b329">UnityEngine.U2D.IK.IKUtility.IsDescendentOf</a></div><div class="ttdeci">static bool IsDescendentOf(Transform transform, Transform ancestor)</div><div class="ttdoc">Check if a Unity Transform is a descendent of another Unity Transform.</div><div class="ttdef"><b>Definition:</b> <a href="_i_k_utility_8cs_source.html#l00017">IKUtility.cs:17</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

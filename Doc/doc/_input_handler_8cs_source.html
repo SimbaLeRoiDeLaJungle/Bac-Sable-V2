@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Assets/Simba/Scirpts/Static Manager/InputHandler.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_158af4e89fe28c6233fdc636e282763b.html">Simba</a></li><li class="navelem"><a class="el" href="dir_7fd08fc4bf1ab871205d67b083a39232.html">Scirpts</a></li><li class="navelem"><a class="el" href="dir_e092b1d85e7bef095637f5180698029d.html">Static Manager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">InputHandler.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_input_handler_8cs.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System.Collections;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> System;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_static_manager.html">StaticManager</a>{</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_static_manager_1_1_input_handler.html">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_static_manager_1_1_input_handler.html">InputHandler</a> : MonoBehaviour</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_static_manager_1_1_input_handler.html#ac7e4e704b93ebda489e6e76f896d2a14">   15</a></span>&#160;        <span class="keyword">static</span> Dictionary&lt;KeyCode, bool[]&gt; <a class="code" href="class_static_manager_1_1_input_handler.html#ac7e4e704b93ebda489e6e76f896d2a14">inputs</a>; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_static_manager_1_1_input_handler.html#a90f5731e52be3eba818d43d650852e1f">   17</a></span>&#160;        <span class="keyword">static</span> Dictionary&lt;GameAction, KeyCode&gt; <a class="code" href="class_static_manager_1_1_input_handler.html#a90f5731e52be3eba818d43d650852e1f">personalKey</a>; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_static_manager_1_1_input_handler.html#a2acc92d2db7b9a040da42d53c6f7a2df">   25</a></span>&#160;<span class="comment"></span>        <span class="keywordtype">void</span> <a class="code" href="class_static_manager_1_1_input_handler.html#a2acc92d2db7b9a040da42d53c6f7a2df">Start</a>()</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <a class="code" href="class_static_manager_1_1_input_handler.html#ac7e4e704b93ebda489e6e76f896d2a14">inputs</a> = <span class="keyword">new</span> Dictionary&lt;KeyCode, bool[]&gt;();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordtype">bool</span>[] b = <span class="keyword">new</span> <span class="keywordtype">bool</span>[2];</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            b[0] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            b[1] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="class_static_manager_1_1_input_handler.html#ac7e4e704b93ebda489e6e76f896d2a14">inputs</a>.Add(KeyCode.Space, b);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="comment">//</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <a class="code" href="class_static_manager_1_1_input_handler.html#a90f5731e52be3eba818d43d650852e1f">personalKey</a> = <span class="keyword">new</span> Dictionary&lt;GameAction, KeyCode&gt; (){</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                {<a class="code" href="_game_action_8cs.html#a5827805c542ab9cccf700dc3697cbafc">GameAction</a>.First, KeyCode.Space},</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                {<a class="code" href="_game_action_8cs.html#a5827805c542ab9cccf700dc3697cbafc">GameAction</a>.Second, KeyCode.RightControl}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            };</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_static_manager_1_1_input_handler.html#a48fd9aad688095cd5a7c958a14d82d36">   47</a></span>&#160;<span class="comment"></span>        <span class="keywordtype">void</span> <a class="code" href="class_static_manager_1_1_input_handler.html#a48fd9aad688095cd5a7c958a14d82d36">FixedUpdate</a>()</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordtype">bool</span>[] b = <span class="keyword">new</span> <span class="keywordtype">bool</span>[2];</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            b[0] = <a class="code" href="class_static_manager_1_1_input_handler.html#ac7e4e704b93ebda489e6e76f896d2a14">inputs</a>[KeyCode.Space][1];</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            b[1] = Input.GetKey(KeyCode.Space);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="class_static_manager_1_1_input_handler.html#ac7e4e704b93ebda489e6e76f896d2a14">inputs</a>[KeyCode.Space] = b;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_static_manager_1_1_input_handler.html#aae1898104292bf9dad7ca1b404383903">   61</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_static_manager_1_1_input_handler.html#aae1898104292bf9dad7ca1b404383903">KeyDown</a>(<a class="code" href="_game_action_8cs.html#a5827805c542ab9cccf700dc3697cbafc">GameAction</a> action){</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            KeyCode keycode = <a class="code" href="class_static_manager_1_1_input_handler.html#a90f5731e52be3eba818d43d650852e1f">personalKey</a>[action];</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_static_manager_1_1_input_handler.html#ac7e4e704b93ebda489e6e76f896d2a14">inputs</a>[keycode][1];</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_static_manager_1_1_input_handler.html#adea4411895fb265128c15cce41b21cd2">   72</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_static_manager_1_1_input_handler.html#adea4411895fb265128c15cce41b21cd2">KeyRelease</a>(<a class="code" href="_game_action_8cs.html#a5827805c542ab9cccf700dc3697cbafc">GameAction</a> action){</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            KeyCode keycode = <a class="code" href="class_static_manager_1_1_input_handler.html#a90f5731e52be3eba818d43d650852e1f">personalKey</a>[action];</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_static_manager_1_1_input_handler.html#ac7e4e704b93ebda489e6e76f896d2a14">inputs</a>[keycode][0] &amp;&amp; !<a class="code" href="class_static_manager_1_1_input_handler.html#ac7e4e704b93ebda489e6e76f896d2a14">inputs</a>[keycode][1];</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_static_manager_1_1_input_handler.html#aebab4e7df727dd6b2b926dd1f0f22510">   83</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_static_manager_1_1_input_handler.html#aebab4e7df727dd6b2b926dd1f0f22510">KeyPressed</a>(<a class="code" href="_game_action_8cs.html#a5827805c542ab9cccf700dc3697cbafc">GameAction</a> action){</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            KeyCode keycode = <a class="code" href="class_static_manager_1_1_input_handler.html#a90f5731e52be3eba818d43d650852e1f">personalKey</a>[action];</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">return</span> !<a class="code" href="class_static_manager_1_1_input_handler.html#ac7e4e704b93ebda489e6e76f896d2a14">inputs</a>[keycode][0] &amp;&amp; <a class="code" href="class_static_manager_1_1_input_handler.html#ac7e4e704b93ebda489e6e76f896d2a14">inputs</a>[keycode][1];</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        } </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_static_manager_1_1_input_handler.html#ae480bbdd62ace8c83848ca726873493e">   94</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <span class="keyword">static</span> Vector2 <a class="code" href="class_static_manager_1_1_input_handler.html#ae480bbdd62ace8c83848ca726873493e">GetAxesInput</a>(){</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordtype">float</span> x = Input.GetAxisRaw(<span class="stringliteral">&quot;Horizontal&quot;</span>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordtype">float</span> y = Input.GetAxisRaw(<span class="stringliteral">&quot;Vertical&quot;</span>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2(x,y);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_static_manager_1_1_input_handler_html"><div class="ttname"><a href="class_static_manager_1_1_input_handler.html">StaticManager.InputHandler</a></div><div class="ttdoc">Stock les inputs.</div><div class="ttdef"><b>Definition:</b> <a href="_input_handler_8cs_source.html#l00013">InputHandler.cs:13</a></div></div>
+<div class="ttc" id="aclass_static_manager_1_1_input_handler_html_adea4411895fb265128c15cce41b21cd2"><div class="ttname"><a href="class_static_manager_1_1_input_handler.html#adea4411895fb265128c15cce41b21cd2">StaticManager.InputHandler.KeyRelease</a></div><div class="ttdeci">static bool KeyRelease(GameAction action)</div><div class="ttdoc">Retourne vrai si la key qui correspond a action vien d'etre relacher.</div><div class="ttdef"><b>Definition:</b> <a href="_input_handler_8cs_source.html#l00072">InputHandler.cs:72</a></div></div>
+<div class="ttc" id="a_game_action_8cs_html_a5827805c542ab9cccf700dc3697cbafc"><div class="ttname"><a href="_game_action_8cs.html#a5827805c542ab9cccf700dc3697cbafc">GameAction</a></div><div class="ttdeci">GameAction</div><div class="ttdef"><b>Definition:</b> <a href="_game_action_8cs_source.html#l00001">GameAction.cs:1</a></div></div>
+<div class="ttc" id="aclass_static_manager_1_1_input_handler_html_a2acc92d2db7b9a040da42d53c6f7a2df"><div class="ttname"><a href="class_static_manager_1_1_input_handler.html#a2acc92d2db7b9a040da42d53c6f7a2df">StaticManager.InputHandler.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">MonoBeahviours Abstract Method</div><div class="ttdef"><b>Definition:</b> <a href="_input_handler_8cs_source.html#l00025">InputHandler.cs:25</a></div></div>
+<div class="ttc" id="aclass_static_manager_1_1_input_handler_html_aebab4e7df727dd6b2b926dd1f0f22510"><div class="ttname"><a href="class_static_manager_1_1_input_handler.html#aebab4e7df727dd6b2b926dd1f0f22510">StaticManager.InputHandler.KeyPressed</a></div><div class="ttdeci">static bool KeyPressed(GameAction action)</div><div class="ttdoc">Retourne vrai si la key qui correspond a action vien juste d'etre presser.</div><div class="ttdef"><b>Definition:</b> <a href="_input_handler_8cs_source.html#l00083">InputHandler.cs:83</a></div></div>
+<div class="ttc" id="aclass_static_manager_1_1_input_handler_html_a48fd9aad688095cd5a7c958a14d82d36"><div class="ttname"><a href="class_static_manager_1_1_input_handler.html#a48fd9aad688095cd5a7c958a14d82d36">StaticManager.InputHandler.FixedUpdate</a></div><div class="ttdeci">void FixedUpdate()</div><div class="ttdoc">MonoBeahviours Abstract Method</div><div class="ttdef"><b>Definition:</b> <a href="_input_handler_8cs_source.html#l00047">InputHandler.cs:47</a></div></div>
+<div class="ttc" id="aclass_static_manager_1_1_input_handler_html_ae480bbdd62ace8c83848ca726873493e"><div class="ttname"><a href="class_static_manager_1_1_input_handler.html#ae480bbdd62ace8c83848ca726873493e">StaticManager.InputHandler.GetAxesInput</a></div><div class="ttdeci">static Vector2 GetAxesInput()</div><div class="ttdoc">Retourne un Vecteur2 = (x,y) avec -1&lt;= x, y &lt;= 1 qui correspond aux inputs horizontaux et latéraux.</div><div class="ttdef"><b>Definition:</b> <a href="_input_handler_8cs_source.html#l00094">InputHandler.cs:94</a></div></div>
+<div class="ttc" id="aclass_static_manager_1_1_input_handler_html_a90f5731e52be3eba818d43d650852e1f"><div class="ttname"><a href="class_static_manager_1_1_input_handler.html#a90f5731e52be3eba818d43d650852e1f">StaticManager.InputHandler.personalKey</a></div><div class="ttdeci">static Dictionary&lt; GameAction, KeyCode &gt; personalKey</div><div class="ttdef"><b>Definition:</b> <a href="_input_handler_8cs_source.html#l00017">InputHandler.cs:17</a></div></div>
+<div class="ttc" id="anamespace_static_manager_html"><div class="ttname"><a href="namespace_static_manager.html">StaticManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_camera_script_8cs_source.html#l00004">CameraScript.cs:4</a></div></div>
+<div class="ttc" id="aclass_static_manager_1_1_input_handler_html_aae1898104292bf9dad7ca1b404383903"><div class="ttname"><a href="class_static_manager_1_1_input_handler.html#aae1898104292bf9dad7ca1b404383903">StaticManager.InputHandler.KeyDown</a></div><div class="ttdeci">static bool KeyDown(GameAction action)</div><div class="ttdoc">Retourne vrai si la key qui correspond a action est actuellement presser.</div><div class="ttdef"><b>Definition:</b> <a href="_input_handler_8cs_source.html#l00061">InputHandler.cs:61</a></div></div>
+<div class="ttc" id="aclass_static_manager_1_1_input_handler_html_ac7e4e704b93ebda489e6e76f896d2a14"><div class="ttname"><a href="class_static_manager_1_1_input_handler.html#ac7e4e704b93ebda489e6e76f896d2a14">StaticManager.InputHandler.inputs</a></div><div class="ttdeci">static Dictionary&lt; KeyCode, bool[]&gt; inputs</div><div class="ttdef"><b>Definition:</b> <a href="_input_handler_8cs_source.html#l00015">InputHandler.cs:15</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

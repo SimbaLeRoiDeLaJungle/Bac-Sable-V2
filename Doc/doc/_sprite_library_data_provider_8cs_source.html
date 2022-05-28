@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.animation@8.0.1/Editor/SpriteLib/SpriteLibraryDataProvider.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_6cbc2cf28c1ecf4e247ef2386a6cccaf.html">com.unity.2d.animation@8.0.1</a></li><li class="navelem"><a class="el" href="dir_fe14c7676fb41ad3338788a8b5881895.html">Editor</a></li><li class="navelem"><a class="el" href="dir_32394cd427449568dfebc7828390b6cd.html">SpriteLib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SpriteLibraryDataProvider.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Serialization;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor_1_1_u2_d_1_1_animation.html">UnityEditor.U2D.Animation</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_label.html">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">struct </span><a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_label.html">SpriteCategoryLabel</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">string</span> m_Name;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">string</span> m_SpriteId;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_label.html#af4f8e0542902f764d7c88513a315ff49">name</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_label.html#af4f8e0542902f764d7c88513a315ff49">   23</a></span>&#160;        {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Name; }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keyword">set</span> { m_Name = value; }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_label.html#a9a768a3ab32bd0a273c449e07d6de0bc">spriteId</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_label.html#a9a768a3ab32bd0a273c449e07d6de0bc">   32</a></span>&#160;        {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_SpriteId; }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keyword">set</span> { m_SpriteId = value; }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category.html">   42</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">struct </span><a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category.html">SpriteCategory</a></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        [FormerlySerializedAs(<span class="stringliteral">&quot;name&quot;</span>)]</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">string</span> m_Name;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        List&lt;SpriteCategoryLabel&gt; m_Labels;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category.html#a99ad1b7900f4237625029021184066f1">name</a></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category.html#a99ad1b7900f4237625029021184066f1">   54</a></span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Name; }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keyword">set</span> { m_Name = value; }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">public</span> List&lt;SpriteCategoryLabel&gt; <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category.html#ae4354678f4fff8885f801bbb36431d39">labels</a></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category.html#ae4354678f4fff8885f801bbb36431d39">   63</a></span>&#160;        {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Labels; }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keyword">set</span> { m_Labels = value; }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_list.html">   73</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">struct </span><a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_list.html">SpriteCategoryList</a></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        [FormerlySerializedAs(<span class="stringliteral">&quot;categories&quot;</span>)]</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        List&lt;SpriteCategory&gt; m_Categories;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">public</span> List&lt;SpriteCategory&gt; <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_list.html#a70d3e4e0449f09316a94dfdef6775ec6">categories</a></div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_list.html#a70d3e4e0449f09316a94dfdef6775ec6">   83</a></span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Categories; }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keyword">set</span> { m_Categories = value; }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    [Obsolete(<span class="stringliteral">&quot;The interface is no longer used&quot;</span>)]</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_sprite_lib_data_provider.html">   92</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_sprite_lib_data_provider.html">ISpriteLibDataProvider</a></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_list.html">SpriteCategoryList</a> <a class="code" href="interface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_sprite_lib_data_provider.html#a0940adb5dc4ca7554dac5057597c23fb">GetSpriteCategoryList</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="interface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_sprite_lib_data_provider.html#abf3238e4e5139e68a2be4dd1c2b3c949">SetSpriteCategoryList</a>(<a class="code" href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_list.html">SpriteCategoryList</a> spriteCategoryList);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_html_a99ad1b7900f4237625029021184066f1"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category.html#a99ad1b7900f4237625029021184066f1">UnityEditor.U2D.Animation.SpriteCategory.name</a></div><div class="ttdeci">string name</div><div class="ttdoc">Get and set the name for the Sprite Category</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_library_data_provider_8cs_source.html#l00054">SpriteLibraryDataProvider.cs:54</a></div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_u2_d_1_1_animation_html"><div class="ttname"><a href="namespace_unity_editor_1_1_u2_d_1_1_animation.html">UnityEditor.U2D.Animation</a></div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8animation_0d8_80_81_2_editor_2_analytics_8cs_source.html#l00009">Analytics.cs:9</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_label_html"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_label.html">UnityEditor.U2D.Animation.SpriteCategoryLabel</a></div><div class="ttdoc">Structure that defines a Sprite Library Category Label</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_library_data_provider_8cs_source.html#l00012">SpriteLibraryDataProvider.cs:12</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_list_html_a70d3e4e0449f09316a94dfdef6775ec6"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_list.html#a70d3e4e0449f09316a94dfdef6775ec6">UnityEditor.U2D.Animation.SpriteCategoryList.categories</a></div><div class="ttdeci">List&lt; SpriteCategory &gt; categories</div><div class="ttdoc">Get or set the a list of SpriteCategory</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_library_data_provider_8cs_source.html#l00083">SpriteLibraryDataProvider.cs:83</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_html_ae4354678f4fff8885f801bbb36431d39"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category.html#ae4354678f4fff8885f801bbb36431d39">UnityEditor.U2D.Animation.SpriteCategory.labels</a></div><div class="ttdeci">List&lt; SpriteCategoryLabel &gt; labels</div><div class="ttdoc">Get and set the Sprites registered to this category.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_library_data_provider_8cs_source.html#l00063">SpriteLibraryDataProvider.cs:63</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_html"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category.html">UnityEditor.U2D.Animation.SpriteCategory</a></div><div class="ttdoc">Structure that defines a Sprite Library Category.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_library_data_provider_8cs_source.html#l00042">SpriteLibraryDataProvider.cs:42</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_label_html_af4f8e0542902f764d7c88513a315ff49"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_label.html#af4f8e0542902f764d7c88513a315ff49">UnityEditor.U2D.Animation.SpriteCategoryLabel.name</a></div><div class="ttdeci">string name</div><div class="ttdoc">Get and set the name for the Sprite label</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_library_data_provider_8cs_source.html#l00023">SpriteLibraryDataProvider.cs:23</a></div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_sprite_lib_data_provider_html_abf3238e4e5139e68a2be4dd1c2b3c949"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_sprite_lib_data_provider.html#abf3238e4e5139e68a2be4dd1c2b3c949">UnityEditor.U2D.Animation.ISpriteLibDataProvider.SetSpriteCategoryList</a></div><div class="ttdeci">void SetSpriteCategoryList(SpriteCategoryList spriteCategoryList)</div><div class="ttdoc">Sets the SpriteCategoryList structure that represents the Sprite Library data to the data provider</div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_sprite_lib_data_provider_html"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_sprite_lib_data_provider.html">UnityEditor.U2D.Animation.ISpriteLibDataProvider</a></div><div class="ttdoc">An interface that allows Sprite Editor Modules to edit Sprite Library data for user custom importer.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_library_data_provider_8cs_source.html#l00092">SpriteLibraryDataProvider.cs:92</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_list_html"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_list.html">UnityEditor.U2D.Animation.SpriteCategoryList</a></div><div class="ttdoc">A structure to hold a collection of SpriteCategory</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_library_data_provider_8cs_source.html#l00073">SpriteLibraryDataProvider.cs:73</a></div></div>
+<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition:</b> <a href="_preserve_dependency_attribute_8cs_source.html#l00030">PreserveDependencyAttribute.cs:30</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_label_html_a9a768a3ab32bd0a273c449e07d6de0bc"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_animation_1_1_sprite_category_label.html#a9a768a3ab32bd0a273c449e07d6de0bc">UnityEditor.U2D.Animation.SpriteCategoryLabel.spriteId</a></div><div class="ttdeci">string spriteId</div><div class="ttdoc">Get and set the Sprite Id.</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_library_data_provider_8cs_source.html#l00032">SpriteLibraryDataProvider.cs:32</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_sprite_lib_data_provider_html_a0940adb5dc4ca7554dac5057597c23fb"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_animation_1_1_i_sprite_lib_data_provider.html#a0940adb5dc4ca7554dac5057597c23fb">UnityEditor.U2D.Animation.ISpriteLibDataProvider.GetSpriteCategoryList</a></div><div class="ttdeci">SpriteCategoryList GetSpriteCategoryList()</div><div class="ttdoc">Returns the SpriteCategoryList structure that represents the Sprite Library data.</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

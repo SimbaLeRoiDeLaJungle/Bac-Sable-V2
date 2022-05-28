@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/EditorTools/TilemapEditorTool.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_df381046aaab1e560c209bd4c9981ca6.html">com.unity.2d.tilemap@1.0.0</a></li><li class="navelem"><a class="el" href="dir_0d21ded2fd5e96c0f4a77865c032209d.html">Editor</a></li><li class="navelem"><a class="el" href="dir_ada0ab607736a321fecd682016d7414b.html">EditorTools</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TilemapEditorTool.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.EditorTools;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.ShortcutManagement;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor_1_1_tilemaps.html">UnityEditor.Tilemaps</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html">TilemapEditorTool</a> : EditorTool</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_1_1_shortcut_context.html">   18</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_1_1_shortcut_context.html">ShortcutContext</a> : IShortcutToolContext</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keyword">public</span> <span class="keywordtype">bool</span> active { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> Dictionary&lt;Type, EditorTool&gt; s_TilemapEditorToolsMap;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> EditorTool[] s_DefaultTilemapEditorTools;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> Type[] s_DefaultToolTypes = <span class="keyword">new</span>[]</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            typeof(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_select_tool.html">SelectTool</a>),</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            typeof(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_move_tool.html">MoveTool</a>),</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            typeof(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_paint_tool.html">PaintTool</a>),</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            typeof(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_box_tool.html">BoxTool</a>),</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            typeof(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_picking_tool.html">PickingTool</a>),</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            typeof(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_erase_tool.html">EraseTool</a>),</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            typeof(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_fill_tool.html">FillTool</a>)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        };</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> EditorTool[] <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#aa27a4aef1727026bf84bc6669bb3c995">tilemapEditorTools</a></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#aa27a4aef1727026bf84bc6669bb3c995">   44</a></span>&#160;        {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keyword">get</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="keywordflow">if</span> (IsCachedEditorToolsInvalid())</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    InstantiateEditorTools();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html">GridPaintingState</a>.activeBrushTools;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a53dc98f1625e4cadbd82a65a2e586614">tilemapEditorToolsToolbarSize</a></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a53dc98f1625e4cadbd82a65a2e586614">   57</a></span>&#160;        {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keyword">get</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">if</span> (IsCachedEditorToolsInvalid())</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    InstantiateEditorTools();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html">GridPaintingState</a>.activeBrushToolbarSize;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#ad2b570aa34ff3d225c7d0180ff0619af">   69</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">abstract</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#ad2b570aa34ff3d225c7d0180ff0619af">tooltipStringFormat</a> { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#ae21abeac3675f7aab53c9fa82fe303eb">   73</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">abstract</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#ae21abeac3675f7aab53c9fa82fe303eb">shortcutId</a> { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a7b4f6d59e09a97588f3cf0fb85d94d62">   82</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a7b4f6d59e09a97588f3cf0fb85d94d62">GetTooltipText</a>(<span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#ad2b570aa34ff3d225c7d0180ff0619af">tooltipStringFormat</a>, <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#ae21abeac3675f7aab53c9fa82fe303eb">shortcutId</a>)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">return</span> String.Format(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#ad2b570aa34ff3d225c7d0180ff0619af">tooltipStringFormat</a>, <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#ab3b3c03ea2d1f12bafbfe591d0ed5b2d">GetKeysFromToolName</a>(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#ae21abeac3675f7aab53c9fa82fe303eb">shortcutId</a>));</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#ab3b3c03ea2d1f12bafbfe591d0ed5b2d">   92</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#ab3b3c03ea2d1f12bafbfe591d0ed5b2d">GetKeysFromToolName</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">return</span> ShortcutIntegration.instance.GetKeyCombinationFor(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a11068b8967be71156c069a1dd9c8f524">  100</a></span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a11068b8967be71156c069a1dd9c8f524">UpdateTooltip</a>()</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            toolbarIcon.tooltip = <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a7b4f6d59e09a97588f3cf0fb85d94d62">GetTooltipText</a>(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#ad2b570aa34ff3d225c7d0180ff0619af">tooltipStringFormat</a>, <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#ae21abeac3675f7aab53c9fa82fe303eb">shortcutId</a>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#aab7d2e20ae69f6315c628d9369f63216">  114</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#aab7d2e20ae69f6315c628d9369f63216">HandleTool</a>(<span class="keywordtype">bool</span> isHotControl, GridLayout gridLayout, GameObject brushTarget, Vector3Int gridMousePosition)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a9cdce2f5de8633c559dfe0e940ecc6a6">  123</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a9cdce2f5de8633c559dfe0e940ecc6a6">IsAvailable</a>()</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">return</span> (GridPaintPaletteWindow.instances.Count &gt; 0) &amp;&amp; <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html">GridPaintingState</a>.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html#a8e6606eb39acceb586d94baebdffc6b7">gridBrush</a>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">void</span> UpdateTooltips()</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">if</span> (IsCachedEditorToolsInvalid())</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                InstantiateEditorTools();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keywordflow">foreach</span> (var editorTool <span class="keywordflow">in</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html">GridPaintingState</a>.activeBrushTools)</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                var tilemapEditorTool = editorTool as <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html">TilemapEditorTool</a>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                <span class="keywordflow">if</span> (tilemapEditorTool == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                tilemapEditorTool.<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a11068b8967be71156c069a1dd9c8f524">UpdateTooltip</a>();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a53c6babddf75bd49ae65b8bebc1ad7e9">  154</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a53c6babddf75bd49ae65b8bebc1ad7e9">ToggleActiveEditorTool</a>(Type type)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keywordflow">if</span> (ToolManager.activeToolType != type)</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a3a72189245589f3956704acc43308484">SetActiveEditorTool</a>(type);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                ToolManager.RestorePreviousPersistentTool();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a3a72189245589f3956704acc43308484">  171</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a3a72189245589f3956704acc43308484">SetActiveEditorTool</a>(Type type)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keywordflow">if</span> (type == <span class="keyword">null</span> || !type.IsSubclassOf(typeof(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html">TilemapEditorTool</a>)))</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentException(<span class="stringliteral">&quot;The tool to set must be valid and derive from TilemapEditorTool.&quot;</span>);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            EditorTool selectedTool = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordflow">foreach</span> (var tool <span class="keywordflow">in</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#aa27a4aef1727026bf84bc6669bb3c995">tilemapEditorTools</a>)</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                <span class="keywordflow">if</span> (tool.GetType() == type)</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                    selectedTool = tool;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordflow">if</span> (selectedTool != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                ToolManager.SetActiveTool(selectedTool);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsActive(Type toolType)</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        {</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordflow">return</span> ToolManager.activeToolType != <span class="keyword">null</span> &amp;&amp; ToolManager.activeToolType == toolType;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsCachedEditorToolsInvalid()</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordflow">return</span> s_TilemapEditorToolsMap == <span class="keyword">null</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                || s_DefaultTilemapEditorTools == <span class="keyword">null</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                || s_DefaultTilemapEditorTools.Length == 0</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                || s_DefaultTilemapEditorTools[0] == <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> InstantiateEditorTools()</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            s_DefaultTilemapEditorTools = TilemapEditorToolPreferences.CreateDefaultTilePaletteEditorTools();</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            s_TilemapEditorToolsMap = <span class="keyword">new</span> Dictionary&lt;Type, EditorTool&gt;(s_DefaultTilemapEditorTools.Length);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keywordflow">foreach</span> (var editorTool <span class="keywordflow">in</span> s_DefaultTilemapEditorTools)</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            {</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                s_TilemapEditorToolsMap.Add(editorTool.GetType(), editorTool);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            GridPaintingState.UpdateBrushToolbar();</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">void</span> UpdateEditorTools(BrushToolsAttribute brushToolsAttribute)</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordflow">if</span> (IsCachedEditorToolsInvalid())</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                InstantiateEditorTools();</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            EditorTool[] editorTools;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            <span class="keywordflow">if</span> (brushToolsAttribute?.toolList == <span class="keyword">null</span> || brushToolsAttribute.toolList.Count == 0)</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                editorTools = s_DefaultTilemapEditorTools;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                editorTools = <span class="keyword">new</span> EditorTool[brushToolsAttribute.toolList.Count];</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; brushToolsAttribute.toolList.Count; ++i)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                    var toolType = brushToolsAttribute.toolList[i];</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                    <span class="keywordflow">if</span> (!s_TilemapEditorToolsMap.TryGetValue(toolType, out EditorTool editorTool))</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                    {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                        editorTool = (EditorTool)ScriptableObject.CreateInstance(toolType);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                        s_TilemapEditorToolsMap.Add(toolType, editorTool);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                    }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                    editorTools[i] = editorTool;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                }</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            }</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            GridPaintingState.SetBrushTools(editorTools);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsCustomTilemapEditorToolActive()</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            <span class="keywordflow">if</span> (EditorToolManager.activeTool == <span class="keyword">null</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                || !(EditorToolManager.activeTool is TilemapEditorTool))</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keywordflow">if</span> (s_DefaultTilemapEditorTools == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            var activeToolType = EditorToolManager.activeTool.GetType();</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <span class="keywordflow">foreach</span> (var toolType <span class="keywordflow">in</span> s_DefaultToolTypes)</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            {</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                <span class="keywordflow">if</span> (toolType == activeToolType)</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            }</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        }</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_move_tool_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_move_tool.html">UnityEditor.Tilemaps.MoveTool</a></div><div class="ttdoc">Tool for doing a move with the Tile Palette</div><div class="ttdef"><b>Definition:</b> <a href="_move_tool_8cs_source.html#l00009">MoveTool.cs:9</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_html_aab7d2e20ae69f6315c628d9369f63216"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#aab7d2e20ae69f6315c628d9369f63216">UnityEditor.Tilemaps.TilemapEditorTool.HandleTool</a></div><div class="ttdeci">virtual bool HandleTool(bool isHotControl, GridLayout gridLayout, GameObject brushTarget, Vector3Int gridMousePosition)</div><div class="ttdoc">Method called when the Tool is being used. Override this to have custom behaviour when the Tool is us...</div><div class="ttdef"><b>Definition:</b> <a href="_tilemap_editor_tool_8cs_source.html#l00114">TilemapEditorTool.cs:114</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_select_tool_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_select_tool.html">UnityEditor.Tilemaps.SelectTool</a></div><div class="ttdoc">Tool for doing a selection with the Tile Palette</div><div class="ttdef"><b>Definition:</b> <a href="_select_tool_8cs_source.html#l00008">SelectTool.cs:8</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_html_a3a72189245589f3956704acc43308484"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a3a72189245589f3956704acc43308484">UnityEditor.Tilemaps.TilemapEditorTool.SetActiveEditorTool</a></div><div class="ttdeci">static void SetActiveEditorTool(Type type)</div><div class="ttdoc">Sets the current active editor tool to the type passed in</div><div class="ttdef"><b>Definition:</b> <a href="_tilemap_editor_tool_8cs_source.html#l00171">TilemapEditorTool.cs:171</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_html_ad2b570aa34ff3d225c7d0180ff0619af"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#ad2b570aa34ff3d225c7d0180ff0619af">UnityEditor.Tilemaps.TilemapEditorTool.tooltipStringFormat</a></div><div class="ttdeci">abstract string tooltipStringFormat</div><div class="ttdoc">Tooltip String format which accepts a shortcut combination as the parameter</div><div class="ttdef"><b>Definition:</b> <a href="_tilemap_editor_tool_8cs_source.html#l00069">TilemapEditorTool.cs:69</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_html_a53dc98f1625e4cadbd82a65a2e586614"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a53dc98f1625e4cadbd82a65a2e586614">UnityEditor.Tilemaps.TilemapEditorTool.tilemapEditorToolsToolbarSize</a></div><div class="ttdeci">static float tilemapEditorToolsToolbarSize</div><div class="ttdoc">The horizontal size of a Toolbar with all the TilemapEditorTools</div><div class="ttdef"><b>Definition:</b> <a href="_tilemap_editor_tool_8cs_source.html#l00057">TilemapEditorTool.cs:57</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_painting_state_html_a8e6606eb39acceb586d94baebdffc6b7"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html#a8e6606eb39acceb586d94baebdffc6b7">UnityEditor.Tilemaps.GridPaintingState.gridBrush</a></div><div class="ttdeci">static GridBrushBase? gridBrush</div><div class="ttdoc">The currently active brush for the Tile Palette</div><div class="ttdef"><b>Definition:</b> <a href="_grid_painting_state_8cs_source.html#l00161">GridPaintingState.cs:161</a></div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_tilemaps_html"><div class="ttname"><a href="namespace_unity_editor_1_1_tilemaps.html">UnityEditor.Tilemaps</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00008">GameObjectBrush.cs:8</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_html_aa27a4aef1727026bf84bc6669bb3c995"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#aa27a4aef1727026bf84bc6669bb3c995">UnityEditor.Tilemaps.TilemapEditorTool.tilemapEditorTools</a></div><div class="ttdeci">static EditorTool[] tilemapEditorTools</div><div class="ttdoc">All currently active Editor Tools which work with the Tile Palette</div><div class="ttdef"><b>Definition:</b> <a href="_tilemap_editor_tool_8cs_source.html#l00044">TilemapEditorTool.cs:44</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_box_tool_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_box_tool.html">UnityEditor.Tilemaps.BoxTool</a></div><div class="ttdoc">Tool for doing a box fill with the Tile Palette</div><div class="ttdef"><b>Definition:</b> <a href="_box_tool_8cs_source.html#l00010">BoxTool.cs:10</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html">UnityEditor.Tilemaps.TilemapEditorTool</a></div><div class="ttdoc">A base class for Editor Tools which work with the Tile Palette and GridBrushes</div><div class="ttdef"><b>Definition:</b> <a href="_tilemap_editor_tool_8cs_source.html#l00013">TilemapEditorTool.cs:13</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_fill_tool_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_fill_tool.html">UnityEditor.Tilemaps.FillTool</a></div><div class="ttdoc">Tool for doing a flood fill with the Tile Palette</div><div class="ttdef"><b>Definition:</b> <a href="_fill_tool_8cs_source.html#l00008">FillTool.cs:8</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_1_1_shortcut_context_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_1_1_shortcut_context.html">UnityEditor.Tilemaps.TilemapEditorTool.ShortcutContext</a></div><div class="ttdoc">Context to determine if TilemapEditorTools can be triggered through shortcuts</div><div class="ttdef"><b>Definition:</b> <a href="_tilemap_editor_tool_8cs_source.html#l00018">TilemapEditorTool.cs:18</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_html_a9cdce2f5de8633c559dfe0e940ecc6a6"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a9cdce2f5de8633c559dfe0e940ecc6a6">UnityEditor.Tilemaps.TilemapEditorTool.IsAvailable</a></div><div class="ttdeci">override bool IsAvailable()</div><div class="ttdoc">Gets whether the tool is available for use</div><div class="ttdef"><b>Definition:</b> <a href="_tilemap_editor_tool_8cs_source.html#l00123">TilemapEditorTool.cs:123</a></div></div>
+<div class="ttc" id="anamespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8animation_0d8_80_81_2_editor_2_analytics_8cs_source.html#l00009">Analytics.cs:9</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_erase_tool_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_erase_tool.html">UnityEditor.Tilemaps.EraseTool</a></div><div class="ttdoc">Tool for doing an erase with the Tile Palette</div><div class="ttdef"><b>Definition:</b> <a href="_erase_tool_8cs_source.html#l00008">EraseTool.cs:8</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_html_a11068b8967be71156c069a1dd9c8f524"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a11068b8967be71156c069a1dd9c8f524">UnityEditor.Tilemaps.TilemapEditorTool.UpdateTooltip</a></div><div class="ttdeci">void UpdateTooltip()</div><div class="ttdoc">Updates the tooltip whenever there is a change in shortcut combinations</div><div class="ttdef"><b>Definition:</b> <a href="_tilemap_editor_tool_8cs_source.html#l00100">TilemapEditorTool.cs:100</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_html_a7b4f6d59e09a97588f3cf0fb85d94d62"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a7b4f6d59e09a97588f3cf0fb85d94d62">UnityEditor.Tilemaps.TilemapEditorTool.GetTooltipText</a></div><div class="ttdeci">static string GetTooltipText(string tooltipStringFormat, string shortcutId)</div><div class="ttdoc">Gets the text for the tooltip given a tooltip string format and the shortcut combination for a toolti...</div><div class="ttdef"><b>Definition:</b> <a href="_tilemap_editor_tool_8cs_source.html#l00082">TilemapEditorTool.cs:82</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_picking_tool_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_picking_tool.html">UnityEditor.Tilemaps.PickingTool</a></div><div class="ttdoc">Tool for doing a picking action with the Tile Palette</div><div class="ttdef"><b>Definition:</b> <a href="_picking_tool_8cs_source.html#l00009">PickingTool.cs:9</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_html_ae21abeac3675f7aab53c9fa82fe303eb"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#ae21abeac3675f7aab53c9fa82fe303eb">UnityEditor.Tilemaps.TilemapEditorTool.shortcutId</a></div><div class="ttdeci">abstract string shortcutId</div><div class="ttdoc">Shortcut Id for this tool</div><div class="ttdef"><b>Definition:</b> <a href="_tilemap_editor_tool_8cs_source.html#l00073">TilemapEditorTool.cs:73</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_paint_tool_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_paint_tool.html">UnityEditor.Tilemaps.PaintTool</a></div><div class="ttdoc">Tool for doing a paint with the Tile Palette</div><div class="ttdef"><b>Definition:</b> <a href="_paint_tool_8cs_source.html#l00009">PaintTool.cs:9</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_grid_painting_state_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_grid_painting_state.html">UnityEditor.Tilemaps.GridPaintingState</a></div><div class="ttdoc">GridPaintingState controls the state of objects for painting with a Tile Palette.</div><div class="ttdef"><b>Definition:</b> <a href="_grid_painting_state_8cs_source.html#l00018">GridPaintingState.cs:18</a></div></div>
+<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition:</b> <a href="_preserve_dependency_attribute_8cs_source.html#l00030">PreserveDependencyAttribute.cs:30</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_html_a53c6babddf75bd49ae65b8bebc1ad7e9"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a53c6babddf75bd49ae65b8bebc1ad7e9">UnityEditor.Tilemaps.TilemapEditorTool.ToggleActiveEditorTool</a></div><div class="ttdeci">static void ToggleActiveEditorTool(Type type)</div><div class="ttdoc">Toggles the state of active editor tool with the type passed in.</div><div class="ttdef"><b>Definition:</b> <a href="_tilemap_editor_tool_8cs_source.html#l00154">TilemapEditorTool.cs:154</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_html_ab3b3c03ea2d1f12bafbfe591d0ed5b2d"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#ab3b3c03ea2d1f12bafbfe591d0ed5b2d">UnityEditor.Tilemaps.TilemapEditorTool.GetKeysFromToolName</a></div><div class="ttdeci">static string GetKeysFromToolName(string id)</div><div class="ttdoc">Gets the key combination for triggering the shortcut for this tool</div><div class="ttdef"><b>Definition:</b> <a href="_tilemap_editor_tool_8cs_source.html#l00092">TilemapEditorTool.cs:92</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

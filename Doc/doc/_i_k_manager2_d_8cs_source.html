@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.animation@8.0.1/IK/Runtime/IKManager2D.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_6cbc2cf28c1ecf4e247ef2386a6cccaf.html">com.unity.2d.animation@8.0.1</a></li><li class="navelem"><a class="el" href="dir_9fb99b0510a70b98894b51983ab6b550.html">IK</a></li><li class="navelem"><a class="el" href="dir_b288542e7ff7e3d9f4faa7726a8e758b.html">Runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">IKManager2D.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity.html">Unity</a>.Profiling;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Scripting.APIUpdating;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_u2_d.html">U2D</a>.<a class="code" href="namespace_unity_engine_1_1_u2_d_1_1_common.html">Common</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine_1_1_u2_d_1_1_i_k.html">UnityEngine.U2D.IK</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    [DefaultExecutionOrder(-2)]</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    [MovedFrom(<span class="stringliteral">&quot;UnityEngine.Experimental.U2D.IK&quot;</span>)]</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    [ExecuteInEditMode]</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html">   15</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">partial class </span><a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html">IKManager2D</a> : MonoBehaviour, IPreviewable</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">private</span> List&lt;Solver2D&gt; m_Solvers = <span class="keyword">new</span> List&lt;Solver2D&gt;();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        [SerializeField][Range(0f, 1f)]</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">float</span> m_Weight = 1f;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#af8f61f7b959712ef639925943e74e11d">weight</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#af8f61f7b959712ef639925943e74e11d">   26</a></span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Weight; }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keyword">set</span> { m_Weight = Mathf.Clamp01(value); }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">public</span> List&lt;Solver2D&gt; <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#a2b25e45d6f6b5f031477c5ab2def98f5">solvers</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#a2b25e45d6f6b5f031477c5ab2def98f5">   35</a></span>&#160;        {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> m_Solvers; }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> OnValidate()</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            m_Weight = Mathf.Clamp01(m_Weight);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            OnEditorDataValidate();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Reset()</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            FindChildSolvers();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            OnEditorDataValidate();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> FindChildSolvers()</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            m_Solvers.Clear();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            List&lt;Solver2D&gt; <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#a2b25e45d6f6b5f031477c5ab2def98f5">solvers</a> = <span class="keyword">new</span> List&lt;Solver2D&gt;();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            transform.GetComponentsInChildren&lt;Solver2D&gt;(<span class="keyword">true</span>, <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#a2b25e45d6f6b5f031477c5ab2def98f5">solvers</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">foreach</span> (Solver2D solver <span class="keywordflow">in</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#a2b25e45d6f6b5f031477c5ab2def98f5">solvers</a>)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">if</span> (solver.GetComponentInParent&lt;IKManager2D&gt;() == <span class="keyword">this</span>)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#a547724782af5f4aa425d8f27df30714c">AddSolver</a>(solver);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#a547724782af5f4aa425d8f27df30714c">   69</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#a547724782af5f4aa425d8f27df30714c">AddSolver</a>(<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_solver2_d.html">Solver2D</a> solver)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">if</span> (!m_Solvers.Contains(solver))</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                m_Solvers.Add(solver);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                AddSolverEditorData();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#a5b564ee9a327f05adba7010777518bb0">   82</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#a5b564ee9a327f05adba7010777518bb0">RemoveSolver</a>(<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_solver2_d.html">Solver2D</a> solver)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            RemoveSolverEditorData(solver);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            m_Solvers.Remove(solver);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#a9c78f0b98f2c37cd0defe17cb808a202">   91</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#a9c78f0b98f2c37cd0defe17cb808a202">UpdateManager</a>()</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            var profilerMarker = <span class="keyword">new</span> ProfilerMarker(<span class="stringliteral">&quot;IKManager2D.UpdateManager&quot;</span>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            profilerMarker.Begin();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">foreach</span> (var solver <span class="keywordflow">in</span> m_Solvers)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="keywordflow">if</span> (solver == <span class="keyword">null</span> || !solver.isActiveAndEnabled)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordflow">if</span> (!solver.isValid)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    solver.Initialize();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                solver.UpdateIK(<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#af8f61f7b959712ef639925943e74e11d">weight</a>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            profilerMarker.End();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#acaf6158a3b00582e5dd85c4b8ce0ced8">  112</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#acaf6158a3b00582e5dd85c4b8ce0ced8">OnPreviewUpdate</a>()</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#if UNITY_EDITOR </span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">if</span>(IsInGUIUpdateLoop())</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#a9c78f0b98f2c37cd0defe17cb808a202">UpdateManager</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> IsInGUIUpdateLoop() =&gt; Event.current != <span class="keyword">null</span>;      </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> LateUpdate()</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#a9c78f0b98f2c37cd0defe17cb808a202">UpdateManager</a>();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> Events.UnityEvent onDrawGizmos = <span class="keyword">new</span> Events.UnityEvent();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> OnDrawGizmos() { onDrawGizmos.Invoke(); }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d_html_a2b25e45d6f6b5f031477c5ab2def98f5"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#a2b25e45d6f6b5f031477c5ab2def98f5">UnityEngine.U2D.IK.IKManager2D.solvers</a></div><div class="ttdeci">List&lt; Solver2D &gt; solvers</div><div class="ttdoc">Get the Solvers that are managed by this manager.</div><div class="ttdef"><b>Definition:</b> <a href="_i_k_manager2_d_8cs_source.html#l00035">IKManager2D.cs:35</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_1_1_i_k_html"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d_1_1_i_k.html">UnityEngine.U2D.IK</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html">UnityEngine.U2D</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d_html_a5b564ee9a327f05adba7010777518bb0"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#a5b564ee9a327f05adba7010777518bb0">UnityEngine.U2D.IK.IKManager2D.RemoveSolver</a></div><div class="ttdeci">void RemoveSolver(Solver2D solver)</div><div class="ttdoc">Remove Solver from the manager.</div><div class="ttdef"><b>Definition:</b> <a href="_i_k_manager2_d_8cs_source.html#l00082">IKManager2D.cs:82</a></div></div>
+<div class="ttc" id="anamespace_unity_html"><div class="ttname"><a href="namespace_unity.html">Unity</a></div><div class="ttdef"><b>Definition:</b> <a href="_build_asset_bundle_8cs_source.html#l00004">BuildAssetBundle.cs:4</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d_html_af8f61f7b959712ef639925943e74e11d"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#af8f61f7b959712ef639925943e74e11d">UnityEngine.U2D.IK.IKManager2D.weight</a></div><div class="ttdeci">float weight</div><div class="ttdoc">Get and Set the weight for solvers.</div><div class="ttdef"><b>Definition:</b> <a href="_i_k_manager2_d_8cs_source.html#l00026">IKManager2D.cs:26</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d_html_a547724782af5f4aa425d8f27df30714c"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#a547724782af5f4aa425d8f27df30714c">UnityEngine.U2D.IK.IKManager2D.AddSolver</a></div><div class="ttdeci">void AddSolver(Solver2D solver)</div><div class="ttdoc">Add Solver to the manager.</div><div class="ttdef"><b>Definition:</b> <a href="_i_k_manager2_d_8cs_source.html#l00069">IKManager2D.cs:69</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d_html_a9c78f0b98f2c37cd0defe17cb808a202"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#a9c78f0b98f2c37cd0defe17cb808a202">UnityEngine.U2D.IK.IKManager2D.UpdateManager</a></div><div class="ttdeci">void UpdateManager()</div><div class="ttdoc">Updates the Solvers in this manager.</div><div class="ttdef"><b>Definition:</b> <a href="_i_k_manager2_d_8cs_source.html#l00091">IKManager2D.cs:91</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d_html_acaf6158a3b00582e5dd85c4b8ce0ced8"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html#acaf6158a3b00582e5dd85c4b8ce0ced8">UnityEngine.U2D.IK.IKManager2D.OnPreviewUpdate</a></div><div class="ttdeci">void OnPreviewUpdate()</div><div class="ttdoc">Used by the animation clip preview window. Recommended to not use outside of this purpose.</div><div class="ttdef"><b>Definition:</b> <a href="_i_k_manager2_d_8cs_source.html#l00112">IKManager2D.cs:112</a></div></div>
+<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition:</b> <a href="_preserve_dependency_attribute_8cs_source.html#l00030">PreserveDependencyAttribute.cs:30</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d_html"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_manager2_d.html">UnityEngine.U2D.IK.IKManager2D</a></div><div class="ttdoc">Component to manager 2D IK Solvers.</div><div class="ttdef"><b>Definition:</b> <a href="_i_k_manager2_d_8cs_source.html#l00015">IKManager2D.cs:15</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_1_1_common_html"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d_1_1_common.html">UnityEngine.U2D.Common</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_animation_previewable_8cs_source.html#l00003">IAnimationPreviewable.cs:3</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_solver2_d_html"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_solver2_d.html">UnityEngine.U2D.IK.Solver2D</a></div><div class="ttdoc">Abstract class for implementing a 2D IK Solver.</div><div class="ttdef"><b>Definition:</b> <a href="_solver2_d_8cs_source.html#l00013">Solver2D.cs:13</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

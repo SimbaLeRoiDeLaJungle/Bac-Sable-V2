@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.animation@8.0.1/IK/Editor/Inspectors/FabrikSolver2DEditor.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_6cbc2cf28c1ecf4e247ef2386a6cccaf.html">com.unity.2d.animation@8.0.1</a></li><li class="navelem"><a class="el" href="dir_9fb99b0510a70b98894b51983ab6b550.html">IK</a></li><li class="navelem"><a class="el" href="dir_95fb5ee8a964a59a93891c32a7d9028b.html">Editor</a></li><li class="navelem"><a class="el" href="dir_7062ba9b37a1de54dc5ac842b931975f.html">Inspectors</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">FabrikSolver2DEditor.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_u2_d.html">U2D</a>.<a class="code" href="namespace_unity_engine_1_1_u2_d_1_1_i_k.html">IK</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor_1_1_u2_d_1_1_i_k.html">UnityEditor.U2D.IK</a></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    [CustomEditor(typeof(<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_fabrik_solver2_d.html">FabrikSolver2D</a>))]</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    [CanEditMultipleObjects]</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">internal</span> <span class="keyword">class </span>FabrikSolver2DEditor : Solver2DEditor</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">static</span> <span class="keyword">class </span>Contents</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent effectorLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Effector&quot;</span>, <span class="stringliteral">&quot;The last Transform of a hierarchy constrained by the target&quot;</span>);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent targetLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Target&quot;</span>, <span class="stringliteral">&quot;Transform which the effector will follow&quot;</span>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent chainLengthLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Chain Length&quot;</span>, <span class="stringliteral">&quot;Number of Transforms handled by the IK&quot;</span>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent iterationsLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Iterations&quot;</span>, <span class="stringliteral">&quot;Number of iterations the IK solver is run per frame&quot;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> readonly GUIContent toleranceLabel = <span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Tolerance&quot;</span>, <span class="stringliteral">&quot;How close the target is to the goal to be considered as successful&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        SerializedProperty m_TargetProperty;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        SerializedProperty m_EffectorProperty;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        SerializedProperty m_TransformCountProperty;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        SerializedProperty m_IterationsProperty;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        SerializedProperty m_ToleranceProperty;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_fabrik_solver2_d.html">FabrikSolver2D</a> m_Solver;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">void</span> OnEnable()</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            m_Solver = target as <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_fabrik_solver2_d.html">FabrikSolver2D</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            var chainProperty = serializedObject.FindProperty(<span class="stringliteral">&quot;m_Chain&quot;</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            m_TargetProperty = chainProperty.FindPropertyRelative(<span class="stringliteral">&quot;m_TargetTransform&quot;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            m_EffectorProperty = chainProperty.FindPropertyRelative(<span class="stringliteral">&quot;m_EffectorTransform&quot;</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            m_TransformCountProperty = chainProperty.FindPropertyRelative(<span class="stringliteral">&quot;m_TransformCount&quot;</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            m_IterationsProperty = serializedObject.FindProperty(<span class="stringliteral">&quot;m_Iterations&quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            m_ToleranceProperty = serializedObject.FindProperty(<span class="stringliteral">&quot;m_Tolerance&quot;</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> OnInspectorGUI()</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            var chain = m_Solver.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_fabrik_solver2_d.html#a278c3d63f6f431789624035253c96195">GetChain</a>(0);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            serializedObject.Update();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            EditorGUILayout.PropertyField(m_EffectorProperty, Contents.effectorLabel);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            EditorGUILayout.PropertyField(m_TargetProperty, Contents.targetLabel);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            EditorGUILayout.IntSlider(m_TransformCountProperty, 0, <a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility.html">IKUtility</a>.<a class="code" href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility.html#afb4f357011e95fbb71f4afdb1773a253">GetMaxChainCount</a>(chain), Contents.chainLengthLabel);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            EditorGUILayout.PropertyField(m_IterationsProperty, Contents.iterationsLabel);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            EditorGUILayout.PropertyField(m_ToleranceProperty, Contents.toleranceLabel);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <a class="code" href="class_unity_editor_1_1_u2_d_1_1_i_k_1_1_solver2_d_editor.html#a11aacfa9029c41cb4b4e9987052ab864">DrawCommonSolverInspector</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            serializedObject.ApplyModifiedProperties();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_unity_editor_1_1_u2_d_1_1_i_k_1_1_solver2_d_editor_html_a11aacfa9029c41cb4b4e9987052ab864"><div class="ttname"><a href="class_unity_editor_1_1_u2_d_1_1_i_k_1_1_solver2_d_editor.html#a11aacfa9029c41cb4b4e9987052ab864">UnityEditor.U2D.IK.Solver2DEditor.DrawCommonSolverInspector</a></div><div class="ttdeci">void DrawCommonSolverInspector()</div><div class="ttdoc">Custom Inspector GUI for Solver2D.</div><div class="ttdef"><b>Definition:</b> <a href="_solver2_d_editor_8cs_source.html#l00040">Solver2DEditor.cs:40</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility_html"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility.html">UnityEngine.U2D.IK.IKUtility</a></div><div class="ttdoc">General utilities for 2D IK.</div><div class="ttdef"><b>Definition:</b> <a href="_i_k_utility_8cs_source.html#l00009">IKUtility.cs:9</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_1_1_i_k_html"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d_1_1_i_k.html">UnityEngine.U2D.IK</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html">UnityEngine.U2D</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_fabrik_solver2_d_html"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_fabrik_solver2_d.html">UnityEngine.U2D.IK.FabrikSolver2D</a></div><div class="ttdoc">Component for 2D Forward And Backward Reaching Inverse Kinematics (FABRIK) IK.</div><div class="ttdef"><b>Definition:</b> <a href="_fabrik_solver2_d_8cs_source.html#l00012">FabrikSolver2D.cs:12</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility_html_afb4f357011e95fbb71f4afdb1773a253"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_i_k_utility.html#afb4f357011e95fbb71f4afdb1773a253">UnityEngine.U2D.IK.IKUtility.GetMaxChainCount</a></div><div class="ttdeci">static int GetMaxChainCount(IKChain2D chain)</div><div class="ttdoc">Gets the maximum chain count for a IKChain2D.</div><div class="ttdef"><b>Definition:</b> <a href="_i_k_utility_8cs_source.html#l00060">IKUtility.cs:60</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_u2_d_1_1_i_k_1_1_fabrik_solver2_d_html_a278c3d63f6f431789624035253c96195"><div class="ttname"><a href="class_unity_engine_1_1_u2_d_1_1_i_k_1_1_fabrik_solver2_d.html#a278c3d63f6f431789624035253c96195">UnityEngine.U2D.IK.FabrikSolver2D.GetChain</a></div><div class="ttdeci">override IKChain2D GetChain(int index)</div><div class="ttdoc">Gets the chain in the solver by index.</div><div class="ttdef"><b>Definition:</b> <a href="_fabrik_solver2_d_8cs_source.html#l00060">FabrikSolver2D.cs:60</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_u2_d_1_1_i_k_html"><div class="ttname"><a href="namespace_unity_editor_1_1_u2_d_1_1_i_k.html">UnityEditor.U2D.IK</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_k_editor_manager_8cs_source.html#l00008">IKEditorManager.cs:8</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

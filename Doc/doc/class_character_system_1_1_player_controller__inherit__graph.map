@@ -1,0 +1,4 @@
+<map id="CharacterSystem.PlayerController" name="CharacterSystem.PlayerController">
+<area shape="rect" id="node1" title="Permet de controller le joueur." alt="" coords="5,80,248,107"/>
+<area shape="rect" id="node2" title=" " alt="" coords="65,5,189,32"/>
+</map>

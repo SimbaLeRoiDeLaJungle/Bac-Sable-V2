@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Assets/Simba/Scirpts/Custom Attributes/LineSeparator.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_158af4e89fe28c6233fdc636e282763b.html">Simba</a></li><li class="navelem"><a class="el" href="dir_7fd08fc4bf1ab871205d67b083a39232.html">Scirpts</a></li><li class="navelem"><a class="el" href="dir_677c86d5728cd1dccd08a178c07d05ac.html">Custom Attributes</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">LineSeparator.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_line_separator_8cs.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System.Collections;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> UnityEditor;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> System;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="namespace_custom_attributes.html">    6</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_custom_attributes.html">CustomAttributes</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    [AttributeUsage(AttributeTargets.Field, Inherited= <span class="keyword">true</span>)]</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_custom_attributes_1_1_line_separator.html">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_custom_attributes_1_1_line_separator.html">LineSeparator</a> : PropertyAttribute</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_custom_attributes_1_1_line_separator.html#a4e8b6dab29c682608e95ec78ea74d51c">   14</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="class_custom_attributes_1_1_line_separator.html#a4e8b6dab29c682608e95ec78ea74d51c">DefaultHeight</a> = 0.5f;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_custom_attributes_1_1_line_separator.html#abe955b80e71e87f64d22a0831b0215f1">   16</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_custom_attributes_1_1_line_separator.html#abe955b80e71e87f64d22a0831b0215f1">Height </a>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_custom_attributes_1_1_line_separator.html#aeff0d356a366d50ce20be7f9122e89ac">   18</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_custom_attributes_1_1_line_separator.html#aeff0d356a366d50ce20be7f9122e89ac">LineSeparator</a>(<span class="keywordtype">float</span> height = <a class="code" href="class_custom_attributes_1_1_line_separator.html#a4e8b6dab29c682608e95ec78ea74d51c">DefaultHeight</a>){</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            Height = height;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    [CustomPropertyDrawer(typeof(LineSeparator))]</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_custom_attributes_1_1_line_separator_decorator_drawer.html">   24</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_custom_attributes_1_1_line_separator_decorator_drawer.html">LineSeparatorDecoratorDrawer</a> : DecoratorDrawer</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_custom_attributes_1_1_line_separator_decorator_drawer.html#a870e46eb56b6f88d5e615982e618b91f">   26</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">float</span> <a class="code" href="class_custom_attributes_1_1_line_separator_decorator_drawer.html#a870e46eb56b6f88d5e615982e618b91f">GetHeight</a>(){</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <a class="code" href="class_custom_attributes_1_1_line_separator.html">LineSeparator</a> lineAttr = (<a class="code" href="class_custom_attributes_1_1_line_separator.html">LineSeparator</a>)attribute;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span> EditorGUIUtility.singleLineHeight + lineAttr.Height;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_custom_attributes_1_1_line_separator_decorator_drawer.html#a98ecaaf5c4c99f2ef7e45e69f65d907e">   31</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_custom_attributes_1_1_line_separator_decorator_drawer.html#a98ecaaf5c4c99f2ef7e45e69f65d907e">OnGUI</a>(Rect position){</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            Rect rect = EditorGUI.IndentedRect(position);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            rect.y += EditorGUIUtility.singleLineHeight/ 3.0f;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <a class="code" href="class_custom_attributes_1_1_line_separator.html">LineSeparator</a> lineAttr = (<a class="code" href="class_custom_attributes_1_1_line_separator.html">LineSeparator</a>)attribute;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            rect.height = lineAttr.Height;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            EditorGUI.DrawRect(rect, <span class="keyword">new</span> Color32(0,0,0,255));</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_custom_attributes_1_1_line_separator_html_abe955b80e71e87f64d22a0831b0215f1"><div class="ttname"><a href="class_custom_attributes_1_1_line_separator.html#abe955b80e71e87f64d22a0831b0215f1">CustomAttributes.LineSeparator.Height </a></div><div class="ttdeci">float Height </div><div class="ttdef"><b>Definition:</b> <a href="_line_separator_8cs_source.html#l00016">LineSeparator.cs:16</a></div></div>
+<div class="ttc" id="aclass_custom_attributes_1_1_line_separator_decorator_drawer_html_a98ecaaf5c4c99f2ef7e45e69f65d907e"><div class="ttname"><a href="class_custom_attributes_1_1_line_separator_decorator_drawer.html#a98ecaaf5c4c99f2ef7e45e69f65d907e">CustomAttributes.LineSeparatorDecoratorDrawer.OnGUI</a></div><div class="ttdeci">override void OnGUI(Rect position)</div><div class="ttdef"><b>Definition:</b> <a href="_line_separator_8cs_source.html#l00031">LineSeparator.cs:31</a></div></div>
+<div class="ttc" id="aclass_custom_attributes_1_1_line_separator_html_aeff0d356a366d50ce20be7f9122e89ac"><div class="ttname"><a href="class_custom_attributes_1_1_line_separator.html#aeff0d356a366d50ce20be7f9122e89ac">CustomAttributes.LineSeparator.LineSeparator</a></div><div class="ttdeci">LineSeparator(float height=DefaultHeight)</div><div class="ttdef"><b>Definition:</b> <a href="_line_separator_8cs_source.html#l00018">LineSeparator.cs:18</a></div></div>
+<div class="ttc" id="aclass_custom_attributes_1_1_line_separator_html"><div class="ttname"><a href="class_custom_attributes_1_1_line_separator.html">CustomAttributes.LineSeparator</a></div><div class="ttdoc">Permet de tracer une ligne dans l'inspecteur</div><div class="ttdef"><b>Definition:</b> <a href="_line_separator_8cs_source.html#l00012">LineSeparator.cs:12</a></div></div>
+<div class="ttc" id="aclass_custom_attributes_1_1_line_separator_decorator_drawer_html_a870e46eb56b6f88d5e615982e618b91f"><div class="ttname"><a href="class_custom_attributes_1_1_line_separator_decorator_drawer.html#a870e46eb56b6f88d5e615982e618b91f">CustomAttributes.LineSeparatorDecoratorDrawer.GetHeight</a></div><div class="ttdeci">override float GetHeight()</div><div class="ttdef"><b>Definition:</b> <a href="_line_separator_8cs_source.html#l00026">LineSeparator.cs:26</a></div></div>
+<div class="ttc" id="anamespace_custom_attributes_html"><div class="ttname"><a href="namespace_custom_attributes.html">CustomAttributes</a></div><div class="ttdef"><b>Definition:</b> <a href="_line_separator_8cs_source.html#l00006">LineSeparator.cs:6</a></div></div>
+<div class="ttc" id="aclass_custom_attributes_1_1_line_separator_html_a4e8b6dab29c682608e95ec78ea74d51c"><div class="ttname"><a href="class_custom_attributes_1_1_line_separator.html#a4e8b6dab29c682608e95ec78ea74d51c">CustomAttributes.LineSeparator.DefaultHeight</a></div><div class="ttdeci">const float DefaultHeight</div><div class="ttdef"><b>Definition:</b> <a href="_line_separator_8cs_source.html#l00014">LineSeparator.cs:14</a></div></div>
+<div class="ttc" id="aclass_custom_attributes_1_1_line_separator_decorator_drawer_html"><div class="ttname"><a href="class_custom_attributes_1_1_line_separator_decorator_drawer.html">CustomAttributes.LineSeparatorDecoratorDrawer</a></div><div class="ttdef"><b>Definition:</b> <a href="_line_separator_8cs_source.html#l00024">LineSeparator.cs:24</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

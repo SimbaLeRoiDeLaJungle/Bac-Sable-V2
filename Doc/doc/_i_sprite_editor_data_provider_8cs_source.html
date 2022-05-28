@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/Interface/ISpriteEditorDataProvider.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_5c619a296023e83a6677e0176cfa3c9d.html">com.unity.2d.sprite@1.0.0</a></li><li class="navelem"><a class="el" href="dir_3a60e56e7ba05fabd92e031555305799.html">Editor</a></li><li class="navelem"><a class="el" href="dir_d8afb3b2944b897d875a03a327e6ec56.html">Interface</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ISpriteEditorDataProvider.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.<a class="code" href="namespace_unity_engine_1_1_u2_d.html">U2D</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> UnityObject = <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.Object;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor_1_1_u2_d_1_1_sprites.html">UnityEditor.U2D.Sprites</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html">ISpriteEditorDataProvider</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#abef1b5bf64f00364d89c80034eca2110">   14</a></span>&#160;        SpriteImportMode <a class="code" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#abef1b5bf64f00364d89c80034eca2110">spriteImportMode</a> { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#ac0455aafc980dda2a903f89fadb47349">   16</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#ac0455aafc980dda2a903f89fadb47349">pixelsPerUnit</a> { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#a30030478490532e433dad5535bd94e0c">   18</a></span>&#160;        UnityObject <a class="code" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#a30030478490532e433dad5535bd94e0c">targetObject</a> { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="class_unity_editor_1_1_sprite_rect.html">SpriteRect</a>[] <a class="code" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#a5534a294a948521a06caf90fbb2d8c4d">GetSpriteRects</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#ae29e75a4d056c54e846f107558e0e091">SetSpriteRects</a>(<a class="code" href="class_unity_editor_1_1_sprite_rect.html">SpriteRect</a>[] spriteRects);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#a8a769567015ee9447591d9f169e39cc8">Apply</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#a5869f0fdd6d6b4acfcf15fd1e43b5b11">InitSpriteEditorDataProvider</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        T <a class="code" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#ad2c12a35def668ff94c924255414c478">GetDataProvider&lt;T&gt;</a>() where T : class;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#a4794967bceb0fbebd3f814853a316a52">HasDataProvider</a>(Type type);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_bone_data_provider.html">   42</a></span>&#160;    public interface <a class="code" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_bone_data_provider.html">ISpriteBoneDataProvider</a></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        List&lt;SpriteBone&gt; GetBones(GUID guid);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> SetBones(GUID guid, List&lt;SpriteBone&gt; bones);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_name_file_id_data_provider.html">   63</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_name_file_id_data_provider.html">ISpriteNameFileIdDataProvider</a></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        IEnumerable&lt;SpriteNameFileIdPair&gt; GetNameFileIdPairs();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">void</span> SetNameFileIdPairs(IEnumerable&lt;SpriteNameFileIdPair&gt; nameFileIdPairs);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_outline_data_provider.html">   75</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_outline_data_provider.html">ISpriteOutlineDataProvider</a></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        List&lt;Vector2[]&gt; GetOutlines(GUID guid);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">void</span> SetOutlines(GUID guid, List&lt;Vector2[]&gt; data);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">float</span> GetTessellationDetail(GUID guid);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">void</span> SetTessellationDetail(GUID guid, <span class="keywordtype">float</span> value);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_physics_outline_data_provider.html">   97</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_physics_outline_data_provider.html">ISpritePhysicsOutlineDataProvider</a></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        List&lt;Vector2[]&gt; GetOutlines(GUID guid);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordtype">void</span> SetOutlines(GUID guid, List&lt;Vector2[]&gt; data);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordtype">float</span> GetTessellationDetail(GUID guid);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordtype">void</span> SetTessellationDetail(GUID guid, <span class="keywordtype">float</span> value);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_texture_data_provider.html">  118</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_texture_data_provider.html">ITextureDataProvider</a></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_texture_data_provider.html#ac6d1679f1b7af49373ae41522b5a9f00">  121</a></span>&#160;        Texture2D texture { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_texture_data_provider.html#a5d423d2f523f00ad9c3cb26659ca5a22">  123</a></span>&#160;        Texture2D previewTexture { <span class="keyword">get</span>; }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordtype">void</span> GetTextureActualWidthAndHeight(out <span class="keywordtype">int</span> width , out <span class="keywordtype">int</span> height);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        Texture2D GetReadableTexture2D();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_secondary_texture_data_provider.html">  134</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_secondary_texture_data_provider.html">ISecondaryTextureDataProvider</a></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    {</div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_secondary_texture_data_provider.html#a30533de7e55bd9a5e15b2f46896f53dc">  139</a></span>&#160;        SecondarySpriteTexture[] textures { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    [Serializable]</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_sprites_1_1_vertex2_d_meta_data.html">  144</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">struct </span><a class="code" href="struct_unity_editor_1_1_u2_d_1_1_sprites_1_1_vertex2_d_meta_data.html">Vertex2DMetaData</a></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    {</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_sprites_1_1_vertex2_d_meta_data.html#a1280604243d6ff1b8dca2121f60584a7">  147</a></span>&#160;        <span class="keyword">public</span> Vector2 <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_sprites_1_1_vertex2_d_meta_data.html#a1280604243d6ff1b8dca2121f60584a7">position</a>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="struct_unity_editor_1_1_u2_d_1_1_sprites_1_1_vertex2_d_meta_data.html#ae879b3d783c3fbf73233f07a77f853dc">  149</a></span>&#160;        <span class="keyword">public</span> BoneWeight <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_sprites_1_1_vertex2_d_meta_data.html#ae879b3d783c3fbf73233f07a77f853dc">boneWeight</a>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider.html">  153</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider.html">ISpriteMeshDataProvider</a></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_sprites_1_1_vertex2_d_meta_data.html">Vertex2DMetaData</a>[] GetVertices(GUID guid);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordtype">void</span> SetVertices(GUID guid, <a class="code" href="struct_unity_editor_1_1_u2_d_1_1_sprites_1_1_vertex2_d_meta_data.html">Vertex2DMetaData</a>[] vertices);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordtype">int</span>[] GetIndices(GUID guid);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordtype">void</span> SetIndices(GUID guid, <span class="keywordtype">int</span>[] indices);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        Vector2Int[] GetEdges(GUID guid);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordtype">void</span> SetEdges(GUID guid, Vector2Int[] edges);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_texture_data_provider_html"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_texture_data_provider.html">UnityEditor.U2D.Sprites.ITextureDataProvider</a></div><div class="ttdoc">Data provider that provides texture data needed for Sprite Editor Window.</div><div class="ttdef"><b>Definition:</b> <a href="_i_sprite_editor_data_provider_8cs_source.html#l00118">ISpriteEditorDataProvider.cs:118</a></div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider_html"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider.html">UnityEditor.U2D.Sprites.ISpriteMeshDataProvider</a></div><div class="ttdoc">Data Provider interface that deals with Sprite mesh data.</div><div class="ttdef"><b>Definition:</b> <a href="_i_sprite_editor_data_provider_8cs_source.html#l00153">ISpriteEditorDataProvider.cs:153</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_sprites_1_1_vertex2_d_meta_data_html_a1280604243d6ff1b8dca2121f60584a7"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_sprites_1_1_vertex2_d_meta_data.html#a1280604243d6ff1b8dca2121f60584a7">UnityEditor.U2D.Sprites.Vertex2DMetaData.position</a></div><div class="ttdeci">Vector2 position</div><div class="ttdoc">The position of the vertex.</div><div class="ttdef"><b>Definition:</b> <a href="_i_sprite_editor_data_provider_8cs_source.html#l00147">ISpriteEditorDataProvider.cs:147</a></div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_name_file_id_data_provider_html"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_name_file_id_data_provider.html">UnityEditor.U2D.Sprites.ISpriteNameFileIdDataProvider</a></div><div class="ttdoc">Data provider that provides data for ID to be used given a SpriteRect's name.</div><div class="ttdef"><b>Definition:</b> <a href="_i_sprite_editor_data_provider_8cs_source.html#l00063">ISpriteEditorDataProvider.cs:63</a></div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_physics_outline_data_provider_html"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_physics_outline_data_provider.html">UnityEditor.U2D.Sprites.ISpritePhysicsOutlineDataProvider</a></div><div class="ttdoc">Data provider that provides the Physics outline data for SpriteRect.</div><div class="ttdef"><b>Definition:</b> <a href="_i_sprite_editor_data_provider_8cs_source.html#l00097">ISpriteEditorDataProvider.cs:97</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_sprites_1_1_vertex2_d_meta_data_html_ae879b3d783c3fbf73233f07a77f853dc"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_sprites_1_1_vertex2_d_meta_data.html#ae879b3d783c3fbf73233f07a77f853dc">UnityEditor.U2D.Sprites.Vertex2DMetaData.boneWeight</a></div><div class="ttdeci">BoneWeight boneWeight</div><div class="ttdoc">The BoneWeight of the vertex.</div><div class="ttdef"><b>Definition:</b> <a href="_i_sprite_editor_data_provider_8cs_source.html#l00149">ISpriteEditorDataProvider.cs:149</a></div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider_html_ad2c12a35def668ff94c924255414c478"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#ad2c12a35def668ff94c924255414c478">UnityEditor.U2D.Sprites.ISpriteEditorDataProvider.GetDataProvider&lt; T &gt;</a></div><div class="ttdeci">T GetDataProvider&lt; T &gt;()</div><div class="ttdoc">Gets other data providers that might be supported by ISpriteEditorDataProvider.targetObject.</div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider_html_a4794967bceb0fbebd3f814853a316a52"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#a4794967bceb0fbebd3f814853a316a52">UnityEditor.U2D.Sprites.ISpriteEditorDataProvider.HasDataProvider</a></div><div class="ttdeci">bool HasDataProvider(Type type)</div><div class="ttdoc">Queries if ISpriteEditorDataProvider.targetObject supports the data provider type.</div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider_html_ac0455aafc980dda2a903f89fadb47349"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#ac0455aafc980dda2a903f89fadb47349">UnityEditor.U2D.Sprites.ISpriteEditorDataProvider.pixelsPerUnit</a></div><div class="ttdeci">float pixelsPerUnit</div><div class="ttdoc">The number of pixels in the sprite that correspond to one unit in world space.</div><div class="ttdef"><b>Definition:</b> <a href="_i_sprite_editor_data_provider_8cs_source.html#l00016">ISpriteEditorDataProvider.cs:16</a></div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_u2_d_1_1_sprites_html"><div class="ttname"><a href="namespace_unity_editor_1_1_u2_d_1_1_sprites.html">UnityEditor.U2D.Sprites</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_asset_database_8cs_source.html#l00003">IAssetDatabase.cs:3</a></div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider_html_a30030478490532e433dad5535bd94e0c"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#a30030478490532e433dad5535bd94e0c">UnityEditor.U2D.Sprites.ISpriteEditorDataProvider.targetObject</a></div><div class="ttdeci">UnityObject targetObject</div><div class="ttdoc">The object that this data provider is acquiring its data from.</div><div class="ttdef"><b>Definition:</b> <a href="_i_sprite_editor_data_provider_8cs_source.html#l00018">ISpriteEditorDataProvider.cs:18</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_html"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d.html">UnityEngine.U2D</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider_html_abef1b5bf64f00364d89c80034eca2110"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#abef1b5bf64f00364d89c80034eca2110">UnityEditor.U2D.Sprites.ISpriteEditorDataProvider.spriteImportMode</a></div><div class="ttdeci">SpriteImportMode spriteImportMode</div><div class="ttdoc">SpriteImportMode to indicate how Sprite data will be imported.</div><div class="ttdef"><b>Definition:</b> <a href="_i_sprite_editor_data_provider_8cs_source.html#l00014">ISpriteEditorDataProvider.cs:14</a></div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider_html"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html">UnityEditor.U2D.Sprites.ISpriteEditorDataProvider</a></div><div class="ttdoc">An interface that allows Sprite Editor Window to edit Sprite data for user custom importer.</div><div class="ttdef"><b>Definition:</b> <a href="_i_sprite_editor_data_provider_8cs_source.html#l00011">ISpriteEditorDataProvider.cs:11</a></div></div>
+<div class="ttc" id="anamespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div><div class="ttdef"><b>Definition:</b> <a href="_preserve_dependency_attribute_8cs_source.html#l00030">PreserveDependencyAttribute.cs:30</a></div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider_html_a5869f0fdd6d6b4acfcf15fd1e43b5b11"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#a5869f0fdd6d6b4acfcf15fd1e43b5b11">UnityEditor.U2D.Sprites.ISpriteEditorDataProvider.InitSpriteEditorDataProvider</a></div><div class="ttdeci">void InitSpriteEditorDataProvider()</div><div class="ttdoc">Allows the data provider to initialize any data if needed.</div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_bone_data_provider_html"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_bone_data_provider.html">UnityEditor.U2D.Sprites.ISpriteBoneDataProvider</a></div><div class="ttdoc">Data Provider interface that deals with Sprite Bone data.</div><div class="ttdef"><b>Definition:</b> <a href="_i_sprite_editor_data_provider_8cs_source.html#l00042">ISpriteEditorDataProvider.cs:42</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_sprite_rect_html"><div class="ttname"><a href="class_unity_editor_1_1_sprite_rect.html">UnityEditor.SpriteRect</a></div><div class="ttdoc">Abstract class that is used by systems to encapsulate Sprite data representation. Currently this is u...</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_rect_8cs_source.html#l00009">SpriteRect.cs:9</a></div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider_html_ae29e75a4d056c54e846f107558e0e091"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#ae29e75a4d056c54e846f107558e0e091">UnityEditor.U2D.Sprites.ISpriteEditorDataProvider.SetSpriteRects</a></div><div class="ttdeci">void SetSpriteRects(SpriteRect[] spriteRects)</div><div class="ttdoc">Sets the data provider's current SpriteRect.</div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_outline_data_provider_html"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_outline_data_provider.html">UnityEditor.U2D.Sprites.ISpriteOutlineDataProvider</a></div><div class="ttdoc">Data provider that provides the outline data for SpriteRect.</div><div class="ttdef"><b>Definition:</b> <a href="_i_sprite_editor_data_provider_8cs_source.html#l00075">ISpriteEditorDataProvider.cs:75</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider_html_a8a769567015ee9447591d9f169e39cc8"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#a8a769567015ee9447591d9f169e39cc8">UnityEditor.U2D.Sprites.ISpriteEditorDataProvider.Apply</a></div><div class="ttdeci">void Apply()</div><div class="ttdoc">Applying any changed data.</div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_secondary_texture_data_provider_html"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_secondary_texture_data_provider.html">UnityEditor.U2D.Sprites.ISecondaryTextureDataProvider</a></div><div class="ttdoc">Data provider that provides secoondary texture data needed for Sprite Editor Window.</div><div class="ttdef"><b>Definition:</b> <a href="_i_sprite_editor_data_provider_8cs_source.html#l00134">ISpriteEditorDataProvider.cs:134</a></div></div>
+<div class="ttc" id="astruct_unity_editor_1_1_u2_d_1_1_sprites_1_1_vertex2_d_meta_data_html"><div class="ttname"><a href="struct_unity_editor_1_1_u2_d_1_1_sprites_1_1_vertex2_d_meta_data.html">UnityEditor.U2D.Sprites.Vertex2DMetaData</a></div><div class="ttdoc">A structure that contains meta data about vertices in a Sprite.</div><div class="ttdef"><b>Definition:</b> <a href="_i_sprite_editor_data_provider_8cs_source.html#l00144">ISpriteEditorDataProvider.cs:144</a></div></div>
+<div class="ttc" id="ainterface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider_html_a5534a294a948521a06caf90fbb2d8c4d"><div class="ttname"><a href="interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider.html#a5534a294a948521a06caf90fbb2d8c4d">UnityEditor.U2D.Sprites.ISpriteEditorDataProvider.GetSpriteRects</a></div><div class="ttdeci">SpriteRect[] GetSpriteRects()</div><div class="ttdoc">Returns an array of SpriteRect representing Sprite data the provider has.</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

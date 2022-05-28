@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.common@7.0.0/Runtime/UTess2D/Smoothen.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_13c1890f42caf04e391d54eaba5958a9.html">com.unity.2d.common@7.0.0</a></li><li class="navelem"><a class="el" href="dir_dc4de4c9a6e50cecca36e9e92b8aff9f.html">Runtime</a></li><li class="navelem"><a class="el" href="dir_4cd2ea262e7e1b72525cbd8c5b0b7c8e.html">UTess2D</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Smoothen.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity.html">Unity</a>.<a class="code" href="namespace_unity_1_1_mathematics.html">Mathematics</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity.html">Unity</a>.Collections;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity.html">Unity</a>.Collections.LowLevel.Unsafe;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_engine_1_1_u2_d_1_1_common_1_1_u_tess.html">UnityEngine.U2D.Common.UTess</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="struct_unity_engine_1_1_u2_d_1_1_common_1_1_u_tess_1_1_smoothen.html">    8</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_unity_engine_1_1_u2_d_1_1_common_1_1_u_tess_1_1_smoothen.html">Smoothen</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="comment">// This is an arbitrary value less than 2 to ensure points are not moved too far away from the source polygon.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> readonly <span class="keywordtype">float</span> kMaxAreaTolerance = 1.842f;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> readonly <span class="keywordtype">float</span> kMaxEdgeTolerance = 2.482f;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="comment">// Trim Edges</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> RefineEdges(ref NativeArray&lt;int4&gt; refinedEdges, ref NativeArray&lt;int4&gt; delaEdges, ref <span class="keywordtype">int</span> delaEdgeCount, ref NativeArray&lt;int4&gt; voronoiEdges)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordtype">int</span> origEdgeCount = delaEdgeCount;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            delaEdgeCount = 0;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="comment">// Check Neighbour Triangles.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; origEdgeCount - 1; ++i)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                var edge = delaEdges[i];</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                var neighbor = delaEdges[i + 1];</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <span class="keywordflow">if</span> (edge.x == neighbor.x &amp;&amp; edge.y == neighbor.y)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                    <span class="comment">// Found the Opposite Edge. i.e Nearby Triangle.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                    edge.w = neighbor.z;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                    ++i;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="comment">// Update new list.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                refinedEdges[delaEdgeCount++] = edge;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="comment">// Generate Voronoi Edges.</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; delaEdgeCount; ++i)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                var ti1 = refinedEdges[i].z;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                var ti2 = refinedEdges[i].w;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="comment">// We only really care about Bounded Edges. This is simplification. Hoping this garbage works.</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordflow">if</span> (ti1 != -1 &amp;&amp; ti2 != -1)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    <span class="comment">// Get Triangles</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                    <a class="code" href="struct_unity_1_1_mathematics_1_1int4.html">int4</a> e = <span class="keyword">new</span> <a class="code" href="struct_unity_1_1_mathematics_1_1int4.html">int4</a>(ti2, ti1, i, 0);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    voronoiEdges[i] = e;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            ModuleHandle.Copy(refinedEdges, delaEdges, delaEdgeCount);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">// Get all the Edges that has this Point.</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> GetAffectingEdges(<span class="keywordtype">int</span> pointIndex, NativeArray&lt;int4&gt; edges, <span class="keywordtype">int</span> edgeCount, ref NativeArray&lt;int&gt; resultSet, ref NativeArray&lt;int&gt; checkSet, ref <span class="keywordtype">int</span> resultCount)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            resultCount = 0;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; edgeCount; ++i)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">if</span> (pointIndex == edges[i].x || pointIndex == edges[i].y)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    resultSet[resultCount++] = i;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                checkSet[i] = 0;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// Add to Centroids Triangles.</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> CentroidByPoints(<span class="keywordtype">int</span> triIndex, NativeArray&lt;UTriangle&gt; triangles, ref NativeArray&lt;int&gt; centroidTris, ref <span class="keywordtype">int</span> centroidCount, ref <a class="code" href="struct_unity_1_1_mathematics_1_1float2.html">float2</a> aggregate, ref <a class="code" href="struct_unity_1_1_mathematics_1_1float2.html">float2</a> point)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; centroidCount; ++i)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">if</span> (triIndex == centroidTris[i])</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            centroidTris[centroidCount++] = triIndex;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            aggregate += triangles[triIndex].c.center;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            point = aggregate / centroidCount;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> CentroidByPolygon(<a class="code" href="struct_unity_1_1_mathematics_1_1int4.html">int4</a> e, NativeArray&lt;UTriangle&gt; triangles, ref <a class="code" href="struct_unity_1_1_mathematics_1_1float2.html">float2</a> centroid, ref <span class="keywordtype">float</span> area, ref <span class="keywordtype">float</span> distance)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            var es = triangles[e.x].c.center;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            var ee = triangles[e.y].c.center;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            var d = es.x * ee.y - ee.x * es.y;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            distance = distance + math.distance(es, ee);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            area = area + d;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            centroid.x += (ee.x + es.x) * d;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            centroid.y += (ee.y + es.y) * d;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="comment">// Connect Triangles</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> ConnectTriangles(ref NativeArray&lt;int4&gt; connectedTri, ref NativeArray&lt;int&gt; affectEdges, ref NativeArray&lt;int&gt; checkSet, NativeArray&lt;int4&gt; voronoiEdges, <span class="keywordtype">int</span> triangleCount)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            var ei = affectEdges[0];</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            var ni = affectEdges[0];</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            connectedTri[0] = <span class="keyword">new</span> <a class="code" href="struct_unity_1_1_mathematics_1_1int4.html">int4</a>(voronoiEdges[ei].x, voronoiEdges[ei].y, 0, 0);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            checkSet[ni] = 1;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; triangleCount; ++i)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                ni = affectEdges[i];</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="keywordflow">if</span> (checkSet[ni] == 0)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    <span class="keywordflow">if</span> (voronoiEdges[ni].x == connectedTri[i - 1].y)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                        connectedTri[i] = <span class="keyword">new</span> <a class="code" href="struct_unity_1_1_mathematics_1_1int4.html">int4</a>(voronoiEdges[ni].x, voronoiEdges[ni].y, 0, 0);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                        checkSet[ni] = 1;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                    {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                        <span class="keywordflow">if</span> (voronoiEdges[ni].y == connectedTri[i - 1].y)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                        {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                            connectedTri[i] = <span class="keyword">new</span> <a class="code" href="struct_unity_1_1_mathematics_1_1int4.html">int4</a>(voronoiEdges[ni].y, voronoiEdges[ni].x, 0, 0);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                            checkSet[ni] = 1;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                        }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                var connected = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; triangleCount; ++j)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    ni = affectEdges[j];</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                    <span class="keywordflow">if</span> (checkSet[ni] == 1)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                    <span class="keywordflow">if</span> (voronoiEdges[ni].x == connectedTri[i - 1].y)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                    {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                        connectedTri[i] = <span class="keyword">new</span> <a class="code" href="struct_unity_1_1_mathematics_1_1int4.html">int4</a>(voronoiEdges[ni].x, voronoiEdges[ni].y, 0, 0);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                        checkSet[ni] = 1;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                        connected = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                    }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (voronoiEdges[ni].y == connectedTri[i - 1].y)</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                    {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                        connectedTri[i] = <span class="keyword">new</span> <a class="code" href="struct_unity_1_1_mathematics_1_1int4.html">int4</a>(voronoiEdges[ni].y, voronoiEdges[ni].x, 0, 0);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                        checkSet[ni] = 1;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                        connected = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                    }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                <span class="keywordflow">if</span> (!connected)</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="comment">// Perform Voronoi based Smoothing. Does not add/remove points but merely relocates internal vertices so they are uniform distributed.</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keyword">internal</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> Condition(Allocator allocator, ref NativeArray&lt;float2&gt; pgPoints, <span class="keywordtype">int</span> pgPointCount, NativeArray&lt;int2&gt; pgEdges, <span class="keywordtype">int</span> pgEdgeCount, ref NativeArray&lt;float2&gt; vertices, ref <span class="keywordtype">int</span> vertexCount, ref NativeArray&lt;int&gt; indices, ref <span class="keywordtype">int</span> indexCount)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="comment">// Build Triangles and Edges.</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keywordtype">float</span> maxArea = 0, cmxArea = 0, minArea = 0, cmnArea = 0, avgArea = 0, minEdge = 0, maxEdge = 0, avgEdge = 0;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordtype">bool</span> polygonCentroid = <span class="keyword">true</span>, validGraph = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordtype">int</span> triangleCount = 0, delaEdgeCount = 0, affectingEdgeCount = 0;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            var triangles = <span class="keyword">new</span> NativeArray&lt;UTriangle&gt;(indexCount, allocator);    <span class="comment">// Intentionally added more room than actual Triangles needed here.</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            var delaEdges = <span class="keyword">new</span> NativeArray&lt;int4&gt;(indexCount, allocator);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            var voronoiEdges = <span class="keyword">new</span> NativeArray&lt;int4&gt;(indexCount, allocator);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            var connectedTri = <span class="keyword">new</span> NativeArray&lt;int4&gt;(vertexCount, allocator);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            var voronoiCheck = <span class="keyword">new</span> NativeArray&lt;int&gt;(indexCount, allocator);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            var affectsEdges = <span class="keyword">new</span> NativeArray&lt;int&gt;(indexCount, allocator);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            var triCentroids = <span class="keyword">new</span> NativeArray&lt;int&gt;(vertexCount, allocator);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            ModuleHandle.BuildTrianglesAndEdges(vertices, vertexCount, indices, indexCount, ref triangles, ref triangleCount, ref delaEdges, ref delaEdgeCount, ref maxArea, ref avgArea, ref minArea);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            var refinedEdges = <span class="keyword">new</span> NativeArray&lt;int4&gt;(delaEdgeCount, allocator);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="comment">// Sort the Delaunay Edges.</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            unsafe</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                ModuleHandle.InsertionSort&lt;<a class="code" href="struct_unity_1_1_mathematics_1_1int4.html">int4</a>, <a class="code" href="struct_unity_engine_1_1_u2_d_1_1_common_1_1_u_tess_1_1_dela_edge_compare.html">DelaEdgeCompare</a>&gt;(</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                    NativeArrayUnsafeUtility.GetUnsafeBufferPointerWithoutChecks(delaEdges), 0, delaEdgeCount - 1,</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                    <span class="keyword">new</span> <a class="code" href="struct_unity_engine_1_1_u2_d_1_1_common_1_1_u_tess_1_1_dela_edge_compare.html">DelaEdgeCompare</a>());</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="comment">// TrimEdges. Update Triangle Info for Shared Edges and remove Duplicates.</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            RefineEdges(ref refinedEdges, ref delaEdges, ref delaEdgeCount, ref voronoiEdges);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="comment">// Now for each point, generate Voronoi diagram.</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; vertexCount; ++i)</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                <span class="comment">// Try moving this to Centroid of the Voronoi Polygon.</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                GetAffectingEdges(i, delaEdges, delaEdgeCount, ref affectsEdges, ref voronoiCheck, ref affectingEdgeCount);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                var bounded = affectingEdgeCount != 0;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                <span class="comment">// Check for Boundedness</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; affectingEdgeCount; ++j)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                    <span class="comment">// Edge Index.</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                    var ei = affectsEdges[j];</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                    <span class="keywordflow">if</span> (delaEdges[ei].z == -1 || delaEdges[ei].w == -1)</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                    {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                        bounded = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                    }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                <span class="comment">// If this is bounded point, relocate to Voronoi Diagram&#39;s Centroid</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                <span class="keywordflow">if</span> (bounded)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                    polygonCentroid = ConnectTriangles(ref connectedTri, ref affectsEdges, ref voronoiCheck, voronoiEdges, affectingEdgeCount);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                    <span class="keywordflow">if</span> (!polygonCentroid)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                    {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                    }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                    <a class="code" href="struct_unity_1_1_mathematics_1_1float2.html">float2</a> point = <a class="code" href="struct_unity_1_1_mathematics_1_1float2.html">float2</a>.<a class="code" href="struct_unity_1_1_mathematics_1_1float2.html#a195b4f8d3d8c81ef264f02fae6d588b6">zero</a>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                    <span class="keywordtype">float</span> area = 0, distance = 0;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; affectingEdgeCount; ++k)</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                    {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                        CentroidByPolygon(connectedTri[k], triangles, ref point, ref area, ref distance);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                    }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                    point /= (3 * area);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                    pgPoints[i] = point;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="comment">// Do Delaunay Again.</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordtype">int</span> srcIndexCount = indexCount, srcVertexCount = vertexCount;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            indexCount = 0; vertexCount = 0; triangleCount = 0;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <span class="keywordflow">if</span> (polygonCentroid)</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            {</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                validGraph = <a class="code" href="struct_unity_engine_1_1_u2_d_1_1_common_1_1_u_tess_1_1_tessellator.html">Tessellator</a>.Tessellate(allocator, pgPoints, pgPointCount, pgEdges, pgEdgeCount, ref vertices, ref vertexCount, ref indices, ref indexCount);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                <span class="keywordflow">if</span> (validGraph)</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                    ModuleHandle.BuildTriangles(vertices, vertexCount, indices, indexCount, ref triangles, ref triangleCount, ref cmxArea, ref avgArea, ref cmnArea, ref maxEdge, ref avgEdge, ref minEdge);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                <span class="comment">// This Edge validation prevents artifacts by forcing a fallback. todo: Fix the actual bug in Outline generation.</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                validGraph = validGraph &amp;&amp; (cmxArea &lt; maxArea * kMaxAreaTolerance) &amp;&amp; (maxEdge &lt; avgEdge * kMaxEdgeTolerance);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="comment">// Cleanup.</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            triangles.Dispose();</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            delaEdges.Dispose();</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            refinedEdges.Dispose();</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            voronoiCheck.Dispose();</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            voronoiEdges.Dispose();</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            affectsEdges.Dispose();</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            triCentroids.Dispose();</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            connectedTri.Dispose();</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <span class="keywordflow">return</span> (validGraph &amp;&amp; srcIndexCount == indexCount &amp;&amp; srcVertexCount == vertexCount);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    }</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_unity_1_1_mathematics_1_1float2_html_a195b4f8d3d8c81ef264f02fae6d588b6"><div class="ttname"><a href="struct_unity_1_1_mathematics_1_1float2.html#a195b4f8d3d8c81ef264f02fae6d588b6">Unity.Mathematics.float2.zero</a></div><div class="ttdeci">static readonly float2 zero</div><div class="ttdoc">float2 zero value.</div><div class="ttdef"><b>Definition:</b> <a href="float2_8gen_8cs_source.html#l00030">float2.gen.cs:30</a></div></div>
+<div class="ttc" id="astruct_unity_engine_1_1_u2_d_1_1_common_1_1_u_tess_1_1_smoothen_html"><div class="ttname"><a href="struct_unity_engine_1_1_u2_d_1_1_common_1_1_u_tess_1_1_smoothen.html">UnityEngine.U2D.Common.UTess.Smoothen</a></div><div class="ttdef"><b>Definition:</b> <a href="_smoothen_8cs_source.html#l00008">Smoothen.cs:8</a></div></div>
+<div class="ttc" id="astruct_unity_engine_1_1_u2_d_1_1_common_1_1_u_tess_1_1_dela_edge_compare_html"><div class="ttname"><a href="struct_unity_engine_1_1_u2_d_1_1_common_1_1_u_tess_1_1_dela_edge_compare.html">UnityEngine.U2D.Common.UTess.DelaEdgeCompare</a></div><div class="ttdef"><b>Definition:</b> <a href="_u_tess_8cs_source.html#l00195">UTess.cs:195</a></div></div>
+<div class="ttc" id="anamespace_unity_html"><div class="ttname"><a href="namespace_unity.html">Unity</a></div><div class="ttdef"><b>Definition:</b> <a href="_build_asset_bundle_8cs_source.html#l00004">BuildAssetBundle.cs:4</a></div></div>
+<div class="ttc" id="anamespace_unity_1_1_mathematics_html"><div class="ttname"><a href="namespace_unity_1_1_mathematics.html">Unity.Mathematics</a></div><div class="ttdef"><b>Definition:</b> <a href="_test_bitmanipulation_8cs_source.html#l00005">TestBitmanipulation.cs:5</a></div></div>
+<div class="ttc" id="astruct_unity_1_1_mathematics_1_1float2_html"><div class="ttname"><a href="struct_unity_1_1_mathematics_1_1float2.html">Unity.Mathematics.float2</a></div><div class="ttdoc">A 2 component vector of floats.</div><div class="ttdef"><b>Definition:</b> <a href="float2_8gen_8cs_source.html#l00022">float2.gen.cs:22</a></div></div>
+<div class="ttc" id="astruct_unity_engine_1_1_u2_d_1_1_common_1_1_u_tess_1_1_tessellator_html"><div class="ttname"><a href="struct_unity_engine_1_1_u2_d_1_1_common_1_1_u_tess_1_1_tessellator.html">UnityEngine.U2D.Common.UTess.Tessellator</a></div><div class="ttdef"><b>Definition:</b> <a href="_tessellator_8cs_source.html#l00010">Tessellator.cs:10</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_1_1_u2_d_1_1_common_1_1_u_tess_html"><div class="ttname"><a href="namespace_unity_engine_1_1_u2_d_1_1_common_1_1_u_tess.html">UnityEngine.U2D.Common.UTess</a></div><div class="ttdef"><b>Definition:</b> <a href="_array_slice_8cs_source.html#l00007">ArraySlice.cs:7</a></div></div>
+<div class="ttc" id="astruct_unity_1_1_mathematics_1_1int4_html"><div class="ttname"><a href="struct_unity_1_1_mathematics_1_1int4.html">Unity.Mathematics.int4</a></div><div class="ttdoc">A 4 component vector of ints.</div><div class="ttdef"><b>Definition:</b> <a href="int4_8gen_8cs_source.html#l00022">int4.gen.cs:22</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

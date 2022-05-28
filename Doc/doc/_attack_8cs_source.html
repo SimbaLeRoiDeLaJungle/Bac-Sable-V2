@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Assets/Simba/Scirpts/Attack System/Attack.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_158af4e89fe28c6233fdc636e282763b.html">Simba</a></li><li class="navelem"><a class="el" href="dir_7fd08fc4bf1ab871205d67b083a39232.html">Scirpts</a></li><li class="navelem"><a class="el" href="dir_12aa266cb53bbf76cf8bc5785e2b8ff0.html">Attack System</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Attack.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_attack_8cs.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System.Collections;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> System;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> UnityEditor;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_custom_attributes.html">CustomAttributes</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_attack_system.html">AttackSystem</a>{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    [CreateAssetMenu(fileName = <span class="stringliteral">&quot;attack_name&quot;</span>, menuName = <span class="stringliteral">&quot;ScriptableObjects/Attack&quot;</span>, order = 2)]</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html">   10</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_attack_system_1_1_attack.html">Attack</a> : ScriptableObject, ISerializationCallbackReceiver</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        [Header(<span class="stringliteral">&quot;Settings&quot;</span>)]</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#aa836a69d9e61815f53c277eb3b6a0b36">   13</a></span>&#160;        [SerializeField] <span class="keywordtype">bool</span> <a class="code" href="class_attack_system_1_1_attack.html#aa836a69d9e61815f53c277eb3b6a0b36">_canCharge</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        [ShowIf(<a class="code" href="namespace_custom_attributes.html#a4a3049554e325384906ea24ee25e5d9c">ActionOnConditionFail</a>.DontDraw, <a class="code" href="namespace_custom_attributes.html#aa2378c6ae47b8325ac5f12d2892700cd">ConditionOperator</a>.And, nameof(<a class="code" href="class_attack_system_1_1_attack.html#aa836a69d9e61815f53c277eb3b6a0b36">_canCharge</a>))]</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#a18b250a0249cb67a81bb11d16d523161">   15</a></span>&#160;        [SerializeField] <span class="keywordtype">float</span> <a class="code" href="class_attack_system_1_1_attack.html#a18b250a0249cb67a81bb11d16d523161">_maxChargeTime</a>;    </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        [ShowIf(<a class="code" href="namespace_custom_attributes.html#a4a3049554e325384906ea24ee25e5d9c">ActionOnConditionFail</a>.DontDraw, <a class="code" href="namespace_custom_attributes.html#aa2378c6ae47b8325ac5f12d2892700cd">ConditionOperator</a>.And, nameof(<a class="code" href="class_attack_system_1_1_attack.html#aa836a69d9e61815f53c277eb3b6a0b36">_canCharge</a>))]</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#a37906ebf837cf3ce937ab6fb32b6bcd2">   17</a></span>&#160;        [SerializeField] <span class="keywordtype">float</span> <a class="code" href="class_attack_system_1_1_attack.html#a37906ebf837cf3ce937ab6fb32b6bcd2">_minChargeTime</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#a3fc763bb8b5ad3e1af9b5db1c17074dd">   18</a></span>&#160;        [SerializeField] <span class="keywordtype">int</span> <a class="code" href="class_attack_system_1_1_attack.html#a3fc763bb8b5ad3e1af9b5db1c17074dd">_power</a>;  </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#a9910b44fb9f0a16c35405fb96ff97b91">   19</a></span>&#160;        [SerializeField] <span class="keywordtype">float</span> <a class="code" href="class_attack_system_1_1_attack.html#a9910b44fb9f0a16c35405fb96ff97b91">_range</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#a802120c51a19b0521589090d18b9e8a5">   20</a></span>&#160;        [SerializeField] <span class="keywordtype">float</span> <a class="code" href="class_attack_system_1_1_attack.html#a802120c51a19b0521589090d18b9e8a5">_timeOfHit</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#ae6f89f4b877c367b4746e06eb1f2e54c">   21</a></span>&#160;        [SerializeField] <a class="code" href="_attack_type_8cs.html#a904b2f9c8f3951116c343784c59d6afe">AttackType</a> <a class="code" href="class_attack_system_1_1_attack.html#ae6f89f4b877c367b4746e06eb1f2e54c">_attackType</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        [ShowIf(<a class="code" href="namespace_custom_attributes.html#a4a3049554e325384906ea24ee25e5d9c">ActionOnConditionFail</a>.DontDraw, <a class="code" href="namespace_custom_attributes.html#aa2378c6ae47b8325ac5f12d2892700cd">ConditionOperator</a>.And, nameof(<a class="code" href="class_attack_system_1_1_attack.html#a843457f01d63b37afed282c185da7450">distanceAttack</a>))]</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#ac03ae1a828458d072cf1c9c04c74089f">   24</a></span>&#160;        [SerializeField] GameObject <a class="code" href="class_attack_system_1_1_attack.html#ac03ae1a828458d072cf1c9c04c74089f">_prefabBullet</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        [ShowIf(<a class="code" href="namespace_custom_attributes.html#a4a3049554e325384906ea24ee25e5d9c">ActionOnConditionFail</a>.DontDraw, <a class="code" href="namespace_custom_attributes.html#aa2378c6ae47b8325ac5f12d2892700cd">ConditionOperator</a>.And, nameof(<a class="code" href="class_attack_system_1_1_attack.html#a843457f01d63b37afed282c185da7450">distanceAttack</a>))]</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#abd90389b030c37050a1c00406c2c8b72">   26</a></span>&#160;        [SerializeField] Vector2 <a class="code" href="class_attack_system_1_1_attack.html#abd90389b030c37050a1c00406c2c8b72">_bulletRelativePosition</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#a037904da9de89c71e6b783b1e50d4f6a">   27</a></span>&#160;        <a class="code" href="struct_attack_system_1_1_attack_settings.html">AttackSettings</a> <a class="code" href="class_attack_system_1_1_attack.html#a037904da9de89c71e6b783b1e50d4f6a">_attackSettings</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        [<a class="code" href="class_custom_attributes_1_1_line_separator.html">LineSeparator</a>]</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        [Header(<span class="stringliteral">&quot;GFX&quot;</span>)]</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#a14f239c262ff8f5f0abb8380d40f8d89">   31</a></span>&#160;        [SerializeField] GameObject <a class="code" href="class_attack_system_1_1_attack.html#a14f239c262ff8f5f0abb8380d40f8d89">_prefabEffectCharge</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#a379b806fa5983a383acd41651eca9606">   32</a></span>&#160;        [SerializeField] GameObject <a class="code" href="class_attack_system_1_1_attack.html#a379b806fa5983a383acd41651eca9606">_prefabEffect</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#aa6b869fd15da1b61582fd086da4c68ca">   33</a></span>&#160;        [SerializeField] Vector2 <a class="code" href="class_attack_system_1_1_attack.html#aa6b869fd15da1b61582fd086da4c68ca">_effectRelativePose</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#a2deb06fe5316725ab83273595e4225d9">   34</a></span>&#160;        <span class="keyword">public</span> Vector2 <a class="code" href="class_attack_system_1_1_attack.html#a2deb06fe5316725ab83273595e4225d9">effectRelativePosition</a>{ <span class="keyword">get</span> {<span class="keywordflow">return</span> <a class="code" href="class_attack_system_1_1_attack.html#aa6b869fd15da1b61582fd086da4c68ca">_effectRelativePose</a>; } } </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">// Proprety</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#a6eacccdb9b8148ac148986ce1e23a5eb">   38</a></span>&#160;        <span class="keyword">public</span> GameObject <a class="code" href="class_attack_system_1_1_attack.html#a6eacccdb9b8148ac148986ce1e23a5eb">prefabEffect</a>{ <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code" href="class_attack_system_1_1_attack.html#a379b806fa5983a383acd41651eca9606">_prefabEffect</a>; } }</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#a48d2c4ffe48a0a8705264868ce27f8a9">   39</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="struct_attack_system_1_1_attack_settings.html">AttackSettings</a> <a class="code" href="class_attack_system_1_1_attack.html#a48d2c4ffe48a0a8705264868ce27f8a9">Settings</a>{ <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code" href="class_attack_system_1_1_attack.html#a037904da9de89c71e6b783b1e50d4f6a">_attackSettings</a>; } }</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#a96534a7231dae039e600798495f05c51">   40</a></span>&#160;        <span class="keyword">public</span> GameObject <a class="code" href="class_attack_system_1_1_attack.html#a96534a7231dae039e600798495f05c51">prefabBullet</a>{ <span class="keyword">get</span> { <span class="keywordflow">return</span> <a class="code" href="class_attack_system_1_1_attack.html#ac03ae1a828458d072cf1c9c04c74089f">_prefabBullet</a>; } }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">// Serialization </span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#a843457f01d63b37afed282c185da7450">   44</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_attack_system_1_1_attack.html#a843457f01d63b37afed282c185da7450">distanceAttack</a>; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#adf92c7184062e036e5c8acca9447ed6f">   52</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_attack_system_1_1_attack.html#adf92c7184062e036e5c8acca9447ed6f">OnAfterDeserialize</a>()</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <a class="code" href="class_attack_system_1_1_attack.html#a037904da9de89c71e6b783b1e50d4f6a">_attackSettings</a> = <span class="keyword">new</span> <a class="code" href="struct_attack_system_1_1_attack_settings.html">AttackSettings</a>(<a class="code" href="class_attack_system_1_1_attack.html#aa836a69d9e61815f53c277eb3b6a0b36">_canCharge</a>, <a class="code" href="class_attack_system_1_1_attack.html#a18b250a0249cb67a81bb11d16d523161">_maxChargeTime</a>, <a class="code" href="class_attack_system_1_1_attack.html#a37906ebf837cf3ce937ab6fb32b6bcd2">_minChargeTime</a>, <a class="code" href="class_attack_system_1_1_attack.html#a3fc763bb8b5ad3e1af9b5db1c17074dd">_power</a>, <a class="code" href="class_attack_system_1_1_attack.html#ae6f89f4b877c367b4746e06eb1f2e54c">_attackType</a>, <a class="code" href="class_attack_system_1_1_attack.html#a9910b44fb9f0a16c35405fb96ff97b91">_range</a>, <a class="code" href="class_attack_system_1_1_attack.html#a802120c51a19b0521589090d18b9e8a5">_timeOfHit</a>, <a class="code" href="class_attack_system_1_1_attack.html#abd90389b030c37050a1c00406c2c8b72">_bulletRelativePosition</a>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#a57eacee4d0cb41580094ef849bbc7ccb">   63</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_attack_system_1_1_attack.html#a57eacee4d0cb41580094ef849bbc7ccb">OnBeforeSerialize</a>(){}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_attack_system_1_1_attack.html#a21fc7d23bae09208bd0ccb957f8ba103">   71</a></span>&#160;<span class="comment"></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_attack_system_1_1_attack.html#a21fc7d23bae09208bd0ccb957f8ba103">OnValidate</a>(){</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <a class="code" href="class_attack_system_1_1_attack.html#a843457f01d63b37afed282c185da7450">distanceAttack</a> = <a class="code" href="class_attack_system_1_1_attack.html#ae6f89f4b877c367b4746e06eb1f2e54c">_attackType</a> == <a class="code" href="_attack_type_8cs.html#a904b2f9c8f3951116c343784c59d6afe">AttackType</a>.Distance;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_a3fc763bb8b5ad3e1af9b5db1c17074dd"><div class="ttname"><a href="class_attack_system_1_1_attack.html#a3fc763bb8b5ad3e1af9b5db1c17074dd">AttackSystem.Attack._power</a></div><div class="ttdeci">int _power</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00018">Attack.cs:18</a></div></div>
+<div class="ttc" id="anamespace_attack_system_html"><div class="ttname"><a href="namespace_attack_system.html">AttackSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="_action_pad_8cs_source.html#l00006">ActionPad.cs:6</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_a379b806fa5983a383acd41651eca9606"><div class="ttname"><a href="class_attack_system_1_1_attack.html#a379b806fa5983a383acd41651eca9606">AttackSystem.Attack._prefabEffect</a></div><div class="ttdeci">GameObject _prefabEffect</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00032">Attack.cs:32</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_a18b250a0249cb67a81bb11d16d523161"><div class="ttname"><a href="class_attack_system_1_1_attack.html#a18b250a0249cb67a81bb11d16d523161">AttackSystem.Attack._maxChargeTime</a></div><div class="ttdeci">float _maxChargeTime</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00015">Attack.cs:15</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_a48d2c4ffe48a0a8705264868ce27f8a9"><div class="ttname"><a href="class_attack_system_1_1_attack.html#a48d2c4ffe48a0a8705264868ce27f8a9">AttackSystem.Attack.Settings</a></div><div class="ttdeci">AttackSettings Settings</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00039">Attack.cs:39</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_aa836a69d9e61815f53c277eb3b6a0b36"><div class="ttname"><a href="class_attack_system_1_1_attack.html#aa836a69d9e61815f53c277eb3b6a0b36">AttackSystem.Attack._canCharge</a></div><div class="ttdeci">bool _canCharge</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00013">Attack.cs:13</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_aa6b869fd15da1b61582fd086da4c68ca"><div class="ttname"><a href="class_attack_system_1_1_attack.html#aa6b869fd15da1b61582fd086da4c68ca">AttackSystem.Attack._effectRelativePose</a></div><div class="ttdeci">Vector2 _effectRelativePose</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00033">Attack.cs:33</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_a2deb06fe5316725ab83273595e4225d9"><div class="ttname"><a href="class_attack_system_1_1_attack.html#a2deb06fe5316725ab83273595e4225d9">AttackSystem.Attack.effectRelativePosition</a></div><div class="ttdeci">Vector2 effectRelativePosition</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00034">Attack.cs:34</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_ae6f89f4b877c367b4746e06eb1f2e54c"><div class="ttname"><a href="class_attack_system_1_1_attack.html#ae6f89f4b877c367b4746e06eb1f2e54c">AttackSystem.Attack._attackType</a></div><div class="ttdeci">AttackType _attackType</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00021">Attack.cs:21</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_a37906ebf837cf3ce937ab6fb32b6bcd2"><div class="ttname"><a href="class_attack_system_1_1_attack.html#a37906ebf837cf3ce937ab6fb32b6bcd2">AttackSystem.Attack._minChargeTime</a></div><div class="ttdeci">float _minChargeTime</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00017">Attack.cs:17</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_abd90389b030c37050a1c00406c2c8b72"><div class="ttname"><a href="class_attack_system_1_1_attack.html#abd90389b030c37050a1c00406c2c8b72">AttackSystem.Attack._bulletRelativePosition</a></div><div class="ttdeci">Vector2 _bulletRelativePosition</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00026">Attack.cs:26</a></div></div>
+<div class="ttc" id="anamespace_custom_attributes_html_aa2378c6ae47b8325ac5f12d2892700cd"><div class="ttname"><a href="namespace_custom_attributes.html#aa2378c6ae47b8325ac5f12d2892700cd">CustomAttributes.ConditionOperator</a></div><div class="ttdeci">ConditionOperator</div><div class="ttdef"><b>Definition:</b> <a href="_show_if_attribute_8cs_source.html#l00170">ShowIfAttribute.cs:170</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_a21fc7d23bae09208bd0ccb957f8ba103"><div class="ttname"><a href="class_attack_system_1_1_attack.html#a21fc7d23bae09208bd0ccb957f8ba103">AttackSystem.Attack.OnValidate</a></div><div class="ttdeci">void OnValidate()</div><div class="ttdoc">MonoBehaviour Abstract Method</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00071">Attack.cs:71</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_a57eacee4d0cb41580094ef849bbc7ccb"><div class="ttname"><a href="class_attack_system_1_1_attack.html#a57eacee4d0cb41580094ef849bbc7ccb">AttackSystem.Attack.OnBeforeSerialize</a></div><div class="ttdeci">void OnBeforeSerialize()</div><div class="ttdoc">ISerializationCallbackReceiver Abstract Method</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00063">Attack.cs:63</a></div></div>
+<div class="ttc" id="anamespace_custom_attributes_html_a4a3049554e325384906ea24ee25e5d9c"><div class="ttname"><a href="namespace_custom_attributes.html#a4a3049554e325384906ea24ee25e5d9c">CustomAttributes.ActionOnConditionFail</a></div><div class="ttdeci">ActionOnConditionFail</div><div class="ttdef"><b>Definition:</b> <a href="_show_if_attribute_8cs_source.html#l00178">ShowIfAttribute.cs:178</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_a9910b44fb9f0a16c35405fb96ff97b91"><div class="ttname"><a href="class_attack_system_1_1_attack.html#a9910b44fb9f0a16c35405fb96ff97b91">AttackSystem.Attack._range</a></div><div class="ttdeci">float _range</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00019">Attack.cs:19</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_a802120c51a19b0521589090d18b9e8a5"><div class="ttname"><a href="class_attack_system_1_1_attack.html#a802120c51a19b0521589090d18b9e8a5">AttackSystem.Attack._timeOfHit</a></div><div class="ttdeci">float _timeOfHit</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00020">Attack.cs:20</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_a843457f01d63b37afed282c185da7450"><div class="ttname"><a href="class_attack_system_1_1_attack.html#a843457f01d63b37afed282c185da7450">AttackSystem.Attack.distanceAttack</a></div><div class="ttdeci">bool distanceAttack</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00044">Attack.cs:44</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_ac03ae1a828458d072cf1c9c04c74089f"><div class="ttname"><a href="class_attack_system_1_1_attack.html#ac03ae1a828458d072cf1c9c04c74089f">AttackSystem.Attack._prefabBullet</a></div><div class="ttdeci">GameObject _prefabBullet</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00024">Attack.cs:24</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_a14f239c262ff8f5f0abb8380d40f8d89"><div class="ttname"><a href="class_attack_system_1_1_attack.html#a14f239c262ff8f5f0abb8380d40f8d89">AttackSystem.Attack._prefabEffectCharge</a></div><div class="ttdeci">GameObject _prefabEffectCharge</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00031">Attack.cs:31</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_a96534a7231dae039e600798495f05c51"><div class="ttname"><a href="class_attack_system_1_1_attack.html#a96534a7231dae039e600798495f05c51">AttackSystem.Attack.prefabBullet</a></div><div class="ttdeci">GameObject prefabBullet</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00040">Attack.cs:40</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_a6eacccdb9b8148ac148986ce1e23a5eb"><div class="ttname"><a href="class_attack_system_1_1_attack.html#a6eacccdb9b8148ac148986ce1e23a5eb">AttackSystem.Attack.prefabEffect</a></div><div class="ttdeci">GameObject prefabEffect</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00038">Attack.cs:38</a></div></div>
+<div class="ttc" id="aclass_custom_attributes_1_1_line_separator_html"><div class="ttname"><a href="class_custom_attributes_1_1_line_separator.html">CustomAttributes.LineSeparator</a></div><div class="ttdoc">Permet de tracer une ligne dans l'inspecteur</div><div class="ttdef"><b>Definition:</b> <a href="_line_separator_8cs_source.html#l00012">LineSeparator.cs:12</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_a037904da9de89c71e6b783b1e50d4f6a"><div class="ttname"><a href="class_attack_system_1_1_attack.html#a037904da9de89c71e6b783b1e50d4f6a">AttackSystem.Attack._attackSettings</a></div><div class="ttdeci">AttackSettings _attackSettings</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00027">Attack.cs:27</a></div></div>
+<div class="ttc" id="astruct_attack_system_1_1_attack_settings_html"><div class="ttname"><a href="struct_attack_system_1_1_attack_settings.html">AttackSystem.AttackSettings</a></div><div class="ttdef"><b>Definition:</b> <a href="_attack_settings_8cs_source.html#l00009">AttackSettings.cs:9</a></div></div>
+<div class="ttc" id="a_attack_type_8cs_html_a904b2f9c8f3951116c343784c59d6afe"><div class="ttname"><a href="_attack_type_8cs.html#a904b2f9c8f3951116c343784c59d6afe">AttackType</a></div><div class="ttdeci">AttackType</div><div class="ttdef"><b>Definition:</b> <a href="_attack_type_8cs_source.html#l00001">AttackType.cs:1</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html"><div class="ttname"><a href="class_attack_system_1_1_attack.html">AttackSystem.Attack</a></div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00010">Attack.cs:10</a></div></div>
+<div class="ttc" id="anamespace_custom_attributes_html"><div class="ttname"><a href="namespace_custom_attributes.html">CustomAttributes</a></div><div class="ttdef"><b>Definition:</b> <a href="_line_separator_8cs_source.html#l00006">LineSeparator.cs:6</a></div></div>
+<div class="ttc" id="aclass_attack_system_1_1_attack_html_adf92c7184062e036e5c8acca9447ed6f"><div class="ttname"><a href="class_attack_system_1_1_attack.html#adf92c7184062e036e5c8acca9447ed6f">AttackSystem.Attack.OnAfterDeserialize</a></div><div class="ttdeci">void OnAfterDeserialize()</div><div class="ttdoc">ISerializationCallbackReceiver Abstract Method</div><div class="ttdef"><b>Definition:</b> <a href="_attack_8cs_source.html#l00052">Attack.cs:52</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

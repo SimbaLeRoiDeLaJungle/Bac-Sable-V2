@@ -759,7 +759,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1655a0fbcd8975e9329cbe76c57fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectRelativePosition: {x: 1.25, y: 0.2}
 --- !u!1 &679298686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,7 +1260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18ba251a7d05fd7f2aadbd375e599d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayLength: 1
   enemiesLayers:
     serializedVersion: 2
     m_Bits: 128

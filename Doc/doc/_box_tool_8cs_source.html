@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/EditorTools/BoxTool.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5ad7f572bbca03234e8e621e192fc099.html">Library</a></li><li class="navelem"><a class="el" href="dir_c4f15d41bc4cb39d4370b50e8c0340d8.html">PackageCache</a></li><li class="navelem"><a class="el" href="dir_df381046aaab1e560c209bd4c9981ca6.html">com.unity.2d.tilemap@1.0.0</a></li><li class="navelem"><a class="el" href="dir_0d21ded2fd5e96c0f4a77865c032209d.html">Editor</a></li><li class="navelem"><a class="el" href="dir_ada0ab607736a321fecd682016d7414b.html">EditorTools</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">BoxTool.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_editor.html">UnityEditor</a>.EditorTools;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_unity_editor_1_1_tilemaps.html">UnityEditor.Tilemaps</a></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment">//[EditorTool(&quot;Box Tool&quot;, typeof(GridLayout))]</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_box_tool.html">   10</a></span>&#160;    <span class="keyword">public</span> sealed <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_tilemaps_1_1_box_tool.html">BoxTool</a> : <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html">TilemapEditorTool</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">class </span>Styles</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_box_tool.html#adf18a3aeb90f539bc95ebdae5d2b0db4">tooltipStringFormat</a> = <span class="stringliteral">&quot;|Paint a filled box with active brush ({0})&quot;</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_box_tool.html#a25da7faddce53b3838d4de6e4a978bf1">shortcutId</a> = <span class="stringliteral">&quot;Grid Painting/Rectangle&quot;</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keyword">public</span> <span class="keyword">static</span> GUIContent toolContent = EditorGUIUtility.IconContent(<span class="stringliteral">&quot;Grid.BoxTool&quot;</span>, <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a7b4f6d59e09a97588f3cf0fb85d94d62">GetTooltipText</a>(<a class="code" href="class_unity_editor_1_1_tilemaps_1_1_box_tool.html#adf18a3aeb90f539bc95ebdae5d2b0db4">tooltipStringFormat</a>, <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_box_tool.html#a25da7faddce53b3838d4de6e4a978bf1">shortcutId</a>));</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_box_tool.html#adf18a3aeb90f539bc95ebdae5d2b0db4">tooltipStringFormat</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_box_tool.html#adf18a3aeb90f539bc95ebdae5d2b0db4">   23</a></span>&#160;        {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> Styles.tooltipStringFormat; }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_box_tool.html#a25da7faddce53b3838d4de6e4a978bf1">shortcutId</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_box_tool.html#a25da7faddce53b3838d4de6e4a978bf1">   31</a></span>&#160;        {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> Styles.shortcutId; }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> GUIContent <a class="code" href="class_unity_editor_1_1_tilemaps_1_1_box_tool.html#a5c2e12ba9b716759f83453795c445daa">toolbarIcon</a></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_tilemaps_1_1_box_tool.html#a5c2e12ba9b716759f83453795c445daa">   39</a></span>&#160;        {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> Styles.toolContent; }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_box_tool_html_a25da7faddce53b3838d4de6e4a978bf1"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_box_tool.html#a25da7faddce53b3838d4de6e4a978bf1">UnityEditor.Tilemaps.BoxTool.shortcutId</a></div><div class="ttdeci">override string shortcutId</div><div class="ttdoc">Shortcut Id for the BoxTool</div><div class="ttdef"><b>Definition:</b> <a href="_box_tool_8cs_source.html#l00031">BoxTool.cs:31</a></div></div>
+<div class="ttc" id="anamespace_unity_editor_1_1_tilemaps_html"><div class="ttname"><a href="namespace_unity_editor_1_1_tilemaps.html">UnityEditor.Tilemaps</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_object_brush_8cs_source.html#l00008">GameObjectBrush.cs:8</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_box_tool_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_box_tool.html">UnityEditor.Tilemaps.BoxTool</a></div><div class="ttdoc">Tool for doing a box fill with the Tile Palette</div><div class="ttdef"><b>Definition:</b> <a href="_box_tool_8cs_source.html#l00010">BoxTool.cs:10</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_html"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html">UnityEditor.Tilemaps.TilemapEditorTool</a></div><div class="ttdoc">A base class for Editor Tools which work with the Tile Palette and GridBrushes</div><div class="ttdef"><b>Definition:</b> <a href="_tilemap_editor_tool_8cs_source.html#l00013">TilemapEditorTool.cs:13</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_box_tool_html_a5c2e12ba9b716759f83453795c445daa"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_box_tool.html#a5c2e12ba9b716759f83453795c445daa">UnityEditor.Tilemaps.BoxTool.toolbarIcon</a></div><div class="ttdeci">override GUIContent toolbarIcon</div><div class="ttdoc">Toolbar Icon for the BoxTool</div><div class="ttdef"><b>Definition:</b> <a href="_box_tool_8cs_source.html#l00039">BoxTool.cs:39</a></div></div>
+<div class="ttc" id="anamespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div><div class="ttdef"><b>Definition:</b> <a href="com_8unity_82d_8animation_0d8_80_81_2_editor_2_analytics_8cs_source.html#l00009">Analytics.cs:9</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool_html_a7b4f6d59e09a97588f3cf0fb85d94d62"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_tilemap_editor_tool.html#a7b4f6d59e09a97588f3cf0fb85d94d62">UnityEditor.Tilemaps.TilemapEditorTool.GetTooltipText</a></div><div class="ttdeci">static string GetTooltipText(string tooltipStringFormat, string shortcutId)</div><div class="ttdoc">Gets the text for the tooltip given a tooltip string format and the shortcut combination for a toolti...</div><div class="ttdef"><b>Definition:</b> <a href="_tilemap_editor_tool_8cs_source.html#l00082">TilemapEditorTool.cs:82</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_tilemaps_1_1_box_tool_html_adf18a3aeb90f539bc95ebdae5d2b0db4"><div class="ttname"><a href="class_unity_editor_1_1_tilemaps_1_1_box_tool.html#adf18a3aeb90f539bc95ebdae5d2b0db4">UnityEditor.Tilemaps.BoxTool.tooltipStringFormat</a></div><div class="ttdeci">override string tooltipStringFormat</div><div class="ttdoc">Tooltip String Format for the BoxTool</div><div class="ttdef"><b>Definition:</b> <a href="_box_tool_8cs_source.html#l00023">BoxTool.cs:23</a></div></div>
+<div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_c_d_solver2_d_8cs_source.html#l00006">CCDSolver2D.cs:6</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
