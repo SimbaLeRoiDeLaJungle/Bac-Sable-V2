@@ -67,6 +67,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pub-static-methods">Fonctions membres publiques statiques</a> &#124;
 <a href="#properties">Propriétés</a> &#124;
 <a href="#pri-methods">Fonctions membres privées</a> &#124;
 <a href="#pri-attribs">Attributs privés</a> &#124;
@@ -93,7 +94,7 @@ Graphe de collaboration de StaticManager.GameController:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_static_manager_1_1_game_controller__coll__graph.png" border="0" usemap="#_static_manager_8_game_controller_coll__map" alt="Collaboration graph"/></div>
 <map name="_static_manager_8_game_controller_coll__map" id="_static_manager_8_game_controller_coll__map">
-<area shape="rect" title="Le controller principale du jeu" alt="" coords="2035,44,2257,71"/>
+<area shape="rect" title="Le controller principale du jeu" alt="" coords="2043,44,2265,71"/>
 <area shape="rect" title=" " alt="" coords="972,57,1096,84"/>
 <area shape="rect" href="class_character_system_1_1_player_controller.html" title="Permet de controller le joueur." alt="" coords="1635,136,1877,163"/>
 <area shape="rect" href="class_character_system_1_1_ground_checker.html" title="Permet de vérifier si le joueur est au sol ou en saut" alt="" coords="1248,57,1485,84"/>
@@ -112,45 +113,81 @@ Graphe de collaboration de StaticManager.GameController:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:ad8642aca1ddf630fbf05c4a8f113262a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_manager_1_1_game_controller.html#ad8642aca1ddf630fbf05c4a8f113262a">SwitchCharacter</a> ()</td></tr>
-<tr class="memdesc:ad8642aca1ddf630fbf05c4a8f113262a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de changer le personnage (au niveau du PlayerController)  <a href="class_static_manager_1_1_game_controller.html#ad8642aca1ddf630fbf05c4a8f113262a">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ad8642aca1ddf630fbf05c4a8f113262a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9881922202a50f8251a767ab52851f6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_manager_1_1_game_controller.html#a9881922202a50f8251a767ab52851f6c">SetPlayerControllerCharacter</a> (<a class="el" href="class_character_system_1_1_character.html">Character</a> character)</td></tr>
+<tr class="separator:a9881922202a50f8251a767ab52851f6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Fonctions membres publiques statiques</h2></td></tr>
+<tr class="memitem:a9ebe500ea7d0ea86809d59873dd41ea3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_manager_1_1_game_controller.html#a9ebe500ea7d0ea86809d59873dd41ea3">SwitchCharacter</a> (<a class="el" href="class_character_system_1_1_character.html">Character</a> character)</td></tr>
+<tr class="memdesc:a9ebe500ea7d0ea86809d59873dd41ea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de changer le personnage (au niveau du PlayerController)  <a href="class_static_manager_1_1_game_controller.html#a9ebe500ea7d0ea86809d59873dd41ea3">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9ebe500ea7d0ea86809d59873dd41ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d2078b6fad8dc1a8cbbf362f5112ab"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="class_character_system_1_1_character.html">Character</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_manager_1_1_game_controller.html#a80d2078b6fad8dc1a8cbbf362f5112ab">GetCharacters</a> ()</td></tr>
+<tr class="separator:a80d2078b6fad8dc1a8cbbf362f5112ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Propriétés</h2></td></tr>
-<tr class="memitem:a5132eef0f6fdf4cba89e1669e8600847"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_character_system_1_1_character.html">Character</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_manager_1_1_game_controller.html#a5132eef0f6fdf4cba89e1669e8600847">Characters</a><code> [get]</code></td></tr>
-<tr class="separator:a5132eef0f6fdf4cba89e1669e8600847"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae14cb37fb018243961377c85080d3a66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_character_system_1_1_player_controller.html">PlayerController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_manager_1_1_game_controller.html#ae14cb37fb018243961377c85080d3a66">PlayerController</a><code> [get]</code></td></tr>
-<tr class="separator:ae14cb37fb018243961377c85080d3a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92e52184bc539de252478b7ee796d829"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_character_system_1_1_character.html">Character</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_manager_1_1_game_controller.html#a92e52184bc539de252478b7ee796d829">characters</a><code> [get]</code></td></tr>
+<tr class="separator:a92e52184bc539de252478b7ee796d829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb38e8a247cf3decba13566faa7001fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_character_system_1_1_player_controller.html">PlayerController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_manager_1_1_game_controller.html#aeb38e8a247cf3decba13566faa7001fe">playerController</a><code> [get]</code></td></tr>
+<tr class="separator:aeb38e8a247cf3decba13566faa7001fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Fonctions membres privées</h2></td></tr>
-<tr class="memitem:ac61c69bb96672be95321b4b5877c24a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_manager_1_1_game_controller.html#ac61c69bb96672be95321b4b5877c24a8">Start</a> ()</td></tr>
-<tr class="memdesc:ac61c69bb96672be95321b4b5877c24a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">MonoBeahviours Abstract Method  <a href="class_static_manager_1_1_game_controller.html#ac61c69bb96672be95321b4b5877c24a8">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ac61c69bb96672be95321b4b5877c24a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea1f1ad2d684c12ffe27b7992f8e9d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_manager_1_1_game_controller.html#a9ea1f1ad2d684c12ffe27b7992f8e9d0">Awake</a> ()</td></tr>
+<tr class="memdesc:a9ea1f1ad2d684c12ffe27b7992f8e9d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">MonoBeahviours Abstract Method  <a href="class_static_manager_1_1_game_controller.html#a9ea1f1ad2d684c12ffe27b7992f8e9d0">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9ea1f1ad2d684c12ffe27b7992f8e9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff31dcc22843e666f6eb9395a73361ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_manager_1_1_game_controller.html#aff31dcc22843e666f6eb9395a73361ea">FixedUpdate</a> ()</td></tr>
 <tr class="memdesc:aff31dcc22843e666f6eb9395a73361ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">MonoBeahviours Abstract Method  <a href="class_static_manager_1_1_game_controller.html#aff31dcc22843e666f6eb9395a73361ea">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aff31dcc22843e666f6eb9395a73361ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
-<tr class="memitem:aeb38e8a247cf3decba13566faa7001fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_character_system_1_1_player_controller.html">PlayerController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_manager_1_1_game_controller.html#aeb38e8a247cf3decba13566faa7001fe">playerController</a></td></tr>
-<tr class="separator:aeb38e8a247cf3decba13566faa7001fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92e52184bc539de252478b7ee796d829"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_character_system_1_1_character.html">Character</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_manager_1_1_game_controller.html#a92e52184bc539de252478b7ee796d829">characters</a></td></tr>
-<tr class="separator:a92e52184bc539de252478b7ee796d829"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94afb5660df8f5a56f61dd097c15c69a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_manager_1_1_game_controller.html#a94afb5660df8f5a56f61dd097c15c69a">currentCharacter</a> = 0</td></tr>
-<tr class="separator:a94afb5660df8f5a56f61dd097c15c69a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa802cb22c5453466be04615c93c83b47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_character_system_1_1_player_controller.html">PlayerController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_manager_1_1_game_controller.html#aa802cb22c5453466be04615c93c83b47">_playerController</a></td></tr>
+<tr class="separator:aa802cb22c5453466be04615c93c83b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f87c24a1ee9bf96f2242ef974429ec3"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_character_system_1_1_character.html">Character</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_manager_1_1_game_controller.html#a5f87c24a1ee9bf96f2242ef974429ec3">_characters</a></td></tr>
+<tr class="separator:a5f87c24a1ee9bf96f2242ef974429ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Attributs privés statiques</h2></td></tr>
 <tr class="memitem:abaa6860dc131a1f8b0a409b5c1da287e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_static_manager_1_1_game_controller.html">GameController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_manager_1_1_game_controller.html#abaa6860dc131a1f8b0a409b5c1da287e">instance</a></td></tr>
 <tr class="separator:abaa6860dc131a1f8b0a409b5c1da287e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94afb5660df8f5a56f61dd097c15c69a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_manager_1_1_game_controller.html#a94afb5660df8f5a56f61dd097c15c69a">currentCharacter</a> = 0</td></tr>
+<tr class="separator:a94afb5660df8f5a56f61dd097c15c69a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Le controller principale du jeu </p>
 
 <p class="definition">Définition à la ligne <a class="el" href="_game_controller_8cs_source.html#l00011">11</a> du fichier <a class="el" href="_game_controller_8cs_source.html">GameController.cs</a>.</p>
 </div><h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="a9ea1f1ad2d684c12ffe27b7992f8e9d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ea1f1ad2d684c12ffe27b7992f8e9d0">&#9670;&nbsp;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StaticManager.GameController.Awake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>MonoBeahviours Abstract Method </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="_game_controller_8cs_source.html#l00026">26</a> du fichier <a class="el" href="_game_controller_8cs_source.html">GameController.cs</a>.</p>
+
+</div>
+</div>
 <a id="aff31dcc22843e666f6eb9395a73361ea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aff31dcc22843e666f6eb9395a73361ea">&#9670;&nbsp;</a></span>FixedUpdate()</h2>
 
@@ -180,8 +217,8 @@ Attributs privés statiques</h2></td></tr>
 
 </div>
 </div>
-<a id="ac61c69bb96672be95321b4b5877c24a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac61c69bb96672be95321b4b5877c24a8">&#9670;&nbsp;</a></span>Start()</h2>
+<a id="a80d2078b6fad8dc1a8cbbf362f5112ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80d2078b6fad8dc1a8cbbf362f5112ab">&#9670;&nbsp;</a></span>GetCharacters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -190,7 +227,7 @@ Attributs privés statiques</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void StaticManager.GameController.Start </td>
+          <td class="memname">static List&lt;<a class="el" href="class_character_system_1_1_character.html">Character</a>&gt; StaticManager.GameController.GetCharacters </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -198,30 +235,57 @@ Attributs privés statiques</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>MonoBeahviours Abstract Method </p>
-
-<p class="definition">Définition à la ligne <a class="el" href="_game_controller_8cs_source.html#l00026">26</a> du fichier <a class="el" href="_game_controller_8cs_source.html">GameController.cs</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="_game_controller_8cs_source.html#l00066">66</a> du fichier <a class="el" href="_game_controller_8cs_source.html">GameController.cs</a>.</p>
 
 </div>
 </div>
-<a id="ad8642aca1ddf630fbf05c4a8f113262a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8642aca1ddf630fbf05c4a8f113262a">&#9670;&nbsp;</a></span>SwitchCharacter()</h2>
+<a id="a9881922202a50f8251a767ab52851f6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9881922202a50f8251a767ab52851f6c">&#9670;&nbsp;</a></span>SetPlayerControllerCharacter()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void StaticManager.GameController.SwitchCharacter </td>
+          <td class="memname">void StaticManager.GameController.SetPlayerControllerCharacter </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_character_system_1_1_character.html">Character</a>&#160;</td>
+          <td class="paramname"><em>character</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_game_controller_8cs_source.html#l00070">70</a> du fichier <a class="el" href="_game_controller_8cs_source.html">GameController.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9ebe500ea7d0ea86809d59873dd41ea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ebe500ea7d0ea86809d59873dd41ea3">&#9670;&nbsp;</a></span>SwitchCharacter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void StaticManager.GameController.SwitchCharacter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_character_system_1_1_character.html">Character</a>&#160;</td>
+          <td class="paramname"><em>character</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Permet de changer le personnage (au niveau du PlayerController) </p>
@@ -231,8 +295,8 @@ Attributs privés statiques</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentation des données membres</h2>
-<a id="a92e52184bc539de252478b7ee796d829"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92e52184bc539de252478b7ee796d829">&#9670;&nbsp;</a></span>characters</h2>
+<a id="a5f87c24a1ee9bf96f2242ef974429ec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f87c24a1ee9bf96f2242ef974429ec3">&#9670;&nbsp;</a></span>_characters</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -241,7 +305,7 @@ Attributs privés statiques</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;<a class="el" href="class_character_system_1_1_character.html">Character</a>&gt; StaticManager.GameController.characters</td>
+          <td class="memname">List&lt;<a class="el" href="class_character_system_1_1_character.html">Character</a>&gt; StaticManager.GameController._characters</td>
         </tr>
       </table>
   </td>
@@ -253,6 +317,30 @@ Attributs privés statiques</h2></td></tr>
 <p>Liste des characters jouables </p>
 
 <p class="definition">Définition à la ligne <a class="el" href="_game_controller_8cs_source.html#l00015">15</a> du fichier <a class="el" href="_game_controller_8cs_source.html">GameController.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa802cb22c5453466be04615c93c83b47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa802cb22c5453466be04615c93c83b47">&#9670;&nbsp;</a></span>_playerController</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_character_system_1_1_player_controller.html">PlayerController</a> StaticManager.GameController._playerController</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_game_controller_8cs_source.html#l00014">14</a> du fichier <a class="el" href="_game_controller_8cs_source.html">GameController.cs</a>.</p>
 
 </div>
 </div>
@@ -271,7 +359,7 @@ Attributs privés statiques</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -306,33 +394,9 @@ Attributs privés statiques</h2></td></tr>
 
 </div>
 </div>
-<a id="aeb38e8a247cf3decba13566faa7001fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb38e8a247cf3decba13566faa7001fe">&#9670;&nbsp;</a></span>playerController</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_character_system_1_1_player_controller.html">PlayerController</a> StaticManager.GameController.playerController</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Définition à la ligne <a class="el" href="_game_controller_8cs_source.html#l00014">14</a> du fichier <a class="el" href="_game_controller_8cs_source.html">GameController.cs</a>.</p>
-
-</div>
-</div>
 <h2 class="groupheader">Documentation des propriétés</h2>
-<a id="a5132eef0f6fdf4cba89e1669e8600847"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5132eef0f6fdf4cba89e1669e8600847">&#9670;&nbsp;</a></span>Characters</h2>
+<a id="a92e52184bc539de252478b7ee796d829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92e52184bc539de252478b7ee796d829">&#9670;&nbsp;</a></span>characters</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -341,7 +405,7 @@ Attributs privés statiques</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;<a class="el" href="class_character_system_1_1_character.html">Character</a>&gt; StaticManager.GameController.Characters</td>
+          <td class="memname">List&lt;<a class="el" href="class_character_system_1_1_character.html">Character</a>&gt; StaticManager.GameController.characters</td>
         </tr>
       </table>
   </td>
@@ -356,8 +420,8 @@ Attributs privés statiques</h2></td></tr>
 
 </div>
 </div>
-<a id="ae14cb37fb018243961377c85080d3a66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae14cb37fb018243961377c85080d3a66">&#9670;&nbsp;</a></span>PlayerController</h2>
+<a id="aeb38e8a247cf3decba13566faa7001fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb38e8a247cf3decba13566faa7001fe">&#9670;&nbsp;</a></span>playerController</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -366,7 +430,7 @@ Attributs privés statiques</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_character_system_1_1_player_controller.html">PlayerController</a> StaticManager.GameController.PlayerController</td>
+          <td class="memname"><a class="el" href="class_character_system_1_1_player_controller.html">PlayerController</a> StaticManager.GameController.playerController</td>
         </tr>
       </table>
   </td>

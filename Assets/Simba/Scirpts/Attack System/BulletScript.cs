@@ -13,7 +13,7 @@ namespace AttackSystem{
         [SerializeField] LayerMask contactLayers; // si il touche ses calques il disparait
         
         // Property
-        public int power{get; private set;} 
+        public float power{get; private set;} 
         public bool direction{ get {return rb.velocity.x>0; } } // la vitesse devrai jamais etre nulle
 
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
@@ -31,7 +31,7 @@ namespace AttackSystem{
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
         
-        public void Launch(bool direction, float speed, int p_power){
+        public void Launch(bool direction, float speed, float p_power){
             int x = direction ? 1 : -1;
             // On oriente le sprite dans la bonne direction
             transform.localScale = new Vector3(x*transform.localScale.x, transform.localScale.y, transform.localScale.z);

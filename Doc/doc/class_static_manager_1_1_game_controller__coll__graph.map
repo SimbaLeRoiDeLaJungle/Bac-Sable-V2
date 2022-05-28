@@ -1,5 +1,5 @@
 <map id="StaticManager.GameController" name="StaticManager.GameController">
-<area shape="rect" id="node1" title="Le controller principale du jeu" alt="" coords="2035,44,2257,71"/>
+<area shape="rect" id="node1" title="Le controller principale du jeu" alt="" coords="2043,44,2265,71"/>
 <area shape="rect" id="node2" title=" " alt="" coords="972,57,1096,84"/>
 <area shape="rect" id="node3" href="$class_character_system_1_1_player_controller.html" title="Permet de controller le joueur." alt="" coords="1635,136,1877,163"/>
 <area shape="rect" id="node5" href="$class_character_system_1_1_ground_checker.html" title="Permet de vérifier si le joueur est au sol ou en saut" alt="" coords="1248,57,1485,84"/>

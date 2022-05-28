@@ -102,7 +102,7 @@ namespace CharacterSystem{
                     }
                 }
                 if(attackLaunch){
-                    StartCoroutine(LaunchAttack(GameAction.First));
+                    StartCoroutine(LaunchAttack(GameAction.First, actionTimer.time));
                 }
             }
             else{
@@ -160,7 +160,7 @@ namespace CharacterSystem{
         /// <summary>
         /// Pour lancer une attaque en syncro avec le GfxUpdater
         /// </summary>
-        IEnumerator LaunchAttack(GameAction action){
+        IEnumerator LaunchAttack(GameAction action, float chargeTime = 1f){
             state.isAttacking = true;
             Attack attack = character.GetAction(action);
             gfx.LaunchAction(action);
@@ -169,20 +169,21 @@ namespace CharacterSystem{
             {
                 yield return null;
             } 
-            if(attack.Settings.attackType == AttackType.Distance){
+            if(attack.Settings.attackType == AttackType.Distance && chargeTime >= attack.Settings.minChargeTime){
                 Vector3 dir = direction? Vector3.right : Vector3.left;
                 Vector3 relPos = attack.Settings.bulletRelativePosition;
                 Vector3 position = transform.position + dir*relPos.x+Vector3.up*relPos.y;
                 var go = Instantiate(attack.prefabBullet, position, Quaternion.identity);
                 var bullet = go.GetComponent<BulletScript>();
-                bullet.Launch(direction, 3f, attack.Settings.power);
+                float power = (1 + chargeTime/attack.Settings.maxChargeTime) * 0.5f * attack.Settings.power;
+                bullet.Launch(direction, 3f, power);
             }
             else if(attack.Settings.attackType == AttackType.Contact){
                 var hit = attackHitBox.TouchEnemy(direction, attack); 
                 // On regarde si l'épée touche quelque chose
                 if(hit.collider != null){
                     EnemyController ec = hit.collider.gameObject.GetComponent<EnemyController>();// On récupère un script de l'enemi pour qu'il prennent les dégats
-                    float power = (1 + actionTimer.time/actionTimer.maxTime) * 0.5f * attack.Settings.power; // Calcul a la louche pour que plus on charge plus l'enemi part loin
+                    float power = (1 + chargeTime/attack.Settings.maxChargeTime) * 0.5f * attack.Settings.power; // Calcul a la louche pour que plus on charge plus l'enemi part loin
                     ec.TakeHit(power, direction);
                 }
             }

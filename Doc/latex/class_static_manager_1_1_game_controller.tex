@@ -16,7 +16,8 @@ Graphe d\textquotesingle{}héritage de Static\+Manager.\+Game\+Controller\+:\nop
 \end{figure}
 
 
-Graphe de collaboration de Static\+Manager.\+Game\+Controller\+:\nopagebreak
+Graphe de collaboration de Static\+Manager.\+Game\+Controller\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,35 +27,42 @@ Graphe de collaboration de Static\+Manager.\+Game\+Controller\+:\nopagebreak
 \doxysubsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_static_manager_1_1_game_controller_ad8642aca1ddf630fbf05c4a8f113262a}{Switch\+Character}} ()
-\begin{DoxyCompactList}\small\item\em Permet de changer le personnage (au niveau du Player\+Controller) \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_static_manager_1_1_game_controller_a9881922202a50f8251a767ab52851f6c}{Set\+Player\+Controller\+Character}} (\mbox{\hyperlink{class_character_system_1_1_character}{Character}} character)
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_static_manager_1_1_game_controller_a9ebe500ea7d0ea86809d59873dd41ea3}{Switch\+Character}} (\mbox{\hyperlink{class_character_system_1_1_character}{Character}} character)
+\begin{DoxyCompactList}\small\item\em Permet de changer le personnage (au niveau du Player\+Controller) \end{DoxyCompactList}\item 
+static List$<$ \mbox{\hyperlink{class_character_system_1_1_character}{Character}} $>$ \mbox{\hyperlink{class_static_manager_1_1_game_controller_a80d2078b6fad8dc1a8cbbf362f5112ab}{Get\+Characters}} ()
+\end{DoxyCompactItemize}
 \doxysubsection*{Propriétés}
 \begin{DoxyCompactItemize}
 \item 
-List$<$ \mbox{\hyperlink{class_character_system_1_1_character}{Character}} $>$ \mbox{\hyperlink{class_static_manager_1_1_game_controller_a5132eef0f6fdf4cba89e1669e8600847}{Characters}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+List$<$ \mbox{\hyperlink{class_character_system_1_1_character}{Character}} $>$ \mbox{\hyperlink{class_static_manager_1_1_game_controller_a92e52184bc539de252478b7ee796d829}{characters}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \item 
-\mbox{\hyperlink{class_character_system_1_1_player_controller}{Player\+Controller}} \mbox{\hyperlink{class_static_manager_1_1_game_controller_ae14cb37fb018243961377c85080d3a66}{Player\+Controller}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\mbox{\hyperlink{class_character_system_1_1_player_controller}{Player\+Controller}} \mbox{\hyperlink{class_static_manager_1_1_game_controller_aeb38e8a247cf3decba13566faa7001fe}{player\+Controller}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Fonctions membres privées}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_static_manager_1_1_game_controller_ac61c69bb96672be95321b4b5877c24a8}{Start}} ()
+void \mbox{\hyperlink{class_static_manager_1_1_game_controller_a9ea1f1ad2d684c12ffe27b7992f8e9d0}{Awake}} ()
 \begin{DoxyCompactList}\small\item\em Mono\+Beahviours Abstract Method \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_static_manager_1_1_game_controller_aff31dcc22843e666f6eb9395a73361ea}{Fixed\+Update}} ()
 \begin{DoxyCompactList}\small\item\em Mono\+Beahviours Abstract Method \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Attributs privés}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_character_system_1_1_player_controller}{Player\+Controller}} \mbox{\hyperlink{class_static_manager_1_1_game_controller_aeb38e8a247cf3decba13566faa7001fe}{player\+Controller}}
+\mbox{\hyperlink{class_character_system_1_1_player_controller}{Player\+Controller}} \mbox{\hyperlink{class_static_manager_1_1_game_controller_aa802cb22c5453466be04615c93c83b47}{\+\_\+player\+Controller}}
 \item 
-List$<$ \mbox{\hyperlink{class_character_system_1_1_character}{Character}} $>$ \mbox{\hyperlink{class_static_manager_1_1_game_controller_a92e52184bc539de252478b7ee796d829}{characters}}
-\item 
-int \mbox{\hyperlink{class_static_manager_1_1_game_controller_a94afb5660df8f5a56f61dd097c15c69a}{current\+Character}} = 0
+List$<$ \mbox{\hyperlink{class_character_system_1_1_character}{Character}} $>$ \mbox{\hyperlink{class_static_manager_1_1_game_controller_a5f87c24a1ee9bf96f2242ef974429ec3}{\+\_\+characters}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Attributs privés statiques}
 \begin{DoxyCompactItemize}
 \item 
 static \mbox{\hyperlink{class_static_manager_1_1_game_controller}{Game\+Controller}} \mbox{\hyperlink{class_static_manager_1_1_game_controller_abaa6860dc131a1f8b0a409b5c1da287e}{instance}}
+\item 
+static int \mbox{\hyperlink{class_static_manager_1_1_game_controller_a94afb5660df8f5a56f61dd097c15c69a}{current\+Character}} = 0
 \end{DoxyCompactItemize}
 
 
@@ -68,6 +76,20 @@ Définition à la ligne 11 du fichier Game\+Controller.\+cs.
 
 
 \doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_static_manager_1_1_game_controller_a9ea1f1ad2d684c12ffe27b7992f8e9d0}\label{class_static_manager_1_1_game_controller_a9ea1f1ad2d684c12ffe27b7992f8e9d0}} 
+\index{StaticManager.GameController@{StaticManager.GameController}!Awake@{Awake}}
+\index{Awake@{Awake}!StaticManager.GameController@{StaticManager.GameController}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Static\+Manager.\+Game\+Controller.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mono\+Beahviours Abstract Method 
+
+
+
+Définition à la ligne 26 du fichier Game\+Controller.\+cs.
+
 \mbox{\Hypertarget{class_static_manager_1_1_game_controller_aff31dcc22843e666f6eb9395a73361ea}\label{class_static_manager_1_1_game_controller_aff31dcc22843e666f6eb9395a73361ea}} 
 \index{StaticManager.GameController@{StaticManager.GameController}!FixedUpdate@{FixedUpdate}}
 \index{FixedUpdate@{FixedUpdate}!StaticManager.GameController@{StaticManager.GameController}}
@@ -82,25 +104,31 @@ Mono\+Beahviours Abstract Method
 
 Définition à la ligne 39 du fichier Game\+Controller.\+cs.
 
-\mbox{\Hypertarget{class_static_manager_1_1_game_controller_ac61c69bb96672be95321b4b5877c24a8}\label{class_static_manager_1_1_game_controller_ac61c69bb96672be95321b4b5877c24a8}} 
-\index{StaticManager.GameController@{StaticManager.GameController}!Start@{Start}}
-\index{Start@{Start}!StaticManager.GameController@{StaticManager.GameController}}
-\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
-{\footnotesize\ttfamily void Static\+Manager.\+Game\+Controller.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_static_manager_1_1_game_controller_a80d2078b6fad8dc1a8cbbf362f5112ab}\label{class_static_manager_1_1_game_controller_a80d2078b6fad8dc1a8cbbf362f5112ab}} 
+\index{StaticManager.GameController@{StaticManager.GameController}!GetCharacters@{GetCharacters}}
+\index{GetCharacters@{GetCharacters}!StaticManager.GameController@{StaticManager.GameController}}
+\doxysubsubsection{\texorpdfstring{GetCharacters()}{GetCharacters()}}
+{\footnotesize\ttfamily static List$<$\mbox{\hyperlink{class_character_system_1_1_character}{Character}}$>$ Static\+Manager.\+Game\+Controller.\+Get\+Characters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Mono\+Beahviours Abstract Method 
+Définition à la ligne 66 du fichier Game\+Controller.\+cs.
+
+\mbox{\Hypertarget{class_static_manager_1_1_game_controller_a9881922202a50f8251a767ab52851f6c}\label{class_static_manager_1_1_game_controller_a9881922202a50f8251a767ab52851f6c}} 
+\index{StaticManager.GameController@{StaticManager.GameController}!SetPlayerControllerCharacter@{SetPlayerControllerCharacter}}
+\index{SetPlayerControllerCharacter@{SetPlayerControllerCharacter}!StaticManager.GameController@{StaticManager.GameController}}
+\doxysubsubsection{\texorpdfstring{SetPlayerControllerCharacter()}{SetPlayerControllerCharacter()}}
+{\footnotesize\ttfamily void Static\+Manager.\+Game\+Controller.\+Set\+Player\+Controller\+Character (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_character_system_1_1_character}{Character}}}]{character }\end{DoxyParamCaption})}
 
 
 
-Définition à la ligne 26 du fichier Game\+Controller.\+cs.
+Définition à la ligne 70 du fichier Game\+Controller.\+cs.
 
-\mbox{\Hypertarget{class_static_manager_1_1_game_controller_ad8642aca1ddf630fbf05c4a8f113262a}\label{class_static_manager_1_1_game_controller_ad8642aca1ddf630fbf05c4a8f113262a}} 
+\mbox{\Hypertarget{class_static_manager_1_1_game_controller_a9ebe500ea7d0ea86809d59873dd41ea3}\label{class_static_manager_1_1_game_controller_a9ebe500ea7d0ea86809d59873dd41ea3}} 
 \index{StaticManager.GameController@{StaticManager.GameController}!SwitchCharacter@{SwitchCharacter}}
 \index{SwitchCharacter@{SwitchCharacter}!StaticManager.GameController@{StaticManager.GameController}}
 \doxysubsubsection{\texorpdfstring{SwitchCharacter()}{SwitchCharacter()}}
-{\footnotesize\ttfamily void Static\+Manager.\+Game\+Controller.\+Switch\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily static void Static\+Manager.\+Game\+Controller.\+Switch\+Character (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_character_system_1_1_character}{Character}}}]{character }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -113,21 +141,31 @@ Définition à la ligne 50 du fichier Game\+Controller.\+cs.
 
 
 \doxysubsection{Documentation des données membres}
-\mbox{\Hypertarget{class_static_manager_1_1_game_controller_a92e52184bc539de252478b7ee796d829}\label{class_static_manager_1_1_game_controller_a92e52184bc539de252478b7ee796d829}} 
-\index{StaticManager.GameController@{StaticManager.GameController}!characters@{characters}}
-\index{characters@{characters}!StaticManager.GameController@{StaticManager.GameController}}
-\doxysubsubsection{\texorpdfstring{characters}{characters}}
-{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_character_system_1_1_character}{Character}}$>$ Static\+Manager.\+Game\+Controller.\+characters\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_static_manager_1_1_game_controller_a5f87c24a1ee9bf96f2242ef974429ec3}\label{class_static_manager_1_1_game_controller_a5f87c24a1ee9bf96f2242ef974429ec3}} 
+\index{StaticManager.GameController@{StaticManager.GameController}!\_characters@{\_characters}}
+\index{\_characters@{\_characters}!StaticManager.GameController@{StaticManager.GameController}}
+\doxysubsubsection{\texorpdfstring{\_characters}{\_characters}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_character_system_1_1_character}{Character}}$>$ Static\+Manager.\+Game\+Controller.\+\_\+characters\hspace{0.3cm}{\ttfamily [private]}}
 
 Liste des characters jouables 
 
 Définition à la ligne 15 du fichier Game\+Controller.\+cs.
 
+\mbox{\Hypertarget{class_static_manager_1_1_game_controller_aa802cb22c5453466be04615c93c83b47}\label{class_static_manager_1_1_game_controller_aa802cb22c5453466be04615c93c83b47}} 
+\index{StaticManager.GameController@{StaticManager.GameController}!\_playerController@{\_playerController}}
+\index{\_playerController@{\_playerController}!StaticManager.GameController@{StaticManager.GameController}}
+\doxysubsubsection{\texorpdfstring{\_playerController}{\_playerController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_character_system_1_1_player_controller}{Player\+Controller}} Static\+Manager.\+Game\+Controller.\+\_\+player\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne 14 du fichier Game\+Controller.\+cs.
+
 \mbox{\Hypertarget{class_static_manager_1_1_game_controller_a94afb5660df8f5a56f61dd097c15c69a}\label{class_static_manager_1_1_game_controller_a94afb5660df8f5a56f61dd097c15c69a}} 
 \index{StaticManager.GameController@{StaticManager.GameController}!currentCharacter@{currentCharacter}}
 \index{currentCharacter@{currentCharacter}!StaticManager.GameController@{StaticManager.GameController}}
 \doxysubsubsection{\texorpdfstring{currentCharacter}{currentCharacter}}
-{\footnotesize\ttfamily int Static\+Manager.\+Game\+Controller.\+current\+Character = 0\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily int Static\+Manager.\+Game\+Controller.\+current\+Character = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 l\textquotesingle{}indice du character sélection dans la liste characters 
 
@@ -143,34 +181,24 @@ L\textquotesingle{}instance du controller
 
 Définition à la ligne 13 du fichier Game\+Controller.\+cs.
 
-\mbox{\Hypertarget{class_static_manager_1_1_game_controller_aeb38e8a247cf3decba13566faa7001fe}\label{class_static_manager_1_1_game_controller_aeb38e8a247cf3decba13566faa7001fe}} 
-\index{StaticManager.GameController@{StaticManager.GameController}!playerController@{playerController}}
-\index{playerController@{playerController}!StaticManager.GameController@{StaticManager.GameController}}
-\doxysubsubsection{\texorpdfstring{playerController}{playerController}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_character_system_1_1_player_controller}{Player\+Controller}} Static\+Manager.\+Game\+Controller.\+player\+Controller\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Définition à la ligne 14 du fichier Game\+Controller.\+cs.
-
 
 
 \doxysubsection{Documentation des propriétés}
-\mbox{\Hypertarget{class_static_manager_1_1_game_controller_a5132eef0f6fdf4cba89e1669e8600847}\label{class_static_manager_1_1_game_controller_a5132eef0f6fdf4cba89e1669e8600847}} 
-\index{StaticManager.GameController@{StaticManager.GameController}!Characters@{Characters}}
-\index{Characters@{Characters}!StaticManager.GameController@{StaticManager.GameController}}
-\doxysubsubsection{\texorpdfstring{Characters}{Characters}}
-{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_character_system_1_1_character}{Character}}$>$ Static\+Manager.\+Game\+Controller.\+Characters\hspace{0.3cm}{\ttfamily [get]}}
+\mbox{\Hypertarget{class_static_manager_1_1_game_controller_a92e52184bc539de252478b7ee796d829}\label{class_static_manager_1_1_game_controller_a92e52184bc539de252478b7ee796d829}} 
+\index{StaticManager.GameController@{StaticManager.GameController}!characters@{characters}}
+\index{characters@{characters}!StaticManager.GameController@{StaticManager.GameController}}
+\doxysubsubsection{\texorpdfstring{characters}{characters}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_character_system_1_1_character}{Character}}$>$ Static\+Manager.\+Game\+Controller.\+characters\hspace{0.3cm}{\ttfamily [get]}}
 
 Retourne la liste des characters jouables 
 
 Définition à la ligne 16 du fichier Game\+Controller.\+cs.
 
-\mbox{\Hypertarget{class_static_manager_1_1_game_controller_ae14cb37fb018243961377c85080d3a66}\label{class_static_manager_1_1_game_controller_ae14cb37fb018243961377c85080d3a66}} 
-\index{StaticManager.GameController@{StaticManager.GameController}!PlayerController@{PlayerController}}
-\index{PlayerController@{PlayerController}!StaticManager.GameController@{StaticManager.GameController}}
-\doxysubsubsection{\texorpdfstring{PlayerController}{PlayerController}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_character_system_1_1_player_controller}{Player\+Controller}} Static\+Manager.\+Game\+Controller.\+Player\+Controller\hspace{0.3cm}{\ttfamily [get]}}
+\mbox{\Hypertarget{class_static_manager_1_1_game_controller_aeb38e8a247cf3decba13566faa7001fe}\label{class_static_manager_1_1_game_controller_aeb38e8a247cf3decba13566faa7001fe}} 
+\index{StaticManager.GameController@{StaticManager.GameController}!playerController@{playerController}}
+\index{playerController@{playerController}!StaticManager.GameController@{StaticManager.GameController}}
+\doxysubsubsection{\texorpdfstring{playerController}{playerController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_character_system_1_1_player_controller}{Player\+Controller}} Static\+Manager.\+Game\+Controller.\+player\+Controller\hspace{0.3cm}{\ttfamily [get]}}
 
 
 

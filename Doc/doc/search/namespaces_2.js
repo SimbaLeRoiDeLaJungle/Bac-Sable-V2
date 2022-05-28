@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['staticmanager_189',['StaticManager',['../namespace_static_manager.html',1,'']]]
+  ['staticmanager_207',['StaticManager',['../namespace_static_manager.html',1,'']]]
 ];

@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['inputs_291',['inputs',['../class_static_manager_1_1_input_handler.html#ac7e4e704b93ebda489e6e76f896d2a14',1,'StaticManager::InputHandler']]],
-  ['instance_292',['instance',['../class_static_manager_1_1_game_controller.html#abaa6860dc131a1f8b0a409b5c1da287e',1,'StaticManager::GameController']]],
-  ['isattacking_293',['isAttacking',['../struct_character_system_1_1_character_state.html#a1464a0540a6ac884535d156af445480c',1,'CharacterSystem::CharacterState']]],
-  ['ischarging_294',['isCharging',['../struct_character_system_1_1_character_state.html#aa2727df83ca2772b55487851fa7e7dea',1,'CharacterSystem::CharacterState']]]
+  ['gfx_318',['gfx',['../class_character_system_1_1_player_controller.html#af5dc0435aa69ca405f7be3c412aeadbf',1,'CharacterSystem::PlayerController']]],
+  ['groundchecker_319',['groundChecker',['../class_character_system_1_1_player_controller.html#a59d0acd28b33895adf3a577e414ad900',1,'CharacterSystem::PlayerController']]],
+  ['groundlayers_320',['groundLayers',['../class_character_system_1_1_ground_checker.html#aea6731388248d996c79e885f5211d8ed',1,'CharacterSystem::GroundChecker']]]
 ];

@@ -11,6 +11,8 @@ namespace CharacterSystem{
     {
 
         [Header("GFX")]
+        [SerializeField] Sprite _sprite;
+        public Sprite sprite { get { return _sprite; } } 
         [SerializeField] RuntimeAnimatorController  animatorController;
         [LineSeparator]
         [Header("Actions")]

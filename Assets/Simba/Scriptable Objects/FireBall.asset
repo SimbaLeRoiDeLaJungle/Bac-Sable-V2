@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495de80eb82989b6f8a62d4fbdf1bd27, type: 3}
   m_Name: FireBall
   m_EditorClassIdentifier: 
-  _canCharge: 0
-  _maxChargeTime: 0
-  _minChargeTime: 0
-  _power: 10
+  _canCharge: 1
+  _maxChargeTime: 2
+  _minChargeTime: 0.3
+  _power: 15
   _range: 0
   _timeOfHit: 0
   _attackType: 1

@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project:  Fichier source de /home/simba/UnityProject/Bac à Sable/Assets/Simba/Scirpts/UI/CharacterSelectorButton.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_158af4e89fe28c6233fdc636e282763b.html">Simba</a></li><li class="navelem"><a class="el" href="dir_7fd08fc4bf1ab871205d67b083a39232.html">Scirpts</a></li><li class="navelem"><a class="el" href="dir_e31a3112453afea12a32d1ec7fe29ef3.html">UI</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CharacterSelectorButton.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_character_selector_button_8cs.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System.Collections;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> UnityEngine.UI;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_character_system.html">CharacterSystem</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_static_manager.html">StaticManager</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_u_i.html">UI</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_u_i_1_1_character_selector_button.html">    9</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_u_i_1_1_character_selector_button.html">CharacterSelectorButton</a> : MonoBehaviour</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_u_i_1_1_character_selector_button.html#aa8a6504e5c663b03d29ec18c3a7c0987">   11</a></span>&#160;        Button <a class="code" href="class_u_i_1_1_character_selector_button.html#aa8a6504e5c663b03d29ec18c3a7c0987">_button</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_u_i_1_1_character_selector_button.html#affa6bcd1d4059f74df33681cb6a566c8">   12</a></span>&#160;        [SerializeField] Image <a class="code" href="class_u_i_1_1_character_selector_button.html#affa6bcd1d4059f74df33681cb6a566c8">characterImage</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_u_i_1_1_character_selector_button.html#ab6088aaa19c95da557fee65ddc1b50ed">   13</a></span>&#160;        <a class="code" href="class_character_system_1_1_character.html">Character</a> <a class="code" href="class_u_i_1_1_character_selector_button.html#ab6088aaa19c95da557fee65ddc1b50ed">_character</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_u_i_1_1_character_selector_button.html#ac7945ec194bd681e3f0c24b7df3f0bf2">   14</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_u_i_1_1_character_selector_button.html#ac7945ec194bd681e3f0c24b7df3f0bf2">Awake</a>(){</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <a class="code" href="class_u_i_1_1_character_selector_button.html#aa8a6504e5c663b03d29ec18c3a7c0987">_button</a> = GetComponent&lt;Button&gt;();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_u_i_1_1_character_selector_button.html#a89081781a0730e196262aba2e0a06d3a">   19</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_u_i_1_1_character_selector_button.html#a89081781a0730e196262aba2e0a06d3a">SetCharacter</a>(<a class="code" href="class_character_system_1_1_character.html">Character</a> character){</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <a class="code" href="class_u_i_1_1_character_selector_button.html#affa6bcd1d4059f74df33681cb6a566c8">characterImage</a>.sprite = character.<a class="code" href="class_character_system_1_1_character.html#aceba05a7b876638efa1eb57b1338d1f0">sprite</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <a class="code" href="class_u_i_1_1_character_selector_button.html#ab6088aaa19c95da557fee65ddc1b50ed">_character</a> = character;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <a class="code" href="class_u_i_1_1_character_selector_button.html#aa8a6504e5c663b03d29ec18c3a7c0987">_button</a>.onClick.AddListener(delegate {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                <a class="code" href="class_static_manager_1_1_game_controller.html">GameController</a>.<a class="code" href="class_static_manager_1_1_game_controller.html#a9ebe500ea7d0ea86809d59873dd41ea3">SwitchCharacter</a>(<a class="code" href="class_u_i_1_1_character_selector_button.html#ab6088aaa19c95da557fee65ddc1b50ed">_character</a>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            });</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_u_i_1_1_character_selector_button_html_ab6088aaa19c95da557fee65ddc1b50ed"><div class="ttname"><a href="class_u_i_1_1_character_selector_button.html#ab6088aaa19c95da557fee65ddc1b50ed">UI.CharacterSelectorButton._character</a></div><div class="ttdeci">Character _character</div><div class="ttdef"><b>Definition:</b> <a href="_character_selector_button_8cs_source.html#l00013">CharacterSelectorButton.cs:13</a></div></div>
+<div class="ttc" id="aclass_character_system_1_1_character_html"><div class="ttname"><a href="class_character_system_1_1_character.html">CharacterSystem.Character</a></div><div class="ttdef"><b>Definition:</b> <a href="_character_8cs_source.html#l00010">Character.cs:10</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_character_selector_button_html_ac7945ec194bd681e3f0c24b7df3f0bf2"><div class="ttname"><a href="class_u_i_1_1_character_selector_button.html#ac7945ec194bd681e3f0c24b7df3f0bf2">UI.CharacterSelectorButton.Awake</a></div><div class="ttdeci">void Awake()</div><div class="ttdef"><b>Definition:</b> <a href="_character_selector_button_8cs_source.html#l00014">CharacterSelectorButton.cs:14</a></div></div>
+<div class="ttc" id="anamespace_character_system_html"><div class="ttname"><a href="namespace_character_system.html">CharacterSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="_character_8cs_source.html#l00007">Character.cs:7</a></div></div>
+<div class="ttc" id="anamespace_u_i_html"><div class="ttname"><a href="namespace_u_i.html">UI</a></div><div class="ttdef"><b>Definition:</b> <a href="_character_selector_8cs_source.html#l00007">CharacterSelector.cs:7</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_character_selector_button_html_affa6bcd1d4059f74df33681cb6a566c8"><div class="ttname"><a href="class_u_i_1_1_character_selector_button.html#affa6bcd1d4059f74df33681cb6a566c8">UI.CharacterSelectorButton.characterImage</a></div><div class="ttdeci">Image characterImage</div><div class="ttdef"><b>Definition:</b> <a href="_character_selector_button_8cs_source.html#l00012">CharacterSelectorButton.cs:12</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_character_selector_button_html"><div class="ttname"><a href="class_u_i_1_1_character_selector_button.html">UI.CharacterSelectorButton</a></div><div class="ttdef"><b>Definition:</b> <a href="_character_selector_button_8cs_source.html#l00009">CharacterSelectorButton.cs:9</a></div></div>
+<div class="ttc" id="aclass_static_manager_1_1_game_controller_html"><div class="ttname"><a href="class_static_manager_1_1_game_controller.html">StaticManager.GameController</a></div><div class="ttdoc">Le controller principale du jeu</div><div class="ttdef"><b>Definition:</b> <a href="_game_controller_8cs_source.html#l00011">GameController.cs:11</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_character_selector_button_html_aa8a6504e5c663b03d29ec18c3a7c0987"><div class="ttname"><a href="class_u_i_1_1_character_selector_button.html#aa8a6504e5c663b03d29ec18c3a7c0987">UI.CharacterSelectorButton._button</a></div><div class="ttdeci">Button _button</div><div class="ttdef"><b>Definition:</b> <a href="_character_selector_button_8cs_source.html#l00011">CharacterSelectorButton.cs:11</a></div></div>
+<div class="ttc" id="anamespace_static_manager_html"><div class="ttname"><a href="namespace_static_manager.html">StaticManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_camera_script_8cs_source.html#l00004">CameraScript.cs:4</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_character_selector_button_html_a89081781a0730e196262aba2e0a06d3a"><div class="ttname"><a href="class_u_i_1_1_character_selector_button.html#a89081781a0730e196262aba2e0a06d3a">UI.CharacterSelectorButton.SetCharacter</a></div><div class="ttdeci">void SetCharacter(Character character)</div><div class="ttdef"><b>Definition:</b> <a href="_character_selector_button_8cs_source.html#l00019">CharacterSelectorButton.cs:19</a></div></div>
+<div class="ttc" id="aclass_static_manager_1_1_game_controller_html_a9ebe500ea7d0ea86809d59873dd41ea3"><div class="ttname"><a href="class_static_manager_1_1_game_controller.html#a9ebe500ea7d0ea86809d59873dd41ea3">StaticManager.GameController.SwitchCharacter</a></div><div class="ttdeci">static void SwitchCharacter(Character character)</div><div class="ttdoc">Permet de changer le personnage (au niveau du PlayerController)</div><div class="ttdef"><b>Definition:</b> <a href="_game_controller_8cs_source.html#l00050">GameController.cs:50</a></div></div>
+<div class="ttc" id="aclass_character_system_1_1_character_html_aceba05a7b876638efa1eb57b1338d1f0"><div class="ttname"><a href="class_character_system_1_1_character.html#aceba05a7b876638efa1eb57b1338d1f0">CharacterSystem.Character.sprite</a></div><div class="ttdeci">Sprite sprite</div><div class="ttdef"><b>Definition:</b> <a href="_character_8cs_source.html#l00015">Character.cs:15</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

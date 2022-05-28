@@ -11,11 +11,11 @@ namespace StaticManager
     public class GameController : MonoBehaviour
     {
         static GameController instance; /*!< L'instance du controller */
-        [SerializeField] PlayerController playerController;
-        [SerializeField] List<Character> characters;  /*!< Liste des characters jouables */
-        public List<Character> Characters { get { return characters; } } /*!< Retourne la liste des characters jouables */
-        public PlayerController PlayerController { get { return playerController; } }
-        int currentCharacter = 0; /*!< l'indice du character sélection dans la liste characters */
+        [SerializeField] PlayerController _playerController;
+        [SerializeField] List<Character> _characters;  /*!< Liste des characters jouables */
+        public List<Character> characters { get { return _characters; } } /*!< Retourne la liste des characters jouables */
+        public PlayerController playerController { get { return _playerController; } }
+        static int currentCharacter = 0; /*!< l'indice du character sélection dans la liste characters */
 
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
@@ -23,7 +23,7 @@ namespace StaticManager
         /// <summary>
         /// MonoBeahviours Abstract Method
         /// </summary>
-        void Start()
+        void Awake()
         {
             if(instance == null){
                 instance = this;
@@ -38,7 +38,7 @@ namespace StaticManager
         /// </summary>
         void FixedUpdate()
         {
-            playerController.CustomUpdate();
+            _playerController.CustomUpdate();
         }
 
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
@@ -47,15 +47,29 @@ namespace StaticManager
         /// <summary>
         /// Permet de changer le personnage (au niveau du PlayerController)
         /// </summary>
-        public void SwitchCharacter(){
-            currentCharacter = (currentCharacter == 0)? 1 : 0;
-            Character character = characters[currentCharacter];
-            playerController.SetCharacter(character);
+        public static void SwitchCharacter(Character character){
+            int i = 0;
+            foreach(var chr in instance.characters){
+                if(chr == character){
+                    currentCharacter = i;
+                    instance.SetPlayerControllerCharacter(character);
+                    return;
+                }
+                i++;
+            }
         }
         
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+    
+        public static List<Character> GetCharacters(){
+            return instance.characters;
+        }
+
+        public void SetPlayerControllerCharacter(Character character){
+            _playerController.SetCharacter(character);
+        }
     }
 
 }
