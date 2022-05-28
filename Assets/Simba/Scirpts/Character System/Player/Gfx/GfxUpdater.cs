@@ -59,7 +59,7 @@ namespace CharacterSystem{
                 else{
                     position = new Vector2(-attack.effectRelativePosition.x,attack.effectRelativePosition.y) + (Vector2)transform.position;
                 }
-                bool cond1 = attack.Settings.canCharge && chargeTimer.Time >= attack.Settings.minChargeTime;
+                bool cond1 = attack.Settings.canCharge && chargeTimer.time >= attack.Settings.minChargeTime;
                 bool cond2 = !attack.Settings.canCharge;
                 bool cond3 = attack.prefabEffect != null;
                 if( (cond1 || cond2) && cond3){

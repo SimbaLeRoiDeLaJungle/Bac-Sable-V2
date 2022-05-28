@@ -182,7 +182,7 @@ namespace CharacterSystem{
                 // On regarde si l'épée touche quelque chose
                 if(hit.collider != null){
                     EnemyController ec = hit.collider.gameObject.GetComponent<EnemyController>();// On récupère un script de l'enemi pour qu'il prennent les dégats
-                    float power = (1 + actionTimer.Time/actionTimer.MaxTime) * 0.5f * attack.Settings.power; // Calcul a la louche pour que plus on charge plus l'enemi part loin
+                    float power = (1 + actionTimer.time/actionTimer.maxTime) * 0.5f * attack.Settings.power; // Calcul a la louche pour que plus on charge plus l'enemi part loin
                     ec.TakeHit(power, direction);
                 }
             }
