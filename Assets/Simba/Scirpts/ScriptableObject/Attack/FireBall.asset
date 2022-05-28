@@ -17,7 +17,9 @@ MonoBehaviour:
   _minChargeTime: 0
   _power: 0
   _range: 0
+  _timeOfHit: 0
   _attackType: 1
   _prefabBullet: {fileID: 713108296049806951, guid: c891ee2d98cbdffb8bfb47fe826d9735, type: 3}
+  _bulletRelativePosition: {x: 0.5, y: -0.15}
   _prefabEffectCharge: {fileID: 0}
   _prefabEffect: {fileID: 0}
