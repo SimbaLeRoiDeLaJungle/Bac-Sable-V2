@@ -4,19 +4,22 @@ using UnityEngine;
 using UnityEditor;
 using CustomAttributes;
 using AttackSystem;
+using CharacterGenerator;
+using UnityEditor.Animations;
 namespace CharacterSystem{
     
     [CreateAssetMenu(fileName = "character_name", menuName = "ScriptableObjects/Character", order = 1)]
     public class Character : ScriptableObject
     {
-
+        [SerializeField] string _name;
+        public string name {get { return _name; } }
         [Header("GFX")]
         [SerializeField] Sprite _sprite;
         public Sprite sprite { get { return _sprite; } } 
-        [SerializeField] RuntimeAnimatorController  animatorController;
+        [SerializeField] RuntimeAnimatorController  _animatorController;
         [LineSeparator]
         [Header("Actions")]
-        [SerializeField] ActionPad actionPad;
+        [SerializeField] ActionPad _actionPad;
         [LineSeparator]
         [Header("Statistics")]
         [SerializeField] float _speed;
@@ -31,7 +34,7 @@ namespace CharacterSystem{
         /// Getter de animatorController
         /// </summary>
         public RuntimeAnimatorController GetAnimatorController(){
-            return animatorController;
+            return _animatorController;
         }
         
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
@@ -42,16 +45,23 @@ namespace CharacterSystem{
         /// </summary>
         public Attack GetAction(GameAction action){
             if(action == GameAction.First){
-                return actionPad.first;
+                return _actionPad.first;
             }
             else{
-                return actionPad.second;
+                return _actionPad.second;
             }
         }
 
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
-    }
 
+        public void SetAnimatorController(AnimatorController controller){
+            _animatorController = controller;
+        }
+
+        public void SetName(string name){
+            _name = name;
+        }
+    }
 }

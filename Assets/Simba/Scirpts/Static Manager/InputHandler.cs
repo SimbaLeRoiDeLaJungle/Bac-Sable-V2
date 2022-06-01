@@ -29,7 +29,7 @@ namespace StaticManager{
             b[0] = false;
             b[1] = false;
             inputs.Add(KeyCode.Space, b);
-
+            inputs.Add(KeyCode.RightControl, b);
             //
 
             personalKey = new Dictionary<GameAction, KeyCode> (){
@@ -47,9 +47,16 @@ namespace StaticManager{
         void FixedUpdate()
         {
             bool[] b = new bool[2];
-            b[0] = inputs[KeyCode.Space][1];
-            b[1] = Input.GetKey(KeyCode.Space);
-            inputs[KeyCode.Space] = b;
+            KeyCode key1 = personalKey[GameAction.First];
+            b[0] = inputs[key1][1];
+            b[1] = Input.GetKey(key1);
+            inputs[key1] = b;
+
+            KeyCode key2 = personalKey[GameAction.Second];
+            b = new bool[2];
+            b[0] = inputs[key2][1];
+            b[1] = Input.GetKey(key2);
+            inputs[key2] = b;
         }
 
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
@@ -100,6 +107,59 @@ namespace StaticManager{
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+        /// <summary>
+        /// 
+        /// </summary>
+        public static InputData GetPrioritizeInput(){
+            // Action 1
+            GameAction action = GameAction.First;
+            bool isPressed = KeyPressed(action);
+            if(isPressed){
+                return new InputData(InputType.Press, action); 
+            }
+            bool isDown = KeyDown(action);
+            if(isDown){
+                return new InputData(InputType.Down, action); 
+            }
+            bool isRelease = KeyRelease(action);
+            if(isRelease){
+                return new InputData(InputType.Release, action);
+            }
 
+            // Action 2
+            action = GameAction.Second;
+            isPressed = KeyPressed(action);
+            if(isPressed){
+                return new InputData(InputType.Press, action); 
+            }
+            isDown = KeyDown(action);
+            if(isDown){
+                return new InputData(InputType.Down, action); 
+            }
+            isRelease = KeyRelease(action);
+            if(isRelease){
+                return new InputData(InputType.Release, action);
+            }
+
+            return new InputData(InputType.None, action);
+        }
+
+    }
+
+    public struct InputData{
+        public InputType inputType{get;set;}
+        public GameAction action{get;set;}
+
+        public InputData(InputType p_type, GameAction p_action){
+            inputType = p_type;
+            action = p_action;
+        }
+    }
+
+    public enum InputType{
+        Release,
+        Press,
+        Down,
+        None
     }
 }

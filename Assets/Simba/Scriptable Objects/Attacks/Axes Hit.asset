@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 495de80eb82989b6f8a62d4fbdf1bd27, type: 3}
-  m_Name: Sword Hit
+  m_Name: Axes Hit
   m_EditorClassIdentifier: 
   _canCharge: 1
   _maxChargeTime: 1
-  _minChargeTime: 0.3
+  _minChargeTime: 0.4
   _power: 10
-  _range: 1
+  _range: 0.5
   _timeOfHit: 0.1
   _attackType: 0
   _prefabBullet: {fileID: 0}
   _bulletRelativePosition: {x: 0, y: 0}
   _prefabEffectCharge: {fileID: 0}
   _prefabEffect: {fileID: 3628236789827854803, guid: 5fb5d09a66925433c86ae1db98779465, type: 3}
-  _effectRelativePose: {x: 1.2, y: 0.2}
+  _effectRelativePose: {x: 0.8, y: 0.2}

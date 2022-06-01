@@ -36,23 +36,19 @@ namespace CharacterSystem{
         /// <summary>
         /// Met a jour les Graphisme jouer dans PlayerController.CustomUpdate()
         /// </summary>
-        public void UpdateGfx(bool isGrounded, float xVel, CharacterState state, Timer chargeTimer){
+        public void UpdateGfx(bool isGrounded, float xVel, bool direction, CharacterState state, Timer chargeTimer){
 
             animator.SetBool("charge", state.isCharging);
 
             bool walk = isGrounded && xVel != 0 ; // la vitesse sur l'axe x n'est pas 0 et on est au sol => le joueur marche
             animator.SetBool("walk", walk);
-            if(xVel != 0){
-                bool direction = xVel > 0 ; // si la vitesse est positive il marche vers la droite : true <=> right, false <=> left
-                animator.SetBool("direction", direction);
-            }
+            animator.SetBool("direction", direction);
             if(_launchAttack){
                 _launchAttack = false;
                 _ready = true;
                 Attack attack = character.GetAction(_currentAction);
                 animator.SetTrigger("attack");
                 Vector2 position = Vector2.zero;
-                bool direction = animator.GetBool("direction");
                 if(direction){
                     position = attack.effectRelativePosition + (Vector2)transform.position;
                 }
@@ -82,9 +78,10 @@ namespace CharacterSystem{
         /// <summary>
         /// Met a jour le character et l'animator
         /// </summary>
-        public void SetCharacter(Character character){
+        public void SetCharacter(Character character, bool direction){
             this.character = character;
             animator.runtimeAnimatorController = character.GetAnimatorController();
+            animator.SetBool("direction", direction);
         }
 
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
@@ -97,6 +94,7 @@ namespace CharacterSystem{
             _currentAction = action;
             _launchAttack = true;
             _ready = false;
+            animator.SetInteger("action", (int)action + 1);
         }
 
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-

@@ -1,0 +1,88 @@
+<animations>
+
+	<animationData>
+		<name> WalkLeft </name>
+		<line> 1 </line>
+		<col> 0 </col>
+		<endCol> 9 </endCol>
+		<sizeX> 1 </sizeX>
+		<sizeY> 1 </sizeY>
+		<frameRate> 12 </frameRate>
+	</animationData>
+
+	<animationData>
+		<name> WalkRight </name>
+		<line> 0 </line>
+		<col> 0 </col>
+		<endCol> 9 </endCol>
+		<sizeX> 1 </sizeX>
+		<sizeY> 1 </sizeY>
+		<frameRate> 12 </frameRate>
+	</animationData>
+
+	<animationData>
+		<name> IdleRight </name>
+		<line> 0 </line>
+		<col> 0 </col>
+		<endCol> 1 </endCol>
+		<sizeX> 1 </sizeX>
+		<sizeY> 1 </sizeY>
+		<frameRate> 12 </frameRate>
+	</animationData>
+
+	<animationData>		
+		<name> IdleLeft </name>
+		<line> 1 </line>
+		<col> 0 </col>
+		<endCol> 1 </endCol>
+		<sizeX> 1 </sizeX>
+		<sizeY> 1 </sizeY>
+		<frameRate> 12 </frameRate>
+	</animationData>
+
+
+	<animationData>
+		<name> JumpRight </name>
+		<line> 2 </line>
+		<col> 3 </col>
+		<endCol> 6 </endCol>
+		<sizeX> 1 </sizeX>
+		<sizeY> 1 </sizeY>
+		<frameRate> 12 </frameRate>
+	</animationData>
+
+	<animationData>
+		<name> JumpLeft </name>
+		<line> 3 </line>
+		<col> 3 </col>
+		<endCol> 6 </endCol>
+		<sizeX> 1 </sizeX>
+		<sizeY> 1 </sizeY>
+		<frameRate> 12 </frameRate>
+	</animationData>
+
+	<animationData>
+		<name> AttackLeft </name>
+		<line> 4 </line>
+		<col> 0 </col>
+		<endCol> 6 </endCol>
+		<sizeX> 2 </sizeX>
+		<sizeY> 1 </sizeY>
+		<pivotX> 0.75 </pivotX>
+		<pivotY> 0.5 </pivotY>
+		<frameRate> 12 </frameRate>
+	</animationData>
+
+	<animationData>
+		<name> AttackRight </name>
+		<line> 5 </line>
+		<col> 0 </col>
+		<endCol> 6 </endCol>
+		<sizeX> 2 </sizeX>
+		<sizeY> 1 </sizeY>
+		<pivotX> 0.25 </pivotX>	
+		<pivotY> 0.5 </pivotY>
+		<frameRate> 12 </frameRate>
+	</animationData>
+
+</animations>

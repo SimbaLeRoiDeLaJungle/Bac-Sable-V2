@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf3303df04e2f83fb6b170692b21d35, type: 3}
+  m_Name: Character01
+  m_EditorClassIdentifier: 
+  _name: Simsim
+  _sprite: {fileID: 21300000, guid: 1e45f47f3cc7f1ca088b8b7f5cf77a36, type: 3}
+  _animations:
+    datas:
+    - _name: 2
+      _line: 9
+      _endCol: 9
+      _size: {x: 1, y: 1}
+      _frameRate: 12
+    - _name: 3
+      _line: 11
+      _endCol: 9
+      _size: {x: 1, y: 1}
+      _frameRate: 12
+    - _name: 1
+      _line: 11
+      _endCol: 1
+      _size: {x: 1, y: 1}
+      _frameRate: 12
+    - _name: 0
+      _line: 9
+      _endCol: 1
+      _size: {x: 1, y: 1}
+      _frameRate: 12
+    spriteSheet: {fileID: 2800000, guid: f54ae9e1dc61cc3249da40e2243f18c3, type: 3}
+    _defaultSpriteSize: 64
+    _pixelsPerUnit: 64
+  animatorController: {fileID: 0}
+  actionPad:
+    first: {fileID: 0}
+    second: {fileID: 0}
+  _speed: 1
+  _jumpSpeed: 100

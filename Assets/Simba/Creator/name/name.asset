@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: baf3303df04e2f83fb6b170692b21d35, type: 3}
-  m_Name: Character01
+  m_Name: name
   m_EditorClassIdentifier: 
-  _sprite: {fileID: -527053040, guid: 6458991b29a1ee289a52ca7166a5cc93, type: 3}
-  animatorController: {fileID: 9100000, guid: 87afc5def119330d5a56484bba0a6b0f, type: 2}
-  actionPad:
-    first: {fileID: 11400000, guid: af377e0bd10adebc99eb6910eeb21217, type: 2}
+  _name: name
+  _sprite: {fileID: 0}
+  _animatorController: {fileID: 9100000, guid: e9cccbdb94df4143383cd35e59044c9c, type: 2}
+  _actionPad:
+    first: {fileID: 0}
     second: {fileID: 0}
-  _speed: 2
+  _speed: 1
   _jumpSpeed: 100

@@ -48,7 +48,7 @@ namespace CharacterSystem{
             }
             attackHitBox = GetComponent<AttackHitBox>();
             actionTimer = new Timer(2,TimerMode.LOCK);
-            gfx.SetCharacter(character);
+            gfx.SetCharacter(character, direction);
         }
 
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
@@ -61,60 +61,58 @@ namespace CharacterSystem{
         
             //récupère les inputs
             Vector2 axesInput = InputHandler.GetAxesInput();
-            bool spacePressed = InputHandler.KeyPressed(GameAction.First); // charge l'attaque
-            bool spaceRelease = InputHandler.KeyRelease(GameAction.First); // lance l'attaque
-            bool spaceDown = InputHandler.KeyDown(GameAction.First);
-            
+            InputData data = InputHandler.GetPrioritizeInput();
+
+            InputType inputType = data.inputType;
+            GameAction action = data.action;
+
             // récupère des information
-
             bool isGrounded = groundChecker.CheckGroundContact();
-
-            
-            if(spacePressed || spaceRelease || spaceDown){
-                bool attackLaunch = false;
-                Attack attack = character.GetAction(GameAction.First);
-                bool attackCanCharge = attack.Settings.canCharge;
-                if(!attackCanCharge){
-                    if(!state.isAttacking && spacePressed){
-                        state.isAttacking = true;
-                        attackLaunch = true;
-                        rb.velocity = rb.velocity.y * Vector3.up;
-                    }
-                }
-                else{
-                    if(spacePressed){
-                        // On commence a charger l'attaque
-                        state.isCharging = true;
-                        actionTimer = new Timer(attack.Settings.maxChargeTime, TimerMode.LOCK);
-                        rb.velocity = rb.velocity.y * Vector3.up;
-                    }
-                    else if(spaceDown){
-                        // L'attaque est entrain de charger
-                        bool maxCharge = actionTimer.Update(Time.fixedDeltaTime);
-                        rb.velocity = rb.velocity.y * Vector3.up;
-                    }
-                    else{
-                        // On lance l'attaque (space release)
-                        state.isAttacking = true;
-                        state.isCharging = false;
-                        attackLaunch = true;
-                        rb.velocity = rb.velocity.y * Vector3.up;
-                    }
-                }
-                if(attackLaunch){
-                    StartCoroutine(LaunchAttack(GameAction.First, actionTimer.time));
-                }
-            }
-            else{
+            if(inputType == InputType.None){
+                
                 if(state.isAttacking || state.isCharging){
-                    // On est dans une frame ou le joueur est entrain de faire l'attaque ou de charger (On peut peut etre enlever charger ici)
                     rb.velocity = rb.velocity.y * Vector3.up;
                 }
                 else{
                     MooveControl(axesInput, isGrounded);
                 }
             }
-            gfx.UpdateGfx(isGrounded, rb.velocity.x, state, actionTimer);
+            else{
+                bool attackLaunch = false;
+                Attack attack = character.GetAction(action);
+                bool attackCanCharge = attack.Settings.canCharge;
+                if(!attackCanCharge){
+                    if(!state.isAttacking && inputType == InputType.Press){
+                        state.isAttacking = true;
+                        attackLaunch = true;
+                        rb.velocity = rb.velocity.y * Vector3.up;
+                    }
+                }
+                else{
+                    switch (inputType)
+                    {
+                        case InputType.Press:
+                            state.isCharging = true;
+                            actionTimer = new Timer(attack.Settings.maxChargeTime, TimerMode.LOCK);
+                            rb.velocity = rb.velocity.y * Vector3.up;
+                            break;
+                        case InputType.Down:
+                            Debug.Log(actionTimer.Update(Time.fixedDeltaTime));
+                            rb.velocity = rb.velocity.y * Vector3.up;
+                            break;
+                        case InputType.Release:
+                            state.isAttacking = true;
+                            state.isCharging = false;
+                            attackLaunch = true;
+                            rb.velocity = rb.velocity.y * Vector3.up;
+                            break;
+                    }
+                }
+                if(attackLaunch){
+                    StartCoroutine(LaunchAttack(action, actionTimer.time));
+                }
+            }
+            gfx.UpdateGfx(isGrounded, rb.velocity.x, direction, state, actionTimer);
         }
 
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
@@ -151,7 +149,7 @@ namespace CharacterSystem{
         /// </summary>
         public void SetCharacter(Character character){
             this.character = character;
-            gfx.SetCharacter(character);
+            gfx.SetCharacter(character, direction);
         }
 
         // #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
@@ -183,7 +181,13 @@ namespace CharacterSystem{
                 // On regarde si l'épée touche quelque chose
                 if(hit.collider != null){
                     EnemyController ec = hit.collider.gameObject.GetComponent<EnemyController>();// On récupère un script de l'enemi pour qu'il prennent les dégats
-                    float power = (1 + chargeTime/attack.Settings.maxChargeTime) * 0.5f * attack.Settings.power; // Calcul a la louche pour que plus on charge plus l'enemi part loin
+                    float power;
+                    if(attack.Settings.canCharge){
+                        power = (1 + chargeTime/attack.Settings.maxChargeTime) * 0.5f * attack.Settings.power; // Calcul a la louche pour que plus on charge plus l'enemi part loin
+                    }
+                    else{
+                        power = attack.Settings.power;
+                    }
                     ec.TakeHit(power, direction);
                 }
             }

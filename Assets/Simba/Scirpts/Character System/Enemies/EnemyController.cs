@@ -29,8 +29,10 @@ namespace CharacterSystem{
         /// Crée un mouvement de recule quand l'enemie recoit un coup
         /// </summary>
         public void TakeHit(float power, bool direction){
+            
             Vector3 dir = direction ? Vector3.right : Vector3.left ;
             Vector3 dF = power*reaction*(dir+Vector3.up);
+            Debug.Log(dF);
             rb.AddForce(dF, ForceMode2D.Impulse);
         }
 

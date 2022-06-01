@@ -252,7 +252,6 @@ MonoBehaviour:
   _playerController: {fileID: 1480141913}
   _characters:
   - {fileID: 11400000, guid: c752a2453f3e78164b70fcf7f5c9398e, type: 2}
-  - {fileID: 11400000, guid: 350250a744768f155880dd750a89ccdc, type: 2}
 --- !u!4 &422910359
 Transform:
   m_ObjectHideFlags: 0
